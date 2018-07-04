@@ -17,7 +17,7 @@
 
               <form class="form" @submit.prevent="signUpWithPassword()">
                   <input type="text" placeholder="学籍番号" v-model="studentNo">
-                  <input type="password" placeholder="Password" v-model="pass">
+                  <input type="password" placeholder="パスワード" v-model="pass">
                   <button type="submit" id="login-button" >ログイン</button>
                   <a @click="">新規登録</a>
               </form>
