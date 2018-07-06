@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.MemberDAO;
-
 /**
  * Servlet implementation class Login
  */
@@ -41,16 +39,16 @@ public class Login extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 
-		Member member = new Member();
-		MemberDAO dao = new MemberDAO();
+		Student student = new Student();
+		StudentManager mane = new StudentManager();
 
 
-		member.setName(request.getParameter("name"));
-		member.setPass(request.getParameter("pass"));
+		student.setStudentID(request.getParameter("studentID"));
+		student.setPass(request.getParameter("pass"));
 
 		boolean result = false;
 		try {
-			result = dao.check(member);
+			result = mane.check(student);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -59,7 +57,7 @@ public class Login extends HttpServlet {
 		session.setAttribute("login", result);
 		if (result) {
 			// ログインに成功している場合はmember.jspへ
-			session.setAttribute("member", member);
+			session.setAttribute("student", student);
 			getServletContext().getRequestDispatcher("/top.jsp").forward(request, response);
 		} else {
 			// ログインに失敗している場合はlogin.jspへ
