@@ -11,14 +11,21 @@ public class StudentManager {
 		student = studentDAO.getStudent(studentID);
 		return student;
 	}
-	
+
+	public boolean check(Student student) throws SQLException{
+		boolean result = false;
+			result = studentDAO.check(student);
+		return result;
+
+	}
+
 	public boolean registerStudent(Student student) throws SQLException{
 		boolean result = false;
 			result = studentDAO.registerStudent(student);
 		return result;
 
 	}
-	
+
 	public boolean editProf(Student student) throws SQLException{
 		boolean result = false;
 			result = studentDAO.updateStudent(student);
