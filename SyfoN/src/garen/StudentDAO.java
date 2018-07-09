@@ -17,10 +17,10 @@ public class StudentDAO {
 	final private static String url = "jdbc:postgresql://localhost/" + dbname;
 
 	public Student getStudent(String studentID) throws SQLException {
-		// memberがDBにあるかどうかを調べる
+		// studentがDBにあるかどうかを調べる
 		Student result = new Student();
 		Connection connection;
-		String sql = "select * from member where studentID=?";
+		String sql = "select * from student where studentID=?";
 
 		try {
 			Class.forName(driverClassName);
@@ -47,10 +47,10 @@ public class StudentDAO {
 	}
 
 	public boolean check(Student student) throws SQLException {
-		// memberがDBにあるかどうかを調べる
+		// studentがDBにあるかどうかを調べる
 		boolean result = false;
 		Connection connection;
-		String sql = "select * from member where studentID=? and passWord=?";
+		String sql = "SELECT * FROM student WHERE studentid = ? AND password = ?";
 
 		try {
 			Class.forName(driverClassName);

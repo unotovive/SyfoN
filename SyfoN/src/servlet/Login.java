@@ -63,9 +63,11 @@ public class Login extends HttpServlet {
 		if (result) {
 			// ログインに成功している場合はtop.jspへ
 			session.setAttribute("student", student);
+			System.out.print("dekita");
 			getServletContext().getRequestDispatcher("/top.jsp").forward(request, response);
 		} else {
 			// ログインに失敗している場合はlogin.jspへ
+			System.out.print("sippai");
 			getServletContext().getRequestDispatcher("/Common_Login.jsp").forward(request, response);
 			}
 		}

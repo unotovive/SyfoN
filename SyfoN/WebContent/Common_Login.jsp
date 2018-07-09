@@ -15,9 +15,9 @@
               <h1>Welcome</h1>
               <h2>SyfoN-ログイン</h2>
 
-              <form class="form" action="Login" method="POST" @submit.prevent="NoNull">
-                  <input type="text" placeholder="学籍番号" v-model="studentNo">
-                  <input type="password" placeholder="パスワード" v-model="pass">
+              <form class="form" action="Login" method="POST" >
+                  <input type="text"  name="studentID" placeholder="学籍番号" v-model="studentNo">
+                  <input type="password" name="pass" placeholder="パスワード" v-model="pass">
                   <button type="submit" id="login-button" >ログイン</button>
                   <a @click="">新規登録</a>
               </form>
