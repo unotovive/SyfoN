@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import garen.Student;
+import garen.StudentManager;
+
 /**
  * Servlet implementation class Login
  */
@@ -28,6 +31,7 @@ public class Login extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
@@ -36,6 +40,7 @@ public class Login extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 
@@ -44,7 +49,7 @@ public class Login extends HttpServlet {
 
 
 		student.setStudentID(request.getParameter("studentID"));
-		student.setPass(request.getParameter("pass"));
+		student.setPassWord(request.getParameter("pass"));
 
 		boolean result = false;
 		try {
@@ -56,7 +61,7 @@ public class Login extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.setAttribute("login", result);
 		if (result) {
-			// ログインに成功している場合はmember.jspへ
+			// ログインに成功している場合はtop.jspへ
 			session.setAttribute("student", student);
 			getServletContext().getRequestDispatcher("/top.jsp").forward(request, response);
 		} else {
