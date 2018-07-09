@@ -15,7 +15,7 @@
               <h1>Welcome</h1>
               <h2>SyfoN-ログイン</h2>
 
-              <form class="form" @submit.prevent="signUpWithPassword()">
+              <form class="form" action="Login" method="POST">
                   <input type="text" placeholder="学籍番号" v-model="studentNo">
                   <input type="password" placeholder="パスワード" v-model="pass">
                   <button type="submit" id="login-button" >ログイン</button>
