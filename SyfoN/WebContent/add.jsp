@@ -15,7 +15,7 @@
               <h1>Welcome</h1>
               <h2>SyfoN-ログイン</h2>
 
-              <form class="form" @submit.prevent="signUpWithPassword()">
+              <form class="form" @submit.prevent="signUp()">
                   <input type="text" placeholder="ニックネーム" v-model="name" required>
                   <input type="text" placeholder="学籍番号" v-model="studentNo" required>
                   <input type="e-mail" placeholder="メールアドレス" v-model="mail" required>
@@ -29,7 +29,7 @@
                       <option value='4'>4</option>
                   </select>
                   <button type="submit" id="login-button" >新規登録</button>
-                  <a @click="">ログイン</a>
+                  <a @click="goLogin()">ログイン</a>
               </form>
           </div>
           <ul class="bg-bubbles">
@@ -60,10 +60,16 @@
         grade:''
       },
       methods: {
-        humanizeURL: function (url) {
-          return url
-            .replace(/^https?:\/\//, '')
-            .replace(/\/$/, '')
+        signUp(){
+          if(this.pass1==this.pass2){
+
+          }
+          else{
+            alert("確認用パスワードが違います。")
+          }
+        },
+        goLogin(){
+          console("gologin")
         }
       }
     })
