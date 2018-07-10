@@ -1,4 +1,4 @@
-package garen;
+package student;
 
 import java.sql.SQLException;
 
