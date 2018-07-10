@@ -1,0 +1,1100 @@
+{
+  "my-classes" : {
+    "zenki1" : {
+      "monday" : {
+        "period1" : {
+          "id" : 12345,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 12345,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 15151,
+          "name" : "画処理",
+          "教室" : 1919
+        },
+        "period4" : {
+          "id" : 10006,
+          "name" : "スマブラ",
+          "教室" : 9090
+        },
+        "period5" : {
+          "id" : 10006,
+          "name" : "すまぶら",
+          "教室" : 9090
+        }
+      },
+      "tuesday" : {
+        "period1" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period2" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period3" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period4" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period5" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        }
+      },
+      "wednesday" : {
+        "period1" : {
+          "id" : 90123,
+          "name" : "基礎ゼミ",
+          "教室" : 27502
+        },
+        "period2" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period3" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period4" : {
+          "id" : 11,
+          "name" : "きゃりわ",
+          "教室" : 1
+        },
+        "period5" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        }
+      },
+      "thursday" : {
+        "period1" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period4" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period5" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        }
+      },
+      "fryday" : {
+        "period1" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period4" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period5" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        }
+      }
+    },
+    "kouki1" : {
+      "monday" : {
+        "period1" : {
+          "id" : 12345,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 12345,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 15151,
+          "name" : "画処理",
+          "教室" : 1919
+        },
+        "period4" : {
+          "id" : 10006,
+          "name" : "スマブラ",
+          "教室" : 9090
+        },
+        "period5" : {
+          "id" : 10006,
+          "name" : "すまぶら",
+          "教室" : 9090
+        }
+      },
+      "tuesday" : {
+        "period1" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period2" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period3" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period4" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period5" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        }
+      },
+      "wednesday" : {
+        "period1" : {
+          "id" : 90123,
+          "name" : "基礎ゼミ",
+          "教室" : 27502
+        },
+        "period2" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period3" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period4" : {
+          "id" : 11,
+          "name" : "きゃりわ",
+          "教室" : 1
+        },
+        "period5" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        }
+      },
+      "thursday" : {
+        "period1" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period4" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period5" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        }
+      },
+      "fryday" : {
+        "period1" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period4" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period5" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        }
+      }
+    },
+    "zenki2" : {
+      "monday" : {
+        "period1" : {
+          "id" : 12345,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 12345,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 15151,
+          "name" : "画処理",
+          "教室" : 1919
+        },
+        "period4" : {
+          "id" : 10006,
+          "name" : "スマブラ",
+          "教室" : 9090
+        },
+        "period5" : {
+          "id" : 10006,
+          "name" : "すまぶら",
+          "教室" : 9090
+        }
+      },
+      "tuesday" : {
+        "period1" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period2" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period3" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period4" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period5" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        }
+      },
+      "wednesday" : {
+        "period1" : {
+          "id" : 90123,
+          "name" : "基礎ゼミ",
+          "教室" : 27502
+        },
+        "period2" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period3" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period4" : {
+          "id" : 11,
+          "name" : "きゃりわ",
+          "教室" : 1
+        },
+        "period5" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        }
+      },
+      "thursday" : {
+        "period1" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period4" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period5" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        }
+      },
+      "fryday" : {
+        "period1" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period4" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period5" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        }
+      }
+    },
+    "kouki2" : {
+      "monday" : {
+        "period1" : {
+          "id" : 12345,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 12345,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 15151,
+          "name" : "画処理",
+          "教室" : 1919
+        },
+        "period4" : {
+          "id" : 10006,
+          "name" : "スマブラ",
+          "教室" : 9090
+        },
+        "period5" : {
+          "id" : 10006,
+          "name" : "すまぶら",
+          "教室" : 9090
+        }
+      },
+      "tuesday" : {
+        "period1" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period2" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period3" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period4" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period5" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        }
+      },
+      "wednesday" : {
+        "period1" : {
+          "id" : 90123,
+          "name" : "基礎ゼミ",
+          "教室" : 27502
+        },
+        "period2" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period3" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period4" : {
+          "id" : 11,
+          "name" : "きゃりわ",
+          "教室" : 1
+        },
+        "period5" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        }
+      },
+      "thursday" : {
+        "period1" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period4" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period5" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        }
+      },
+      "fryday" : {
+        "period1" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period4" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period5" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        }
+      }
+    },
+    "zenki3" : {
+      "monday" : {
+        "period1" : {
+          "id" : 12345,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 12345,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 15151,
+          "name" : "画処理",
+          "教室" : 1919
+        },
+        "period4" : {
+          "id" : 10006,
+          "name" : "スマブラ",
+          "教室" : 9090
+        },
+        "period5" : {
+          "id" : 10006,
+          "name" : "すまぶら",
+          "教室" : 9090
+        }
+      },
+      "tuesday" : {
+        "period1" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period2" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period3" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period4" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period5" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        }
+      },
+      "wednesday" : {
+        "period1" : {
+          "id" : 90123,
+          "name" : "基礎ゼミ",
+          "教室" : 27502
+        },
+        "period2" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period3" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period4" : {
+          "id" : 11,
+          "name" : "きゃりわ",
+          "教室" : 1
+        },
+        "period5" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        }
+      },
+      "thursday" : {
+        "period1" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period4" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period5" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        }
+      },
+      "fryday" : {
+        "period1" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period4" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period5" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        }
+      }
+    },
+    "kouki3" : {
+      "monday" : {
+        "period1" : {
+          "id" : 12345,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 12345,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 15151,
+          "name" : "画処理",
+          "教室" : 1919
+        },
+        "period4" : {
+          "id" : 10006,
+          "name" : "スマブラ",
+          "教室" : 9090
+        },
+        "period5" : {
+          "id" : 10006,
+          "name" : "すまぶら",
+          "教室" : 9090
+        }
+      },
+      "tuesday" : {
+        "period1" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period2" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period3" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period4" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period5" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        }
+      },
+      "wednesday" : {
+        "period1" : {
+          "id" : 90123,
+          "name" : "基礎ゼミ",
+          "教室" : 27502
+        },
+        "period2" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period3" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period4" : {
+          "id" : 11,
+          "name" : "きゃりわ",
+          "教室" : 1
+        },
+        "period5" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        }
+      },
+      "thursday" : {
+        "period1" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period4" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period5" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        }
+      },
+      "fryday" : {
+        "period1" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period4" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period5" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        }
+      }
+    },
+    "zenki4" : {
+      "monday" : {
+        "period1" : {
+          "id" : 12345,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 12345,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 15151,
+          "name" : "画処理",
+          "教室" : 1919
+        },
+        "period4" : {
+          "id" : 10006,
+          "name" : "スマブラ",
+          "教室" : 9090
+        },
+        "period5" : {
+          "id" : 10006,
+          "name" : "すまぶら",
+          "教室" : 9090
+        }
+      },
+      "tuesday" : {
+        "period1" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period2" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period3" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period4" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period5" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        }
+      },
+      "wednesday" : {
+        "period1" : {
+          "id" : 90123,
+          "name" : "基礎ゼミ",
+          "教室" : 27502
+        },
+        "period2" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period3" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period4" : {
+          "id" : 11,
+          "name" : "きゃりわ",
+          "教室" : 1
+        },
+        "period5" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        }
+      },
+      "thursday" : {
+        "period1" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period4" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period5" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        }
+      },
+      "fryday" : {
+        "period1" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period4" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period5" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        }
+      }
+    },
+    "kouki4" : {
+      "monday" : {
+        "period1" : {
+          "id" : 12345,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 12345,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 15151,
+          "name" : "画処理",
+          "教室" : 1919
+        },
+        "period4" : {
+          "id" : 10006,
+          "name" : "スマブラ",
+          "教室" : 9090
+        },
+        "period5" : {
+          "id" : 10006,
+          "name" : "すまぶら",
+          "教室" : 9090
+        }
+      },
+      "tuesday" : {
+        "period1" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period2" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period3" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period4" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period5" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        }
+      },
+      "wednesday" : {
+        "period1" : {
+          "id" : 90123,
+          "name" : "基礎ゼミ",
+          "教室" : 27502
+        },
+        "period2" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period3" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        },
+        "period4" : {
+          "id" : 11,
+          "name" : "きゃりわ",
+          "教室" : 1
+        },
+        "period5" : {
+          "id" : null,
+          "name" : "",
+          "教室" : null
+        }
+      },
+      "thursday" : {
+        "period1" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period4" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period5" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        }
+      },
+      "fryday" : {
+        "period1" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period2" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period3" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period4" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        },
+        "period5" : {
+          "id" : 114514,
+          "name" : "さばぷろ",
+          "教室" : 5555
+        }
+      }
+    }
+  }
+}
