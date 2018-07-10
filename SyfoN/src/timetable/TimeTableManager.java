@@ -1,4 +1,4 @@
-package garen;
+package timetable;
 
 public class TimeTableManager {
 
