@@ -8,14 +8,14 @@ public class Student implements Serializable {
 		gradeID = 1;
 		passWord ="";
 		mailAddress ="";
-		nickname ="";
+		nickName ="";
 	}
 
 	private String studentID;
 	private int gradeID;
 	private String passWord;
 	private String mailAddress;
-	private String nickname;
+	private String nickName;
 
 	public String getStudentID() {
 		return studentID;
@@ -48,12 +48,12 @@ public class Student implements Serializable {
 		this.mailAddress = mailAddress;
 	}
 
-	public String getNickname() {
-		return nickname;
+	public String getNickName() {
+		return nickName;
 	}
 
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
+	public void setNickName(String nickname) {
+		this.nickName = nickname;
 	}
 
 

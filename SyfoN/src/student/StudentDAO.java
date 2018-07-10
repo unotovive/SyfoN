@@ -18,7 +18,8 @@ public class StudentDAO {
 
 	public Student getStudent(String studentID) throws SQLException {
 		// studentがDBにあるかどうかを調べる
-		Student result = new Student();
+		Student st = new Student();
+
 		Connection connection;
 		String sql = "select * from student where studentID=?";
 
@@ -35,15 +36,27 @@ public class StudentDAO {
 			pstmt.setString(5, student.getNickname());
 			*/
 
-			ResultSet resultSet = pstmt.executeQuery();
-			if (resultSet.next()) result = null;
+			ResultSet resultSet = pstmt.executeQuery(sql);
+			while(resultSet.next()){
+				//st = null;
 
+				String stID = resultSet.getString("studentid");
+				st.setStudentID(stID);
+				int gradeID = resultSet.getInt("gradeid");
+				st.setGradeID(gradeID);
+				String passWord = resultSet.getString("password");
+				st.setPassWord(passWord);
+				String mailAddress = resultSet.getString("mailaddress");
+				st.setMailAddress(mailAddress);
+				String nickName = resultSet.getString("nickname");
+				st.setNickName(nickName);
+			}
 			resultSet.close();
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return result;
+		return st;
 	}
 
 	public boolean check(Student student) throws SQLException {
@@ -86,7 +99,7 @@ public class StudentDAO {
 			pstmt.setInt(2, student.getGradeID());
 			pstmt.setString(3, student.getPassWord());
 			pstmt.setString(4, student.getMailAddress());
-			pstmt.setString(5, student.getNickname());
+			pstmt.setString(5, student.getNickName());
 
 			ResultSet resultSet = pstmt.executeQuery();
 			if (resultSet.next()) result = true;
