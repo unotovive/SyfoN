@@ -41,30 +41,33 @@ public class TimeTableServ extends HttpServlet {
 		TimeTable.setStudentID(request.getParameter("studentID"));
 	    CouseLecture CouseLecture = new CouseLecture();
 	    CouseLectureManager Lecmane = new CouseLectureManager();
-		ArrayList<TimeTable>  result = null;
+		ArrayList<TimeTable>  result = new ArrayList<TimeTable>();
 	    ArrayList<CouseLecture>  result1 = null;
+	    ArrayList<ArrayList<CouseLecture>> lastresult = new ArrayList<ArrayList<CouseLecture>>();
 
 		try {
 			result = mane.getTimeTableList(request.getParameter("studentID"));
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		//時間割IDを取得
+		//時間割IDを取得(8こ）
 
 		HttpSession session = request.getSession();
 		session.setAttribute("timetableID", result);
-		
+
 		try{
 		for(int i=0;i<8;i++){
-			result1[i] =Lecmane.getCouseLectureList(result.get(i)) ;}
+			result1 = Lecmane.getCouseLectureList(result.get(i)) ;
+			lastresult[i].add(result1);
+			}
 		}
 		catch(SQLException e) {
 			e.printStackTrace();
 		}
 		//時間割IDからコースレクチャーを取得
-		
-		
-		 
+
+
+
 	}
 	//
 
