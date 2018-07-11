@@ -1,0 +1,172 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <html>
+
+  <head>
+    <title>SyfoN</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <meta http-equiv="content-type" charset="utf-8">
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="content">
+        <a>top</a>
+        <a>講義一覧</a>
+        <a>マイページ</a>
+        <a>ログアウト</a>
+        <div id="sirabas">
+          <h2>シラバス情報</h2>
+          <i class="far fa-circle"></i>
+          <i class="far fa-check-circle"></i>
+          <p>履修済み</p>
+          <table class="sir-table">
+            <tbody>
+              <tr>
+                <th class="arrow_box">授業名
+                </th>
+                <td>{{clas.name}}</td>
+              </tr>
+              <tr>
+                <th class="arrow_box">担当教員
+                </th>
+                <td>{{clas.teacher}}</td>
+              </tr>
+              <tr>
+                <tr>
+                  <th class="arrow_box">開講学期
+                  </th>
+                  <td>{{clas.term}}</td>
+                </tr>
+                <tr>
+                  <th class="arrow_box">曜日時限
+                  </th>
+                  <td>{{clas.period}}</td>
+                </tr>
+                <tr>
+                  <th class="arrow_box">教室番号
+                  </th>
+                  <td>{{clas.room}}</td>
+                </tr>
+                <tr>
+                  <th class="arrow_box">単位数
+                  </th>
+                  <td>{{clas.num}}</td>
+                </tr>
+                <tr>
+                  <th class="arrow_box">目的
+                  </th>
+                  <td>{{clas.target}}</td>
+                </tr>
+                <tr>
+                  <th class="arrow_box">目標
+                  </th>
+                  <td>{{clas.goal}}</td>
+                </tr>
+                <tr>
+                  <th class="arrow_box">関連科目
+                  </th>
+                  <td>{{clas.relation}}</td>
+                </tr>
+                <tr>
+                  <th class="arrow_box">履修条件
+                  </th>
+                  <td>{{clas.book}}</td>
+                </tr>
+                <tr>
+                  <th class="arrow_box">教科書名
+                  </th>
+                  <td>{{clas.book}}</td>
+                </tr>
+                <tr>
+                  <th class="arrow_box">評価方法
+                  </th>
+                  <td>{{clas.evaluation}}</td>
+                </tr>
+                <tr>
+                  <th class="arrow_box">教育目標との対応
+                  </th>
+                  <td>{{clas.accept}}</td>
+                </tr>
+                <tr>
+                  <th class="arrow_box">事前・事後学習
+                  </th>
+                  <td>{{clas.homework}}</td>
+                </tr>
+                <tr>
+                  <th class="arrow_box">E-mail
+                  </th>
+                  <td>{{clas.email}}</td>
+                </tr>
+                <tr>
+                  <th class="arrow_box">質問対応
+                  </th>
+                  <td>{{clas.question}}</td>
+                </tr>
+                <tr>
+                  <th class="arrow_box">履修注意事項
+                  </th>
+                  <td>{{clas.attention}}</td>
+                </tr>
+                <tr>
+                  <th class="arrow_box">学習上の助言
+                  </th>
+                  <td>{{clas.help}}</td>
+                </tr>
+                <tr>
+                  <th class="arrow_box">該当ユニット
+                  </th>
+                  <td>{{clas.unit}}</td>
+                </tr>
+                <tr>
+                  <th class="arrow_box">種別
+                  </th>
+                  <td>{{clas.type}}</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="hyoka">
+          <h2><講義評価情報</h2>
+          <button>評価編集</button>
+          
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          clas: ''
+        },
+        methods: {
+
+        },
+        created() {
+          const self = this
+          console.log("hello")
+          axios
+            .get('https://api.myjson.com/bins/1by2li')
+            .then(function (res) {
+              self.table = res.data.classes;
+              self.units = res.data.units;
+              self.needs = res.data.needs
+              console.log(self.table)
+            })
+        }
+      })
+    </script>
+    <style scoped>
+      #app {
+        width: 100vw;
+        height: 100vh;
+        background: #FCFCFC;
+      }
+    </style>
+  </body>
+
+  </html>
