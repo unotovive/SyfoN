@@ -7,7 +7,8 @@
     <title>SyfoN</title>
     <script src="https://unpkg.com/vue"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous">
     <meta http-equiv="content-type" charset="utf-8">
   </head>
 
@@ -130,9 +131,38 @@
           </table>
         </div>
         <div id="hyoka">
-          <h2><講義評価情報</h2>
+          <h2>講義評価情報</h2>
           <button>評価編集</button>
-          
+          <h3>総合</h3>
+          <div class="star-rating">
+            <div class="star-rating-front" id="sogo">★★★★★</div>
+            <div class="star-rating-back">★★★★★</div>
+          </div>
+          <h3>数学</h3>
+          <div class="star-rating">
+            <div class="star-rating-front" id="math">★★★★★</div>
+            <div class="star-rating-back">★★★★★</div>
+          </div>
+          <h3>プログラミング</h3>
+          <div class="star-rating">
+            <div class="star-rating-front" id="prog">★★★★★</div>
+            <div class="star-rating-back">★★★★★</div>
+          </div>
+          <h3>教授</h3>
+          <div class="star-rating">
+            <div class="star-rating-front" id="pers">★★★★★</div>
+            <div class="star-rating-back">★★★★★</div>
+          </div>
+          <h3>出席</h3>
+          <div class="star-rating">
+            <div class="star-rating-front" id="atte">★★★★★</div>
+            <div class="star-rating-back">★★★★★</div>
+          </div>
+          <h3>グループワーク</h3>
+          <p>{{rev.group}}</p>
+          <div id="comments">
+            <p v-for="coment in comments">{{coment.name}}:{{coment.coment}}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -141,10 +171,34 @@
       var app = new Vue({
         el: '#app',
         data: {
-          clas: ''
+          clas: '',
+          rev: { group: "あり" },
+          comments: {
+            "come1": {
+              "coment": "うんこ",
+              "name": "あやたか"
+            },
+            "come2": {
+              "name":"奥西",
+              coment:"８かいしました"
+            }
+          }
+
         },
         methods: {
 
+        },
+        mounted() {
+          var sogo = document.getElementById('sogo');
+          var math = document.getElementById('math');
+          var prog = document.getElementById('prog');
+          var pers = document.getElementById('pers');
+          var atte = document.getElementById('atte');
+          sogo.style.width = "100%";
+          math.style.width = "75%";
+          prog.style.width = "50%";
+          pers.style.width = "20%";
+          atte.style.width = "0%";
         },
         created() {
           const self = this
@@ -157,6 +211,7 @@
               self.needs = res.data.needs
               console.log(self.table)
             })
+
         }
       })
     </script>
@@ -165,6 +220,26 @@
         width: 100vw;
         height: 100vh;
         background: #FCFCFC;
+      }
+
+      .star-rating {
+        position: relative;
+        width: 5em;
+        height: 1em;
+        font-size: 25px;
+
+      }
+
+      .star-rating-front {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        color: #ffcc33;
+      }
+
+      .star-rating-back {
+        color: #ccc;
       }
     </style>
   </body>
