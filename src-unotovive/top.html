@@ -12,7 +12,6 @@
 
   <body>
     <div id="app">
-      {{test}}
       <a>top</a>
       <a>講義一覧</a>
       <a>マイページ</a>
@@ -1288,7 +1287,7 @@
       </div>
       <p>5/23</p>
       <button>時間割作成・編集</button>
-      <p>卒業まで</p>
+      <p>卒業まで{{}}{{}}</p>
       <p>進級まで</p>
       <p>英語　あと　2単位</p>
       <p>必修　あと　2単位</p>
@@ -1307,6 +1306,8 @@
         el: '#app',
         data: {
           table:'',
+          units:'',
+          needs:'',
           test:'unko'
         },
         methods: {
@@ -1319,6 +1320,8 @@
           .get('https://api.myjson.com/bins/1by2li')
           .then(function (res) {
             self.table = res.data.classes;
+            self.units = res.data.units;
+            self.needs = res.data.needs
             console.log(self.table)
           })
         }
