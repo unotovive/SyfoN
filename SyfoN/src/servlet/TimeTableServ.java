@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import courseLecture.CourseLecture;
+import courseLecture.CourseLectureManager;
 import timetable.TimeTable;
 import timetable.TimeTableManager;
 
@@ -39,11 +41,11 @@ public class TimeTableServ extends HttpServlet {
 		TimeTable TimeTable = new TimeTable();
 		TimeTableManager mane = new TimeTableManager();
 		TimeTable.setStudentID(request.getParameter("studentID"));
-	    CouseLecture CouseLecture = new CouseLecture();
-	    CouseLectureManager Lecmane = new CouseLectureManager();
+	    CourseLecture CouseLecture = new CourseLecture();
+	    CourseLectureManager Lecmane = new CourseLectureManager();
 		ArrayList<TimeTable>  result = new ArrayList<TimeTable>();
-	    ArrayList<CouseLecture>  result1 = null;
-	    ArrayList<ArrayList<CouseLecture>> lastresult = new ArrayList<ArrayList<CouseLecture>>();
+	    ArrayList<CourseLecture>  result1 = null;
+	    ArrayList<ArrayList<CourseLecture>> lastresult = new ArrayList<ArrayList<CourseLecture>>();
 
 		try {
 			result = mane.getTimeTableList(request.getParameter("studentID"));
@@ -57,8 +59,8 @@ public class TimeTableServ extends HttpServlet {
 
 		try{
 		for(int i=0;i<8;i++){
-			result1 = Lecmane.getCouseLectureList(result.get(i)) ;
-			lastresult[i].add(result1);
+			result1 = Lecmane.getCourseLectureList(result.get(i)) ;
+			lastresult.add(result1);
 			}
 		}
 		catch(SQLException e) {
