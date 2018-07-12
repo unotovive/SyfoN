@@ -10,8 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.json.JSONObject;
+
 import student.Student;
 import student.StudentManager;
+import test.JSON;
+import test.JSON.Element;
 
 /**
  * Servlet implementation class Login
@@ -58,16 +62,22 @@ public class Login extends HttpServlet {
 			e.printStackTrace();
 		}
 
+		Element tanni = new Element(
+                "elem",new Element(
+                		"all",50)  );
+        JSONObject object = JSON.getSubJSON(tanni);
+        System.out.println("tekito"+object);
+
 		HttpSession session = request.getSession();
 		session.setAttribute("login", result);
+		session.setAttribute("jsonTest", object);
 		if (result) {
 			// ログインに成功している場合はtop.jspへ
 			session.setAttribute("student", student);
-			System.out.print("dekita");
+
 			getServletContext().getRequestDispatcher("/top.jsp").forward(request, response);
 		} else {
 			// ログインに失敗している場合はlogin.jspへ
-			System.out.print("sippai");
 			getServletContext().getRequestDispatcher("/Common_Login.jsp").forward(request, response);
 			}
 		}
