@@ -35,7 +35,7 @@ public class TimeTableServ extends HttpServlet {
 	private static Map<String,Map> semester=new HashMap<String,Map>();
 	private static Map<String,Map> day=new HashMap<String,Map>();
 	private static Map<String,Map> period=new HashMap<String,Map>();
-	private static Map<String,String> lectureDataMap;
+
 
 
 	private static Map<String,String> mustTaniDataMap;
@@ -62,16 +62,13 @@ public class TimeTableServ extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
 
-		TimeTable timeTable = new TimeTable();
 		TimeTableManager timeTableManager = new TimeTableManager();
-		timeTable.setStudentID(request.getParameter("studentID"));
-	    CourseLecture courseLecture = new CourseLecture();
 	    CourseLectureManager courseLectureManager = new CourseLectureManager();
 		LectureManager lectureManager=new LectureManager();
 	    ArrayList<TimeTable>  timeTableList = new ArrayList<TimeTable>();
-	    ArrayList<CourseLecture>   courseLectureList = null;
+	    ArrayList<CourseLecture>   courseLectureList = new ArrayList<CourseLecture>();
 	    ArrayList<Integer> lectureIdList=new ArrayList<Integer>();
 	    ArrayList<Lecture> lectureList =new ArrayList<Lecture>();
 	    HttpSession session=request.getSession();
@@ -90,7 +87,7 @@ public class TimeTableServ extends HttpServlet {
 		//時間割IDからコースレクチャーを取得
 		try{
 		for(int i=0;i<timeTableList.size();i++){
-			courseLectureList = courseLectureManager.getCourseLectureList(timeTableList.get(i).getTimeTableID()) ;
+			courseLectureList.addAll(courseLectureManager.getCourseLectureList(timeTableList.get(i).getTimeTableID())) ;
 			}
 		}
 		catch(SQLException e) {
@@ -115,6 +112,8 @@ public class TimeTableServ extends HttpServlet {
 			e.printStackTrace();
 		}
 
+		System.out.println("oi!");
+
 		String[] semesters={"zenki1","kouki1","zenki2","kouki2","zenki3","kouki3","zenki4","kouki4"};
 		String[] days={"monday","tuesday","wednesday","thursday","flyday"};
 		String[] periods={"period1","period2","period3","period4","period5"};
@@ -130,25 +129,34 @@ public class TimeTableServ extends HttpServlet {
 							lc=tempLect;
 						}
 					}
+					Map<String,String> lectureDataMap=new HashMap<String,String>();;
 					//該当の講義が存在すれば
 					if(lc!=null){
-						this.initLecture();
+
 						lectureDataMap.put("taninum",Integer.toString(lc.getTaniNum()) );
 						lectureDataMap.put("name",lc.getLectureName() );
 						lectureDataMap.put("lectureid",Integer.toString(lc.getLectureID()) );
 						lectureDataMap.put("room",lc.getRoom() );
 						lectureDataMap.put("type",lc.getType() );
 						lectureDataMap.put("unit",lc.getUnit());
-						period.put(periods[n], lectureDataMap);
+					}else{
+						lectureDataMap.put("taninum",null);
+						lectureDataMap.put("name",null );
+						lectureDataMap.put("lectureid",null );
+						lectureDataMap.put("room",null);
+						lectureDataMap.put("type",null );
+						lectureDataMap.put("unit",null);
 					}
+					period.put(periods[n], lectureDataMap);
 				}
 				day.put(days[p],day);
 			}
 			semester.put(semesters[i], semester);
 		}
 		myClasses.put("my-Classes", semester);
-		JSONObject lectureListJson=new JSONObject(myClasses);
-		session.setAttribute("lectureList",lectureListJson );
+		System.out.println("oi!!");
+		JSONObject lectureListJson=new JSONObject(lectureList);
+		session.setAttribute("lectureList",lectureListJson);
 
 		//ここまで、講義情報
 /*------------------------------------------------------------------------*/
@@ -203,7 +211,10 @@ public class TimeTableServ extends HttpServlet {
 
 		unitMap.put("units", variousUnit);
 		JSONObject unitListJson=new JSONObject(unitMap);
+		//String unitListJson=mapper.writeValueAsString(unitMap);
 		session.setAttribute("unit",unitListJson);
+
+		getServletContext().getRequestDispatcher("/top.jsp").forward(request, response);
 	}
 	//
 
@@ -214,10 +225,6 @@ public class TimeTableServ extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-	}
-
-	private void initLecture(){
-		lectureDataMap =new HashMap<String,String>();
 	}
 
 	private void initMustTani(){

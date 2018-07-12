@@ -8,7 +8,6 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito|Poor+Story" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
         <script src="https://unpkg.com/vue"></script>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <meta http-equiv="content-type" charset="utf-8">
     </head>
 
@@ -1147,17 +1146,12 @@
                 methods: {
 
                 },
-                created() {
+                mounted(){
                     const self = this
                     console.log("hello")
-                    axios
-                        .get('https://api.myjson.com/bins/1by2li')
-                        .then(function (res) {
-                            self.table = res.data.classes;
-                            self.units = res.data.units;
-                            self.needs = res.data.needs
-                            console.log(self.table)
-                        })
+                    this.table='<%= session.getAttribute("lectureList")%>'
+                    this.table=JSON.parse(this.table);
+                    console.log(this.table)
                 }
             })
         </script>
