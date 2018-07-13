@@ -8,6 +8,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>登録講義一覧</title>
   <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta http-equiv="content-type" charset="utf-8">
 </head>
 <body>
 <div id="app">
@@ -23,143 +25,143 @@
               <div id="lectureTable">
                   <table id="inputtable">
                       <tr>
-                          <td width="100px">授業コード</td>
-                          <td width="100px">
-                              <input id="inputformSmall" type="text" name="" value="">
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>授業名</td>
-                          <td>
-                              <input id="inputformSmall" type="text" name="" value="">
+                            <td width="100px">授業コード</td>
+                            <td width="100px">
+                                <input id="inputformSmall" type="text" v-model="table.授業コード">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>授業名</td>
+                            <td>
+                                <input id="inputformSmall" type="text" v-model="table.授業名">
 
-                          </td>
-                      </tr>
+                            </td>
+                        </tr>
                       <tr>
                           <td>担当教員</td>
                           <td>
-                              <select id="inputformSmall" required name="teacher">
+                              <select id="inputformSmall" required name="teacher" v-model="table.担当教員">
                                   <option value=""></option>
                               </select>
 
                           </td>
                       </tr>
                       <tr>
-                          <td>該当学期</td>
-                          <td>
-                              <input id="inputformSmall" type="text" name="" value="">
+                            <td>該当学期</td>
+                            <td>
+                                <input id="inputformSmall" type="text" v-model="table.該当学期">
 
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>曜日</td>
-                          <td>
-                              <input id="inputformSmall" type="text" name="" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>曜日</td>
+                            <td>
+                                <input id="inputformSmall" type="text" v-model="table.曜日">
 
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>時限</td>
-                          <td>
-                              <input id="inputformSmall" type="text" name="" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>時限</td>
+                            <td>
+                                <input id="inputformSmall" type="text" v-model="table.時限">
 
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>教室番号</td>
-                          <td>
-                              <input id="inputformSmall" type="text" name="" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>教室番号</td>
+                            <td>
+                                <input id="inputformSmall" type="text" v-model="table.教室番号">
 
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>単位数</td>
-                          <td>
-                              <input id="inputformSmall" type="text" name="" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>単位数</td>
+                            <td>
+                                <input id="inputformSmall" type="text" v-model="table.単位数">
 
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>目的概要</td>
-                          <td>
-                              <textarea id="inputformLarge" name="" value="" rows="3" cols="50"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>目的概要</td>
+                            <td>
+                                <textarea id="inputformLarge" v-model="table.目的概要" rows="3" cols="50"></textarea>
 
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>達成目標</td>
-                          <td>
-                              <textarea id="inputformLarge" name="" value="" rows="3" cols="50"></textarea>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>関連科目</td>
-                          <td>
-                              <textarea id="inputformLarge" name="" value="" rows="3" cols="50"></textarea>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>履修条件</td>
-                          <td>
-                              <textarea id="inputformLarge" name="" value="" rows="3" cols="50"></textarea>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>教科書名</td>
-                          <td>
-                              <input id="inputformSmall" type="text" name="" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>達成目標</td>
+                            <td>
+                                <textarea id="inputformLarge" v-model="table.達成目標" rows="3" cols="50"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>関連科目</td>
+                            <td>
+                                <textarea id="inputformLarge" v-model="table.関連科目" rows="3" cols="50"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>履修条件</td>
+                            <td>
+                                <textarea id="inputformLarge" v-model="table.履修条件" rows="3" cols="50"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>教科書名</td>
+                            <td>
+                                <input id="inputformSmall" type="text" v-model="table.教科書名">
 
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>評価方法</td>
-                          <td>
-                              <input id="inputformSmall" type="text" name="" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>評価方法</td>
+                            <td>
+                                <input id="inputformSmall" type="text" v-model="table.評価方法">
 
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>学習・教育目標との対応</td>
-                          <td>
-                              <textarea id="inputformLarge" name="" value="" rows="3" cols="50"></textarea>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>事前・事後学習</td>
-                          <td>
-                              <textarea id="inputformLarge" name="" value="" rows="3" cols="50"></textarea>
-                          </td>
-                      </tr>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>学習・教育目標との対応</td>
+                            <td>
+                                <textarea id="inputformLarge" v-model="table.教育目標との対応" rows="3" cols="50"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>事前・事後学習</td>
+                            <td>
+                                <textarea id="inputformLarge" v-model="table.事前事後学習" rows="3" cols="50"></textarea>
+                            </td>
+                        </tr>
 
-                      <tr>
-                          <td>E-Mail address</td>
-                          <td>
-                              <input id="inputformSmall" type="text" name="" value="">
+                        <tr>
+                            <td>E-Mail address</td>
+                            <td>
+                                <input id="inputformSmall" type="text" v-model="table.メール">
 
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>質問への対応</td>
-                          <td>
-                              <textarea id="inputformLarge" name="" value="" rows="3" cols="50"></textarea>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>履修上での注意事項</td>
-                          <td>
-                              <textarea id="inputformLarge" name="" value="" rows="3" cols="50"></textarea>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td>学習上の助言</td>
-                          <td>
-                              <textarea id="inputformLarge" name="" value="" rows="3" cols="50"></textarea>
-                          </td>
-                      </tr>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>質問への対応</td>
+                            <td>
+                                <textarea id="inputformLarge" v-model="table.質問" rows="3" cols="50"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>履修上での注意事項</td>
+                            <td>
+                                <textarea id="inputformLarge" v-model="table.注意事項" rows="3" cols="50"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>学習上の助言</td>
+                            <td>
+                                <textarea id="inputformLarge" v-model="table.助言" rows="3" cols="50"></textarea>
+                            </td>
+                        </tr>
                       <tr>
                           <td>該当ユニット</td>
                           <td>
-                              <select id="inputformSmall" required name="unit">
+                              <select id="inputformSmall" required name="unit" v-model="table.ユニット">
                                   <option value=""></option>
                               </select>
 
@@ -168,7 +170,7 @@
                       <tr>
                           <td>種類</td>
                           <td>
-                              <select id="inputformSmall" required name="type">
+                              <select id="inputformSmall" required name="type" v-model="table.種類">
                                   <option value=""></option>
                               </select>
 
@@ -259,23 +261,26 @@
   </script>
 
   <script>
-    var app = new Vue({
-      el: '#app',
-      data: {
-        greeting: 'Welcome to your Vue.js app!',
-        docsURL: 'http://vuejs.org/guide/',
-        discordURL: 'https://chat.vuejs.org',
-        forumURL: 'http://forum.vuejs.org/'
-      },
-      methods: {
-        humanizeURL: function (url) {
-          return url
-            .replace(/^https?:\/\//, '')
-            .replace(/\/$/, '')
-        }
-      }
-    })
-  </script>
+        var app = new Vue({
+                el: '#app',
+                data: {
+                    test: 'afo',
+                    table: ""
+                },
+                methods: {
+                },
+                created() {
+                    const self = this
+                    console.log("afo")
+                    axios
+                        .get('https://api.myjson.com/bins/1g1sni')
+                        .then(function (res) {
+                            self.table = res.data.講義;
+                            console.log(self.table)
+                    })
+                }
+            })
+    </script>
   <style scoped>
       h3{
             margin-left: 20px;
@@ -286,25 +291,20 @@
             margin-right: 20px;
             float: right;
         }
-
       #inputtable {
           margin: auto;
       }
-
       #pageBody {
           width: 600px;
           border-radius: 15px 15px 15px 15px;
           margin: auto;
           background: #fff5e5;
       }
-
       h2 {
           border-radius: 15px 15px 0px 0px;
           text-align: center;
           background: #BDBDBD;
-
       }
-
       #inputformSmall {
           width: 355px;
           border-radius: 5px 5px 5px 5px;
@@ -314,7 +314,6 @@
           /* border-bottom:1px dotted #333;  */
           /* background: #fff5e5; */
       }
-
       #inputformLarge {
           width: 350px;
           border: 0.5px #BDBDBD inset;
