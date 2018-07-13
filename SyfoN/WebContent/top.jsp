@@ -84,116 +84,116 @@
                                         <td>1</td>
 
                                         <td>
-                                            {{table.zenki1.monday.period1.name}} {{table.zenki1.monday.period1.教室}}
-                                            <button v-if="!(table.zenki1.monday.period1.id==null)">詳細</button>
+                                            {{table.zenki1.monday.period1.name}} {{table.zenki1.monday.period1.room}}
+                                            <button v-if="!(table.zenki1.monday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.tuesday.period1.name}} {{table.zenki1.tuesday.period1.教室}}
-                                            <button v-if="!(table.zenki1.tuesday.period1.id==null)">詳細</button>
+                                            {{table.zenki1.tuesday.period1.name}} {{table.zenki1.tuesday.period1.room}}
+                                            <button v-if="!(table.zenki1.tuesday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.wednesday.period1.name}} {{table.zenki1.wednesday.period1.教室}}
-                                            <button v-if="!(table.zenki1.wednesday.period1.id==null)">詳細</button>
+                                            {{table.zenki1.wednesday.period1.name}} {{table.zenki1.wednesday.period1.room}}
+                                            <button v-if="!(table.zenki1.wednesday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.thursday.period1.name}} {{table.zenki1.thursday.period1.教室}}
-                                            <button v-if="!(table.zenki1.thursday.period1.id==null)">詳細</button>
+                                            {{table.zenki1.thursday.period1.name}} {{table.zenki1.thursday.period1.room}}
+                                            <button v-if="!(table.zenki1.thursday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.fryday.period1.name}} {{table.zenki1.fryday.period1.教室}}
-                                            <button v-if="!(table.zenki1.fryday.period1.id==null)">詳細</button>
+                                            {{table.zenki1.fryday.period1.name}} {{table.zenki1.fryday.period1.room}}
+                                            <button v-if="!(table.zenki1.fryday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>
-                                            {{table.zenki1.monday.period2.name}} {{table.zenki1.monday.period2.教室}}
-                                            <button v-if="!(table.zenki1.monday.period2.id==null)">詳細</button>
+                                            {{table.zenki1.monday.period2.name}} {{table.zenki1.monday.period2.room}}
+                                            <button v-if="!(table.zenki1.monday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.tuesday.period2.name}} {{table.zenki1.tuesday.period2.教室}}
-                                            <button v-if="!(table.zenki1.tuesday.period2.id==null)">詳細</button>
+                                            {{table.zenki1.tuesday.period2.name}} {{table.zenki1.tuesday.period2.room}}
+                                            <button v-if="!(table.zenki1.tuesday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.wednesday.period2.name}} {{table.zenki1.wednesday.period2.教室}}
-                                            <button v-if="!(table.zenki1.wednesday.period2.id==null)">詳細</button>
+                                            {{table.zenki1.wednesday.period2.name}} {{table.zenki1.wednesday.period2.room}}
+                                            <button v-if="!(table.zenki1.wednesday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.thursday.period2.name}} {{table.zenki1.thursday.period2.教室}}
-                                            <button v-if="!(table.zenki1.thursday.period2.id==null)">詳細</button>
+                                            {{table.zenki1.thursday.period2.name}} {{table.zenki1.thursday.period2.room}}
+                                            <button v-if="!(table.zenki1.thursday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.fryday.period2.name}} {{table.zenki1.fryday.period2.教室}}
-                                            <button v-if="!(table.zenki1.fryday.period2.id==null)">詳細</button>
+                                            {{table.zenki1.fryday.period2.name}} {{table.zenki1.fryday.period2.room}}
+                                            <button v-if="!(table.zenki1.fryday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
                                         <td>
-                                            {{table.zenki1.monday.period3.name}} {{table.zenki1.monday.period3.教室}}
-                                            <button v-if="!(table.zenki1.monday.period3.id==null)">詳細</button>
+                                            {{table.zenki1.monday.period3.name}} {{table.zenki1.monday.period3.room}}
+                                            <button v-if="!(table.zenki1.monday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.tuesday.period3.name}} {{table.zenki1.tuesday.period3.教室}}
-                                            <button v-if="!(table.zenki1.tuesday.period3.id==null)">詳細</button>
+                                            {{table.zenki1.tuesday.period3.name}} {{table.zenki1.tuesday.period3.room}}
+                                            <button v-if="!(table.zenki1.tuesday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.wednesday.period3.name}} {{table.zenki1.wednesday.period3.教室}}
-                                            <button v-if="!(table.zenki1.wednesday.period3.id==null)">詳細</button>
+                                            {{table.zenki1.wednesday.period3.name}} {{table.zenki1.wednesday.period3.room}}
+                                            <button v-if="!(table.zenki1.wednesday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.thursday.period3.name}} {{table.zenki1.thursday.period3.教室}}
-                                            <button v-if="!(table.zenki1.thursday.period3.id==null)">詳細</button>
+                                            {{table.zenki1.thursday.period3.name}} {{table.zenki1.thursday.period3.room}}
+                                            <button v-if="!(table.zenki1.thursday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.fryday.period3.name}} {{table.zenki1.fryday.period3.教室}}
-                                            <button v-if="!(table.zenki1.fryday.period3.id==null)">詳細</button>
+                                            {{table.zenki1.fryday.period3.name}} {{table.zenki1.fryday.period3.room}}
+                                            <button v-if="!(table.zenki1.fryday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
                                         <td>
-                                            {{table.zenki1.monday.period4.name}} {{table.zenki1.monday.period4.教室}}
-                                            <button v-if="!(table.zenki1.monday.period4.id==null)">詳細</button>
+                                            {{table.zenki1.monday.period4.name}} {{table.zenki1.monday.period4.room}}
+                                            <button v-if="!(table.zenki1.monday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.tuesday.period4.name}} {{table.zenki1.tuesday.period4.教室}}
-                                            <button v-if="!(table.zenki1.tuesday.period4.id==null)">詳細</button>
+                                            {{table.zenki1.tuesday.period4.name}} {{table.zenki1.tuesday.period4.room}}
+                                            <button v-if="!(table.zenki1.tuesday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.wednesday.period4.name}} {{table.zenki1.wednesday.period4.教室}}
-                                            <button v-if="!(table.zenki1.wednesday.period4.id==null)">詳細</button>
+                                            {{table.zenki1.wednesday.period4.name}} {{table.zenki1.wednesday.period4.room}}
+                                            <button v-if="!(table.zenki1.wednesday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.thursday.period4.name}} {{table.zenki1.thursday.period4.教室}}
-                                            <button v-if="!(table.zenki1.thursday.period4.id==null)">詳細</button>
+                                            {{table.zenki1.thursday.period4.name}} {{table.zenki1.thursday.period4.room}}
+                                            <button v-if="!(table.zenki1.thursday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.fryday.period4.name}} {{table.zenki1.fryday.period4.教室}}
-                                            <button v-if="!(table.zenki1.fryday.period4.id==null)">詳細</button>
+                                            {{table.zenki1.fryday.period4.name}} {{table.zenki1.fryday.period4.room}}
+                                            <button v-if="!(table.zenki1.fryday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
                                         <td>
-                                            {{table.zenki1.monday.period5.name}} {{table.zenki1.monday.period5.教室}}
-                                            <button v-if="!(table.zenki1.monday.period5.id==null)">詳細</button>
+                                            {{table.zenki1.monday.period5.name}} {{table.zenki1.monday.period5.room}}
+                                            <button v-if="!(table.zenki1.monday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.tuesday.period5.name}} {{table.zenki1.tuesday.period5.教室}}
-                                            <button v-if="!(table.zenki1.tuesday.period5.id==null)">詳細</button>
+                                            {{table.zenki1.tuesday.period5.name}} {{table.zenki1.tuesday.period5.room}}
+                                            <button v-if="!(table.zenki1.tuesday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.wednesday.period5.name}} {{table.zenki1.wednesday.period5.教室}}
-                                            <button v-if="!(table.zenki1.wednesday.period5.id==null)">詳細</button>
+                                            {{table.zenki1.wednesday.period5.name}} {{table.zenki1.wednesday.period5.room}}
+                                            <button v-if="!(table.zenki1.wednesday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.thursday.period5.name}} {{table.zenki1.thursday.period5.教室}}
-                                            <button v-if="!(table.zenki1.thursday.period5.id==null)">詳細</button>
+                                            {{table.zenki1.thursday.period5.name}} {{table.zenki1.thursday.period5.room}}
+                                            <button v-if="!(table.zenki1.thursday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki1.fryday.period5.name}} {{table.zenki1.fryday.period5.教室}}
-                                            <button v-if="!(table.zenki1.fryday.period5.id==null)">詳細</button>
+                                            {{table.zenki1.fryday.period5.name}} {{table.zenki1.fryday.period5.room}}
+                                            <button v-if="!(table.zenki1.fryday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                 </table>
@@ -214,116 +214,116 @@
                                         <td>1</td>
 
                                         <td>
-                                            {{table.zenki2.monday.period1.name}} {{table.zenki2.monday.period1.教室}}
-                                            <button v-if="!(table.zenki2.monday.period1.id==null)">詳細</button>
+                                            {{table.zenki2.monday.period1.name}} {{table.zenki2.monday.period1.room}}
+                                            <button v-if="!(table.zenki2.monday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.tuesday.period1.name}} {{table.zenki2.tuesday.period1.教室}}
-                                            <button v-if="!(table.zenki2.tuesday.period1.id==null)">詳細</button>
+                                            {{table.zenki2.tuesday.period1.name}} {{table.zenki2.tuesday.period1.room}}
+                                            <button v-if="!(table.zenki2.tuesday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.wednesday.period1.name}} {{table.zenki2.wednesday.period1.教室}}
-                                            <button v-if="!(table.zenki2.wednesday.period1.id==null)">詳細</button>
+                                            {{table.zenki2.wednesday.period1.name}} {{table.zenki2.wednesday.period1.room}}
+                                            <button v-if="!(table.zenki2.wednesday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.thursday.period1.name}} {{table.zenki2.thursday.period1.教室}}
-                                            <button v-if="!(table.zenki2.thursday.period1.id==null)">詳細</button>
+                                            {{table.zenki2.thursday.period1.name}} {{table.zenki2.thursday.period1.room}}
+                                            <button v-if="!(table.zenki2.thursday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.fryday.period1.name}} {{table.zenki2.fryday.period1.教室}}
-                                            <button v-if="!(table.zenki2.fryday.period1.id==null)">詳細</button>
+                                            {{table.zenki2.fryday.period1.name}} {{table.zenki2.fryday.period1.room}}
+                                            <button v-if="!(table.zenki2.fryday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>
-                                            {{table.zenki2.monday.period2.name}} {{table.zenki2.monday.period2.教室}}
-                                            <button v-if="!(table.zenki2.monday.period2.id==null)">詳細</button>
+                                            {{table.zenki2.monday.period2.name}} {{table.zenki2.monday.period2.room}}
+                                            <button v-if="!(table.zenki2.monday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.tuesday.period2.name}} {{table.zenki2.tuesday.period2.教室}}
-                                            <button v-if="!(table.zenki2.tuesday.period2.id==null)">詳細</button>
+                                            {{table.zenki2.tuesday.period2.name}} {{table.zenki2.tuesday.period2.room}}
+                                            <button v-if="!(table.zenki2.tuesday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.wednesday.period2.name}} {{table.zenki2.wednesday.period2.教室}}
-                                            <button v-if="!(table.zenki2.wednesday.period2.id==null)">詳細</button>
+                                            {{table.zenki2.wednesday.period2.name}} {{table.zenki2.wednesday.period2.room}}
+                                            <button v-if="!(table.zenki2.wednesday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.thursday.period2.name}} {{table.zenki2.thursday.period2.教室}}
-                                            <button v-if="!(table.zenki2.thursday.period2.id==null)">詳細</button>
+                                            {{table.zenki2.thursday.period2.name}} {{table.zenki2.thursday.period2.room}}
+                                            <button v-if="!(table.zenki2.thursday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.fryday.period2.name}} {{table.zenki2.fryday.period2.教室}}
-                                            <button v-if="!(table.zenki2.fryday.period2.id==null)">詳細</button>
+                                            {{table.zenki2.fryday.period2.name}} {{table.zenki2.fryday.period2.room}}
+                                            <button v-if="!(table.zenki2.fryday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
                                         <td>
-                                            {{table.zenki2.monday.period3.name}} {{table.zenki2.monday.period3.教室}}
-                                            <button v-if="!(table.zenki2.monday.period3.id==null)">詳細</button>
+                                            {{table.zenki2.monday.period3.name}} {{table.zenki2.monday.period3.room}}
+                                            <button v-if="!(table.zenki2.monday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.tuesday.period3.name}} {{table.zenki2.tuesday.period3.教室}}
-                                            <button v-if="!(table.zenki2.tuesday.period3.id==null)">詳細</button>
+                                            {{table.zenki2.tuesday.period3.name}} {{table.zenki2.tuesday.period3.room}}
+                                            <button v-if="!(table.zenki2.tuesday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.wednesday.period3.name}} {{table.zenki2.wednesday.period3.教室}}
-                                            <button v-if="!(table.zenki2.wednesday.period3.id==null)">詳細</button>
+                                            {{table.zenki2.wednesday.period3.name}} {{table.zenki2.wednesday.period3.room}}
+                                            <button v-if="!(table.zenki2.wednesday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.thursday.period3.name}} {{table.zenki2.thursday.period3.教室}}
-                                            <button v-if="!(table.zenki2.thursday.period3.id==null)">詳細</button>
+                                            {{table.zenki2.thursday.period3.name}} {{table.zenki2.thursday.period3.room}}
+                                            <button v-if="!(table.zenki2.thursday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.fryday.period3.name}} {{table.zenki2.fryday.period3.教室}}
-                                            <button v-if="!(table.zenki2.fryday.period3.id==null)">詳細</button>
+                                            {{table.zenki2.fryday.period3.name}} {{table.zenki2.fryday.period3.room}}
+                                            <button v-if="!(table.zenki2.fryday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
                                         <td>
-                                            {{table.zenki2.monday.period4.name}} {{table.zenki2.monday.period4.教室}}
-                                            <button v-if="!(table.zenki2.monday.period4.id==null)">詳細</button>
+                                            {{table.zenki2.monday.period4.name}} {{table.zenki2.monday.period4.room}}
+                                            <button v-if="!(table.zenki2.monday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.tuesday.period4.name}} {{table.zenki2.tuesday.period4.教室}}
-                                            <button v-if="!(table.zenki2.tuesday.period4.id==null)">詳細</button>
+                                            {{table.zenki2.tuesday.period4.name}} {{table.zenki2.tuesday.period4.room}}
+                                            <button v-if="!(table.zenki2.tuesday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.wednesday.period4.name}} {{table.zenki2.wednesday.period4.教室}}
-                                            <button v-if="!(table.zenki2.wednesday.period4.id==null)">詳細</button>
+                                            {{table.zenki2.wednesday.period4.name}} {{table.zenki2.wednesday.period4.room}}
+                                            <button v-if="!(table.zenki2.wednesday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.thursday.period4.name}} {{table.zenki2.thursday.period4.教室}}
-                                            <button v-if="!(table.zenki2.thursday.period4.id==null)">詳細</button>
+                                            {{table.zenki2.thursday.period4.name}} {{table.zenki2.thursday.period4.room}}
+                                            <button v-if="!(table.zenki2.thursday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.fryday.period4.name}} {{table.zenki2.fryday.period4.教室}}
-                                            <button v-if="!(table.zenki2.fryday.period4.id==null)">詳細</button>
+                                            {{table.zenki2.fryday.period4.name}} {{table.zenki2.fryday.period4.room}}
+                                            <button v-if="!(table.zenki2.fryday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
                                         <td>
-                                            {{table.zenki2.monday.period5.name}} {{table.zenki2.monday.period5.教室}}
-                                            <button v-if="!(table.zenki2.monday.period5.id==null)">詳細</button>
+                                            {{table.zenki2.monday.period5.name}} {{table.zenki2.monday.period5.room}}
+                                            <button v-if="!(table.zenki2.monday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.tuesday.period5.name}} {{table.zenki2.tuesday.period5.教室}}
-                                            <button v-if="!(table.zenki2.tuesday.period5.id==null)">詳細</button>
+                                            {{table.zenki2.tuesday.period5.name}} {{table.zenki2.tuesday.period5.room}}
+                                            <button v-if="!(table.zenki2.tuesday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.wednesday.period5.name}} {{table.zenki2.wednesday.period5.教室}}
-                                            <button v-if="!(table.zenki2.wednesday.period5.id==null)">詳細</button>
+                                            {{table.zenki2.wednesday.period5.name}} {{table.zenki2.wednesday.period5.room}}
+                                            <button v-if="!(table.zenki2.wednesday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.thursday.period5.name}} {{table.zenki2.thursday.period5.教室}}
-                                            <button v-if="!(table.zenki2.thursday.period5.id==null)">詳細</button>
+                                            {{table.zenki2.thursday.period5.name}} {{table.zenki2.thursday.period5.room}}
+                                            <button v-if="!(table.zenki2.thursday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki2.fryday.period5.name}} {{table.zenki2.fryday.period5.教室}}
-                                            <button v-if="!(table.zenki2.fryday.period5.id==null)">詳細</button>
+                                            {{table.zenki2.fryday.period5.name}} {{table.zenki2.fryday.period5.room}}
+                                            <button v-if="!(table.zenki2.fryday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                 </table>
@@ -344,116 +344,116 @@
                                         <td>1</td>
 
                                         <td>
-                                            {{table.zenki3.monday.period1.name}} {{table.zenki3.monday.period1.教室}}
-                                            <button v-if="!(table.zenki3.monday.period1.id==null)">詳細</button>
+                                            {{table.zenki3.monday.period1.name}} {{table.zenki3.monday.period1.room}}
+                                            <button v-if="!(table.zenki3.monday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.tuesday.period1.name}} {{table.zenki3.tuesday.period1.教室}}
-                                            <button v-if="!(table.zenki3.tuesday.period1.id==null)">詳細</button>
+                                            {{table.zenki3.tuesday.period1.name}} {{table.zenki3.tuesday.period1.room}}
+                                            <button v-if="!(table.zenki3.tuesday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.wednesday.period1.name}} {{table.zenki3.wednesday.period1.教室}}
-                                            <button v-if="!(table.zenki3.wednesday.period1.id==null)">詳細</button>
+                                            {{table.zenki3.wednesday.period1.name}} {{table.zenki3.wednesday.period1.room}}
+                                            <button v-if="!(table.zenki3.wednesday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.thursday.period1.name}} {{table.zenki3.thursday.period1.教室}}
-                                            <button v-if="!(table.zenki3.thursday.period1.id==null)">詳細</button>
+                                            {{table.zenki3.thursday.period1.name}} {{table.zenki3.thursday.period1.room}}
+                                            <button v-if="!(table.zenki3.thursday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.fryday.period1.name}} {{table.zenki3.fryday.period1.教室}}
-                                            <button v-if="!(table.zenki3.fryday.period1.id==null)">詳細</button>
+                                            {{table.zenki3.fryday.period1.name}} {{table.zenki3.fryday.period1.room}}
+                                            <button v-if="!(table.zenki3.fryday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>
-                                            {{table.zenki3.monday.period2.name}} {{table.zenki3.monday.period2.教室}}
-                                            <button v-if="!(table.zenki3.monday.period2.id==null)">詳細</button>
+                                            {{table.zenki3.monday.period2.name}} {{table.zenki3.monday.period2.room}}
+                                            <button v-if="!(table.zenki3.monday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.tuesday.period2.name}} {{table.zenki3.tuesday.period2.教室}}
-                                            <button v-if="!(table.zenki3.tuesday.period2.id==null)">詳細</button>
+                                            {{table.zenki3.tuesday.period2.name}} {{table.zenki3.tuesday.period2.room}}
+                                            <button v-if="!(table.zenki3.tuesday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.wednesday.period2.name}} {{table.zenki3.wednesday.period2.教室}}
-                                            <button v-if="!(table.zenki3.wednesday.period2.id==null)">詳細</button>
+                                            {{table.zenki3.wednesday.period2.name}} {{table.zenki3.wednesday.period2.room}}
+                                            <button v-if="!(table.zenki3.wednesday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.thursday.period2.name}} {{table.zenki3.thursday.period2.教室}}
-                                            <button v-if="!(table.zenki3.thursday.period2.id==null)">詳細</button>
+                                            {{table.zenki3.thursday.period2.name}} {{table.zenki3.thursday.period2.room}}
+                                            <button v-if="!(table.zenki3.thursday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.fryday.period2.name}} {{table.zenki3.fryday.period2.教室}}
-                                            <button v-if="!(table.zenki3.fryday.period2.id==null)">詳細</button>
+                                            {{table.zenki3.fryday.period2.name}} {{table.zenki3.fryday.period2.room}}
+                                            <button v-if="!(table.zenki3.fryday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
                                         <td>
-                                            {{table.zenki3.monday.period3.name}} {{table.zenki3.monday.period3.教室}}
-                                            <button v-if="!(table.zenki3.monday.period3.id==null)">詳細</button>
+                                            {{table.zenki3.monday.period3.name}} {{table.zenki3.monday.period3.room}}
+                                            <button v-if="!(table.zenki3.monday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.tuesday.period3.name}} {{table.zenki3.tuesday.period3.教室}}
-                                            <button v-if="!(table.zenki3.tuesday.period3.id==null)">詳細</button>
+                                            {{table.zenki3.tuesday.period3.name}} {{table.zenki3.tuesday.period3.room}}
+                                            <button v-if="!(table.zenki3.tuesday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.wednesday.period3.name}} {{table.zenki3.wednesday.period3.教室}}
-                                            <button v-if="!(table.zenki3.wednesday.period3.id==null)">詳細</button>
+                                            {{table.zenki3.wednesday.period3.name}} {{table.zenki3.wednesday.period3.room}}
+                                            <button v-if="!(table.zenki3.wednesday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.thursday.period3.name}} {{table.zenki3.thursday.period3.教室}}
-                                            <button v-if="!(table.zenki3.thursday.period3.id==null)">詳細</button>
+                                            {{table.zenki3.thursday.period3.name}} {{table.zenki3.thursday.period3.room}}
+                                            <button v-if="!(table.zenki3.thursday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.fryday.period3.name}} {{table.zenki3.fryday.period3.教室}}
-                                            <button v-if="!(table.zenki3.fryday.period3.id==null)">詳細</button>
+                                            {{table.zenki3.fryday.period3.name}} {{table.zenki3.fryday.period3.room}}
+                                            <button v-if="!(table.zenki3.fryday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
                                         <td>
-                                            {{table.zenki3.monday.period4.name}} {{table.zenki3.monday.period4.教室}}
-                                            <button v-if="!(table.zenki3.monday.period4.id==null)">詳細</button>
+                                            {{table.zenki3.monday.period4.name}} {{table.zenki3.monday.period4.room}}
+                                            <button v-if="!(table.zenki3.monday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.tuesday.period4.name}} {{table.zenki3.tuesday.period4.教室}}
-                                            <button v-if="!(table.zenki3.tuesday.period4.id==null)">詳細</button>
+                                            {{table.zenki3.tuesday.period4.name}} {{table.zenki3.tuesday.period4.room}}
+                                            <button v-if="!(table.zenki3.tuesday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.wednesday.period4.name}} {{table.zenki3.wednesday.period4.教室}}
-                                            <button v-if="!(table.zenki3.wednesday.period4.id==null)">詳細</button>
+                                            {{table.zenki3.wednesday.period4.name}} {{table.zenki3.wednesday.period4.room}}
+                                            <button v-if="!(table.zenki3.wednesday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.thursday.period4.name}} {{table.zenki3.thursday.period4.教室}}
-                                            <button v-if="!(table.zenki3.thursday.period4.id==null)">詳細</button>
+                                            {{table.zenki3.thursday.period4.name}} {{table.zenki3.thursday.period4.room}}
+                                            <button v-if="!(table.zenki3.thursday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.fryday.period4.name}} {{table.zenki3.fryday.period4.教室}}
-                                            <button v-if="!(table.zenki3.fryday.period4.id==null)">詳細</button>
+                                            {{table.zenki3.fryday.period4.name}} {{table.zenki3.fryday.period4.room}}
+                                            <button v-if="!(table.zenki3.fryday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
                                         <td>
-                                            {{table.zenki3.monday.period5.name}} {{table.zenki3.monday.period5.教室}}
-                                            <button v-if="!(table.zenki3.monday.period5.id==null)">詳細</button>
+                                            {{table.zenki3.monday.period5.name}} {{table.zenki3.monday.period5.room}}
+                                            <button v-if="!(table.zenki3.monday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.tuesday.period5.name}} {{table.zenki3.tuesday.period5.教室}}
-                                            <button v-if="!(table.zenki3.tuesday.period5.id==null)">詳細</button>
+                                            {{table.zenki3.tuesday.period5.name}} {{table.zenki3.tuesday.period5.room}}
+                                            <button v-if="!(table.zenki3.tuesday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.wednesday.period5.name}} {{table.zenki3.wednesday.period5.教室}}
-                                            <button v-if="!(table.zenki3.wednesday.period5.id==null)">詳細</button>
+                                            {{table.zenki3.wednesday.period5.name}} {{table.zenki3.wednesday.period5.room}}
+                                            <button v-if="!(table.zenki3.wednesday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.thursday.period5.name}} {{table.zenki3.thursday.period5.教室}}
-                                            <button v-if="!(table.zenki3.thursday.period5.id==null)">詳細</button>
+                                            {{table.zenki3.thursday.period5.name}} {{table.zenki3.thursday.period5.room}}
+                                            <button v-if="!(table.zenki3.thursday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki3.fryday.period5.name}} {{table.zenki3.fryday.period5.教室}}
-                                            <button v-if="!(table.zenki3.fryday.period5.id==null)">詳細</button>
+                                            {{table.zenki3.fryday.period5.name}} {{table.zenki3.fryday.period5.room}}
+                                            <button v-if="!(table.zenki3.fryday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                 </table>
@@ -474,116 +474,116 @@
                                         <td>1</td>
 
                                         <td>
-                                            {{table.zenki4.monday.period1.name}} {{table.zenki4.monday.period1.教室}}
-                                            <button v-if="!(table.zenki4.monday.period1.id==null)">詳細</button>
+                                            {{table.zenki4.monday.period1.name}} {{table.zenki4.monday.period1.room}}
+                                            <button v-if="!(table.zenki4.monday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.tuesday.period1.name}} {{table.zenki4.tuesday.period1.教室}}
-                                            <button v-if="!(table.zenki4.tuesday.period1.id==null)">詳細</button>
+                                            {{table.zenki4.tuesday.period1.name}} {{table.zenki4.tuesday.period1.room}}
+                                            <button v-if="!(table.zenki4.tuesday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.wednesday.period1.name}} {{table.zenki4.wednesday.period1.教室}}
-                                            <button v-if="!(table.zenki4.wednesday.period1.id==null)">詳細</button>
+                                            {{table.zenki4.wednesday.period1.name}} {{table.zenki4.wednesday.period1.room}}
+                                            <button v-if="!(table.zenki4.wednesday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.thursday.period1.name}} {{table.zenki4.thursday.period1.教室}}
-                                            <button v-if="!(table.zenki4.thursday.period1.id==null)">詳細</button>
+                                            {{table.zenki4.thursday.period1.name}} {{table.zenki4.thursday.period1.room}}
+                                            <button v-if="!(table.zenki4.thursday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.fryday.period1.name}} {{table.zenki4.fryday.period1.教室}}
-                                            <button v-if="!(table.zenki4.fryday.period1.id==null)">詳細</button>
+                                            {{table.zenki4.fryday.period1.name}} {{table.zenki4.fryday.period1.room}}
+                                            <button v-if="!(table.zenki4.fryday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>
-                                            {{table.zenki4.monday.period2.name}} {{table.zenki4.monday.period2.教室}}
-                                            <button v-if="!(table.zenki4.monday.period2.id==null)">詳細</button>
+                                            {{table.zenki4.monday.period2.name}} {{table.zenki4.monday.period2.room}}
+                                            <button v-if="!(table.zenki4.monday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.tuesday.period2.name}} {{table.zenki4.tuesday.period2.教室}}
-                                            <button v-if="!(table.zenki4.tuesday.period2.id==null)">詳細</button>
+                                            {{table.zenki4.tuesday.period2.name}} {{table.zenki4.tuesday.period2.room}}
+                                            <button v-if="!(table.zenki4.tuesday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.wednesday.period2.name}} {{table.zenki4.wednesday.period2.教室}}
-                                            <button v-if="!(table.zenki4.wednesday.period2.id==null)">詳細</button>
+                                            {{table.zenki4.wednesday.period2.name}} {{table.zenki4.wednesday.period2.room}}
+                                            <button v-if="!(table.zenki4.wednesday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.thursday.period2.name}} {{table.zenki4.thursday.period2.教室}}
-                                            <button v-if="!(table.zenki4.thursday.period2.id==null)">詳細</button>
+                                            {{table.zenki4.thursday.period2.name}} {{table.zenki4.thursday.period2.room}}
+                                            <button v-if="!(table.zenki4.thursday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.fryday.period2.name}} {{table.zenki4.fryday.period2.教室}}
-                                            <button v-if="!(table.zenki4.fryday.period2.id==null)">詳細</button>
+                                            {{table.zenki4.fryday.period2.name}} {{table.zenki4.fryday.period2.room}}
+                                            <button v-if="!(table.zenki4.fryday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
                                         <td>
-                                            {{table.zenki4.monday.period3.name}} {{table.zenki4.monday.period3.教室}}
-                                            <button v-if="!(table.zenki4.monday.period3.id==null)">詳細</button>
+                                            {{table.zenki4.monday.period3.name}} {{table.zenki4.monday.period3.room}}
+                                            <button v-if="!(table.zenki4.monday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.tuesday.period3.name}} {{table.zenki4.tuesday.period3.教室}}
-                                            <button v-if="!(table.zenki4.tuesday.period3.id==null)">詳細</button>
+                                            {{table.zenki4.tuesday.period3.name}} {{table.zenki4.tuesday.period3.room}}
+                                            <button v-if="!(table.zenki4.tuesday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.wednesday.period3.name}} {{table.zenki4.wednesday.period3.教室}}
-                                            <button v-if="!(table.zenki4.wednesday.period3.id==null)">詳細</button>
+                                            {{table.zenki4.wednesday.period3.name}} {{table.zenki4.wednesday.period3.room}}
+                                            <button v-if="!(table.zenki4.wednesday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.thursday.period3.name}} {{table.zenki4.thursday.period3.教室}}
-                                            <button v-if="!(table.zenki4.thursday.period3.id==null)">詳細</button>
+                                            {{table.zenki4.thursday.period3.name}} {{table.zenki4.thursday.period3.room}}
+                                            <button v-if="!(table.zenki4.thursday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.fryday.period3.name}} {{table.zenki4.fryday.period3.教室}}
-                                            <button v-if="!(table.zenki4.fryday.period3.id==null)">詳細</button>
+                                            {{table.zenki4.fryday.period3.name}} {{table.zenki4.fryday.period3.room}}
+                                            <button v-if="!(table.zenki4.fryday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
                                         <td>
-                                            {{table.zenki4.monday.period4.name}} {{table.zenki4.monday.period4.教室}}
-                                            <button v-if="!(table.zenki4.monday.period4.id==null)">詳細</button>
+                                            {{table.zenki4.monday.period4.name}} {{table.zenki4.monday.period4.room}}
+                                            <button v-if="!(table.zenki4.monday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.tuesday.period4.name}} {{table.zenki4.tuesday.period4.教室}}
-                                            <button v-if="!(table.zenki4.tuesday.period4.id==null)">詳細</button>
+                                            {{table.zenki4.tuesday.period4.name}} {{table.zenki4.tuesday.period4.room}}
+                                            <button v-if="!(table.zenki4.tuesday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.wednesday.period4.name}} {{table.zenki4.wednesday.period4.教室}}
-                                            <button v-if="!(table.zenki4.wednesday.period4.id==null)">詳細</button>
+                                            {{table.zenki4.wednesday.period4.name}} {{table.zenki4.wednesday.period4.room}}
+                                            <button v-if="!(table.zenki4.wednesday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.thursday.period4.name}} {{table.zenki4.thursday.period4.教室}}
-                                            <button v-if="!(table.zenki4.thursday.period4.id==null)">詳細</button>
+                                            {{table.zenki4.thursday.period4.name}} {{table.zenki4.thursday.period4.room}}
+                                            <button v-if="!(table.zenki4.thursday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.fryday.period4.name}} {{table.zenki4.fryday.period4.教室}}
-                                            <button v-if="!(table.zenki4.fryday.period4.id==null)">詳細</button>
+                                            {{table.zenki4.fryday.period4.name}} {{table.zenki4.fryday.period4.room}}
+                                            <button v-if="!(table.zenki4.fryday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
                                         <td>
-                                            {{table.zenki4.monday.period5.name}} {{table.zenki4.monday.period5.教室}}
-                                            <button v-if="!(table.zenki4.monday.period5.id==null)">詳細</button>
+                                            {{table.zenki4.monday.period5.name}} {{table.zenki4.monday.period5.room}}
+                                            <button v-if="!(table.zenki4.monday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.tuesday.period5.name}} {{table.zenki4.tuesday.period5.教室}}
-                                            <button v-if="!(table.zenki4.tuesday.period5.id==null)">詳細</button>
+                                            {{table.zenki4.tuesday.period5.name}} {{table.zenki4.tuesday.period5.room}}
+                                            <button v-if="!(table.zenki4.tuesday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.wednesday.period5.name}} {{table.zenki4.wednesday.period5.教室}}
-                                            <button v-if="!(table.zenki4.wednesday.period5.id==null)">詳細</button>
+                                            {{table.zenki4.wednesday.period5.name}} {{table.zenki4.wednesday.period5.room}}
+                                            <button v-if="!(table.zenki4.wednesday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.thursday.period5.name}} {{table.zenki4.thursday.period5.教室}}
-                                            <button v-if="!(table.zenki4.thursday.period5.id==null)">詳細</button>
+                                            {{table.zenki4.thursday.period5.name}} {{table.zenki4.thursday.period5.room}}
+                                            <button v-if="!(table.zenki4.thursday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.zenki4.fryday.period5.name}} {{table.zenki4.fryday.period5.教室}}
-                                            <button v-if="!(table.zenki4.fryday.period5.id==null)">詳細</button>
+                                            {{table.zenki4.fryday.period5.name}} {{table.zenki4.fryday.period5.room}}
+                                            <button v-if="!(table.zenki4.fryday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                 </table>
@@ -604,116 +604,116 @@
                                         <td>1</td>
 
                                         <td>
-                                            {{table.kouki1.monday.period1.name}} {{table.kouki1.monday.period1.教室}}
-                                            <button v-if="!(table.kouki1.monday.period1.id==null)">詳細</button>
+                                            {{table.kouki1.monday.period1.name}} {{table.kouki1.monday.period1.room}}
+                                            <button v-if="!(table.kouki1.monday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.tuesday.period1.name}} {{table.kouki1.tuesday.period1.教室}}
-                                            <button v-if="!(table.kouki1.tuesday.period1.id==null)">詳細</button>
+                                            {{table.kouki1.tuesday.period1.name}} {{table.kouki1.tuesday.period1.room}}
+                                            <button v-if="!(table.kouki1.tuesday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.wednesday.period1.name}} {{table.kouki1.wednesday.period1.教室}}
-                                            <button v-if="!(table.kouki1.wednesday.period1.id==null)">詳細</button>
+                                            {{table.kouki1.wednesday.period1.name}} {{table.kouki1.wednesday.period1.room}}
+                                            <button v-if="!(table.kouki1.wednesday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.thursday.period1.name}} {{table.kouki1.thursday.period1.教室}}
-                                            <button v-if="!(table.kouki1.thursday.period1.id==null)">詳細</button>
+                                            {{table.kouki1.thursday.period1.name}} {{table.kouki1.thursday.period1.room}}
+                                            <button v-if="!(table.kouki1.thursday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.fryday.period1.name}} {{table.kouki1.fryday.period1.教室}}
-                                            <button v-if="!(table.kouki1.fryday.period1.id==null)">詳細</button>
+                                            {{table.kouki1.fryday.period1.name}} {{table.kouki1.fryday.period1.room}}
+                                            <button v-if="!(table.kouki1.fryday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>
-                                            {{table.kouki1.monday.period2.name}} {{table.kouki1.monday.period2.教室}}
-                                            <button v-if="!(table.kouki1.monday.period2.id==null)">詳細</button>
+                                            {{table.kouki1.monday.period2.name}} {{table.kouki1.monday.period2.room}}
+                                            <button v-if="!(table.kouki1.monday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.tuesday.period2.name}} {{table.kouki1.tuesday.period2.教室}}
-                                            <button v-if="!(table.kouki1.tuesday.period2.id==null)">詳細</button>
+                                            {{table.kouki1.tuesday.period2.name}} {{table.kouki1.tuesday.period2.room}}
+                                            <button v-if="!(table.kouki1.tuesday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.wednesday.period2.name}} {{table.kouki1.wednesday.period2.教室}}
-                                            <button v-if="!(table.kouki1.wednesday.period2.id==null)">詳細</button>
+                                            {{table.kouki1.wednesday.period2.name}} {{table.kouki1.wednesday.period2.room}}
+                                            <button v-if="!(table.kouki1.wednesday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.thursday.period2.name}} {{table.kouki1.thursday.period2.教室}}
-                                            <button v-if="!(table.kouki1.thursday.period2.id==null)">詳細</button>
+                                            {{table.kouki1.thursday.period2.name}} {{table.kouki1.thursday.period2.room}}
+                                            <button v-if="!(table.kouki1.thursday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.fryday.period2.name}} {{table.kouki1.fryday.period2.教室}}
-                                            <button v-if="!(table.kouki1.fryday.period2.id==null)">詳細</button>
+                                            {{table.kouki1.fryday.period2.name}} {{table.kouki1.fryday.period2.room}}
+                                            <button v-if="!(table.kouki1.fryday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
                                         <td>
-                                            {{table.kouki1.monday.period3.name}} {{table.kouki1.monday.period3.教室}}
-                                            <button v-if="!(table.kouki1.monday.period3.id==null)">詳細</button>
+                                            {{table.kouki1.monday.period3.name}} {{table.kouki1.monday.period3.room}}
+                                            <button v-if="!(table.kouki1.monday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.tuesday.period3.name}} {{table.kouki1.tuesday.period3.教室}}
-                                            <button v-if="!(table.kouki1.tuesday.period3.id==null)">詳細</button>
+                                            {{table.kouki1.tuesday.period3.name}} {{table.kouki1.tuesday.period3.room}}
+                                            <button v-if="!(table.kouki1.tuesday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.wednesday.period3.name}} {{table.kouki1.wednesday.period3.教室}}
-                                            <button v-if="!(table.kouki1.wednesday.period3.id==null)">詳細</button>
+                                            {{table.kouki1.wednesday.period3.name}} {{table.kouki1.wednesday.period3.room}}
+                                            <button v-if="!(table.kouki1.wednesday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.thursday.period3.name}} {{table.kouki1.thursday.period3.教室}}
-                                            <button v-if="!(table.kouki1.thursday.period3.id==null)">詳細</button>
+                                            {{table.kouki1.thursday.period3.name}} {{table.kouki1.thursday.period3.room}}
+                                            <button v-if="!(table.kouki1.thursday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.fryday.period3.name}} {{table.kouki1.fryday.period3.教室}}
-                                            <button v-if="!(table.kouki1.fryday.period3.id==null)">詳細</button>
+                                            {{table.kouki1.fryday.period3.name}} {{table.kouki1.fryday.period3.room}}
+                                            <button v-if="!(table.kouki1.fryday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
                                         <td>
-                                            {{table.kouki1.monday.period4.name}} {{table.kouki1.monday.period4.教室}}
-                                            <button v-if="!(table.kouki1.monday.period4.id==null)">詳細</button>
+                                            {{table.kouki1.monday.period4.name}} {{table.kouki1.monday.period4.room}}
+                                            <button v-if="!(table.kouki1.monday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.tuesday.period4.name}} {{table.kouki1.tuesday.period4.教室}}
-                                            <button v-if="!(table.kouki1.tuesday.period4.id==null)">詳細</button>
+                                            {{table.kouki1.tuesday.period4.name}} {{table.kouki1.tuesday.period4.room}}
+                                            <button v-if="!(table.kouki1.tuesday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.wednesday.period4.name}} {{table.kouki1.wednesday.period4.教室}}
-                                            <button v-if="!(table.kouki1.wednesday.period4.id==null)">詳細</button>
+                                            {{table.kouki1.wednesday.period4.name}} {{table.kouki1.wednesday.period4.room}}
+                                            <button v-if="!(table.kouki1.wednesday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.thursday.period4.name}} {{table.kouki1.thursday.period4.教室}}
-                                            <button v-if="!(table.kouki1.thursday.period4.id==null)">詳細</button>
+                                            {{table.kouki1.thursday.period4.name}} {{table.kouki1.thursday.period4.room}}
+                                            <button v-if="!(table.kouki1.thursday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.fryday.period4.name}} {{table.kouki1.fryday.period4.教室}}
-                                            <button v-if="!(table.kouki1.fryday.period4.id==null)">詳細</button>
+                                            {{table.kouki1.fryday.period4.name}} {{table.kouki1.fryday.period4.room}}
+                                            <button v-if="!(table.kouki1.fryday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
                                         <td>
-                                            {{table.kouki1.monday.period5.name}} {{table.kouki1.monday.period5.教室}}
-                                            <button v-if="!(table.kouki1.monday.period5.id==null)">詳細</button>
+                                            {{table.kouki1.monday.period5.name}} {{table.kouki1.monday.period5.room}}
+                                            <button v-if="!(table.kouki1.monday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.tuesday.period5.name}} {{table.kouki1.tuesday.period5.教室}}
-                                            <button v-if="!(table.kouki1.tuesday.period5.id==null)">詳細</button>
+                                            {{table.kouki1.tuesday.period5.name}} {{table.kouki1.tuesday.period5.room}}
+                                            <button v-if="!(table.kouki1.tuesday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.wednesday.period5.name}} {{table.kouki1.wednesday.period5.教室}}
-                                            <button v-if="!(table.kouki1.wednesday.period5.id==null)">詳細</button>
+                                            {{table.kouki1.wednesday.period5.name}} {{table.kouki1.wednesday.period5.room}}
+                                            <button v-if="!(table.kouki1.wednesday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.thursday.period5.name}} {{table.kouki1.thursday.period5.教室}}
-                                            <button v-if="!(table.kouki1.thursday.period5.id==null)">詳細</button>
+                                            {{table.kouki1.thursday.period5.name}} {{table.kouki1.thursday.period5.room}}
+                                            <button v-if="!(table.kouki1.thursday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki1.fryday.period5.name}} {{table.kouki1.fryday.period5.教室}}
-                                            <button v-if="!(table.kouki1.fryday.period5.id==null)">詳細</button>
+                                            {{table.kouki1.fryday.period5.name}} {{table.kouki1.fryday.period5.room}}
+                                            <button v-if="!(table.kouki1.fryday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                 </table>
@@ -734,116 +734,116 @@
                                         <td>1</td>
 
                                         <td>
-                                            {{table.kouki2.monday.period1.name}} {{table.kouki2.monday.period1.教室}}
-                                            <button v-if="!(table.kouki2.monday.period1.id==null)">詳細</button>
+                                            {{table.kouki2.monday.period1.name}} {{table.kouki2.monday.period1.room}}
+                                            <button v-if="!(table.kouki2.monday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.tuesday.period1.name}} {{table.kouki2.tuesday.period1.教室}}
-                                            <button v-if="!(table.kouki2.tuesday.period1.id==null)">詳細</button>
+                                            {{table.kouki2.tuesday.period1.name}} {{table.kouki2.tuesday.period1.room}}
+                                            <button v-if="!(table.kouki2.tuesday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.wednesday.period1.name}} {{table.kouki2.wednesday.period1.教室}}
-                                            <button v-if="!(table.kouki2.wednesday.period1.id==null)">詳細</button>
+                                            {{table.kouki2.wednesday.period1.name}} {{table.kouki2.wednesday.period1.room}}
+                                            <button v-if="!(table.kouki2.wednesday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.thursday.period1.name}} {{table.kouki2.thursday.period1.教室}}
-                                            <button v-if="!(table.kouki2.thursday.period1.id==null)">詳細</button>
+                                            {{table.kouki2.thursday.period1.name}} {{table.kouki2.thursday.period1.room}}
+                                            <button v-if="!(table.kouki2.thursday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.fryday.period1.name}} {{table.kouki2.fryday.period1.教室}}
-                                            <button v-if="!(table.kouki2.fryday.period1.id==null)">詳細</button>
+                                            {{table.kouki2.fryday.period1.name}} {{table.kouki2.fryday.period1.room}}
+                                            <button v-if="!(table.kouki2.fryday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>
-                                            {{table.kouki2.monday.period2.name}} {{table.kouki2.monday.period2.教室}}
-                                            <button v-if="!(table.kouki2.monday.period2.id==null)">詳細</button>
+                                            {{table.kouki2.monday.period2.name}} {{table.kouki2.monday.period2.room}}
+                                            <button v-if="!(table.kouki2.monday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.tuesday.period2.name}} {{table.kouki2.tuesday.period2.教室}}
-                                            <button v-if="!(table.kouki2.tuesday.period2.id==null)">詳細</button>
+                                            {{table.kouki2.tuesday.period2.name}} {{table.kouki2.tuesday.period2.room}}
+                                            <button v-if="!(table.kouki2.tuesday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.wednesday.period2.name}} {{table.kouki2.wednesday.period2.教室}}
-                                            <button v-if="!(table.kouki2.wednesday.period2.id==null)">詳細</button>
+                                            {{table.kouki2.wednesday.period2.name}} {{table.kouki2.wednesday.period2.room}}
+                                            <button v-if="!(table.kouki2.wednesday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.thursday.period2.name}} {{table.kouki2.thursday.period2.教室}}
-                                            <button v-if="!(table.kouki2.thursday.period2.id==null)">詳細</button>
+                                            {{table.kouki2.thursday.period2.name}} {{table.kouki2.thursday.period2.room}}
+                                            <button v-if="!(table.kouki2.thursday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.fryday.period2.name}} {{table.kouki2.fryday.period2.教室}}
-                                            <button v-if="!(table.kouki2.fryday.period2.id==null)">詳細</button>
+                                            {{table.kouki2.fryday.period2.name}} {{table.kouki2.fryday.period2.room}}
+                                            <button v-if="!(table.kouki2.fryday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
                                         <td>
-                                            {{table.kouki2.monday.period3.name}} {{table.kouki2.monday.period3.教室}}
-                                            <button v-if="!(table.kouki2.monday.period3.id==null)">詳細</button>
+                                            {{table.kouki2.monday.period3.name}} {{table.kouki2.monday.period3.room}}
+                                            <button v-if="!(table.kouki2.monday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.tuesday.period3.name}} {{table.kouki2.tuesday.period3.教室}}
-                                            <button v-if="!(table.kouki2.tuesday.period3.id==null)">詳細</button>
+                                            {{table.kouki2.tuesday.period3.name}} {{table.kouki2.tuesday.period3.room}}
+                                            <button v-if="!(table.kouki2.tuesday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.wednesday.period3.name}} {{table.kouki2.wednesday.period3.教室}}
-                                            <button v-if="!(table.kouki2.wednesday.period3.id==null)">詳細</button>
+                                            {{table.kouki2.wednesday.period3.name}} {{table.kouki2.wednesday.period3.room}}
+                                            <button v-if="!(table.kouki2.wednesday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.thursday.period3.name}} {{table.kouki2.thursday.period3.教室}}
-                                            <button v-if="!(table.kouki2.thursday.period3.id==null)">詳細</button>
+                                            {{table.kouki2.thursday.period3.name}} {{table.kouki2.thursday.period3.room}}
+                                            <button v-if="!(table.kouki2.thursday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.fryday.period3.name}} {{table.kouki2.fryday.period3.教室}}
-                                            <button v-if="!(table.kouki2.fryday.period3.id==null)">詳細</button>
+                                            {{table.kouki2.fryday.period3.name}} {{table.kouki2.fryday.period3.room}}
+                                            <button v-if="!(table.kouki2.fryday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
                                         <td>
-                                            {{table.kouki2.monday.period4.name}} {{table.kouki2.monday.period4.教室}}
-                                            <button v-if="!(table.kouki2.monday.period4.id==null)">詳細</button>
+                                            {{table.kouki2.monday.period4.name}} {{table.kouki2.monday.period4.room}}
+                                            <button v-if="!(table.kouki2.monday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.tuesday.period4.name}} {{table.kouki2.tuesday.period4.教室}}
-                                            <button v-if="!(table.kouki2.tuesday.period4.id==null)">詳細</button>
+                                            {{table.kouki2.tuesday.period4.name}} {{table.kouki2.tuesday.period4.room}}
+                                            <button v-if="!(table.kouki2.tuesday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.wednesday.period4.name}} {{table.kouki2.wednesday.period4.教室}}
-                                            <button v-if="!(table.kouki2.wednesday.period4.id==null)">詳細</button>
+                                            {{table.kouki2.wednesday.period4.name}} {{table.kouki2.wednesday.period4.room}}
+                                            <button v-if="!(table.kouki2.wednesday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.thursday.period4.name}} {{table.kouki2.thursday.period4.教室}}
-                                            <button v-if="!(table.kouki2.thursday.period4.id==null)">詳細</button>
+                                            {{table.kouki2.thursday.period4.name}} {{table.kouki2.thursday.period4.room}}
+                                            <button v-if="!(table.kouki2.thursday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.fryday.period4.name}} {{table.kouki2.fryday.period4.教室}}
-                                            <button v-if="!(table.kouki2.fryday.period4.id==null)">詳細</button>
+                                            {{table.kouki2.fryday.period4.name}} {{table.kouki2.fryday.period4.room}}
+                                            <button v-if="!(table.kouki2.fryday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
                                         <td>
-                                            {{table.kouki2.monday.period5.name}} {{table.kouki2.monday.period5.教室}}
-                                            <button v-if="!(table.kouki2.monday.period5.id==null)">詳細</button>
+                                            {{table.kouki2.monday.period5.name}} {{table.kouki2.monday.period5.room}}
+                                            <button v-if="!(table.kouki2.monday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.tuesday.period5.name}} {{table.kouki2.tuesday.period5.教室}}
-                                            <button v-if="!(table.kouki2.tuesday.period5.id==null)">詳細</button>
+                                            {{table.kouki2.tuesday.period5.name}} {{table.kouki2.tuesday.period5.room}}
+                                            <button v-if="!(table.kouki2.tuesday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.wednesday.period5.name}} {{table.kouki2.wednesday.period5.教室}}
-                                            <button v-if="!(table.kouki2.wednesday.period5.id==null)">詳細</button>
+                                            {{table.kouki2.wednesday.period5.name}} {{table.kouki2.wednesday.period5.room}}
+                                            <button v-if="!(table.kouki2.wednesday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.thursday.period5.name}} {{table.kouki2.thursday.period5.教室}}
-                                            <button v-if="!(table.kouki2.thursday.period5.id==null)">詳細</button>
+                                            {{table.kouki2.thursday.period5.name}} {{table.kouki2.thursday.period5.room}}
+                                            <button v-if="!(table.kouki2.thursday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki2.fryday.period5.name}} {{table.kouki2.fryday.period5.教室}}
-                                            <button v-if="!(table.kouki2.fryday.period5.id==null)">詳細</button>
+                                            {{table.kouki2.fryday.period5.name}} {{table.kouki2.fryday.period5.room}}
+                                            <button v-if="!(table.kouki2.fryday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                 </table>
@@ -864,116 +864,116 @@
                                         <td>1</td>
 
                                         <td>
-                                            {{table.kouki3.monday.period1.name}} {{table.kouki3.monday.period1.教室}}
-                                            <button v-if="!(table.kouki3.monday.period1.id==null)">詳細</button>
+                                            {{table.kouki3.monday.period1.name}} {{table.kouki3.monday.period1.room}}
+                                            <button v-if="!(table.kouki3.monday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.tuesday.period1.name}} {{table.kouki3.tuesday.period1.教室}}
-                                            <button v-if="!(table.kouki3.tuesday.period1.id==null)">詳細</button>
+                                            {{table.kouki3.tuesday.period1.name}} {{table.kouki3.tuesday.period1.room}}
+                                            <button v-if="!(table.kouki3.tuesday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.wednesday.period1.name}} {{table.kouki3.wednesday.period1.教室}}
-                                            <button v-if="!(table.kouki3.wednesday.period1.id==null)">詳細</button>
+                                            {{table.kouki3.wednesday.period1.name}} {{table.kouki3.wednesday.period1.room}}
+                                            <button v-if="!(table.kouki3.wednesday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.thursday.period1.name}} {{table.kouki3.thursday.period1.教室}}
-                                            <button v-if="!(table.kouki3.thursday.period1.id==null)">詳細</button>
+                                            {{table.kouki3.thursday.period1.name}} {{table.kouki3.thursday.period1.room}}
+                                            <button v-if="!(table.kouki3.thursday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.fryday.period1.name}} {{table.kouki3.fryday.period1.教室}}
-                                            <button v-if="!(table.kouki3.fryday.period1.id==null)">詳細</button>
+                                            {{table.kouki3.fryday.period1.name}} {{table.kouki3.fryday.period1.room}}
+                                            <button v-if="!(table.kouki3.fryday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>
-                                            {{table.kouki3.monday.period2.name}} {{table.kouki3.monday.period2.教室}}
-                                            <button v-if="!(table.kouki3.monday.period2.id==null)">詳細</button>
+                                            {{table.kouki3.monday.period2.name}} {{table.kouki3.monday.period2.room}}
+                                            <button v-if="!(table.kouki3.monday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.tuesday.period2.name}} {{table.kouki3.tuesday.period2.教室}}
-                                            <button v-if="!(table.kouki3.tuesday.period2.id==null)">詳細</button>
+                                            {{table.kouki3.tuesday.period2.name}} {{table.kouki3.tuesday.period2.room}}
+                                            <button v-if="!(table.kouki3.tuesday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.wednesday.period2.name}} {{table.kouki3.wednesday.period2.教室}}
-                                            <button v-if="!(table.kouki3.wednesday.period2.id==null)">詳細</button>
+                                            {{table.kouki3.wednesday.period2.name}} {{table.kouki3.wednesday.period2.room}}
+                                            <button v-if="!(table.kouki3.wednesday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.thursday.period2.name}} {{table.kouki3.thursday.period2.教室}}
-                                            <button v-if="!(table.kouki3.thursday.period2.id==null)">詳細</button>
+                                            {{table.kouki3.thursday.period2.name}} {{table.kouki3.thursday.period2.room}}
+                                            <button v-if="!(table.kouki3.thursday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.fryday.period2.name}} {{table.kouki3.fryday.period2.教室}}
-                                            <button v-if="!(table.kouki3.fryday.period2.id==null)">詳細</button>
+                                            {{table.kouki3.fryday.period2.name}} {{table.kouki3.fryday.period2.room}}
+                                            <button v-if="!(table.kouki3.fryday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
                                         <td>
-                                            {{table.kouki3.monday.period3.name}} {{table.kouki3.monday.period3.教室}}
-                                            <button v-if="!(table.kouki3.monday.period3.id==null)">詳細</button>
+                                            {{table.kouki3.monday.period3.name}} {{table.kouki3.monday.period3.room}}
+                                            <button v-if="!(table.kouki3.monday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.tuesday.period3.name}} {{table.kouki3.tuesday.period3.教室}}
-                                            <button v-if="!(table.kouki3.tuesday.period3.id==null)">詳細</button>
+                                            {{table.kouki3.tuesday.period3.name}} {{table.kouki3.tuesday.period3.room}}
+                                            <button v-if="!(table.kouki3.tuesday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.wednesday.period3.name}} {{table.kouki3.wednesday.period3.教室}}
-                                            <button v-if="!(table.kouki3.wednesday.period3.id==null)">詳細</button>
+                                            {{table.kouki3.wednesday.period3.name}} {{table.kouki3.wednesday.period3.room}}
+                                            <button v-if="!(table.kouki3.wednesday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.thursday.period3.name}} {{table.kouki3.thursday.period3.教室}}
-                                            <button v-if="!(table.kouki3.thursday.period3.id==null)">詳細</button>
+                                            {{table.kouki3.thursday.period3.name}} {{table.kouki3.thursday.period3.room}}
+                                            <button v-if="!(table.kouki3.thursday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.fryday.period3.name}} {{table.kouki3.fryday.period3.教室}}
-                                            <button v-if="!(table.kouki3.fryday.period3.id==null)">詳細</button>
+                                            {{table.kouki3.fryday.period3.name}} {{table.kouki3.fryday.period3.room}}
+                                            <button v-if="!(table.kouki3.fryday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
                                         <td>
-                                            {{table.kouki3.monday.period4.name}} {{table.kouki3.monday.period4.教室}}
-                                            <button v-if="!(table.kouki3.monday.period4.id==null)">詳細</button>
+                                            {{table.kouki3.monday.period4.name}} {{table.kouki3.monday.period4.room}}
+                                            <button v-if="!(table.kouki3.monday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.tuesday.period4.name}} {{table.kouki3.tuesday.period4.教室}}
-                                            <button v-if="!(table.kouki3.tuesday.period4.id==null)">詳細</button>
+                                            {{table.kouki3.tuesday.period4.name}} {{table.kouki3.tuesday.period4.room}}
+                                            <button v-if="!(table.kouki3.tuesday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.wednesday.period4.name}} {{table.kouki3.wednesday.period4.教室}}
-                                            <button v-if="!(table.kouki3.wednesday.period4.id==null)">詳細</button>
+                                            {{table.kouki3.wednesday.period4.name}} {{table.kouki3.wednesday.period4.room}}
+                                            <button v-if="!(table.kouki3.wednesday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.thursday.period4.name}} {{table.kouki3.thursday.period4.教室}}
-                                            <button v-if="!(table.kouki3.thursday.period4.id==null)">詳細</button>
+                                            {{table.kouki3.thursday.period4.name}} {{table.kouki3.thursday.period4.room}}
+                                            <button v-if="!(table.kouki3.thursday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.fryday.period4.name}} {{table.kouki3.fryday.period4.教室}}
-                                            <button v-if="!(table.kouki3.fryday.period4.id==null)">詳細</button>
+                                            {{table.kouki3.fryday.period4.name}} {{table.kouki3.fryday.period4.room}}
+                                            <button v-if="!(table.kouki3.fryday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
                                         <td>
-                                            {{table.kouki3.monday.period5.name}} {{table.kouki3.monday.period5.教室}}
-                                            <button v-if="!(table.kouki3.monday.period5.id==null)">詳細</button>
+                                            {{table.kouki3.monday.period5.name}} {{table.kouki3.monday.period5.room}}
+                                            <button v-if="!(table.kouki3.monday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.tuesday.period5.name}} {{table.kouki3.tuesday.period5.教室}}
-                                            <button v-if="!(table.kouki3.tuesday.period5.id==null)">詳細</button>
+                                            {{table.kouki3.tuesday.period5.name}} {{table.kouki3.tuesday.period5.room}}
+                                            <button v-if="!(table.kouki3.tuesday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.wednesday.period5.name}} {{table.kouki3.wednesday.period5.教室}}
-                                            <button v-if="!(table.kouki3.wednesday.period5.id==null)">詳細</button>
+                                            {{table.kouki3.wednesday.period5.name}} {{table.kouki3.wednesday.period5.room}}
+                                            <button v-if="!(table.kouki3.wednesday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.thursday.period5.name}} {{table.kouki3.thursday.period5.教室}}
-                                            <button v-if="!(table.kouki3.thursday.period5.id==null)">詳細</button>
+                                            {{table.kouki3.thursday.period5.name}} {{table.kouki3.thursday.period5.room}}
+                                            <button v-if="!(table.kouki3.thursday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki3.fryday.period5.name}} {{table.kouki3.fryday.period5.教室}}
-                                            <button v-if="!(table.kouki3.fryday.period5.id==null)">詳細</button>
+                                            {{table.kouki3.fryday.period5.name}} {{table.kouki3.fryday.period5.room}}
+                                            <button v-if="!(table.kouki3.fryday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                 </table>
@@ -994,116 +994,116 @@
                                         <td>1</td>
 
                                         <td>
-                                            {{table.kouki4.monday.period1.name}} {{table.kouki4.monday.period1.教室}}
-                                            <button v-if="!(table.kouki4.monday.period1.id==null)">詳細</button>
+                                            {{table.kouki4.monday.period1.name}} {{table.kouki4.monday.period1.room}}
+                                            <button v-if="!(table.kouki4.monday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.tuesday.period1.name}} {{table.kouki4.tuesday.period1.教室}}
-                                            <button v-if="!(table.kouki4.tuesday.period1.id==null)">詳細</button>
+                                            {{table.kouki4.tuesday.period1.name}} {{table.kouki4.tuesday.period1.room}}
+                                            <button v-if="!(table.kouki4.tuesday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.wednesday.period1.name}} {{table.kouki4.wednesday.period1.教室}}
-                                            <button v-if="!(table.kouki4.wednesday.period1.id==null)">詳細</button>
+                                            {{table.kouki4.wednesday.period1.name}} {{table.kouki4.wednesday.period1.room}}
+                                            <button v-if="!(table.kouki4.wednesday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.thursday.period1.name}} {{table.kouki4.thursday.period1.教室}}
-                                            <button v-if="!(table.kouki4.thursday.period1.id==null)">詳細</button>
+                                            {{table.kouki4.thursday.period1.name}} {{table.kouki4.thursday.period1.room}}
+                                            <button v-if="!(table.kouki4.thursday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.fryday.period1.name}} {{table.kouki4.fryday.period1.教室}}
-                                            <button v-if="!(table.kouki4.fryday.period1.id==null)">詳細</button>
+                                            {{table.kouki4.fryday.period1.name}} {{table.kouki4.fryday.period1.room}}
+                                            <button v-if="!(table.kouki4.fryday.period1.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>
-                                            {{table.kouki4.monday.period2.name}} {{table.kouki4.monday.period2.教室}}
-                                            <button v-if="!(table.kouki4.monday.period2.id==null)">詳細</button>
+                                            {{table.kouki4.monday.period2.name}} {{table.kouki4.monday.period2.room}}
+                                            <button v-if="!(table.kouki4.monday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.tuesday.period2.name}} {{table.kouki4.tuesday.period2.教室}}
-                                            <button v-if="!(table.kouki4.tuesday.period2.id==null)">詳細</button>
+                                            {{table.kouki4.tuesday.period2.name}} {{table.kouki4.tuesday.period2.room}}
+                                            <button v-if="!(table.kouki4.tuesday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.wednesday.period2.name}} {{table.kouki4.wednesday.period2.教室}}
-                                            <button v-if="!(table.kouki4.wednesday.period2.id==null)">詳細</button>
+                                            {{table.kouki4.wednesday.period2.name}} {{table.kouki4.wednesday.period2.room}}
+                                            <button v-if="!(table.kouki4.wednesday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.thursday.period2.name}} {{table.kouki4.thursday.period2.教室}}
-                                            <button v-if="!(table.kouki4.thursday.period2.id==null)">詳細</button>
+                                            {{table.kouki4.thursday.period2.name}} {{table.kouki4.thursday.period2.room}}
+                                            <button v-if="!(table.kouki4.thursday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.fryday.period2.name}} {{table.kouki4.fryday.period2.教室}}
-                                            <button v-if="!(table.kouki4.fryday.period2.id==null)">詳細</button>
+                                            {{table.kouki4.fryday.period2.name}} {{table.kouki4.fryday.period2.room}}
+                                            <button v-if="!(table.kouki4.fryday.period2.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
                                         <td>
-                                            {{table.kouki4.monday.period3.name}} {{table.kouki4.monday.period3.教室}}
-                                            <button v-if="!(table.kouki4.monday.period3.id==null)">詳細</button>
+                                            {{table.kouki4.monday.period3.name}} {{table.kouki4.monday.period3.room}}
+                                            <button v-if="!(table.kouki4.monday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.tuesday.period3.name}} {{table.kouki4.tuesday.period3.教室}}
-                                            <button v-if="!(table.kouki4.tuesday.period3.id==null)">詳細</button>
+                                            {{table.kouki4.tuesday.period3.name}} {{table.kouki4.tuesday.period3.room}}
+                                            <button v-if="!(table.kouki4.tuesday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.wednesday.period3.name}} {{table.kouki4.wednesday.period3.教室}}
-                                            <button v-if="!(table.kouki4.wednesday.period3.id==null)">詳細</button>
+                                            {{table.kouki4.wednesday.period3.name}} {{table.kouki4.wednesday.period3.room}}
+                                            <button v-if="!(table.kouki4.wednesday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.thursday.period3.name}} {{table.kouki4.thursday.period3.教室}}
-                                            <button v-if="!(table.kouki4.thursday.period3.id==null)">詳細</button>
+                                            {{table.kouki4.thursday.period3.name}} {{table.kouki4.thursday.period3.room}}
+                                            <button v-if="!(table.kouki4.thursday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.fryday.period3.name}} {{table.kouki4.fryday.period3.教室}}
-                                            <button v-if="!(table.kouki4.fryday.period3.id==null)">詳細</button>
+                                            {{table.kouki4.fryday.period3.name}} {{table.kouki4.fryday.period3.room}}
+                                            <button v-if="!(table.kouki4.fryday.period3.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
                                         <td>
-                                            {{table.kouki4.monday.period4.name}} {{table.kouki4.monday.period4.教室}}
-                                            <button v-if="!(table.kouki4.monday.period4.id==null)">詳細</button>
+                                            {{table.kouki4.monday.period4.name}} {{table.kouki4.monday.period4.room}}
+                                            <button v-if="!(table.kouki4.monday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.tuesday.period4.name}} {{table.kouki4.tuesday.period4.教室}}
-                                            <button v-if="!(table.kouki4.tuesday.period4.id==null)">詳細</button>
+                                            {{table.kouki4.tuesday.period4.name}} {{table.kouki4.tuesday.period4.room}}
+                                            <button v-if="!(table.kouki4.tuesday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.wednesday.period4.name}} {{table.kouki4.wednesday.period4.教室}}
-                                            <button v-if="!(table.kouki4.wednesday.period4.id==null)">詳細</button>
+                                            {{table.kouki4.wednesday.period4.name}} {{table.kouki4.wednesday.period4.room}}
+                                            <button v-if="!(table.kouki4.wednesday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.thursday.period4.name}} {{table.kouki4.thursday.period4.教室}}
-                                            <button v-if="!(table.kouki4.thursday.period4.id==null)">詳細</button>
+                                            {{table.kouki4.thursday.period4.name}} {{table.kouki4.thursday.period4.room}}
+                                            <button v-if="!(table.kouki4.thursday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.fryday.period4.name}} {{table.kouki4.fryday.period4.教室}}
-                                            <button v-if="!(table.kouki4.fryday.period4.id==null)">詳細</button>
+                                            {{table.kouki4.fryday.period4.name}} {{table.kouki4.fryday.period4.room}}
+                                            <button v-if="!(table.kouki4.fryday.period4.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
                                         <td>
-                                            {{table.kouki4.monday.period5.name}} {{table.kouki4.monday.period5.教室}}
-                                            <button v-if="!(table.kouki4.monday.period5.id==null)">詳細</button>
+                                            {{table.kouki4.monday.period5.name}} {{table.kouki4.monday.period5.room}}
+                                            <button v-if="!(table.kouki4.monday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.tuesday.period5.name}} {{table.kouki4.tuesday.period5.教室}}
-                                            <button v-if="!(table.kouki4.tuesday.period5.id==null)">詳細</button>
+                                            {{table.kouki4.tuesday.period5.name}} {{table.kouki4.tuesday.period5.room}}
+                                            <button v-if="!(table.kouki4.tuesday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.wednesday.period5.name}} {{table.kouki4.wednesday.period5.教室}}
-                                            <button v-if="!(table.kouki4.wednesday.period5.id==null)">詳細</button>
+                                            {{table.kouki4.wednesday.period5.name}} {{table.kouki4.wednesday.period5.room}}
+                                            <button v-if="!(table.kouki4.wednesday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.thursday.period5.name}} {{table.kouki4.thursday.period5.教室}}
-                                            <button v-if="!(table.kouki4.thursday.period5.id==null)">詳細</button>
+                                            {{table.kouki4.thursday.period5.name}} {{table.kouki4.thursday.period5.room}}
+                                            <button v-if="!(table.kouki4.thursday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                         <td>
-                                            {{table.kouki4.fryday.period5.name}} {{table.kouki4.fryday.period5.教室}}
-                                            <button v-if="!(table.kouki4.fryday.period5.id==null)">詳細</button>
+                                            {{table.kouki4.fryday.period5.name}} {{table.kouki4.fryday.period5.room}}
+                                            <button v-if="!(table.kouki4.fryday.period5.lectureid==strnull)">詳細</button>
                                         </td>
                                     </tr>
                                 </table>
@@ -1139,7 +1139,8 @@
             var app = new Vue({
                 el: '#app',
                 data: {
-                    table: '',
+                    strnull:"",
+                	table: '',
                     units: '',
                     needs: '',
                     test: 'unko'
@@ -1151,10 +1152,21 @@
                     const self = this
                     console.log("hello")
                     this.table='<%= session.getAttribute("lectureList")%>'
+                    this.table=JSON.parse(this.table)
+                    this.table=this.table.table
                     console.log(this.table)
-                    this.table=JSON.parse(this.table);
-                    console.log(this.table)
-                    console.log(this.table.myClasses)
+;
+                    this.units='<%= session.getAttribute("unit")%>'
+                    this.units=JSON.parse(this.units)
+                    this.units=this.units.units
+                    console.log(this.units)
+                    console.log("↑unit")
+
+                    this.needs='<%= session.getAttribute("mustTani")%>'
+                    this.needs=JSON.parse(this.needs)
+                    this.needs=this.needs.mustTani
+                    console.log(this.needs)
+
                 }
             })
         </script>
