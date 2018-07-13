@@ -6,6 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>登録講義一覧</title>
   <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta http-equiv="content-type" charset="utf-8">
 </head>
 <body>
   <div id="app">
@@ -37,27 +39,12 @@
               <th width="50px"></th>
               <th width="50px"></th>
             </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <a href="https://www.ayataka.jp/">
-                  <span>変更</span>
-              </td>
-              <td>
-                <a href="https://www.ayataka.jp/">
-                  <span>削除</span>
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+            <tr v-for="item in table">
+              <td>{{item.開講曜日}}</td>
+              <td>{{item.授業コード}}</td>
+              <td>{{item.講義名}}</td>
+              <td>{{item.教員名}}</td>
+              <td>{{item.教室}}</td>
               <td>
                 <a href="https://www.ayataka.jp/">
                   <span>変更</span>
@@ -77,21 +64,25 @@
     var app = new Vue({
       el: '#app',
       data: {
-        greeting: 'Welcome to your Vue.js app!',
-        docsURL: 'http://vuejs.org/guide/',
-        discordURL: 'https://chat.vuejs.org',
-        forumURL: 'http://forum.vuejs.org/'
+        table: '',
+        test: 'aaa'
       },
       methods: {
-        humanizeURL: function (url) {
-          return url
-            .replace(/^https?:\/\//, '')
-            .replace(/\/$/, '')
-        }
+
+      },
+      created() {
+        const self = this
+        console.log("afo")
+        axios
+          .get('https://api.myjson.com/bins/19mbbi')
+          .then(function (res) {
+            self.table = res.data.lectureList;
+            console.log(self.table)
+          })
       }
     })
   </script>
-  <style scoped>
+  <style>
     table th {
       color: #FF9800;
       background: #fff5e5;
@@ -153,4 +144,5 @@
     }
   </style>
 </body>
+
 </html>

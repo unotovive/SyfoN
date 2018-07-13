@@ -4,8 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Welcome to Vue</title>
+<title>評価一覧</title>
   <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <meta http-equiv="content-type" charset="utf-8">
 </head>
 <body>
   <div id="app">
@@ -18,10 +20,10 @@
       </div>
       <form action="adominLectureList" method="post">
         <div id="bar">
-          <p>講義名：{{ lectureName }}</p>
+          <p>講義名：{{ lecture.講義名 }}</p>
         </div>
         <div id="lectureTable">
-          <table border="1">
+          <!-- <table border="1">
             <tr>
               <th width="100px">投稿者</th>
               <th width="500px">投稿内容</th>
@@ -43,6 +45,21 @@
                   <span>削除</span>
               </td>
             </tr>
+          </table> -->
+          <table border="1">
+            <tr>
+              <th width="100px">投稿者</th>
+              <th width="500px">投稿内容</th>
+              <th width="50px"></th>
+            </tr>
+            <tr v-for="item in table">
+              <td>{{item.投稿者}}</td>
+              <td>{{item.投稿内容}}</td>
+              <td>
+                <a href="https://www.ayataka.jp/">
+                  <span>削除</span>
+              </td>
+            </tr>
           </table>
         </div>
       </form>
@@ -53,18 +70,32 @@
     var app = new Vue({
       el: '#app',
       data: {
-        lectureName: 'aaa'
+        lecture: "",
+        table: '',
+        test: 'aaa'
       },
       methods: {
-        humanizeURL: function (url) {
-          return url
-            .replace(/^https?:\/\//, '')
-            .replace(/\/$/, '')
-        }
+
+      },
+      created() {
+        const self = this
+        console.log("afo")
+        axios
+          .get('https://api.myjson.com/bins/twgy6')
+          .then(function (res) {
+            self.table = res.data.講義.投稿;
+            console.log(self.table)
+          })
+        axios
+          .get('https://api.myjson.com/bins/twgy6')
+          .then(function (res) {
+            self.lecture = res.data.講義;
+            console.log(self.lecture)
+          })
       }
     })
   </script>
-  <style scoped>
+  <style>
     table th {
       color: #FF9800;
       background: #fff5e5;
@@ -127,4 +158,5 @@
     }
   </style>
 </body>
+
 </html>

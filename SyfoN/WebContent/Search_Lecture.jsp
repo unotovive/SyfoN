@@ -63,9 +63,8 @@
 							<td><span class="checkbox-parts">履修済</span> <input
 								id="checkbox" class="checkbox-input" type="checkbox" name=""
 								value=""></td>
-							<td><input id="serchButton" type="button" value="検索"
-								onclick="search();">
-								<button v-on:click="search">検索２</button></td>
+							<td>
+								<button v-on:click="search">検索</button></td>
 						</tr>
 					</table>
 
