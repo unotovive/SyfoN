@@ -1155,7 +1155,7 @@
                     this.table=JSON.parse(this.table)
                     this.table=this.table.table
                     console.log(this.table)
-
+;
                     this.units='<%= session.getAttribute("unit")%>'
                     this.units=JSON.parse(this.units)
                     this.units=this.units.units
