@@ -44,6 +44,7 @@ public class UnitDAO {
 
 		return unitList;
 	}
+
 	public Unit getUnit(String unitID) throws SQLException {
 		// studentがDBにあるかどうかを調べる
 		Unit unit = new Unit();
