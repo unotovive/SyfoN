@@ -68,8 +68,26 @@ public class ProfessorToLectureDAO {
 		return ptlList;
 	}
 	public boolean registerPTL(ProfessorToLecture ptl){
-		boolean result=true;
+		boolean result=false;
+		Connection connection;
+		String sql = "INSERT INTO professortolecture VALUES(?,?);";
 
+		try {
+			Class.forName(driverClassName);
+			connection = DriverManager.getConnection(url, user, password);
+			PreparedStatement pstmt = connection.prepareStatement(sql);
+
+			pstmt.setString(1, ptl.getProfessorID());
+			pstmt.setInt(2, ptl.getLectureID());
+
+			ResultSet resultSet = pstmt.executeQuery();
+			if (resultSet.next()) result = true;
+
+			resultSet.close();
+			connection.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return result;
 	}
 	public boolean updatePTL(ProfessorToLecture ptl){
