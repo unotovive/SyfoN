@@ -10,9 +10,9 @@ import java.util.ArrayList;
 
 
 public class ReviewDAO {
-	final private static String dbname = "tutorial";   // データベース名
-	final private static String user = "wspuser";      // tutorialにアクセスできるユーザ
-	final private static String password = "hogehoge"; // wspuserのパスワード
+	final private static String dbname = "garen"; //tutorial  // データベース名
+	final private static String user = "knight"; //wspuser     // tutorialにアクセスできるユーザ
+	final private static String password = "terror";//hogehoge  // wspuserのパスワード
 	final private static String driverClassName = "org.postgresql.Driver";
 	final private static String url = "jdbc:postgresql://localhost/" + dbname;
 
@@ -259,3 +259,4 @@ public class ReviewDAO {
 
 
 }
+
