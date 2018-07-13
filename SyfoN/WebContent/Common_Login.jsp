@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    <%@ page import="test.*" %>
+    <%@ page import= "org.json.*" %>
+<!DOCTYPE html>
 <html>
 <head>
   <title>SyfoN</title>
@@ -12,6 +14,18 @@
     <div class="bodya">
       <div class="wrapper">
           <div class="container">
+          <%
+          System.out.println(session.getAttribute("jsonTest"));
+          %>
+          <script>
+
+	        var jsonTest='<%= session.getAttribute("jsonTest") %>';
+
+	        if(jsonTest != null){
+				jsonTest=JSON.parse(jsonTest);
+          		document.write(jsonTest.elem.all);
+          	}
+          </script>
               <h1>Welcome</h1>
               <h2>SyfoN-ログイン</h2>
 
