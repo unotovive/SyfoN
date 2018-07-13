@@ -50,6 +50,7 @@ public class Login extends HttpServlet {
 
 		student.setStudentID(request.getParameter("studentID"));
 		student.setPassWord(request.getParameter("pass"));
+		String studentID = request.getParameter("studentID");
 
 		boolean result = false;
 		try {
@@ -57,23 +58,18 @@ public class Login extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-//
-//		Element tanni = new Element(
-//                "elem",new Element(
-//                		"all",50)  );
-//        JSONObject object = JSON.getSubJSON(tanni);
-//        System.out.println("tekito"+object);
 
 		HttpSession session = request.getSession();
 		session.setAttribute("login", result);
-		//session.setAttribute("jsonTest", object);
 		if (result) {
 			// ログインに成功している場合はtop.jspへ
 			session.setAttribute("student", student);
-			getServletContext().getRequestDispatcher("/TimeTableServ").forward(request, response);
+			session.setAttribute("studentID", studentID);
+			//System.out.print("dekita");
+			getServletContext().getRequestDispatcher("/top.jsp").forward(request, response);
 		} else {
 			// ログインに失敗している場合はlogin.jspへ
-			System.out.println("sippahi");
+			//System.out.print("sippai");
 			getServletContext().getRequestDispatcher("/Common_Login.jsp").forward(request, response);
 			}
 		}

@@ -84,8 +84,8 @@
                                         <td>1</td>
 
                                         <td>
-                                            {{table.zenki1.monday.period1.name}} {{table.zenki1.monday.period1.room}}
-                                            <button v-if="!(table.zenki1.monday.period1.lectureid==strnull)">詳細</button>
+                                            {{table.zenki1.monday.period1.name}} {{table.zenki1.monday.period1.教室}}
+                                            <button v-if="!(table.zenki1.monday.period1.id==null)">詳細</button>
                                         </td>
                                         <td>
                                             {{table.zenki1.tuesday.period1.name}} {{table.zenki1.tuesday.period1.room}}
