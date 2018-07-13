@@ -50,6 +50,7 @@ public class Login extends HttpServlet {
 
 		student.setStudentID(request.getParameter("studentID"));
 		student.setPassWord(request.getParameter("pass"));
+		String studentID = request.getParameter("studentID");
 
 		boolean result = false;
 		try {
@@ -63,11 +64,12 @@ public class Login extends HttpServlet {
 		if (result) {
 			// ログインに成功している場合はtop.jspへ
 			session.setAttribute("student", student);
-			System.out.print("dekita");
+			session.setAttribute("studentID", studentID);
+			//System.out.print("dekita");
 			getServletContext().getRequestDispatcher("/top.jsp").forward(request, response);
 		} else {
 			// ログインに失敗している場合はlogin.jspへ
-			System.out.print("sippai");
+			//System.out.print("sippai");
 			getServletContext().getRequestDispatcher("/Common_Login.jsp").forward(request, response);
 			}
 		}
