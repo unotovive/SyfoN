@@ -29,7 +29,7 @@ public class StudentDAO {
 
 			pstmt.setString(1, studentID);
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 				//st = null;
 

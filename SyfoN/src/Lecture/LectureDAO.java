@@ -240,12 +240,12 @@ public class LectureDAO {
 
 
 	public ArrayList<Lecture> findLectureByDay(String day) throws SQLException {
-		// memberがDBにあるかどうかを調べる
+		// LectureがDBにあるかどうかを調べる
 
 		ArrayList<Lecture> lecList = new ArrayList<Lecture>();
 
 		Connection connection;
-		String sql = "SELECT * FROM lecture where day = ?";
+		String sql = "SELECT * FROM lecture where day LIKE ?";
 
 		try {
 			Class.forName(driverClassName);
@@ -320,7 +320,7 @@ public class LectureDAO {
 		ArrayList<Lecture> lecList = new ArrayList<Lecture>();
 
 		Connection connection;
-		String sql = "SELECT * FROM lecture where gaitogakki = ?";
+		String sql = "SELECT * FROM lecture where gaitogakki LIKE ?";
 
 		try {
 			Class.forName(driverClassName);
@@ -395,7 +395,7 @@ public class LectureDAO {
 		ArrayList<Lecture> lecList = new ArrayList<Lecture>();
 
 		Connection connection;
-		String sql = "SELECT * FROM lecture where period = ?";
+		String sql = "SELECT * FROM lecture where period LIKE ?";
 
 		try {
 			Class.forName(driverClassName);
@@ -466,7 +466,7 @@ public class LectureDAO {
 	}
 
 	public boolean registerLecture(Lecture lecture) throws SQLException {
-		// memberがDBにあるかどうかを調べる
+		// Lectureを新しく登録する
 		boolean result = false;
 		Connection connection;
 		String sql = "INSERT INTO lecture VALUES (?, ?, ?,?,?, ?,?,?,?,?, ?,?,?,?,?, ?,?,?,?,?, ?,?)";
