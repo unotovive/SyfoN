@@ -15,14 +15,14 @@ public class MustTaniDAO {
 		MustTani mt=new MustTani();
 
 		Connection connection;
-		String sql = "select * from musttani";
+		String sql = "SELECT * FROM musttani";
 
 		try {
 			Class.forName(driverClassName);
 			connection = DriverManager.getConnection(url, user, password);
 			PreparedStatement pstmt = connection.prepareStatement(sql);
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 				int allMustTani = resultSet.getInt("allmt");
 				mt.setAllMustTani(allMustTani);

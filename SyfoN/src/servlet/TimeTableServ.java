@@ -21,6 +21,7 @@ import MustTani.MustTani;
 import MustTani.MustTaniManager;
 import courseLecture.CourseLecture;
 import courseLecture.CourseLectureManager;
+import student.Student;
 import timetable.TimeTable;
 import timetable.TimeTableManager;
 import unit.Unit;
@@ -75,7 +76,8 @@ public class TimeTableServ extends HttpServlet {
 
 	  //時間割IDを取得(8こ）
 		try {
-			timeTableList = timeTableManager.getTimeTableList(request.getParameter("studentID"));
+			Student st=(Student)session.getAttribute("student");
+			timeTableList = timeTableManager.getTimeTableList(st.getStudentID());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -132,7 +134,6 @@ public class TimeTableServ extends HttpServlet {
 					Map<String,String> lectureDataMap=new HashMap<String,String>();;
 					//該当の講義が存在すれば
 					if(lc!=null){
-
 						lectureDataMap.put("taninum",Integer.toString(lc.getTaniNum()) );
 						lectureDataMap.put("name",lc.getLectureName() );
 						lectureDataMap.put("lectureid",Integer.toString(lc.getLectureID()) );
@@ -149,13 +150,15 @@ public class TimeTableServ extends HttpServlet {
 					}
 					period.put(periods[n], lectureDataMap);
 				}
-				day.put(days[p],day);
+				day.put(days[p],period);
 			}
-			semester.put(semesters[i], semester);
+			semester.put(semesters[i],day);
 		}
+
 		myClasses.put("my-Classes", semester);
 		System.out.println("oi!!");
-		JSONObject lectureListJson=new JSONObject(lectureList);
+		JSONObject lectureListJson=new JSONObject(myClasses);
+		System.out.println(lectureListJson);
 		session.setAttribute("lectureList",lectureListJson);
 
 		//ここまで、講義情報

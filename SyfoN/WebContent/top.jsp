@@ -1134,6 +1134,7 @@
                 </div>
             </div>
         </div>
+        <% System.out.println( session.getAttribute("lectureList")); %>
         <script>
             var app = new Vue({
                 el: '#app',
@@ -1150,8 +1151,10 @@
                     const self = this
                     console.log("hello")
                     this.table='<%= session.getAttribute("lectureList")%>'
+                    console.log(this.table)
                     this.table=JSON.parse(this.table);
                     console.log(this.table)
+                    console.log(this.table.myClasses)
                 }
             })
         </script>

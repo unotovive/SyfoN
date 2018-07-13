@@ -9,17 +9,17 @@ import java.util.ArrayList;
 
 public class TimeTableDAO {
 
-	final private static String dbname = "tutorial";   // データベース名
-	final private static String user = "wspuser";      // tutorialにアクセスできるユーザ
-	final private static String password = "hogehoge"; // wspuserのパスワード
+	final private static String dbname = "garen";   // データベース名
+	final private static String user = "knight";      // tutorialにアクセスできるユーザ
+	final private static String password = "terror"; // wspuserのパスワード
 	final private static String driverClassName = "org.postgresql.Driver";
 	final private static String url = "jdbc:postgresql://localhost/" + dbname;
 
 	public ArrayList<TimeTable> getTimeTableList(String studentID) throws SQLException {
-		// memberがDBにあるかどうかを調べる
+		// DBにあるtimetableを引っ張ってくる
 		ArrayList<TimeTable> result = new ArrayList<TimeTable>();
 		Connection connection;
-		String sql = "select * from timetable where studentID=?";
+		String sql = "select * from timetable where studentID = ?";
 
 		try {
 			Class.forName(driverClassName);
@@ -27,10 +27,10 @@ public class TimeTableDAO {
 			PreparedStatement pstmt = connection.prepareStatement(sql);
 
 			pstmt.setString(1, studentID);
+			System.out.println("studentID is "+studentID);
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
-				//st = null;
 				TimeTable tt = new TimeTable();
 
 				String ttID = resultSet.getString("timetableid");
@@ -52,7 +52,7 @@ public class TimeTableDAO {
 	}
 
 	public boolean registerTimeTable(TimeTable timeTable) throws SQLException {
-		// memberがDBにあるかどうかを調べる
+		// timeTableをDBに登録する
 		boolean result = false;
 		Connection connection;
 		String sql = "INSERT INTO timeTable VALUES (?, ?, ?)";

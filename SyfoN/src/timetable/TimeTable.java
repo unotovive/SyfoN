@@ -1,6 +1,8 @@
 package timetable;
 
-public class TimeTable {
+import java.io.Serializable;
+
+public class TimeTable implements Serializable{
 	private String timeTableID;
 	private String timeSemester;
 	private String studentID;

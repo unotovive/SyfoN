@@ -17,7 +17,7 @@ public class UnitDAO {
 
 	public ArrayList<Unit> getAllUnit() throws SQLException {
 		Connection connection;
-		String sql = "select * from unit";
+		String sql = "SELECT * FROM unit";
 		ArrayList<Unit> unitList=new ArrayList<Unit>();
 
 		try {
@@ -25,7 +25,7 @@ public class UnitDAO {
 			connection = DriverManager.getConnection(url, user, password);
 			PreparedStatement pstmt = connection.prepareStatement(sql);
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 				Unit unit=new Unit();
 				String unID = resultSet.getString("unitid");
