@@ -118,7 +118,7 @@ public class TimeTableServ extends HttpServlet {
 		System.out.println("oi!");
 
 		String[] semesters={"zenki1","kouki1","zenki2","kouki2","zenki3","kouki3","zenki4","kouki4"};
-		String[] days={"monday","tuesday","wednesday","thursday","flyday"};
+		String[] days={"monday","tuesday","wednesday","thursday","fryday"};
 		String[] periods={"1","2","3","4","5"};
 
 		for(int i=0;i<semesters.length;i++){
@@ -160,7 +160,7 @@ public class TimeTableServ extends HttpServlet {
 			}
 			semester.put(semesters[i],day);
 		}
-		myClasses.put("my-Classes", semester);
+		myClasses.put("table", semester);
 		System.out.println("oi!!");
 		JSONObject lectureListJson=new JSONObject(myClasses);
 		System.out.println(lectureListJson);
@@ -219,7 +219,7 @@ public class TimeTableServ extends HttpServlet {
 
 		unitMap.put("units", variousUnit);
 		JSONObject unitListJson=new JSONObject(unitMap);
-		//String unitListJson=mapper.writeValueAsString(unitMap);
+		System.out.println("unitMap");
 		session.setAttribute("unit",unitListJson);
 
 		getServletContext().getRequestDispatcher("/top.jsp").forward(request, response);
