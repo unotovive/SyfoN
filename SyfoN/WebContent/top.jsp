@@ -72,13 +72,13 @@
                         <div class="tab_content" id="zen1_content">
                             <div class="tab_content_description">
                                 <table border="1">
-                                    <tr>
-                                        <th></th>
-                                        <th>月</th>
-                                        <th>火</th>
-                                        <th>水</th>
-                                        <th>木</th>
-                                        <th>金</th>
+                                    <tr class="top">
+                                        <th class="top"></th>
+                                        <th class="top">月</th>
+                                        <th class="top">火</th>
+                                        <th class="top">水</th>
+                                        <th class="top">木</th>
+                                        <th class="top">金</th>
                                     </tr>
                                     <tr>
                                         <td>1</td>
