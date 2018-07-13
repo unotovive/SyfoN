@@ -11,16 +11,16 @@ import java.util.ArrayList;
 
 public class LectureDAO {
 
-	final private static String dbname = "tutorial";   // データベース名
-	final private static String user = "wspuser";      // tutorialにアクセスできるユーザ
-	final private static String password = "hogehoge"; // wspuserのパスワード
+	final private static String dbname = "garen";   // データベース名
+	final private static String user = "knight";      // tutorialにアクセスできるユーザ
+	final private static String password = "terror"; // wspuserのパスワード
 	final private static String driverClassName = "org.postgresql.Driver";
 	final private static String url = "jdbc:postgresql://localhost/" + dbname;
 
 	public Lecture getLecture(int lectureID) throws SQLException {
 		Lecture lec = new Lecture();
 		Connection connection;
-		String sql = "SELECT * FROM lecture where lectureid = ?";
+		String sql = "SELECT * FROM lecture where lectureid=?";
 
 		try {
 			Class.forName(driverClassName);
@@ -29,7 +29,7 @@ public class LectureDAO {
 
 			pstmt.setInt(1, lectureID);
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 
 				int lecID = resultSet.getInt("lectureid");
@@ -46,8 +46,6 @@ public class LectureDAO {
 				lec.setRoom(room);
 				int tani = resultSet.getInt("taninum");
 				lec.setTaniNum(tani);
-				String proID = resultSet.getString("professorid");
-				lec.setProfessorID(proID);
 				String purpose = resultSet.getString("purpose");
 				lec.setPurpose(purpose);
 				String achieve = resultSet.getString("achieve");
