@@ -21,7 +21,6 @@ import MustTani.MustTani;
 import MustTani.MustTaniManager;
 import courseLecture.CourseLecture;
 import courseLecture.CourseLectureManager;
-import student.Student;
 import timetable.TimeTable;
 import timetable.TimeTableManager;
 import unit.Unit;
@@ -76,15 +75,12 @@ public class TimeTableServ extends HttpServlet {
 
 	  //時間割IDを取得(8こ）
 		try {
-			Student st=(Student)session.getAttribute("student");
-			timeTableList = timeTableManager.getTimeTableList(st.getStudentID());
+			String studentID=(String)session.getAttribute("studentID");
+			timeTableList = timeTableManager.getTimeTableList(studentID);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 
-
-		//HttpSession session = request.getSession();
-		//session.setAttribute("timetableID", result);
 
 		//時間割IDからコースレクチャーを取得
 		try{
