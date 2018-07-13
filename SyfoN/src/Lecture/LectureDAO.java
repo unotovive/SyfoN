@@ -20,7 +20,7 @@ public class LectureDAO {
 	public Lecture getLecture(int lectureID) throws SQLException {
 		Lecture lec = new Lecture();
 		Connection connection;
-		String sql = "SELECT * FROM lecture where lectureid = ?";
+		String sql = "SELECT * FROM lecture where lectureid=?";
 
 		try {
 			Class.forName(driverClassName);
@@ -29,7 +29,7 @@ public class LectureDAO {
 
 			pstmt.setInt(1, lectureID);
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 
 				int lecID = resultSet.getInt("lectureid");
@@ -46,8 +46,6 @@ public class LectureDAO {
 				lec.setRoom(room);
 				int tani = resultSet.getInt("taninum");
 				lec.setTaniNum(tani);
-				String proID = resultSet.getString("professorid");
-				lec.setProfessorID(proID);
 				String purpose = resultSet.getString("purpose");
 				lec.setPurpose(purpose);
 				String achieve = resultSet.getString("achieve");

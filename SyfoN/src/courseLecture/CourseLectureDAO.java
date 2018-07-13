@@ -19,7 +19,7 @@ public class CourseLectureDAO {
 		// memberがDBにあるかどうかを調べる
 		ArrayList<CourseLecture> result = new ArrayList<CourseLecture>();
 		Connection connection;
-		String sql = "select * from timetable where timetableID=?";
+		String sql = "select * from courselecture where timetableID=?";
 
 		try {
 			Class.forName(driverClassName);
@@ -28,7 +28,7 @@ public class CourseLectureDAO {
 
 			pstmt.setString(1, timeTableID);
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 				//st = null;
 				CourseLecture cl = new CourseLecture();
@@ -37,7 +37,7 @@ public class CourseLectureDAO {
 				cl.setTimeTableID(ttID);
 				int lecID = resultSet.getInt("lectureid");
 				cl.setLectureID(lecID);
-				String cs = resultSet.getString("courasesituation");
+				String cs = resultSet.getString("coursesituation");
 				cl.setCourseSituation(cs);
 
 				result.add(cl);
