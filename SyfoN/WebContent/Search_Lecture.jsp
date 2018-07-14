@@ -82,6 +82,7 @@
 			</form>
 		</div>
  	</div>
+ 	<% System.out.println( (String)session.getAttribute("lectureList") ); %>
 <%-- 	<%
 // 		Map<String,Map> map=new HashMap<String,Map>();
 // 		Map<String,String> lect1=new HashMap<String,String>();
