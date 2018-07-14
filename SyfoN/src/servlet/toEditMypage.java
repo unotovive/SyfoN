@@ -29,6 +29,7 @@ public class toEditMypage extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
+		//マイページ編集ボタン
 		getServletContext().getRequestDispatcher("/toeditmypage.jsp").forward(request, response);
 
 		/*
