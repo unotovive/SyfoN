@@ -34,11 +34,11 @@
 							<td>開講日</td>
 							<td><select id="inputformSmall"  name="day">
 									<option value=""></option>
-									<option value="mon">月</option>
-									<option value="tue">火</option>
-									<option value="wed">水</option>
-									<option value="thu">木</option>
-									<option value="fry">金</option>
+									<option value="monday">月</option>
+									<option value="tuesday">火</option>
+									<option value="wednesday">水</option>
+									<option value="thursday">木</option>
+									<option value="fryday">金</option>
 							</select></td>
 						</tr>
 						<tr>
@@ -55,8 +55,8 @@
 							<td>開講期</td>
 							<td><select id="inputformSmall" name="kaikoki">
 									<option value=""></option>
-									<option value="first">前期</option>
-									<option value="scecond">後期</option>
+									<option value="zenki">前期</option>
+									<option value="kouki">後期</option>
 							</select></td>
 						</tr>
 						<tr>
@@ -178,7 +178,7 @@
 	</script>
 	<script>
 		window.onload = function() {
-		var jsonTest='<%= session.getAttribute("jsonTest")%>';
+		var jsonTest='<%= session.getAttribute("lectureList")%>';
 		jsonTest=JSON.parse(jsonTest);
 		var keys = Object.keys(jsonTest);
 		for(var i = 0; i <Object.keys(jsonTest).length; i++){

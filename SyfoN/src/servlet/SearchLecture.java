@@ -64,14 +64,15 @@ public class SearchLecture extends HttpServlet {
 	    LectureManager lectureManager= new LectureManager();
 		Set<Lecture> lectureList=new HashSet<Lecture>();
 
-		Professor professor=new Professor();
 		ProfessorManager professorManager=new ProfessorManager();
 		ProfessorToLectureManager ptlManager=new ProfessorToLectureManager();
 		ArrayList<ProfessorToLecture>  ptlList = new ArrayList<ProfessorToLecture>();
 
 		//まず、教師名で講義を得る
-		professor=professorManager.getProfessor(request.getParameter("professorName"));
-		ptlList = ptlManager.findPTLList(professor.getProfessorID());
+		ArrayList<Professor> professorList=professorManager.findProfessor(request.getParameter("professorName"));
+		for(Professor p:professorList){
+			ptlList.addAll(ptlManager.findPTLList(p.getProfessorID()));
+		}
 		for(ProfessorToLecture tempPTL:ptlList){
 			lectureList.add(lectureManager.getLecture(tempPTL.getLectureID()));
 		}
@@ -80,17 +81,15 @@ public class SearchLecture extends HttpServlet {
 		lec.setDay(request.getParameter("day"));
 		lec.setLectureName(request.getParameter("lectureName"));
 
-
-
 		//該当学期のみ変換
-		String gaitoGakki=this.AdaptGaitoGakki(request.getParameter("haitoNen"), request.getParameter("kaikoki"));
+		String gaitoGakki=this.AdaptGaitoGakki(request.getParameter("kaikoki"));
+		gaitoGakki+=request.getParameter("haitoNen");
 		lec.setGaitoGakki(gaitoGakki);
 
 		//Lectureを取得
 		lectureList.addAll(lectureManager.findLecture(lec));
 
 		//Mapに入れていく
-		Map<String,Map> lectureMap=new HashMap<String,Map>();
 		Map<String,Map> lectureListMap=new HashMap<String,Map>();
 		int count=1;
 		for(Lecture l:lectureList){
@@ -102,17 +101,27 @@ public class SearchLecture extends HttpServlet {
 			//教授名を取得して、入れる
 			String professorName=professorManager.getProfessor(
 					ptlManager.getPTL(l.getLectureID()).getProfessorID()).getProfessorName();
+			if(professorName!=null){
 			lectureDataMap.put("教授名",professorName);
+			}else{
+				lectureDataMap.put("教授名","未登録");
+			}
 			lectureListMap.put("lecture"+Integer.toString(count),lectureDataMap);
 
 			count++;
 		}
-		lectureMap.put("lectureList",lectureListMap);
 
-		JSONObject lectureListJson=new JSONObject(lectureMap);
+		JSONObject lectureListJson=new JSONObject(lectureListMap);
 		session.setAttribute("lectureList",lectureListJson );
 		System.out.println(lectureListJson);
 		getServletContext().getRequestDispatcher("/Search_Lecture.jsp").forward(request, response);
+
+		//リクエストの破棄
+		request.removeAttribute("professorName");
+		request.removeAttribute("day");
+		request.removeAttribute("lectureName");
+		request.removeAttribute("kaikoki");
+		request.removeAttribute("haitoNen");
 
 		} catch (SQLException e1) {
 			// TODO Auto-generated catch block
@@ -122,25 +131,25 @@ public class SearchLecture extends HttpServlet {
 	private String AdaptGakki(String gaitoGakki){
 		String result="";
 		switch(gaitoGakki){
-		case "zennki1":
+		case "zenki1":
 			result="1年生前期";
 			break;
 		case "kouki1":
 			result="1年生後期";
 			break;
-		case "zennki2":
+		case "zenki2":
 			result="2年生前期";
 			break;
 		case "kouki2":
 			result="2年生後期";
 			break;
-		case "zennki3":
+		case "zenki3":
 			result="3年生前期";
 			break;
 		case "kouki3":
 			result="3年生後期";
 			break;
-		case "zennki4":
+		case "zenki4":
 			result="4年生前期";
 			break;
 		case "kouki4":
@@ -149,7 +158,7 @@ public class SearchLecture extends HttpServlet {
 		}
 		return result;
 	}
-	private String AdaptGaitoGakki(String HaitoNen,String Kaikoki){
+	private String AdaptGaitoGakki(String Kaikoki){
 		String result=Kaikoki;
 		switch(result){
 		case "前期":
