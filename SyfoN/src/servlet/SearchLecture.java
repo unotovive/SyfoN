@@ -80,7 +80,6 @@ public class SearchLecture extends HttpServlet {
 		//次にLectureに各要素を入力して検索する
 		lec.setDay(request.getParameter("day"));
 		lec.setLectureName(request.getParameter("rectureName"));
-		lec.setPeriod(Integer.valueOf(request.getParameter("period")));
 
 		//該当学期のみ変換
 		String gaitoGakki=this.AdaptGaitoGakki(request.getParameter("haitoNen"), request.getParameter("kaikoki"));
@@ -109,6 +108,7 @@ public class SearchLecture extends HttpServlet {
 		JSONObject lectureListJson=new JSONObject(lectureMap);
 		session.setAttribute("lectureList",lectureListJson );
 		System.out.println(lectureListJson);
+		getServletContext().getRequestDispatcher("/Search_Lecture.jsp").forward(request, response);
 
 		} catch (SQLException e1) {
 			// TODO Auto-generated catch block

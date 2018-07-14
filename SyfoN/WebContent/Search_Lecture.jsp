@@ -16,23 +16,23 @@
 		<!-- {{test}} -->
 		<a>top</a> <a>講義一覧</a> <a>マイページ</a> <a>ログアウト</a>
 		<div id="pageBody">
-			<form action="serch_lecture" method="post">
+			<form action="SearchLecture" method="post">
 				<div id="pageBodyLeft">
 					<h1>講義一覧</h1>
 					<table>
 						<tr>
 							<td>教科名</td>
-							<td><input id="inputformSmall" type="text" name="kyoka"
+							<td><input id="inputformSmall" type="text" name="lectureName"
 								value=""></td>
 						</tr>
 						<tr>
 							<td>教授名</td>
-							<td><input id="inputformSmall" type="text" name="" value="">
+							<td><input id="inputformSmall" type="text" name="professorName" value="">
 							</td>
 						</tr>
 						<tr>
 							<td>開講日</td>
-							<td><select id="inputformSmall" required>
+							<td><select id="inputformSmall"  name="day">
 									<option value=""></option>
 									<option value="mon">月</option>
 									<option value="tue">火</option>
@@ -43,7 +43,7 @@
 						</tr>
 						<tr>
 							<td>配当年</td>
-							<td><select id="inputformSmall" required>
+							<td><select id="inputformSmall" name="haitoNen">
 									<option value=""></option>
 									<option value="1">1年</option>
 									<option value="2">2年</option>
@@ -53,7 +53,7 @@
 						</tr>
 						<tr>
 							<td>開講期</td>
-							<td><select id="inputformSmall" required>
+							<td><select id="inputformSmall" name="kaikoki">
 									<option value=""></option>
 									<option value="first">前期</option>
 									<option value="scecond">後期</option>
@@ -63,9 +63,7 @@
 							<td><span class="checkbox-parts">履修済</span> <input
 								id="checkbox" class="checkbox-input" type="checkbox" name=""
 								value=""></td>
-							<td><input id="serchButton" type="button" value="検索"
-								onclick="search();">
-								<button v-on:click="search">検索２</button></td>
+							<button v-on:click="search" type="submit" >検索2</button></td>
 						</tr>
 					</table>
 
@@ -83,40 +81,40 @@
 				</div>
 			</form>
 		</div>
-	</div>
-	<%
-		Map<String,Map> map=new HashMap<String,Map>();
-		Map<String,String> lect1=new HashMap<String,String>();
-		lect1.put("教科名", "サーバ設計論");
-		lect1.put("教授名", "柿崎");
-		lect1.put("開講日", "月");
-		lect1.put("時限", "2限");
-		lect1.put("配当年学期", "3年前期");
-		map.put("lect1",lect1);
-		Map<String,String> lect2=new HashMap<String,String>();
-		lect2.put("教科名", "サーバ設計論");
-		lect2.put("教授名", "柿崎");
-		lect2.put("開講日", "月");
-		lect2.put("時限", "2限");
-		lect2.put("配当年学期", "3年前期");
-		map.put("lect2",lect2);
-		Map<String,String> lect3=new HashMap<String,String>();
-		lect3.put("教科名", "鯖プロ");
-		lect3.put("教授名", "柿崎");
-		lect3.put("開講日", "金");
-		lect3.put("時限", "3限");
-		lect3.put("配当年学期", "3年前期");
-		map.put("lect3",lect3);
-		Map<String,String> lect4=new HashMap<String,String>();
-		lect4.put("教科名", "鯖プロ");
-		lect4.put("教授名", "柿崎");
-		lect4.put("開講日", "金");
-		lect4.put("時限", "4限");
-		lect4.put("配当年学期", "3年前期");
-		map.put("lect4",lect4);
-		JSONObject jsonTest=new JSONObject(map);
-		session.setAttribute("jsonTest",jsonTest);
-	%>
+ 	</div>
+<%-- 	<%
+// 		Map<String,Map> map=new HashMap<String,Map>();
+// 		Map<String,String> lect1=new HashMap<String,String>();
+// 		lect1.put("教科名", "サーバ設計論");
+// 		lect1.put("教授名", "柿崎");
+// 		lect1.put("開講日", "月");
+// 		lect1.put("時限", "2限");
+// 		lect1.put("配当年学期", "3年前期");
+// 		map.put("lect1",lect1);
+// 		Map<String,String> lect2=new HashMap<String,String>();
+// 		lect2.put("教科名", "サーバ設計論");
+// 		lect2.put("教授名", "柿崎");
+// 		lect2.put("開講日", "月");
+// 		lect2.put("時限", "2限");
+// 		lect2.put("配当年学期", "3年前期");
+// 		map.put("lect2",lect2);
+// 		Map<String,String> lect3=new HashMap<String,String>();
+// 		lect3.put("教科名", "鯖プロ");
+// 		lect3.put("教授名", "柿崎");
+// 		lect3.put("開講日", "金");
+// 		lect3.put("時限", "3限");
+// 		lect3.put("配当年学期", "3年前期");
+// 		map.put("lect3",lect3);
+// 		Map<String,String> lect4=new HashMap<String,String>();
+// 		lect4.put("教科名", "鯖プロ");
+// 		lect4.put("教授名", "柿崎");
+// 		lect4.put("開講日", "金");
+// 		lect4.put("時限", "4限");
+// 		lect4.put("配当年学期", "3年前期");
+// 		map.put("lect4",lect4);
+// 		JSONObject jsonTest=new JSONObject(map);
+// 		session.setAttribute("jsonTest",jsonTest);
+	 	%> --%>
 
 	<script>
 	var addLine = function(tblEl,index) {
