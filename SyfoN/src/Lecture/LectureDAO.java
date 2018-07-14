@@ -164,7 +164,7 @@ public class LectureDAO {
 		ArrayList<Lecture> lecList = new ArrayList<Lecture>();
 
 		Connection connection;
-		String sql = "SELECT * FROM lecture where lecName Like ? ";
+		String sql = "SELECT * FROM lecture where lecturename Like ? ";
 
 		try {
 			Class.forName(driverClassName);
@@ -192,8 +192,6 @@ public class LectureDAO {
 				lec.setRoom(room);
 				int tani = resultSet.getInt("taninum");
 				lec.setTaniNum(tani);
-				String proID = resultSet.getString("professorid");
-				lec.setProfessorID(proID);
 				String purpose = resultSet.getString("purpose");
 				lec.setPurpose(purpose);
 				String achieve = resultSet.getString("achieve");

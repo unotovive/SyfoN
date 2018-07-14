@@ -79,11 +79,15 @@ public class SearchLecture extends HttpServlet {
 
 		//次にLectureに各要素を入力して検索する
 		lec.setDay(request.getParameter("day"));
-		lec.setLectureName(request.getParameter("rectureName"));
+		lec.setLectureName(request.getParameter("lectureName"));
+
+		System.out.println(lectureManager.findLecture(lec).get(0).getDay());
 
 		//該当学期のみ変換
 		String gaitoGakki=this.AdaptGaitoGakki(request.getParameter("haitoNen"), request.getParameter("kaikoki"));
 		lec.setGaitoGakki(gaitoGakki);
+
+		//Lectureを取得
 		lectureList.addAll(lectureManager.findLecture(lec));
 
 		//Mapに入れていく
@@ -105,6 +109,7 @@ public class SearchLecture extends HttpServlet {
 			count++;
 		}
 		lectureMap.put("lectureList",lectureListMap);
+
 		JSONObject lectureListJson=new JSONObject(lectureMap);
 		session.setAttribute("lectureList",lectureListJson );
 		System.out.println(lectureListJson);
