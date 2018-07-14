@@ -102,7 +102,7 @@ public class SearchLecture extends HttpServlet {
 			String professorName=professorManager.getProfessor(
 					ptlManager.getPTL(l.getLectureID()).getProfessorID()).getProfessorName();
 			if(professorName!=null){
-			lectureDataMap.put("教授名",professorName);
+				lectureDataMap.put("教授名",professorName);
 			}else{
 				lectureDataMap.put("教授名","未登録");
 			}

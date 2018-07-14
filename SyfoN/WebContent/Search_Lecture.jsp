@@ -76,6 +76,7 @@
 							<th>時限</th>
 							<th>配当年学期</th>
 							<th>教科名</th>
+							<th>教授名</th>
 						</tr>
 					</table>
 				</div>
@@ -129,20 +130,23 @@
 
 	    // セルの挿入
 	    // 0指定で先頭挿入
-	    var td1 = tr.insertCell(-1),
-	        td2 = tr.insertCell(-1),
+	    var td1 = tr.insertCell(-1);
+	        td2 = tr.insertCell(-1);
 	        td3 = tr.insertCell(-1);
 	    	td4 = tr.insertCell(-1);
+	    	td5 = tr.insertCell(-1);
 
 		var atd1 = "lect" + index + "1";
 		var atd2 = "lect" + index + "2";
 		var atd3 = "lect" + index + "3";
 		var atd4 = "lect" + index + "4";
+		var atd5= "lect"+index+"5";
 	    // ボタン用 タグ
-	    var tag1 = '<p id='+atd1+'></p>',
+	    var tag1 = '<p id='+atd1+'></p>';
 	        tag2 = '<p id='+atd2+'></p>';
 	        tag3 = '<p id='+atd3+'></p>';
 	        tag4 = '<p id='+atd4+'></p>';
+	        tag5 = '<p id='+atd5+'></p>';
 
 
 	    // 行数取得
@@ -153,6 +157,7 @@
 	    td2.innerHTML = tag2;
 	    td3.innerHTML = tag3;
 	    td4.innerHTML = tag4;
+	    td5.innerHTML = tag5;
 	}
 	</script>
 	<script>
@@ -165,6 +170,7 @@
 		var td2 = "lect" + i + "2";
 		var td3 = "lect" + i + "3";
 		var td4 = "lect" + i + "4";
+		var td5 = "lect" + i + "5";
 		console.log(Object.keys(jsonTest.lecture1)[i],jsonTest[keys[i]]);
 		var inputformSmall11 = document.getElementById(td1);
 		inputformSmall11.innerHTML = jsonTest[keys[i]].開講日;
@@ -174,6 +180,8 @@
 		inputformSmall31.innerHTML = jsonTest[keys[i]].配当年学期;
 		var inputformSmall41 = document.getElementById(td4);
 		inputformSmall41.innerHTML = jsonTest[keys[i]].教科名;
+		var inputformSmall51 = document.getElementById(td5);
+		inputformSmall51.innerHTML = jsonTest[keys[i]].教授名;
 	}
 
 	</script>
@@ -185,7 +193,7 @@
 		for(var i = 0; i <Object.keys(jsonTest).length; i++){
 			addLine("lectures",i);
 			addLect(i);
-			console.log(Object.keys(jsonTest.lect1)[i],jsonTest[keys[i]]);
+			console.log(Object.keys(jsonTest.lecture1)[i],jsonTest[keys[i]]);
 		}
 	}
 
