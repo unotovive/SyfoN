@@ -61,7 +61,7 @@ public class Admin_LectureListServlet extends HttpServlet {
 		System.out.println("d");
 		String lect = "lect";
 		for(int i = 0; i < result.size(); i++) {
-			lectureListMap = new HashMap<String, Map>();
+			lecture = new HashMap<String, Map>();
 			Map<String , String> LectureDetail = new HashMap<String , String>();
 			LectureDetail.put("開講曜日",result.get(i).getDay());
 			LectureDetail.put("授業コード",Integer.toString(result.get(i).getLectureID()));
