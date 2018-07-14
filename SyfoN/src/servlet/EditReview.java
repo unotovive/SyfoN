@@ -8,18 +8,22 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import review.Review;
+import review.ReviewManager;
 
 /**
  * Servlet implementation class ExitReview
  */
 @WebServlet("/ExitReview")
-public class ExitReview extends HttpServlet {
+public class EditReview extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ExitReview() {
+    public EditReview() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -41,8 +45,8 @@ public class ExitReview extends HttpServlet {
 		ReviewManager mane = new ReviewManager();
 
 		HttpSession session = request.getSession();
-		rev.setStudentID(ssession.getAttribute("studentID"));
-		rev.setLectureID(request.getParameter("lectureID"));
+		rev.setStudentID((String)session.getAttribute("studentID"));
+		rev.setLectureID(Integer.parseInt(request.getParameter("lectureID")));
 		rev.setComment(request.getParameter("comment"));
 		rev.setTotalPoint(Integer.parseInt(request.getParameter("totalpoint")));
 		rev.setMathPoint(Integer.parseInt(request.getParameter("mathpoint")));
@@ -53,7 +57,7 @@ public class ExitReview extends HttpServlet {
 
 		boolean result = false;
 		try {
-			result = mane.updateReview(rev);
+			result = mane.editReview(rev);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
