@@ -76,12 +76,9 @@ public class Admin_LectureListServlet extends HttpServlet {
         System.out.println(lectureListJson);
         session.setAttribute("lectureList",lectureListJson);
 
-//		HttpSession session = request.getSession();
-//		session.setAttribute("adminlec", result);
-
-//		getServletContext().getRequestDispatcher("/top.jsp").forward(request, response);
-
-	}
+        Lecture lecresult = new Lecture();
+        lecresult.setLectureID(Integer.parseInt(request.getParameter("授業コード")));;;
+      }
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -89,7 +86,42 @@ public class Admin_LectureListServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		Lecture Lecture = new Lecture();
+		LectureManager mane = new LectureManager();
+		Lecture editresult = new Lecture();
+		boolean remresult = false;
+		Lecture.setLectureID((Integer.parseInt(request.getParameter("授業コード"))));
+
+		HttpSession session = request.getSession();
+
+
+		if(request.getParameter("AddLecture")!= null){    //新規登録を押された場合
+			session.removeAttribute("editresult");    //サーバーに残っている授業コードを破棄
+			getServletContext().getRequestDispatcher("/Admin_RegisterLecture.jsp").forward(request, response);
+
+
+		}else if(request.getParameter("EditLecture")!=null){    //編集を押された場合
+			try {
+				editresult = mane.getLecture(Lecture.getLectureID());
+				session.setAttribute("editresult",editresult);  //押された講義の授業コードを保持
+			} catch (SQLException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
+			getServletContext().getRequestDispatcher("/Admin_RegisterLecture.jsp").forward(request, response);
+
+
+
+		}else if(request.getParameter("removelecture")!=null){       //削除を押された場合
+			try {
+
+				remresult = mane.removeLecture(Lecture);
+			} catch (SQLException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
+			getServletContext().getRequestDispatcher("/Admin_LectureList.jsp").forward(request, response);
+		}
 	}
 
 }
