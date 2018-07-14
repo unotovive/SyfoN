@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.Student;
-import model.StudentManager;
+import student.Student;
+import student.StudentManager;
 
 /**
  * Servlet implementation class Mypageexit
@@ -19,13 +19,13 @@ import model.StudentManager;
 public class Mypageedit extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Mypageedit() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public Mypageedit() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -44,10 +44,10 @@ public class Mypageedit extends HttpServlet {
 		StudentManager mane = new StudentManager();
 		boolean result = false;
 
-		student.setNickname(request.getParameter("nickname"));
+		student.setNickName(request.getParameter("nickname"));
 		student.setGradeID(Integer.parseInt(request.getParameter("gradeid")) );
-		student.setPassword(request.getParameter("pass"));
-		student.setNickname(request.getParameter("nickname"));
+		student.setPassWord(request.getParameter("pass"));
+		student.setNickName(request.getParameter("nickname"));
 
 		try {
 			result = mane.editProf(student);
@@ -63,7 +63,8 @@ public class Mypageedit extends HttpServlet {
 			// ログインに失敗している場合はlogin.jspへ
 			//System.out.print("sippai");
 			getServletContext().getRequestDispatcher("/editMypage.jsp").forward(request, response);
-			}
-		}}
-
+		}
+	}
 }
+
+
