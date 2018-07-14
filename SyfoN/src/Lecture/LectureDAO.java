@@ -99,7 +99,7 @@ public class LectureDAO {
 
 			//pstmt.setString(1, day);
 
-			ResultSet resultSet = pstmt.executeQuery();
+			ResultSet resultSet = pstmt.executeQuery(sql);
 			while(resultSet.next()){
 
 				Lecture lec = new Lecture();
