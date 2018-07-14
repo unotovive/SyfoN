@@ -29,7 +29,9 @@ public class ProfessorToLectureDAO {
 			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 
-				ptl.setLectureID(lectureID);
+
+				int lecID = resultSet.getInt("lecturerid");
+				ptl.setLectureID(lecID);
 				String professorID = resultSet.getString("professorid");
 				ptl.setProfessorID(professorID);
 			}
@@ -56,8 +58,10 @@ public class ProfessorToLectureDAO {
 			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 				ProfessorToLecture tempPtl=new ProfessorToLecture();
-				tempPtl.setProfessorID(professorID);
-				tempPtl.setProfessorID(resultSet.getString("lectureid"));
+				int lecID = resultSet.getInt("lecturerid");
+				tempPtl.setLectureID(lecID);
+				String proID = resultSet.getString("professorid");
+				tempPtl.setProfessorID(proID);
 				ptlList.add(tempPtl);
 			}
 			resultSet.close();
@@ -93,7 +97,7 @@ public class ProfessorToLectureDAO {
 	public boolean updatePTL(ProfessorToLecture ptl){
 		boolean result=false;
 		Connection connection;
-		String sql = "UPDATE professortolecture SET professorid =? , lectureid = ? WHERE lectureid=? ;";
+		String sql = "UPDATE professortolecture SET professorid =? WHERE lectureid=? ;";
 
 		try {
 			Class.forName(driverClassName);

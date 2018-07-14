@@ -48,7 +48,7 @@ public class ProfessorDAO {
 
 	public ArrayList<Professor> findProfessor(String professorName) throws SQLException {
 		Connection connection;
-		String sql = "SELECT * FROM professor WHERE professorname = ?";
+		String sql = "SELECT * FROM professor WHERE professorname like ?";
 		ArrayList<Professor> proList=new ArrayList<Professor>();
 
 		try {
