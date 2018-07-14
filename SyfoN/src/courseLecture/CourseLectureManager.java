@@ -35,9 +35,9 @@ public class CourseLectureManager {
 	}
 
 
-	public ArrayList<CourseLecture> getCourseLectureList(String studentID) throws SQLException{
+	public ArrayList<CourseLecture> getCourseLectureList(String timeTableID) throws SQLException{
 		//ArrayList<CourseLecture> result = new Array ;
-		courseLectureList = courseLectureDAO.getCourseLectureList(studentID);
+		courseLectureList = courseLectureDAO.getCourseLectureList(timeTableID);
 		return courseLectureList;
 	}
 

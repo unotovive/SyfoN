@@ -55,8 +55,6 @@ public class RegisterTimeTable extends HttpServlet {
 		} else {
 			// ログインに失敗している場合はlogin.jspへ
 			getServletContext().getRequestDispatcher("/CreateTable").forward(request, response);
-			}
 		}
 	}
-
 }
