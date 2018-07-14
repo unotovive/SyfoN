@@ -150,31 +150,13 @@ public class SearchLecture extends HttpServlet {
 		return result;
 	}
 	private String AdaptGaitoGakki(String HaitoNen,String Kaikoki){
-		String result=HaitoNen+Kaikoki;
+		String result=Kaikoki;
 		switch(result){
-		case "1年前期":
-			result="zenki1";
+		case "前期":
+			result="zenki";
 			break;
-		case"1年後期":
-			result="kouki1";
-			break;
-		case"2年前期":
-			result="zenki2";
-			break;
-		case"2年後期":
-			result="kouki2";
-			break;
-		case "3年前期":
-			result="zenki3";
-			break;
-		case "3年後期":
-			result="kouki3";
-			break;
-		case "4年前期":
-			result="zenki4";
-			break;
-		case "4年後期":
-			result="kouki4";
+		case"後期":
+			result="kouki";
 			break;
 		}
 		return result;

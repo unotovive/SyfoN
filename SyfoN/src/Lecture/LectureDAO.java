@@ -311,12 +311,12 @@ public class LectureDAO {
 		return lecList;
 	}
 
-	//ここ、完全検索でおｋ？
+	//学期による検索
 	public ArrayList<Lecture> findLectureByGaitoGakki(String gaitoGakki) throws SQLException {
 		ArrayList<Lecture> lecList = new ArrayList<Lecture>();
 
 		Connection connection;
-		String sql = "SELECT * FROM lecture where gaitogakki = ?";
+		String sql = "SELECT * FROM lecture where gaitogakki LIKE ?";
 
 		try {
 			Class.forName(driverClassName);
