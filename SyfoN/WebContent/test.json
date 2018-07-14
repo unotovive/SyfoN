@@ -1,0 +1,5292 @@
+{
+    "table" : {
+      "zenki1" : {"monday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "tuesday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "wednesday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "thursday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+        "fryday" : {
+          "period1" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period2" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period3" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period4" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period5" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "うんぴ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          }
+        }
+      },
+      "zenki2" : {"monday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "tuesday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "wednesday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "thursday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+        "fryday" : {
+          "period1" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period2" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period3" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period4" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period5" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "うんぴ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          }
+        }
+      },
+      "zenki3" : {"monday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "tuesday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "wednesday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "thursday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+        "fryday" : {
+          "period1" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period2" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period3" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period4" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period5" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "うんぴ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          }
+        }
+      },
+      "zenki4" : {"monday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "tuesday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "wednesday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "thursday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+        "fryday" : {
+          "period1" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period2" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period3" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period4" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period5" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "うんぴ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          }
+        }
+      },
+      "kouki1" : {"monday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "tuesday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "wednesday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "thursday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+        "fryday" : {
+          "period1" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period2" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period3" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period4" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period5" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "うんぴ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          }
+        }
+      },
+      "kouki2" : {"monday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "tuesday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "wednesday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "thursday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+        "fryday" : {
+          "period1" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period2" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period3" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period4" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period5" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "うんぴ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          }
+        }
+      },
+      "kouki3" : {"monday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "tuesday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "wednesday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "thursday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+        "fryday" : {
+          "period1" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period2" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period3" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period4" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period5" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "うんぴ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          }
+        }
+      },
+      "kouki4" : {"monday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "tuesday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "wednesday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+      "thursday" : {
+        "period1" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period2" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period3" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period4" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "鯖プロ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        },
+        "period5" : {
+          "csc" : [ {
+            "id" : 514,
+            "must" : false,
+            "name" : "じんか",
+            "room" : "うんこ",
+            "taninum" : 10
+          },{
+              "id" : 8014,
+              "must" : true,
+              "name" : "環境",
+              "room" : "岩井健",
+              "taninum" : 100
+            },{
+              "id" : 80224,
+              "must" : false,
+              "name" : "音楽",
+              "room" : "音楽室",
+              "taninum" : 1
+            }],
+          "id" : 114514,
+          "must" : true,
+          "name" : "うんぴ",
+          "room" : "FI科演習室",
+          "taninum" : 3
+        }
+      },
+        "fryday" : {
+          "period1" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period2" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period3" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period4" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "鯖プロ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          },
+          "period5" : {
+            "csc" : [ {
+              "id" : 514,
+              "must" : false,
+              "name" : "じんか",
+              "room" : "うんこ",
+              "taninum" : 10
+            },{
+                "id" : 8014,
+                "must" : true,
+                "name" : "環境",
+                "room" : "岩井健",
+                "taninum" : 100
+              },{
+                "id" : 80224,
+                "must" : false,
+                "name" : "音楽",
+                "room" : "音楽室",
+                "taninum" : 1
+              }],
+            "id" : 114514,
+            "must" : true,
+            "name" : "うんぴ",
+            "room" : "FI科演習室",
+            "taninum" : 3
+          }
+        }
+      }
+    }
+  }

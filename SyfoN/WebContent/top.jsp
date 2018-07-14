@@ -1149,15 +1149,6 @@
                 mounted() {
                     const self = this
                     console.log("hello")
-                    axios
-                        .get('https://api.myjson.com/bins/1by2li')
-                        .then(function (res) {
-                            self.table = res.data.classes;
-                            self.units = res.data.units;
-                            self.needs = res.data.needs
-                            console.log(self.table)
-                        })
-                    console.log("hello")
                     this.table = '<%= session.getAttribute("lectureList")%>'
                     this.table = JSON.parse(this.table)
                     this.table = this.table.table
