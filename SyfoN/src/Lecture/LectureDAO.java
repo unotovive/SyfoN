@@ -118,8 +118,6 @@ public class LectureDAO {
 				lec.setRoom(room);
 				int tani = resultSet.getInt("taninum");
 				lec.setTaniNum(tani);
-				String proID = resultSet.getString("professorid");
-				lec.setProfessorID(proID);
 				String purpose = resultSet.getString("purpose");
 				lec.setPurpose(purpose);
 				String achieve = resultSet.getString("achieve");
