@@ -46,15 +46,15 @@ public class RegisterStudent extends HttpServlet {
 		Student student = new Student();
 		StudentManager manager= new StudentManager();
 
-		student.setName(request.getParameter("name"));
-		student.setID(request.getParameter("studentNo"));
-		student.setmailAddress(request.getParameter("mail"));
-		student.setPass(request.getParameter("pass1"));
-		student.setGrade(request.getParameter("Grade"));
+		student.setNickName(request.getParameter("name"));
+		student.setStudentID(request.getParameter("studentNo"));
+		student.setMailAddress(request.getParameter("mail"));
+		student.setPassWord(request.getParameter("pass1"));
+		student.setGradeID(Integer.parseInt(request.getParameter("Grade")));
 
 		boolean result = false;
 		try {
-			result = manager.checkID(student);
+			result = manager.check(student);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -62,7 +62,12 @@ public class RegisterStudent extends HttpServlet {
 		session.setAttribute("login", result);
 		if (result) {
 			// 同じIDがなかった場合
-			manager.registerstudent(student);
+			try {
+				manager.registerStudent(student);
+			} catch (SQLException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
 			getServletContext().getRequestDispatcher("/Common_Login.jsp").forward(request, response);
 		} else {
 			// ログインに失敗している場合はlogin.jspへ
