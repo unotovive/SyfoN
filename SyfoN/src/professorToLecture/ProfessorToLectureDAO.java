@@ -29,7 +29,9 @@ public class ProfessorToLectureDAO {
 			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 
-				ptl.setLectureID(lectureID);
+
+				int lecID = resultSet.getInt("lecturerid");
+				ptl.setLectureID(lecID);
 				String professorID = resultSet.getString("professorid");
 				ptl.setProfessorID(professorID);
 			}
@@ -41,7 +43,7 @@ public class ProfessorToLectureDAO {
 		return ptl;
 	}
 
-	public ArrayList<ProfessorToLecture> findlecture(String professorID){
+	public ArrayList<ProfessorToLecture> findPTLList(String professorID){
 		ArrayList<ProfessorToLecture> ptlList=new ArrayList<ProfessorToLecture>();
 		Connection connection;
 		String sql = "SELECT * FROM professortolecture where professorid = ?";
@@ -53,11 +55,13 @@ public class ProfessorToLectureDAO {
 
 			pstmt.setString(1, professorID);
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 				ProfessorToLecture tempPtl=new ProfessorToLecture();
-				tempPtl.setProfessorID(professorID);
-				tempPtl.setLectureID(resultSet.getInt("lectureid"));
+				int lecID = resultSet.getInt("lecturerid");
+				tempPtl.setLectureID(lecID);
+				String proID = resultSet.getString("professorid");
+				tempPtl.setProfessorID(proID);
 				ptlList.add(tempPtl);
 			}
 			resultSet.close();
@@ -91,7 +95,26 @@ public class ProfessorToLectureDAO {
 		return result;
 	}
 	public boolean updatePTL(ProfessorToLecture ptl){
-		boolean result=true;
+		boolean result=false;
+		Connection connection;
+		String sql = "UPDATE professortolecture SET professorid =? WHERE lectureid=? ;";
+
+		try {
+			Class.forName(driverClassName);
+			connection = DriverManager.getConnection(url, user, password);
+			PreparedStatement pstmt = connection.prepareStatement(sql);
+
+			pstmt.setString(1, ptl.getProfessorID());
+			pstmt.setInt(2, ptl.getLectureID());
+
+			ResultSet resultSet = pstmt.executeQuery();
+			if (resultSet.next()) result = true;
+
+			resultSet.close();
+			connection.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return result;
 	}
 }
