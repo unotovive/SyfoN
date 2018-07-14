@@ -85,7 +85,7 @@ public class LectureDAO {
 	}
 
 	public ArrayList<Lecture> getLectureList() throws SQLException {
-		// memberがDBにあるかどうかを調べる
+		//全ての講義を渡す
 
 		ArrayList<Lecture> lecList = new ArrayList<Lecture>();
 
@@ -159,7 +159,7 @@ public class LectureDAO {
 	}
 
 	public ArrayList<Lecture> findLectureByLectureName(String lecName) throws SQLException {
-		// memberがDBにあるかどうかを調べる
+		// 名前を使ってLectureを探す
 
 		ArrayList<Lecture> lecList = new ArrayList<Lecture>();
 

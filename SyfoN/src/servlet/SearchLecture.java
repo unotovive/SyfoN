@@ -70,7 +70,6 @@ public class SearchLecture extends HttpServlet {
 		ArrayList<ProfessorToLecture>  ptlList = new ArrayList<ProfessorToLecture>();
 
 		//まず、教師名で講義を得る
-		System.out.println(request.getParameter("professorName"));
 		professor=professorManager.getProfessor(request.getParameter("professorName"));
 		ptlList = ptlManager.findPTLList(professor.getProfessorID());
 		for(ProfessorToLecture tempPTL:ptlList){
@@ -81,7 +80,7 @@ public class SearchLecture extends HttpServlet {
 		lec.setDay(request.getParameter("day"));
 		lec.setLectureName(request.getParameter("lectureName"));
 
-		System.out.println(lectureManager.findLecture(lec).get(0).getDay());
+
 
 		//該当学期のみ変換
 		String gaitoGakki=this.AdaptGaitoGakki(request.getParameter("haitoNen"), request.getParameter("kaikoki"));
@@ -96,7 +95,7 @@ public class SearchLecture extends HttpServlet {
 		int count=1;
 		for(Lecture l:lectureList){
 			Map<String,String> lectureDataMap=new HashMap<String,String>();
-			lectureDataMap.put("開講日", l.getDay());
+			lectureDataMap.put("開講日", this.AdaptDay(l.getDay()));
 			lectureDataMap.put("教科名", l.getLectureName());
 			lectureDataMap.put("時限",Integer.toString(l.getPeriod())+"限");
 			lectureDataMap.put("配当年学期", this.AdaptGakki(l.getGaitoGakki()));

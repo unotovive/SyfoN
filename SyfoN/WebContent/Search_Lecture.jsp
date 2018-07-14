@@ -156,7 +156,7 @@
 	</script>
 	<script>
 	var addLect = function(i){
-		var jsonTest='<%= session.getAttribute("jsonTest")%>';
+		var jsonTest='<%= session.getAttribute("lectureList")%>';
 		jsonTest=JSON.parse(jsonTest);
 		console.log(Object.keys(jsonTest).length);
 		var keys = Object.keys(jsonTest);
