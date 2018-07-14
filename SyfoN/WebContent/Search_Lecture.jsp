@@ -82,7 +82,7 @@
 			</form>
 		</div>
  	</div>
- 	<% System.out.println( (String)session.getAttribute("lectureList") ); %>
+
 <%-- 	<%
 // 		Map<String,Map> map=new HashMap<String,Map>();
 // 		Map<String,String> lect1=new HashMap<String,String>();
@@ -165,7 +165,7 @@
 		var td2 = "lect" + i + "2";
 		var td3 = "lect" + i + "3";
 		var td4 = "lect" + i + "4";
-		console.log(Object.keys(jsonTest.lect1)[i],jsonTest[keys[i]]);
+		console.log(Object.keys(jsonTest.lecture1)[i],jsonTest[keys[i]]);
 		var inputformSmall11 = document.getElementById(td1);
 		inputformSmall11.innerHTML = jsonTest[keys[i]].開講日;
 		var inputformSmall21 = document.getElementById(td2);
