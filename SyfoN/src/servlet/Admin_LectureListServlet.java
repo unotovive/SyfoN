@@ -25,6 +25,7 @@ import Lecture.LectureManager;
 public class Admin_LectureListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static Map<String , Map> lectureListMap = new HashMap<String , Map>();
+	private static Map<String , Map> lecture = new HashMap<String , Map>();
 
 
 
@@ -61,15 +62,17 @@ public class Admin_LectureListServlet extends HttpServlet {
 		String lect = "lect";
 		for(int i = 0; i < result.size(); i++) {
 			lectureListMap = new HashMap<String, Map>();
-			Map<String , String> lecture = new HashMap<String , String>();
-			lecture.put("開講曜日",result.get(i).getDay());
-			lecture.put("授業コード",Integer.toString(result.get(i).getLectureID()));
-			lecture.put("講義名",result.get(i).getLectureName());
-			lecture.put("教員名",result.get(i).getProfessorID()); //かりおき
-			lecture.put("教室",result.get(i).getRoom());
+			Map<String , String> LectureDetail = new HashMap<String , String>();
+			LectureDetail.put("開講曜日",result.get(i).getDay());
+			LectureDetail.put("授業コード",Integer.toString(result.get(i).getLectureID()));
+			LectureDetail.put("講義名",result.get(i).getLectureName());
+			LectureDetail.put("教員名",result.get(i).getProfessorID()); //かりおき
+			LectureDetail.put("教室",result.get(i).getRoom());
 			lect = "lect" + Integer.toString(i);
-			lectureListMap.put(lect, lecture);
+			lecture.put(lect, LectureDetail);
 		}
+		lectureListMap.put("lectureList", lecture);
+
 		JSONObject lectureListJson=new JSONObject(lectureListMap);
         System.out.println(lectureListJson);
         session.setAttribute("lectureList",lectureListJson);
