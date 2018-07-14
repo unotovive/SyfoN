@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class ToAdSys
  */
-@WebServlet("/ToAdSys")
+@WebServlet("/ToRegisterStudent")
 public class ToRegisterStudent extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
