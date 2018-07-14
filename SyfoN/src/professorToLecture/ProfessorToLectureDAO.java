@@ -93,7 +93,7 @@ public class ProfessorToLectureDAO {
 	public boolean updatePTL(ProfessorToLecture ptl){
 		boolean result=false;
 		Connection connection;
-		String sql = "UPDATE professortolecture SET professorid =? , lectureid = ? WHERE;";
+		String sql = "UPDATE professortolecture SET professorid =? , lectureid = ? WHERE lectureid=? ;";
 
 		try {
 			Class.forName(driverClassName);

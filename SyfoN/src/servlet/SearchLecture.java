@@ -80,16 +80,21 @@ public class SearchLecture extends HttpServlet {
 		lec.setPeriod(Integer.valueOf(request.getParameter("Period")));
 
 		//該当学期のみ変換
-		String gaitoGakki=this.AdaptGaitoGakki(request.getParameter("HaitoNen"), request.getParameter("Kaikoki"))
-		lec.setGaitoGakki(request.getParameter(""));
+		String gaitoGakki=this.AdaptGaitoGakki(request.getParameter("HaitoNen"), request.getParameter("Kaikoki"));
+		lec.setGaitoGakki(gaitoGakki);
 		lectureList.addAll(lectureManager.findLecture(lec));
 
 		//Mapに入れていく
 		Map<String,String> lectureMap=new HashMap<String,String>();
 		for(Lecture l:lectureList){
-			lectureMap.put("day", l.getDay());
-			lectureMap.put("period",Integer.toString(l.getPeriod()));
-			lectureMap.put("gaitgakki", l.getGaitoGakki());
+			lectureMap.put("開講日", l.getDay());
+			lectureMap.put("教科名", l.getLectureName());
+			lectureMap.put("時限",Integer.toString(l.getPeriod())+"限");
+			lectureMap.put("配当年学期", this.AdaptGakki(l.getGaitoGakki()));
+			//教授名だけ
+			String professorName=professorManager.getProfessor(
+					ptlManager.getPTL(l.getLectureID()).getProfessorID()).getProfessorName();
+			lectureMap.put("教授名",professorName);
 		}
 		session.setAttribute("findlecture", lectureList);
 
@@ -98,38 +103,86 @@ public class SearchLecture extends HttpServlet {
 			e1.printStackTrace();
 		}
 	}
-	private String AdaptorGakki(String gaitoGakki){
+	private String AdaptGakki(String gaitoGakki){
 		String result="";
 		switch(gaitoGakki){
 		case "zennki1":
-			result="1年前期";
+			result="1年生前期";
 			break;
 		case "kouki1":
-			result="1年後期";
+			result="1年生後期";
 			break;
 		case "zennki2":
-			result="2年前期";
+			result="2年生前期";
 			break;
 		case "kouki2":
-			result="2年後期";
+			result="2年生後期";
 			break;
 		case "zennki3":
-			result="3年前期";
+			result="3年生前期";
 			break;
 		case "kouki3":
-			result="3年後期";
+			result="3年生後期";
 			break;
 		case "zennki4":
-			result="4年前期";
+			result="4年生前期";
 			break;
 		case "kouki4":
-			result="4年後期";
+			result="4年生後期";
 			break;
 		}
 		return result;
 	}
 	private String AdaptGaitoGakki(String HaitoNen,String Kaikoki){
+		String result=HaitoNen+Kaikoki;
+		switch(result){
+		case "1年前期":
+			result="zenki1";
+			break;
+		case"1年後期":
+			result="kouki1";
+			break;
+		case"2年前期":
+			result="zenki2";
+			break;
+		case"2年後期":
+			result="kouki2";
+			break;
+		case "3年前期":
+			result="zenki3";
+			break;
+		case "3年後期":
+			result="kouki3";
+			break;
+		case "4年前期":
+			result="zenki4";
+			break;
+		case "4年後期":
+			result="kouki4";
+			break;
+		}
+		return result;
+	}
+
+	public String AdaptDay(String day){
 		String result="";
+		switch(day){
+		case "monday":
+			result="月";
+			break;
+		case "tuesday":
+			result="火";
+			break;
+		case "wednesday":
+			result="水";
+			break;
+		case "thursday":
+			result="木";
+			break;
+		case "fryday":
+			result="金";
+			break;
+		}
 		return result;
 	}
 }
