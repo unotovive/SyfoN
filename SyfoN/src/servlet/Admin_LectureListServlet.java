@@ -42,9 +42,10 @@ public class Admin_LectureListServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
 
 		Lecture Lecture = new Lecture();
 		LectureManager mane = new LectureManager();
@@ -61,18 +62,16 @@ public class Admin_LectureListServlet extends HttpServlet {
 		System.out.println("d");
 		String lect = "lect";
 		for(int i = 0; i < result.size(); i++) {
-			lecture = new HashMap<String, Map>();
 			Map<String , String> LectureDetail = new HashMap<String , String>();
 			LectureDetail.put("開講曜日",result.get(i).getDay());
 			LectureDetail.put("授業コード",Integer.toString(result.get(i).getLectureID()));
 			LectureDetail.put("講義名",result.get(i).getLectureName());
-			LectureDetail.put("教員名",result.get(i).getProfessorID()); //かりおき
+			LectureDetail.put("教員名","kakizaki"); //かりおき
 			LectureDetail.put("教室",result.get(i).getRoom());
 			lect = "lect" + Integer.toString(i);
 			lecture.put(lect, LectureDetail);
 		}
 		lectureListMap.put("lectureList", lecture);
-
 		JSONObject lectureListJson=new JSONObject(lectureListMap);
         System.out.println(lectureListJson);
         session.setAttribute("lectureList",lectureListJson);
@@ -87,6 +86,7 @@ public class Admin_LectureListServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
