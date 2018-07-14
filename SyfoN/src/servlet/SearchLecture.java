@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.json.JSONObject;
+
 import Lecture.Lecture;
 import Lecture.LectureManager;
 import professor.Professor;
@@ -68,35 +70,45 @@ public class SearchLecture extends HttpServlet {
 		ArrayList<ProfessorToLecture>  ptlList = new ArrayList<ProfessorToLecture>();
 
 		//まず、教師名で講義を得る
-		professor=professorManager.getProfessor(request.getParameter("ProfessorName"));
+		System.out.println(request.getParameter("professorName"));
+		professor=professorManager.getProfessor(request.getParameter("professorName"));
 		ptlList = ptlManager.findPTLList(professor.getProfessorID());
 		for(ProfessorToLecture tempPTL:ptlList){
 			lectureList.add(lectureManager.getLecture(tempPTL.getLectureID()));
 		}
 
 		//次にLectureに各要素を入力して検索する
-		lec.setDay(request.getParameter("Day"));
-		lec.setLectureName(request.getParameter("RectureName"));
-		lec.setPeriod(Integer.valueOf(request.getParameter("Period")));
+		lec.setDay(request.getParameter("day"));
+		lec.setLectureName(request.getParameter("rectureName"));
+		lec.setPeriod(Integer.valueOf(request.getParameter("period")));
 
 		//該当学期のみ変換
-		String gaitoGakki=this.AdaptGaitoGakki(request.getParameter("HaitoNen"), request.getParameter("Kaikoki"));
+		String gaitoGakki=this.AdaptGaitoGakki(request.getParameter("haitoNen"), request.getParameter("kaikoki"));
 		lec.setGaitoGakki(gaitoGakki);
 		lectureList.addAll(lectureManager.findLecture(lec));
 
 		//Mapに入れていく
-		Map<String,String> lectureMap=new HashMap<String,String>();
+		Map<String,Map> lectureMap=new HashMap<String,Map>();
+		Map<String,Map> lectureListMap=new HashMap<String,Map>();
+		int count=1;
 		for(Lecture l:lectureList){
-			lectureMap.put("開講日", l.getDay());
-			lectureMap.put("教科名", l.getLectureName());
-			lectureMap.put("時限",Integer.toString(l.getPeriod())+"限");
-			lectureMap.put("配当年学期", this.AdaptGakki(l.getGaitoGakki()));
-			//教授名だけ
+			Map<String,String> lectureDataMap=new HashMap<String,String>();
+			lectureDataMap.put("開講日", l.getDay());
+			lectureDataMap.put("教科名", l.getLectureName());
+			lectureDataMap.put("時限",Integer.toString(l.getPeriod())+"限");
+			lectureDataMap.put("配当年学期", this.AdaptGakki(l.getGaitoGakki()));
+			//教授名を取得して、入れる
 			String professorName=professorManager.getProfessor(
 					ptlManager.getPTL(l.getLectureID()).getProfessorID()).getProfessorName();
-			lectureMap.put("教授名",professorName);
+			lectureDataMap.put("教授名",professorName);
+			lectureListMap.put("lecture"+Integer.toString(count),lectureDataMap);
+
+			count++;
 		}
-		session.setAttribute("findlecture", lectureList);
+		lectureMap.put("lectureList",lectureListMap);
+		JSONObject lectureListJson=new JSONObject(lectureMap);
+		session.setAttribute("lectureList",lectureListJson );
+		System.out.println(lectureListJson);
 
 		} catch (SQLException e1) {
 			// TODO Auto-generated catch block

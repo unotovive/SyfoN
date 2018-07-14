@@ -16,23 +16,23 @@
 		<!-- {{test}} -->
 		<a>top</a> <a>講義一覧</a> <a>マイページ</a> <a>ログアウト</a>
 		<div id="pageBody">
-			<form action="serch_lecture" method="post">
+			<form action="SearchLecture" method="post">
 				<div id="pageBodyLeft">
 					<h1>講義一覧</h1>
 					<table>
 						<tr>
 							<td>教科名</td>
-							<td><input id="inputformSmall" type="text" name="kyoka"
+							<td><input id="inputformSmall" type="text" name="lectureName"
 								value=""></td>
 						</tr>
 						<tr>
 							<td>教授名</td>
-							<td><input id="inputformSmall" type="text" name="" value="">
+							<td><input id="inputformSmall" type="text" name="professorName" value="">
 							</td>
 						</tr>
 						<tr>
 							<td>開講日</td>
-							<td><select id="inputformSmall" required>
+							<td><select id="inputformSmall" required name="day">
 									<option value=""></option>
 									<option value="mon">月</option>
 									<option value="tue">火</option>
@@ -43,7 +43,7 @@
 						</tr>
 						<tr>
 							<td>配当年</td>
-							<td><select id="inputformSmall" required>
+							<td><select id="inputformSmall" required name="haitoNen">
 									<option value=""></option>
 									<option value="1">1年</option>
 									<option value="2">2年</option>
@@ -53,7 +53,7 @@
 						</tr>
 						<tr>
 							<td>開講期</td>
-							<td><select id="inputformSmall" required>
+							<td><select id="inputformSmall" required name="kaikoki">
 									<option value=""></option>
 									<option value="first">前期</option>
 									<option value="scecond">後期</option>
@@ -63,7 +63,7 @@
 							<td><span class="checkbox-parts">履修済</span> <input
 								id="checkbox" class="checkbox-input" type="checkbox" name=""
 								value=""></td>
-							<td><input id="serchButton" type="button" value="検索"
+							<td><input id="serchButton" type="submit" value="検索"
 								onclick="search();">
 								<button v-on:click="search">検索２</button></td>
 						</tr>

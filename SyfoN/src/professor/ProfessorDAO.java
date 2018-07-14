@@ -21,7 +21,7 @@ public class ProfessorDAO {
 		Professor professor = new Professor();
 
 		Connection connection;
-		String sql = "select * from unit where professorID=?";
+		String sql = "select * from professor where professorID=?";
 
 		try {
 			Class.forName(driverClassName);
@@ -30,7 +30,7 @@ public class ProfessorDAO {
 
 			pstmt.setString(1, professorID);
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 
 				String proID = resultSet.getString("professorid");
