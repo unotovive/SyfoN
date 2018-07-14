@@ -12,13 +12,13 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class ToAdSys
  */
 @WebServlet("/ToAdSys")
-public class ToAdSys extends HttpServlet {
+public class ToRegisterStudent extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ToAdSys() {
+    public ToRegisterStudent() {
         super();
         // TODO Auto-generated constructor stub
     }
