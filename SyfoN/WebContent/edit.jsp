@@ -17,7 +17,7 @@
             <div id="bar">
                 <h1>SyfoN</h1>
             </div>
-            <input type="checkbox" class="check" id="checked">
+            <input type="checkbox" class="check" id="checked" />
             <label class="menu-btn" for="checked">
                 <span class="bar top"></span>
                 <span class="bar middle"></span>
@@ -45,28 +45,28 @@
                     <h2>Timetable</h2>
                     <button class="edit">時間割作成・編集</button>
                     <div class="tabs">
-                        <input id="zen1" type="radio" name="tab_item" checked>
+                        <input id="zen1" type="radio" name="tab_item" checked/>
                         <label class="tab_item" for="zen1">1年前期</label>
 
-                        <input id="kou1" type="radio" name="tab_item">
+                        <input id="kou1" type="radio" name="tab_item" />
                         <label class="tab_item" for="kou1">1年後期</label>
 
-                        <input id="zen2" type="radio" name="tab_item">
+                        <input id="zen2" type="radio" name="tab_item" />
                         <label class="tab_item" for="zen2">2年前期</label>
 
-                        <input id="kou2" type="radio" name="tab_item">
+                        <input id="kou2" type="radio" name="tab_item" />
                         <label class="tab_item" for="kou2">2年後期</label>
 
-                        <input id="zen3" type="radio" name="tab_item">
+                        <input id="zen3" type="radio" name="tab_item" />
                         <label class="tab_item" for="zen3">3年前期</label>
 
-                        <input id="kou3" type="radio" name="tab_item">
+                        <input id="kou3" type="radio" name="tab_item" />
                         <label class="tab_item" for="kou3">3年後期</label>
 
-                        <input id="zen4" type="radio" name="tab_item">
+                        <input id="zen4" type="radio" name="tab_item" />
                         <label class="tab_item" for="zen4">4年前期</label>
 
-                        <input id="kou4" type="radio" name="tab_item">
+                        <input id="kou4" type="radio" name="tab_item" />
                         <label class="tab_item" for="kou4">4年後期</label>
 
 
@@ -300,70 +300,69 @@
                         let numHumForSum = 0;
                         let numMusForSum = 0;
                         for (term in this.table) {
-                                for (yobi in this.table[`${term}`]) {
-                                    for (clas in this.table[`${term}`][`${yobi}`]) {
-                                        numAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                        console.log(term)
-                                        if ((term == "zenki1") || (term == "kouki1")) {
-                                                numTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            }
-                                        if (!(term == "zenki4") && !(term == "kouki4")) {
-                                            numForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                        }
+                            for (yobi in this.table[`${term}`]) {
+                                for (clas in this.table[`${term}`][`${yobi}`]) {
+                                    numAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                    console.log(term)
+                                    if ((term == "zenki1") || (term == "kouki1")) {
+                                        numTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                    }
+                                    if (!(term == "zenki4") && !(term == "kouki4")) {
+                                        numForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                    }
 
-                                        if (this.table[`${term}`][`${yobi}`][`${clas}`].type == "eng") {
-                                            numEngAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            if ((term == "zenki1") || (term == "kouki1")) {
-                                                numEngTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            }
-                                            if (!(term == "zenki4") || !(term == "kouki4")) {
-                                                numEngForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            }
+                                    if (this.table[`${term}`][`${yobi}`][`${clas}`].type == "eng") {
+                                        numEngAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                        if ((term == "zenki1") || (term == "kouki1")) {
+                                            numEngTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
                                         }
-                                        if (this.table[`${term}`][`${yobi}`][`${clas}`].type == "must") {
-                                            numHumAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            if ((term == "zenki1") || (term == "kouki1")) {
-                                                numHumTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            }
-                                            if (!(term == "zenki4") || !(term == "kouki4")) {
-                                                numHumForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            }
+                                        if (!(term == "zenki4") || !(term == "kouki4")) {
+                                            numEngForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
                                         }
-                                        if (this.table[`${term}`][`${yobi}`][`${clas}`].type == "human") {
-                                            numMusAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            if ((term == "zenki1") || (term == "kouki1")) {
-                                                numMusTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            }
-                                            if (!(term == "zenki4") || !(term == "kouki4")) {
-                                                numMusForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            }
+                                    }
+                                    if (this.table[`${term}`][`${yobi}`][`${clas}`].type == "must") {
+                                        numHumAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                        if ((term == "zenki1") || (term == "kouki1")) {
+                                            numHumTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                        }
+                                        if (!(term == "zenki4") || !(term == "kouki4")) {
+                                            numHumForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                        }
+                                    }
+                                    if (this.table[`${term}`][`${yobi}`][`${clas}`].type == "human") {
+                                        numMusAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                        if ((term == "zenki1") || (term == "kouki1")) {
+                                            numMusTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                        }
+                                        if (!(term == "zenki4") || !(term == "kouki4")) {
+                                            numMusForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
                                         }
                                     }
                                 }
                             }
-                            this.numAllSum = numAllSum;
-                            this.numEngAllSum = numEngAllSum;
-                            this.numHumAllSum = numHumAllSum;
-                            this.numMusAllSum = numMusAllSum;
+                        }
+                        this.numAllSum = numAllSum;
+                        this.numEngAllSum = numEngAllSum;
+                        this.numHumAllSum = numHumAllSum;
+                        this.numMusAllSum = numMusAllSum;
 
-                            this.numTwoSum = numTwoSum;
-                            this.numEngTwoSum = numEngTwoSum;
-                            this.numHumTwoSum = numHumTwoSum;
-                            this.numMusTwoSum = numMusTwoSum;
+                        this.numTwoSum = numTwoSum;
+                        this.numEngTwoSum = numEngTwoSum;
+                        this.numHumTwoSum = numHumTwoSum;
+                        this.numMusTwoSum = numMusTwoSum;
 
-                            this.numForSum = numForSum;
-                            this.numEngForSum = numEngForSum;
-                            this.numHumForSum = numHumForSum;
-                            this.numMusForSum = numMusForSum;
+                        this.numForSum = numForSum;
+                        this.numEngForSum = numEngForSum;
+                        this.numHumForSum = numHumForSum;
+                        this.numMusForSum = numMusForSum;
                     }
                 },
-
                 mounted() {
                     const self = this
                     console.log("hello")
                     this.table = '<%= session.getAttribute("lectureList")%>'
                     this.table = JSON.parse(this.table)
-                    this.table = this.table.tableconsole.log(this.table)
+                    this.table = this.table.table
                     console.log(this.table)
 
                     this.units = '<%= session.getAttribute("unit")%>'
@@ -375,86 +374,6 @@
                     this.needs = JSON.parse(this.needs)
                     this.needs = this.needs.mustTani
                     console.log(this.needs)
-                }
-
-                    axios
-                        .get('https://api.myjson.com/bins/17nmke')
-                        .then(function (res) {
-                            self.table = res.data.table;
-                            console.log(res.data.table)
-                            let numAllSum = 0;
-                            let numEngAllSum = 0;
-                            let numHumAllSum = 0;
-                            let numMusAllSum = 0;
-
-                            let numTwoSum = 0;
-                            let numEngTwoSum = 0;
-                            let numHumTwoSum = 0;
-                            let numMusTwoSum = 0;
-
-                            let numForSum = 0;
-                            let numEngForSum = 0;
-                            let numHumForSum = 0;
-                            let numMusForSum = 0;
-
-
-                            for (term in res.data.table) {
-                                for (yobi in res.data.table[`${term}`]) {
-                                    for (clas in res.data.table[`${term}`][`${yobi}`]) {
-                                        numAllSum += res.data.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                        console.log(term)
-                                        if ((term == "zenki1") || (term == "kouki1")) {
-                                                numTwoSum += res.data.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            }
-                                        if (!((term == "zenki4") && (term == "kouki4"))) {
-                                            numForSum += res.data.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                        }
-
-                                        if (res.data.table[`${term}`][`${yobi}`][`${clas}`].type == "eng") {
-                                            numEngAllSum += res.data.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            if ((term == "zenki1") || (term == "kouki1")) {
-                                                numEngTwoSum += res.data.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            }
-                                            if (!(term == "zenki4") || !(term == "kouki4")) {
-                                                numEngForSum += res.data.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            }
-                                        }
-                                        if (res.data.table[`${term}`][`${yobi}`][`${clas}`].type == "must") {
-                                            numHumAllSum += res.data.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            if ((term == "zenki1") || (term == "kouki1")) {
-                                                numHumTwoSum += res.data.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            }
-                                            if (!(term == "zenki4") || !(term == "kouki4")) {
-                                                numHumForSum += res.data.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            }
-                                        }
-                                        if (res.data.table[`${term}`][`${yobi}`][`${clas}`].type == "human") {
-                                            numMusAllSum += res.data.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            if ((term == "zenki1") || (term == "kouki1")) {
-                                                numMusTwoSum += res.data.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            }
-                                            if (!(term == "zenki4") || !(term == "kouki4")) {
-                                                numMusForSum += res.data.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            self.numAllSum = numAllSum;
-                            self.numEngAllSum = numEngAllSum;
-                            self.numHumAllSum = numHumAllSum;
-                            self.numMusAllSum = numMusAllSum;
-
-                            self.numTwoSum = numTwoSum;
-                            self.numEngTwoSum = numEngTwoSum;
-                            self.numHumTwoSum = numHumTwoSum;
-                            self.numMusTwoSum = numMusTwoSum;
-
-                            self.numForSum = numForSum;
-                            self.numEngForSum = numEngForSum;
-                            self.numHumForSum = numHumForSum;
-                            self.numMusForSum = numMusForSum;
-                        })
                 }
             })
         </script>
@@ -532,7 +451,7 @@
                 width: 80%;
                 margin-top: 8%;
                 clear: both;
-                padding :10px;
+                padding: 10px;
                 background: #FFF;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
                 box-sizing: inherit;
@@ -544,7 +463,7 @@
                 width: 80%;
                 clear: both;
                 margin-top: 3%;
-                padding :10px;
+                padding: 10px;
                 background: #FFF;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
                 box-sizing: inherit;
@@ -570,19 +489,21 @@
             }
 
             h3 {
-                font-size:1.5em;
+                font-size: 1.5em;
                 margin: 10px;
                 color: #555555;
             }
 
             h4 {
-                font-size:1.2em;
+                font-size: 1.2em;
                 margin: 10px;
                 color: #555555;
             }
-            p{
+
+            p {
                 margin: 10px;
             }
+
             .edit {
                 clear: both;
             }

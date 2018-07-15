@@ -42,7 +42,9 @@
             <div id="mcontent">
                 <div id="tables">
                     <h2>Timetable</h2>
-                    <button class="edit">時間割作成・編集</button>
+                    <form action="CreateTable" method="POST">
+                    	<button class="edit">時間割作成・編集</button>
+                    </form>
                     <div class="tabs">
                         <input id="zen1" type="radio" name="tab_item" checked>
                         <label class="tab_item" for="zen1">1年前期</label>
