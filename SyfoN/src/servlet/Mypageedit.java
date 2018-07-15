@@ -30,6 +30,7 @@ public class Mypageedit extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
@@ -38,6 +39,7 @@ public class Mypageedit extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		Student student = new Student();
@@ -47,7 +49,7 @@ public class Mypageedit extends HttpServlet {
 		student.setNickName(request.getParameter("nickname"));
 		student.setGradeID(Integer.parseInt(request.getParameter("gradeid")) );
 		student.setPassWord(request.getParameter("pass"));
-		student.setNickName(request.getParameter("nickname"));
+		student.setMailAddress(request.getParameter("mail"));
 
 		try {
 			result = mane.editProf(student);
