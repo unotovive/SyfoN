@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import student.Student;
 import student.StudentManager;
@@ -42,14 +43,18 @@ public class Mypageedit extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		request.setCharacterEncoding("UTF-8");
+		
 		Student student = new Student();
 		StudentManager mane = new StudentManager();
 		boolean result = false;
+		HttpSession session=request.getSession();
 
-		student.setNickName(request.getParameter("nickname"));
-		student.setGradeID(Integer.parseInt(request.getParameter("gradeid")) );
+		student.setNickName(request.getParameter("name"));
+		student.setGradeID(Integer.parseInt(request.getParameter("grade")) );
 		student.setPassWord(request.getParameter("pass"));
 		student.setMailAddress(request.getParameter("mail"));
+		student.setStudentID((String)session.getAttribute("studentID"));
 
 		try {
 			result = mane.editProf(student);
@@ -59,12 +64,15 @@ public class Mypageedit extends HttpServlet {
 
 		if (result) {
 			//編集に成功した場合マイページへ
-			//System.out.print("dekita");
-			getServletContext().getRequestDispatcher("/Mypage.jsp").forward(request, response);
+			System.out.print("dekita");
+			//セッションの学生情報を更新
+			session.removeAttribute("student");
+			session.setAttribute("student", student);
+			getServletContext().getRequestDispatcher("/Mypagesev").forward(request, response);
 		} else {
-			// ログインに失敗している場合はlogin.jspへ
-			//System.out.print("sippai");
-			getServletContext().getRequestDispatcher("/editMypage.jsp").forward(request, response);
+			// 編集に失敗している場合はlogin.jspへ
+			System.out.print("sippai");
+			getServletContext().getRequestDispatcher("/exitmypage.jsp").forward(request, response);
 		}
 	}
 }

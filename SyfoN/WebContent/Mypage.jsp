@@ -23,35 +23,37 @@
 		</label> <label class="close-menu" for="checked"></label>
 		<nav class="drawer-menu">
 		<ul>
-			<li><a href="#">トップページ</a></li>
+			<li><a href="TimeTableServ">トップページ</a></li>
 			<li><a href="#">講義一覧</a></li>
-			<li><a href="#">マイページ</a></li>
+			<li><a href="Mypagesev">マイページ</a></li>
 			<li><a href="#">ログアウト</a></li>
 		</ul>
 		</nav>
 		<div id="mcontent">
 		<div id="panel">
 			<h2>マイページ・設定</h2>
-			<h3>学籍番号 {{table.学籍番号}}</h3>
+			<h3>学籍番号 {{table.id}}</h3>
 			<table id="table">
 				<tr>
 					<td>ニックネーム</td>
-					<td>{{table.ニックネーム}}</td>
+					<td>{{table.name}}</td>
 				</tr>
 				<tr>
-					<td>性別</td>
-					<td>{{table.現在の学年}}</td>
+					<td>学年</td>
+					<td>{{table.grade}}</td>
 				</tr>
 				<tr>
 					<td>メールアドレス</td>
-					<td>{{table.メールアドレス}}</td>
+					<td>{{table.mail}}</td>
 				</tr>
 				<tr>
 					<td>パスワード</td>
-					<td>{{table.パスワード}}</td>
+					<td>{{table.pass}}</td>
 				</tr>
 			</table>
-			<input id="submit" type="submit" value="編集する">
+			<a href="exitmypage.jsp">
+			<input id="submit" type="button" value="編集する">
+			</a>
 		</div>
 		</div>
 	</div>
@@ -65,15 +67,13 @@
       methods: {
 
       },
-      created() {
+      mounted() {
         const self = this
         console.log("afo")
-        axios
-          .get('https://api.myjson.com/bins/19kn4u')
-          .then(function (res) {
-            self.table = res.data.student;
-            console.log(self.table)
-          })
+          this.table='<%= session.getAttribute("studentJson")%>'
+          this.table=JSON.parse(this.table)
+          this.table=this.table.table
+          console.log(this.table)
       }
     })
   </script>

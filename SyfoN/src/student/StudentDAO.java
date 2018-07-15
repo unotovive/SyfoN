@@ -29,7 +29,7 @@ public class StudentDAO {
 
 			pstmt.setString(1, studentID);
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 				//st = null;
 
@@ -107,23 +107,25 @@ public class StudentDAO {
 	public boolean updateStudent(Student student) throws SQLException {
 		boolean result = false;
 		Connection connection;
-		String sql = "UPDATE student SET password = ?,mailaddress = ?  WHERE studentID = ?;";
+		String sql = "UPDATE student SET password = ? , mailaddress = ? , nickname = ? , gradeid = ? WHERE studentID = ?;";
 
 		try {
 			Class.forName(driverClassName);
 			connection = DriverManager.getConnection(url, user, password);
 			PreparedStatement pstmt = connection.prepareStatement(sql);
 
-
 			pstmt.setString(1, student.getPassWord());
 			pstmt.setString(2, student.getMailAddress());
-			pstmt.setString(3, student.getStudentID());
+			pstmt.setString(3, student.getNickName());
+			pstmt.setInt(4, student.getGradeID());
+			pstmt.setString(5, student.getStudentID());
+			System.out.println("studentID="+student.getStudentID());
 
+			//ResultSet resultSet = pstmt.executeQuery();
+			int rowNum=pstmt.executeUpdate();
+			if (rowNum==1) result = true;
 
-			ResultSet resultSet = pstmt.executeQuery();
-			if (resultSet.next()) result = true;
-
-			resultSet.close();
+			//resultSet.close();
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();

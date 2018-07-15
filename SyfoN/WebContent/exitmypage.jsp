@@ -25,36 +25,35 @@
 		<ul>
 			<li><a href="#">トップページ</a></li>
 			<li><a href="#">講義一覧</a></li>
-			<li><a href="#">マイページ</a></li>
+			<li><a href="Mypagesev">マイページ</a></li>
 			<li><a href="#">ログアウト</a></li>
 		</ul>
 		</nav>
 		<div id="mcontent">
 			<div id="panel">
 				<h2>マイページ・設定</h2>
-				<h3>学籍番号 {{table.学籍番号}}</h3>
+				<form class="form" action="Mypageedit" method="POST">
+				<h3>学籍番号 {{table.id}}</h3>
 				<table id="table">
 					<tr>
 						<td>ニックネーム</td>
-						<td><input type="text" v-model="table.ニックネーム"></td>
+						<td><input type="text" v-model="table.name" name="name"></td>
 					</tr>
 					<tr>
-						<td>性別</td>
-						<td><input type="text" v-model="table.現在の学年"></td>
+						<td>学年</td>
+						<td><input type="text" v-model="table.grade" name="grade"></td>
 					</tr>
 					<tr>
 						<td>メールアドレス</td>
-						<td><input type="text" v-model="table.メールアドレス"></td>
+						<td><input type="text" v-model="table.mail" name="mail"></td>
 					</tr>
 					<tr>
 						<td>パスワード</td>
-						<td><input type="password" v-model="table.パスワード"></td>
+						<td><input type="text" v-model="table.pass" name="pass"></td>
 					</tr>
-
-
 				</table>
-
 				<input id="submit" type="submit" value="確定する">
+				</form>
 			</div>
 		</div>
 
@@ -69,15 +68,12 @@
       methods: {
 
       },
-      created() {
+      mounted() {
         const self = this
         console.log("afo")
-        axios
-          .get('https://api.myjson.com/bins/19kn4u')
-          .then(function (res) {
-            self.table = res.data.student;
-            console.log(self.table)
-          })
+        this.table='<%= session.getAttribute("studentJson")%>'
+        this.table = JSON.parse(this.table)
+        this.table = this.table.table
       }
     })
   </script>

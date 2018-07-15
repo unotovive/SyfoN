@@ -37,6 +37,10 @@ public class Mypagesev extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
+		//マイページに行くまでに、json形式で学生情報を渡す
+
+		request.setCharacterEncoding("UTF-8");
+
 		HttpSession session = request.getSession();
 
 		Student student=(Student)session.getAttribute("student");
@@ -49,31 +53,15 @@ public class Mypagesev extends HttpServlet {
 		studentDataMap.put("pass",student.getPassWord());
 		studentDataMap.put("mail", student.getMailAddress());
 
-		studentMap.put("student", studentDataMap);
+		studentMap.put("table", studentDataMap);
 
 		//JSON形に変換
 		JSONObject studentJson=new JSONObject(studentMap);
 		System.out.println(studentJson);
 		session.setAttribute("studentJson", studentJson);
 
-		//トップページからマイページへ
+		//マイページへ
 		getServletContext().getRequestDispatcher("/Mypage.jsp").forward(request, response);
-
-		/*
-		Student student = new Student();
-		StudentManager mane = new StudentManager();
-		Student result =  new Student();
-
-		try {
-			result = mane.getStudent(request.getParameter("studentID"));
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
-		HttpSession session = request.getSession();
-		session.setAttribute("Myinfo", result);
-		*/
-
 	}
 
 	/**
