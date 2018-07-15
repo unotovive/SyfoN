@@ -17,10 +17,6 @@ import org.json.JSONObject;
 
 import Lecture.Lecture;
 import Lecture.LectureManager;
-import courseLecture.CourseLecture;
-import courseLecture.CourseLectureManager;
-import timetable.TimeTable;
-import timetable.TimeTableManager;
 
 /**
  * Servlet implementation class CreateTable
@@ -44,8 +40,8 @@ public class CreateTable extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//テスト用
-		HttpSession session = request.getSession();
-		session.setAttribute("studentID", "16fi888");
+//		HttpSession session = request.getSession();
+//		session.setAttribute("studentID", "16fi888");
 		this.doPost(request, response);
 	}
 
@@ -55,79 +51,46 @@ public class CreateTable extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//String semester =request.getParameter("semester");
-		//テスト用
-		String semester="zenki1";
-		try {
-	    ArrayList<TimeTable> timeTableList = new ArrayList<TimeTable>();
-		ArrayList<Lecture> gakkiLectureList=new ArrayList<Lecture>();
-	    ArrayList<Lecture> coursingLectureList=new ArrayList<Lecture>();
-		LectureManager lectureManager=new LectureManager();
-		TimeTableManager timeTableManager = new TimeTableManager();
-		TimeTable timeTable=null;
 
+		try {
 		HttpSession session = request.getSession();
+
+		LectureManager lectureManager=new LectureManager();
 		String studentID=(String)session.getAttribute("studentID");
 
-		//学生の時間割8つ
-		timeTableList = timeTableManager.getTimeTableList(studentID);
-		//該当学期の時間割
-		for(TimeTable tempTimeTable:timeTableList){
-			if(tempTimeTable.getTimeSemester().equals(semester))
-				timeTable=tempTimeTable;
-		}
-		System.out.println(semester);
-		if(timeTable==null)
-			System.out.print("時間割がない！");
+		//現在履修中の講義を得る
+		Map<String,Map> coursingLectureMap=(Map<String,Map>)session.getAttribute("tableMap");
 
-
-		//全ての講義を得た後、該当学期の講義を抽出する
+		//全ての講義を得る
 		ArrayList<Lecture> allLectureList=lectureManager.getAllLecture();
-		for(Lecture lc:allLectureList){
-			if(lc.getGaitoGakki().equals(semester)){
-				gakkiLectureList.add(lc);
-			}
-		}
 
 
-		CourseLectureManager courseLectureManager=new CourseLectureManager();
-		ArrayList<CourseLecture> courseLectureList=courseLectureManager.getCourseLectureList(timeTable.getTimeTableID());
-		for(CourseLecture tempCL:courseLectureList){
-			Lecture tempLecture=lectureManager.getLecture(tempCL.getLectureID());
-			coursingLectureList.add(tempLecture);
-		}
 
 		String[] semesters={"zenki1","kouki1","zenki2","kouki2","zenki3","kouki3","zenki4","kouki4"};
 		String[] days={"monday","tuesday","wednesday","thursday","fryday"};
 		String[] periods={"1","2","3","4","5"};
 
-		Map<String,Map> myClassesMap=new HashMap<String,Map>();
-		Map<String,Map> semesterMap=new HashMap<String,Map>();
-		Map<String,Map> dayMap=new HashMap<String,Map>();
-		Map<String,Map> periodMap=new HashMap<String,Map>();
 		Map<String,Map> lectureListMap=new HashMap<String,Map>();
 		Map<String,String> lectureDataMap=new HashMap<String,String>();
-		Lecture noLecture =new Lecture();
+		Map<String,Map<String,Map<String,Map>>> table=coursingLectureMap.get("table");
 
 		for(int i=0;i<semesters.length;i++){
-			dayMap=new HashMap<String,Map>();
 			for(int p=0;p<days.length;p++){
-			periodMap=new HashMap<String,Map>();
 				for(int n=0;n<periods.length;n++){
 					ArrayList<Lecture> tempLectureList=new ArrayList<Lecture>();
 					//全ての講義の中から該当の講義を見つける
-					for(Lecture tempLect:gakkiLectureList){
-	//					System.out.println(tempLect.getGaitoGakki()+","+semesters[i]+","+tempLect.getDay()+","+days[p]+","+Integer.toString(tempLect.getPeriod())+","+periods[n]);
-						if(tempLect.getDay().equals(days[p])
-							&&Integer.toString(tempLect.getPeriod()).equals(periods[n]))
+					for(Lecture tempLect:allLectureList){
+						if(tempLect.getGaitoGakki().equals(semesters[i])
+								&&tempLect.getDay().equals(days[p])
+								&&Integer.toString(tempLect.getPeriod()).equals(periods[n]))
 						{
 							tempLectureList.add(tempLect);
 						}
 					}
 
 					//該当の講義が1つ以上存在すれば
-					Map<String,Map> cscMap=new HashMap<String,Map>();
 					int count=1;
+					System.out.println(tempLectureList.size());
 					if(tempLectureList.size()>0){
 
 						for(Lecture lc:tempLectureList){
@@ -148,27 +111,33 @@ public class CreateTable extends HttpServlet {
 							lectureListMap.put("lecture"+Integer.toString(count),lectureDataMap );
 							count++;
 						}
+//						lectureDataMap.put("taninum","0" );
+//						lectureDataMap.put("name","取らない");
+//						lectureDataMap.put("id","0" );
+//						lectureDataMap.put("room","0");
+//						lectureDataMap.put("type","0");
+//						lectureDataMap.put("unit","0");
+//						lectureDataMap.put("must", "false");
+//					}else{
+//						lectureDataMap.put("taninum","0" );
+//						lectureDataMap.put("name","取らない");
+//						lectureDataMap.put("id","0" );
+//						lectureDataMap.put("room","0");
+//						lectureDataMap.put("type","0");
+//						lectureDataMap.put("unit","0");
+//						lectureDataMap.put("must", "false");
 					}
-					lectureDataMap.put("taninum","0" );
-					lectureDataMap.put("name","取らない");
-					lectureDataMap.put("id","0" );
-					lectureDataMap.put("room","0");
-					lectureDataMap.put("type","0");
-					lectureDataMap.put("unit","0");
-					lectureDataMap.put("must", "false");
 
-					lectureListMap.put("lecture"+Integer.toString(count),lectureDataMap );
-					cscMap.put("csc", lectureListMap);
-					periodMap.put("period"+periods[n], cscMap);
+					//履修可能講義を現在の講義のマップに入れる
+					table.get(semesters[i]).get(days[p]).get("period"+periods[n]).put("csc",lectureListMap);
+
 				}
-				dayMap.put(days[p],periodMap);
 			}
-			semesterMap.put(semesters[i],dayMap);
 		}
-		myClassesMap.put("table", semesterMap);
-		JSONObject myClassesJson = new JSONObject(myClassesMap);
+
+		JSONObject myClassesJson = new JSONObject(table);
+		session.setAttribute("EditLectureList",myClassesJson);
 		System.out.println(myClassesJson);
-		session.setAttribute("lectureList",myClassesJson);
 
 		getServletContext().getRequestDispatcher("/edit.jsp").forward(request, response);
 	} catch (SQLException e) {

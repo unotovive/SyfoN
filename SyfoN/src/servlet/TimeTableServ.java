@@ -161,6 +161,7 @@ public class TimeTableServ extends HttpServlet {
 		JSONObject lectureListJson=new JSONObject(myClasses);
 		System.out.println(lectureListJson);
 		session.setAttribute("lectureList",lectureListJson);
+		session.setAttribute("tableMap",myClasses);
 
 		//ここまで、講義情報
 /*------------------------------------------------------------------------*/

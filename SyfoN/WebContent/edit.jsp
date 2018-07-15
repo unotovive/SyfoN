@@ -360,7 +360,7 @@
                 mounted() {
                     const self = this
                     console.log("hello")
-                    this.table = '<%= session.getAttribute("lectureList")%>'
+                    this.table = '<%= session.getAttribute("EditLectureList")%>'
                     this.table = JSON.parse(this.table)
                     this.table = this.table.table
                     console.log(this.table)
