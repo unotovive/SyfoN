@@ -14,7 +14,6 @@
     <div id="pageBody">
       <h1>登録講義一覧</h1>
       <div id="backTop">
-          <a href="https://www.ayataka.jp/">
             <span>TOPへ戻る</span>
           </a>
         </div>
@@ -23,7 +22,6 @@
       </div>
 
       <div id="createLecture">
-        <a href="https://www.ayataka.jp/">
           <span>講義の新規登録</span>
         </a>
       </div>
@@ -46,11 +44,9 @@
               <td>{{item.教員名}}</td>
               <td>{{item.教室}}</td>
               <td>
-                <a href="https://www.ayataka.jp/">
                   <span>変更</span>
               </td>
               <td>
-                <a href="https://www.ayataka.jp/">
                   <span>削除</span>
               </td>
             </tr>
