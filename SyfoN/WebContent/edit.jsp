@@ -69,105 +69,761 @@
                         <input id="kou4" type="radio" name="tab_item" />
                         <label class="tab_item" for="kou4">4年後期</label>
 
-
+                        <!--前期１-->
                         <div class="tab_content" id="zen1_content">
                             <span class="five-m">月</span>
                             <span class="five-m">火</span>
                             <span class="five-m">水</span>
                             <span class="five-m">木</span>
                             <span class="five-m">金</span>
-                            <div class="five" v-for="yobi in table.zenki1">
-                                <div class="data" v-for="clas in yobi">
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="table.zanki1.monday.period1" @setting="set(table.zanki1.monday.period1,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zanki1.monday.period2" @setting="set(table.zanki1.monday.period2,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
                                     <box :clas="clas" @setting="set(clas,$event)" />
                                 </div>
                             </div>
                         </div>
+
+                        <!--前期２-->
                         <div class="tab_content" id="zen2_content">
                             <span class="five-m">月</span>
                             <span class="five-m">火</span>
                             <span class="five-m">水</span>
                             <span class="five-m">木</span>
                             <span class="five-m">金</span>
-                            <div class="five" v-for="yobi in table.zenki2">
-                                <div class="data" v-for="clas in yobi">
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
                                     <box :clas="clas" @setting="set(clas,$event)" />
                                 </div>
                             </div>
                         </div>
+
+                        <!--前期3-->
                         <div class="tab_content" id="zen3_content">
                             <span class="five-m">月</span>
                             <span class="five-m">火</span>
                             <span class="five-m">水</span>
                             <span class="five-m">木</span>
                             <span class="five-m">金</span>
-                            <div class="five" v-for="yobi in table.zenki3">
-                                <div class="data" v-for="clas in yobi">
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
                                     <box :clas="clas" @setting="set(clas,$event)" />
                                 </div>
                             </div>
                         </div>
+                        
+                        <!--前期４-->
                         <div class="tab_content" id="zen4_content">
                             <span class="five-m">月</span>
                             <span class="five-m">火</span>
                             <span class="five-m">水</span>
                             <span class="five-m">木</span>
                             <span class="five-m">金</span>
-                            <div class="five" v-for="yobi in table.zenki4">
-                                <div class="data" v-for="clas in yobi">
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
                                     <box :clas="clas" @setting="set(clas,$event)" />
                                 </div>
                             </div>
                         </div>
+
+                        <!--後期１-->
                         <div class="tab_content" id="kou1_content">
                             <span class="five-m">月</span>
                             <span class="five-m">火</span>
                             <span class="five-m">水</span>
                             <span class="five-m">木</span>
                             <span class="five-m">金</span>
-                            <div class="five" v-for="yobi in table.kouki1">
-                                <div class="data" v-for="clas in yobi">
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
                                     <box :clas="clas" @setting="set(clas,$event)" />
                                 </div>
                             </div>
                         </div>
+
+                        <!--後期2-->
                         <div class="tab_content" id="kou2_content">
                             <span class="five-m">月</span>
                             <span class="five-m">火</span>
                             <span class="five-m">水</span>
                             <span class="five-m">木</span>
                             <span class="five-m">金</span>
-                            <div class="five" v-for="yobi in table.kouki2">
-                                <div class="data" v-for="clas in yobi">
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
                                     <box :clas="clas" @setting="set(clas,$event)" />
                                 </div>
                             </div>
                         </div>
+
+                        <!--後期3-->
                         <div class="tab_content" id="kou3_content">
                             <span class="five-m">月</span>
                             <span class="five-m">火</span>
                             <span class="five-m">水</span>
                             <span class="five-m">木</span>
                             <span class="five-m">金</span>
-                            <div class="five" v-for="yobi in table.kouki3">
-                                <div class="data" v-for="clas in yobi">
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
                                     <box :clas="clas" @setting="set(clas,$event)" />
                                 </div>
                             </div>
                         </div>
+
+                        <!--後期４-->
                         <div class="tab_content" id="kou4_content">
                             <span class="five-m">月</span>
                             <span class="five-m">火</span>
                             <span class="five-m">水</span>
                             <span class="five-m">木</span>
                             <span class="five-m">金</span>
-                            <div class="five" v-for="yobi in table.kouki4">
-                                <div class="data" v-for="clas in yobi">
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
+                                </div>
+                                <div class="data">
                                     <box :clas="clas" @setting="set(clas,$event)" />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
                 <div id="panel">
                     <div id="progres1">
                         <h3>進級まで</h3>
