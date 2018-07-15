@@ -83,41 +83,6 @@
 			</form>
 		</div>
  	</div>
-
-<%-- 	<%
-// 		Map<String,Map> map=new HashMap<String,Map>();
-// 		Map<String,String> lect1=new HashMap<String,String>();
-// 		lect1.put("教科名", "サーバ設計論");
-// 		lect1.put("教授名", "柿崎");
-// 		lect1.put("開講日", "月");
-// 		lect1.put("時限", "2限");
-// 		lect1.put("配当年学期", "3年前期");
-// 		map.put("lect1",lect1);
-// 		Map<String,String> lect2=new HashMap<String,String>();
-// 		lect2.put("教科名", "サーバ設計論");
-// 		lect2.put("教授名", "柿崎");
-// 		lect2.put("開講日", "月");
-// 		lect2.put("時限", "2限");
-// 		lect2.put("配当年学期", "3年前期");
-// 		map.put("lect2",lect2);
-// 		Map<String,String> lect3=new HashMap<String,String>();
-// 		lect3.put("教科名", "鯖プロ");
-// 		lect3.put("教授名", "柿崎");
-// 		lect3.put("開講日", "金");
-// 		lect3.put("時限", "3限");
-// 		lect3.put("配当年学期", "3年前期");
-// 		map.put("lect3",lect3);
-// 		Map<String,String> lect4=new HashMap<String,String>();
-// 		lect4.put("教科名", "鯖プロ");
-// 		lect4.put("教授名", "柿崎");
-// 		lect4.put("開講日", "金");
-// 		lect4.put("時限", "4限");
-// 		lect4.put("配当年学期", "3年前期");
-// 		map.put("lect4",lect4);
-// 		JSONObject jsonTest=new JSONObject(map);
-// 		session.setAttribute("jsonTest",jsonTest);
-	 	%> --%>
-
 	<script>
 	var addLine = function(tblEl,index) {
 
