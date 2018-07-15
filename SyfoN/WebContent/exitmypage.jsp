@@ -237,38 +237,16 @@
 	border-spacing: 25px;
 }
 
-#text-field {
-	position: relative;
-	margin-top: 1.5rem; input { padding-bottom : 0.5rem;
-	background-color: transparent;
+input {
+	font-size: 15px;
+	padding: 10px 10px 10px 5px;
+	display: block;
 	border: none;
+	border-bottom: 1px solid #757575;
+}
+
+input:focus {
 	outline: none;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-	transition: 256ms;
-	&:
-	focus
-	{
-	border-bottom
-	:
-	2px
-	solid
-	blue;
-}
-
-}
-label {
-	position: absolute;
-	left: 0;
-	top: -2px;
-	color: #888;
-	pointer-events: none;
-	transition: 256ms;
-}
-
-input.focused+label {
-	color: blue;
-	top: -1rem;
-	font-size: 0.6rem;
 }
 
 }
