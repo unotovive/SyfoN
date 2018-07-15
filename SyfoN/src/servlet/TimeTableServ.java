@@ -196,6 +196,7 @@ public class TimeTableServ extends HttpServlet {
 		mustTaniMap.put("mustTani", variousMustTani);
 		JSONObject mustTaniJson=new JSONObject(mustTaniMap);
 		session.setAttribute("mustTani",mustTaniJson);
+		System.out.println(mustTaniJson);
 
 		//ここまで、必要単位
 /*------------------------------------------------------------------------*/
@@ -215,7 +216,7 @@ public class TimeTableServ extends HttpServlet {
 
 		unitMap.put("units", variousUnit);
 		JSONObject unitListJson=new JSONObject(unitMap);
-		System.out.println("unitMap");
+		System.out.println(unitListJson);
 		session.setAttribute("unit",unitListJson);
 
 		getServletContext().getRequestDispatcher("/top.jsp").forward(request, response);

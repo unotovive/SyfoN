@@ -108,7 +108,7 @@ public class CourseLectureDAO {
 		// memberがDBにあるかどうかを調べる
 		boolean result = false;
 		Connection connection;
-		String sql = "DELETE FROM timeTable WHERE timeTableID = ?";
+		String sql = "DELETE FROM timeTable WHERE timeTableID = ? lectureID = ? ";
 
 		try {
 			Class.forName(driverClassName);
@@ -116,6 +116,7 @@ public class CourseLectureDAO {
 			PreparedStatement pstmt = connection.prepareStatement(sql);
 
 			pstmt.setString(1, courseLecture.getTimeTableID());
+			pstmt.setInt(2, courseLecture.getLectureID());
 
 			ResultSet resultSet = pstmt.executeQuery();
 			if (resultSet.next()) result = true;

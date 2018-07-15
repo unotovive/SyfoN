@@ -365,19 +365,18 @@
                     this.table = JSON.parse(this.table)
                     this.table = this.table.tableconsole.log(this.table)
                     console.log(this.table)
-                    
+
                     this.units = '<%= session.getAttribute("unit")%>'
                     this.units = JSON.parse(this.units)
                     this.units = this.units.units
                     console.log(this.units)
-                   	
+
                     this.needs = '<%= session.getAttribute("mustTani")%>'
                     this.needs = JSON.parse(this.needs)
                     this.needs = this.needs.mustTani
                     console.log(this.needs)
+                }
 
-                    
-                    /*
                     axios
                         .get('https://api.myjson.com/bins/17nmke')
                         .then(function (res) {
@@ -397,7 +396,7 @@
                             let numEngForSum = 0;
                             let numHumForSum = 0;
                             let numMusForSum = 0;
-                            */
+
 
                             for (term in res.data.table) {
                                 for (yobi in res.data.table[`${term}`]) {

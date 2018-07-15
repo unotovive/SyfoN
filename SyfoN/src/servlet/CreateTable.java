@@ -136,7 +136,7 @@ public class CreateTable extends HttpServlet {
 
 							lectureDataMap.put("taninum",Integer.toString(lc.getTaniNum()) );
 							lectureDataMap.put("name",lc.getLectureName() );
-							lectureDataMap.put("lectureid",Integer.toString(lc.getLectureID()) );
+							lectureDataMap.put("id",Integer.toString(lc.getLectureID()) );
 							lectureDataMap.put("room",lc.getRoom() );
 							lectureDataMap.put("type",this.AdaptType(lc.getType()));
 							lectureDataMap.put("unit",lc.getUnit());
@@ -153,7 +153,7 @@ public class CreateTable extends HttpServlet {
 					}
 					lectureDataMap.put("taninum","0" );
 					lectureDataMap.put("name","取らない");
-					lectureDataMap.put("lectureid","0" );
+					lectureDataMap.put("id","0" );
 					lectureDataMap.put("room","0");
 					lectureDataMap.put("type","0");
 					lectureDataMap.put("unit","0");
