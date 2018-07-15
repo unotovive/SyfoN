@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class AdminDAO {
 	final private static String dbname = "garen";   // データベース名
@@ -12,7 +13,7 @@ public class AdminDAO {
 	final private static String driverClassName = "org.postgresql.Driver";
 	final private static String url = "jdbc:postgresql://localhost/" + dbname;
 
-	public boolean check(Admin admin){
+	public boolean check(Admin admin) throws SQLException{
 		boolean result=false;
 		Connection connection;
 		String sql = "SELECT * FROM admin WHERE adminid = ? AND password = ?";

@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import admin.Admin;
-import admin.AdminManager;
+import Admin.Admin;
+import Admin.AdminManager;
 import student.Student;
 import student.StudentManager;
 
@@ -48,16 +48,16 @@ public class Login extends HttpServlet {
 
 		Student student = new Student();
 		StudentManager mane = new StudentManager();
-		Admin admin = new admin();
-		AdminManager adminmane = new adminManager();
+		Admin admin = new Admin();
+		AdminManager adminmane = new AdminManager();
 
 
 		student.setStudentID(request.getParameter("studentID"));
 		student.setPassWord(request.getParameter("pass"));
 		String ID = request.getParameter("studentID");
 
-		admin.setadminID(request.getParameter("studentID"));
-		admin.setPassWord(request.getParameter("pass"));
+		admin.setAdminID(request.getParameter("studentID"));
+		admin.setPassword(request.getParameter("pass"));
 
 		boolean result = false;
 
@@ -65,7 +65,7 @@ public class Login extends HttpServlet {
 		{     //管理者のログイン
 		try {
 			result = adminmane.check(admin);
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
