@@ -51,7 +51,7 @@
 					<td>{{table.パスワード}}</td>
 				</tr>
 			</table>
-			<input id="submit" type="submit" value="確定する">
+			<input id="submit" type="submit" value="編集する">
 		</div>
 		</div>
 	</div>
