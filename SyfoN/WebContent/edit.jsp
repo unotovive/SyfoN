@@ -71,114 +71,98 @@
 
 
                         <div class="tab_content" id="zen1_content">
-                            <span class="five">月</span>
-                            <span class="five">火</span>
-                            <span class="five">水</span>
-                            <span class="five">木</span>
-                            <span class="five">金</span>
-                            <div class="tab_content_description">
-                                <div class="row" v-for="yobi in table.zenki1">
-                                    <div class="data" v-for="clas in yobi">
-                                        <box :clas="clas" @setting="set(clas,$event)" />
-                                    </div>
+                            <span class="five-m">月</span>
+                            <span class="five-m">火</span>
+                            <span class="five-m">水</span>
+                            <span class="five-m">木</span>
+                            <span class="five-m">金</span>
+                            <div class="five" v-for="yobi in table.zenki1">
+                                <div class="data" v-for="clas in yobi">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
                                 </div>
                             </div>
                         </div>
                         <div class="tab_content" id="zen2_content">
-                            <span class="five">月</span>
-                            <span class="five">火</span>
-                            <span class="five">水</span>
-                            <span class="five">木</span>
-                            <span class="five">金</span>
-                            <div class="tab_content_description">
-                                <div class="row" v-for="yobi in table.zenki1">
-                                    <div class="data" v-for="clas in yobi">
-                                        <box :clas="clas" @setting="set(clas,$event)" />
-                                    </div>
+                            <span class="five-m">月</span>
+                            <span class="five-m">火</span>
+                            <span class="five-m">水</span>
+                            <span class="five-m">木</span>
+                            <span class="five-m">金</span>
+                            <div class="five" v-for="yobi in table.zenki2">
+                                <div class="data" v-for="clas in yobi">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
                                 </div>
                             </div>
                         </div>
                         <div class="tab_content" id="zen3_content">
-                            <span class="five">月</span>
-                            <span class="five">火</span>
-                            <span class="five">水</span>
-                            <span class="five">木</span>
-                            <span class="five">金</span>
-                            <div class="tab_content_description">
-                                <div class="row" v-for="yobi in table.zenki1">
-                                    <div class="data" v-for="clas in yobi">
-                                        <box :clas="clas" @setting="set(clas,$event)" />
-                                    </div>
+                            <span class="five-m">月</span>
+                            <span class="five-m">火</span>
+                            <span class="five-m">水</span>
+                            <span class="five-m">木</span>
+                            <span class="five-m">金</span>
+                            <div class="five" v-for="yobi in table.zenki3">
+                                <div class="data" v-for="clas in yobi">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
                                 </div>
                             </div>
                         </div>
                         <div class="tab_content" id="zen4_content">
-                            <span class="five">月</span>
-                            <span class="five">火</span>
-                            <span class="five">水</span>
-                            <span class="five">木</span>
-                            <span class="five">金</span>
-                            <div class="tab_content_description">
-                                <div class="row" v-for="yobi in table.zenki1">
-                                    <div class="data" v-for="clas in yobi">
-                                        <box :clas="clas" @setting="set(clas,$event)" />
-                                    </div>
+                            <span class="five-m">月</span>
+                            <span class="five-m">火</span>
+                            <span class="five-m">水</span>
+                            <span class="five-m">木</span>
+                            <span class="five-m">金</span>
+                            <div class="five" v-for="yobi in table.zenki4">
+                                <div class="data" v-for="clas in yobi">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
                                 </div>
                             </div>
                         </div>
                         <div class="tab_content" id="kou1_content">
-                            <span class="five">月</span>
-                            <span class="five">火</span>
-                            <span class="five">水</span>
-                            <span class="five">木</span>
-                            <span class="five">金</span>
-                            <div class="tab_content_description">
-                                <div class="row" v-for="yobi in table.zenki1">
-                                    <div class="data" v-for="clas in yobi">
-                                        <box :clas="clas" @setting="set(clas,$event)" />
-                                    </div>
+                            <span class="five-m">月</span>
+                            <span class="five-m">火</span>
+                            <span class="five-m">水</span>
+                            <span class="five-m">木</span>
+                            <span class="five-m">金</span>
+                            <div class="five" v-for="yobi in table.kouki1">
+                                <div class="data" v-for="clas in yobi">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
                                 </div>
                             </div>
                         </div>
                         <div class="tab_content" id="kou2_content">
-                            <span class="five">月</span>
-                            <span class="five">火</span>
-                            <span class="five">水</span>
-                            <span class="five">木</span>
-                            <span class="five">金</span>
-                            <div class="tab_content_description">
-                                <div class="row" v-for="yobi in table.zenki1">
-                                    <div class="data" v-for="clas in yobi">
-                                        <box :clas="clas" @setting="set(clas,$event)" />
-                                    </div>
+                            <span class="five-m">月</span>
+                            <span class="five-m">火</span>
+                            <span class="five-m">水</span>
+                            <span class="five-m">木</span>
+                            <span class="five-m">金</span>
+                            <div class="five" v-for="yobi in table.kouki2">
+                                <div class="data" v-for="clas in yobi">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
                                 </div>
                             </div>
                         </div>
                         <div class="tab_content" id="kou3_content">
-                            <span class="five">月</span>
-                            <span class="five">火</span>
-                            <span class="five">水</span>
-                            <span class="five">木</span>
-                            <span class="five">金</span>
-                            <div class="tab_content_description">
-                                <div class="row" v-for="yobi in table.zenki1">
-                                    <div class="data" v-for="clas in yobi">
-                                        <box :clas="clas" @setting="set(clas,$event)" />
-                                    </div>
+                            <span class="five-m">月</span>
+                            <span class="five-m">火</span>
+                            <span class="five-m">水</span>
+                            <span class="five-m">木</span>
+                            <span class="five-m">金</span>
+                            <div class="five" v-for="yobi in table.kouki3">
+                                <div class="data" v-for="clas in yobi">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
                                 </div>
                             </div>
                         </div>
                         <div class="tab_content" id="kou4_content">
-                            <span class="five">月</span>
-                            <span class="five">火</span>
-                            <span class="five">水</span>
-                            <span class="five">木</span>
-                            <span class="five">金</span>
-                            <div class="tab_content_description">
-                                <div class="row" v-for="yobi in table.zenki1">
-                                    <div class="data" v-for="clas in yobi">
-                                        <box :clas="clas" @setting="set(clas,$event)" />
-                                    </div>
+                            <span class="five-m">月</span>
+                            <span class="five-m">火</span>
+                            <span class="five-m">水</span>
+                            <span class="five-m">木</span>
+                            <span class="five-m">金</span>
+                            <div class="five" v-for="yobi in table.kouki4">
+                                <div class="data" v-for="clas in yobi">
+                                    <box :clas="clas" @setting="set(clas,$event)" />
                                 </div>
                             </div>
                         </div>
@@ -208,7 +192,7 @@
         <script>
             const Selector = {
                 template:
-                    '<div><select v-model="selected"><option v-for="csc in clas.csc" v-bind:value="csc">{{csc.name}}</option></select><button @click="set(selected)">選択</button></div>'
+                    '<div><select v-model="selected" style="width:90%; border-radius:10px; margin: 1% 5%; height:48%; font-size: .7em;"><option v-for="csc in clas.csc" v-bind:value="csc">{{csc.name}}</option></select><br><button @click="set(selected)" style="color:#7369CB; border-radius:10px; border:2px solid #7369CB; width:90%; background: #FFFFFF; margin: 1% 5%; height:40%; font-size:0.7em; padding:0;">この教科を選択</button></div>'
                 ,
                 props: ['clas'],
                 data: function () {
@@ -218,14 +202,13 @@
                 },
                 methods: {
                     set(nclas) {
-                        console.log(nclas)
                         this.$emit('setting', nclas)
                     }
                 }
             }
             const Box = {
                 template:
-                    '<div>{{clas.name}}<br>{{clas.taninum}}<span>単位</span><br><selector :clas="clas" @setting="set"/></div>'
+                    '<div><p style="margin:1% 1%; height:22%; font-size:0.9em;">{{clas.name}}</p><p style="margin:1% 1%; height:22%; font-size:0.7em;">{{clas.taninum}}<span>単位</span></p><selector :clas="clas" @setting="set" style="height:50%;"/></div>'
                 ,
                 components: {
                     Selector
@@ -237,8 +220,7 @@
                 },
                 methods: {
                     set(nclas) {
-                        console.log(nclas)
-                        this.$emit('setting', nclas, this.clas)
+                        this.$emit('setting', nclas)
                     }
                 }
             }
@@ -299,11 +281,12 @@
                         let numEngForSum = 0;
                         let numHumForSum = 0;
                         let numMusForSum = 0;
+                        console.log("rerun")
+                        console.log(this.table)
                         for (term in this.table) {
                             for (yobi in this.table[`${term}`]) {
                                 for (clas in this.table[`${term}`][`${yobi}`]) {
                                     numAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
-                                    console.log(term)
                                     if ((term == "zenki1") || (term == "kouki1")) {
                                         numTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
                                     }
@@ -581,18 +564,32 @@
                 height: calc(100%/5);
             }
 
-            .data {
-                width: calc(100%/6);
-                float: left;
-                border: #7369CB 1px solid;
-                box-sizing: inherit;
+            .col {
+                height: 100%;
+                width: calc(100%/5)
             }
 
-            .five {
-                width: calc(100%/6);
+            .data {
+                width: 100%;
+                display: block;
+                border: #7369CB 1px solid;
+                box-sizing: inherit;
+                height: 20%;
+                overflow: hidden;
+            }
+            .five-m {
+                width: calc(95%/5);
                 float: left;
                 border: #7369CB 1px solid;
                 box-sizing: inherit;
+                height: 5%;
+            }
+            .five {
+                width: calc(95%/5);
+                float: left;
+                border: #7369CB 1px solid;
+                box-sizing: inherit;
+                height: 90%;
             }
 
             table {
@@ -697,6 +694,8 @@
                 padding: 20px 20px 0;
                 clear: both;
                 overflow: hidden;
+                width: 100%;
+                height: 100%;
             }
 
             /*選択されているタブのコンテンツのみを表示*/
