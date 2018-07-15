@@ -130,8 +130,9 @@ public class CreateTable extends HttpServlet {
 				}
 			}
 		}
-
-		JSONObject myClassesJson = new JSONObject(table);
+		Map<String,Map> fuckMap=new HashMap<String,Map>();
+		fuckMap.put("table", table);
+		JSONObject myClassesJson = new JSONObject(fuckMap);
 		session.setAttribute("EditLectureList",myClassesJson);
 		System.out.println(myClassesJson);
 		getServletContext().getRequestDispatcher("/edit.jsp").forward(request, response);
