@@ -121,6 +121,14 @@ public class Admin_LectureListServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 			getServletContext().getRequestDispatcher("/Admin_LectureList.jsp").forward(request, response);
+		}else if(request.getParameter("reviewlecture")!=null){    //講義の評価一覧へ
+			try {
+				editresult = mane.getLecture(Lecture.getLectureID());
+			} catch (SQLException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
+			getServletContext().getRequestDispatcher("/Admin_ReviewList.jsp").forward(request, response);
 		}
 	}
 

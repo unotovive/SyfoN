@@ -16,7 +16,6 @@ import javax.servlet.http.HttpSession;
 import org.json.JSONObject;
 
 import Lecture.Lecture;
-import Lecture.LectureManager;
 import review.Review;
 import review.ReviewManager;
 
@@ -45,16 +44,14 @@ public class Admin_reviewList extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
-		Review review = new Review();
 		ReviewManager reviewManager = new ReviewManager();
-		LectureManager lectureManager = new LectureManager();
-		Lecture lecture = new Lecture();
 		ArrayList<Review> result = new ArrayList<Review>();
 		HttpSession session = request.getSession();
-
+		Lecture stragelec = (Lecture) session.getAttribute("editresult");
+        int lecID = 0;
 		try {
-			result = reviewManager.getReviewList(334); //LectureID 仮置き
-			lecture = lectureManager.getLecture(334);
+			lecID = stragelec.getLectureID();
+			result = reviewManager.getReviewList(lecID); //LectureID 仮置き
 		}catch(SQLException e){
 			e.printStackTrace();
 		}
@@ -67,7 +64,7 @@ public class Admin_reviewList extends HttpServlet {
 			rev = "rev" + Integer.toString(i);
 			lectureReview.put(rev,reviewDetail);
 		}
-		lectureName.put("講義名", lecture.getLectureName());
+		lectureName.put("講義名", stragelec.getLectureName());
 		lectureMap.put("講義", lectureName);
 		lectureMap.put("投稿", lectureReview);
 		JSONObject reviewListJson=new JSONObject(lectureMap);
@@ -82,7 +79,21 @@ public class Admin_reviewList extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		Review review = new Review();
+		ReviewManager reviewManager = new ReviewManager();
+		boolean result = false;
+		HttpSession session = request.getSession();
+
+		String revID = request.getParameter("評価ID");
+		try {
+			review=reviewManager.getReview(revID);
+			result = reviewManager.removeReview(review);
+		} catch (SQLException e1) {
+			// TODO 自動生成された catch ブロック
+			e1.printStackTrace();
+		}
+
+
 	}
 
 }
