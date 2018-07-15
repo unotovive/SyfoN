@@ -30,40 +30,61 @@
 		</ul>
 		</nav>
 		<div id="mcontent">
-			<h1>評価を作成</h1>
-			<h2>{{table.曜日}}{{table.時限}} {{table.講義名}}</h2>
-			<table>
-				<tr>
-					<td>総合</td>
-					<td><input type="text" v-model="table.総合"></td>
-				</tr>
-				<tr>
-					<td>数学</td>
-					<td><input type="text" v-model="table.数学"></td>
-				</tr>
-				<tr>
-					<td>program</td>
-					<td><input type="text" v-model="table.program"></td>
-				</tr>
-				<tr>
-					<td>教授</td>
-					<td><input type="text" v-model="table.教授"></td>
-				</tr>
-				<tr>
-					<td>出席</td>
-					<td><input type="text" v-model="table.出席"></td>
-				</tr>
-				<tr>
-					<td>グループワーク</td>
-					<td><input type="text" v-model="table.グループワーク"></td>
-				</tr>
+			<div id="panel">
+				<div id="reviewPanel">
+					<div id="reviewLeft">
+						<h2>評価を作成</h2>
+						<h3>{{table.曜日}}{{table.時限}} {{table.講義名}}</h3>
+						<table id="table" cellspacing="15">
+							<tr>
+								<td width="200px">総合</td>
+								<td width="150px"><input type="text" v-model="table.総合"></td>
+							</tr>
+							<tr>
+								<td>数学</td>
+								<td>
+								<div class = "group">
+								<input type="text" v-model="table.数学">
+								</div>
+								</td>
+							</tr>
+							<tr>
+								<td>program</td>
+								<td><input type="text" v-model="table.program"></td>
+							</tr>
+							<tr>
+								<td>教授</td>
+								<td><div class = "group">
+								<input type="text" v-model="table.教授"></div>
+								</td>
+							</tr>
+							<tr>
+								<td>出席</td>
+								<td><div class = "group">
+								<input type="text" v-model="table.出席"></div>
+								</td>
+							</tr>
+							<tr>
+								<td>グループワーク</td>
+								<td><div class = "group">
+								<input type="text" v-model="table.グループワーク"></div></td>
+							</tr>
 
-			</table>
+						</table>
+					</div>
+					<div id="reviewLeft">
+						<div id="comment">
 
-			<h2>コメント</h2>
-			<span><textarea v-model="table.コメント"
-					placeholder="add multiple lines"></textarea></span> <input type="submit"
-				value="評価する">
+							<h3>コメント</h3>
+							<span><textarea v-model="table.コメント"
+									placeholder="add multiple lines"></textarea></span>
+
+						</div>
+						<input id="submit" type="submit" value="評価する">
+					</div>
+				</div>
+
+			</div>
 		</div>
 	</div>
 	<script>
@@ -132,7 +153,6 @@
 	padding-top: 100px;
 	background: #f3f3f3;
 	display: table;
-	box-shadow: 0 0 50px 0 rgba(0, 0, 0, .8);
 	-webkit-transition-property: all;
 	transition-property: all;
 	-webkit-transition-delay: .3s;
@@ -140,6 +160,161 @@
 	-webkit-transition-duration: .5s;
 	transition-duration: .5s;
 	top: 0;
+}
+input               {
+  font-size:15px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus         { outline:none; }
+
+textarea{
+	font-size:15px;
+  	padding:10px 10px 10px 5px;
+  	width: 250px;
+  	display:block;
+  	border:none;
+  	border-bottom:1px solid #757575;
+}
+
+textarea:focus + hr {
+      transform: scaleX(1);
+      outline:none;
+  }
+
+#panel {
+	display: block;
+	height: 60%;
+	width: 50%;
+	margin-top: 8%;
+	clear: both;
+	background: #FFF;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	box-sizing: inherit;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+
+#reviewPanel {
+	height: 100%;
+	width: 100%;
+	margin: auto;
+}
+
+#reviewLeft {
+	right: 0;
+	width: 50%;
+	height: 100%;
+	margin: 0;
+	box-sizing: inherit;
+	float: left;
+	margin: 0 auto;
+}
+
+#reviewRight {
+	right: 0;
+	width: 50%;
+	height: 100%;
+	margin: 0;
+	box-sizing: inherit;
+	float: right;
+	margin: 0 auto;
+}
+
+#comment {
+	margin-top: 100px;
+}
+
+#commentBox {
+	width: 200px;
+	height: 120px;
+	margin-left: 30px;
+}
+
+#submit {
+	margin-top: 200px;
+	margin-left: 50px;
+	display: inline-block;
+	background-color: #26a69b; /*背景色*/
+	color: #FFF; /*文字色*/
+	font-size: 1em; /*文字サイズ*/
+	line-height: 1;
+	text-decoration: none;
+	letter-spacing: 0.05em; /*字間*/
+	padding: 0.2em 1em; /*ボタン内の余白*/
+	border-radius: 3px; /*角の丸み*/
+	cursor: pointer;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0
+		rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); /*影*/
+	-webkit-tap-highlight-color: transparent;
+	transition: .3s ease-out; /*変化を緩やかに*/
+}
+
+#submit:hover {
+	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0
+		rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2); /*浮き上がるように*/
+}
+
+#back {
+	display: inline-block;
+	background-color: #A4A4A4; /*背景色*/
+	color: #FFF; /*文字色*/
+	font-size: 1em; /*文字サイズ*/
+	line-height: 1;
+	text-decoration: none;
+	letter-spacing: 0.05em; /*字間*/
+	padding: 0.2em 1em; /*ボタン内の余白*/
+	border-radius: 3px; /*角の丸み*/
+	cursor: pointer;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0
+		rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); /*影*/
+	-webkit-tap-highlight-color: transparent;
+	transition: .3s ease-out; /*変化を緩やかに*/
+}
+
+#back:hover {
+	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0
+		rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2); /*浮き上がるように*/
+}
+
+#table {
+	font-size: 20px;
+	margin-left: 30px;
+}
+
+#text-field {
+  position: relative;
+  margin-top: 1.5rem;
+
+  input {
+    padding-bottom: 0.5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    transition: 256ms;
+    &:focus {
+      border-bottom: 2px solid blue;
+    }
+  }
+
+  label {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    color: #888;
+    pointer-events: none;
+    transition: 256ms;
+  }
+
+  input.focused + label {
+    color: blue;
+    top: -1rem;
+    font-size: 0.6rem;
+  }
 }
 
 h1 {
@@ -151,11 +326,11 @@ h1 {
 
 h2 {
 	font-size: 2em;
-	margin: 30px;
+	margin-left: 15px;
 }
 
 h3 {
-
+	margin-left: 30px;
 }
 
 h4 {
