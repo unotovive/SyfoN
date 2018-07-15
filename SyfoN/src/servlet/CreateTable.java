@@ -107,12 +107,13 @@ public class CreateTable extends HttpServlet {
 							}else{
 								lectureDataMap.put("must", "false");
 							}
-
 							lectureListMap.put("lecture"+Integer.toString(count),lectureDataMap );
 							count++;
 						}
-
 					}
+					//初期化
+					lectureDataMap=new HashMap<String,String>();
+
 					lectureDataMap.put("taninum","0" );
 					lectureDataMap.put("name","取らない");
 					lectureDataMap.put("id","0" );
@@ -120,12 +121,15 @@ public class CreateTable extends HttpServlet {
 					lectureDataMap.put("type","0");
 					lectureDataMap.put("unit","0");
 					lectureDataMap.put("must", "false");
+					System.out.println("lectureData"+lectureDataMap.size());
 
-					//取らないを入れる為の
+					//取らないを追加する
 					lectureListMap.put("lecture"+Integer.toString(count),lectureDataMap );
-
 					//履修可能講義を現在の講義のマップに入れる
 					table.get(semesters[i]).get(days[p]).get("period"+periods[n]).put("csc",lectureListMap);
+
+					//初期化
+					lectureDataMap=new HashMap<String,String>();
 					lectureListMap=new HashMap<String,Map>();
 				}
 			}
