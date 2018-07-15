@@ -55,6 +55,7 @@ public class Login extends HttpServlet {
 		boolean result = false;
 		try {
 			result = mane.check(student);
+			student=mane.getStudent(studentID);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
