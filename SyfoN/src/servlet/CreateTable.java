@@ -126,8 +126,7 @@ public class CreateTable extends HttpServlet {
 					}
 
 					//該当の講義が1つ以上存在すれば
-					ArrayList<Map> cscList=new ArrayList<Map>();
-					Map<String,ArrayList> cscMap=new HashMap<String,ArrayList>();
+					Map<String,Map> cscMap=new HashMap<String,Map>();
 					int count=1;
 					if(tempLectureList.size()>0){
 
@@ -147,7 +146,6 @@ public class CreateTable extends HttpServlet {
 							}
 
 							lectureListMap.put("lecture"+Integer.toString(count),lectureDataMap );
-							cscList.add(lectureListMap);
 							count++;
 						}
 					}
@@ -160,8 +158,7 @@ public class CreateTable extends HttpServlet {
 					lectureDataMap.put("must", "false");
 
 					lectureListMap.put("lecture"+Integer.toString(count),lectureDataMap );
-					cscList.add(lectureListMap);
-					cscMap.put("csc", cscList);
+					cscMap.put("csc", lectureListMap);
 					periodMap.put("period"+periods[n], cscMap);
 				}
 				dayMap.put(days[p],periodMap);
