@@ -62,7 +62,7 @@ public class RegisterStudent extends HttpServlet {
 			e.printStackTrace();
 		}
 		HttpSession session = request.getSession();
-		session.setAttribute("login", result);
+		session.setAttribute("studentRegisted", result);
 		if (result) {
 			// 同じIDがなかった場合
 			try {
