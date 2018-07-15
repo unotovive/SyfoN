@@ -207,6 +207,8 @@
 }
 
 #submit {
+	width: 120px;
+	height: 40px;
 	display: inline-block;
 	background-color: #26a69b; /*背景色*/
 	color: #FFF; /*文字色*/
@@ -229,6 +231,9 @@
 }
 
 #back {
+	width: 120px;
+	height: 40px;
+
 	display: inline-block;
 	background-color: #A4A4A4; /*背景色*/
 	color: #FFF; /*文字色*/

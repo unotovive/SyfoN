@@ -43,9 +43,9 @@
 							<tr>
 								<td>数学</td>
 								<td>
-								<div class = "group">
-								<input type="text" v-model="table.数学">
-								</div>
+									<div class="group">
+										<input type="text" v-model="table.数学">
+									</div>
 								</td>
 							</tr>
 							<tr>
@@ -54,20 +54,21 @@
 							</tr>
 							<tr>
 								<td>教授</td>
-								<td><div class = "group">
-								<input type="text" v-model="table.教授"></div>
-								</td>
+								<td><div class="group">
+										<input type="text" v-model="table.教授">
+									</div></td>
 							</tr>
 							<tr>
 								<td>出席</td>
-								<td><div class = "group">
-								<input type="text" v-model="table.出席"></div>
-								</td>
+								<td><div class="group">
+										<input type="text" v-model="table.出席">
+									</div></td>
 							</tr>
 							<tr>
 								<td>グループワーク</td>
-								<td><div class = "group">
-								<input type="text" v-model="table.グループワーク"></div></td>
+								<td><div class="group">
+										<input type="text" v-model="table.グループワーク">
+									</div></td>
 							</tr>
 
 						</table>
@@ -161,28 +162,32 @@
 	transition-duration: .5s;
 	top: 0;
 }
-input               {
-  font-size:15px;
-  padding:10px 10px 10px 5px;
-  display:block;
-  border:none;
-  border-bottom:1px solid #757575;
-}
-input:focus         { outline:none; }
 
-textarea{
-	font-size:15px;
-  	padding:10px 10px 10px 5px;
-  	width: 250px;
-  	display:block;
-  	border:none;
-  	border-bottom:1px solid #757575;
+input {
+	font-size: 15px;
+	padding: 10px 10px 10px 5px;
+	display: block;
+	border: none;
+	border-bottom: 1px solid #757575;
 }
 
-textarea:focus + hr {
-      transform: scaleX(1);
-      outline:none;
-  }
+input:focus {
+	outline: none;
+}
+
+textarea {
+	font-size: 15px;
+	padding: 10px 10px 10px 5px;
+	width: 250px;
+	display: block;
+	border: none;
+	border-bottom: 1px solid #757575;
+}
+
+textarea:focus+hr {
+	transform: scaleX(1);
+	outline: none;
+}
 
 #panel {
 	display: block;
@@ -234,6 +239,8 @@ textarea:focus + hr {
 }
 
 #submit {
+	width: 120px;
+	height: 40px;
 	margin-top: 200px;
 	margin-left: 50px;
 	display: inline-block;
@@ -285,38 +292,40 @@ textarea:focus + hr {
 }
 
 #text-field {
-  position: relative;
-  margin-top: 1.5rem;
-
-  input {
-    padding-bottom: 0.5rem;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-    transition: 256ms;
-    &:focus {
-      border-bottom: 2px solid blue;
-    }
-  }
-
-  label {
-    position: absolute;
-    left: 0;
-    top: -2px;
-    color: #888;
-    pointer-events: none;
-    transition: 256ms;
-  }
-
-  input.focused + label {
-    color: blue;
-    top: -1rem;
-    font-size: 0.6rem;
-  }
+	position: relative;
+	margin-top: 1.5rem; input { padding-bottom : 0.5rem;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	transition: 256ms;
+	&:
+	focus
+	{
+	border-bottom
+	:
+	2px
+	solid
+	blue;
 }
 
+}
+label {
+	position: absolute;
+	left: 0;
+	top: -2px;
+	color: #888;
+	pointer-events: none;
+	transition: 256ms;
+}
+
+input.focused+label {
+	color: blue;
+	top: -1rem;
+	font-size: 0.6rem;
+}
+
+}
 h1 {
 	margin: 20px;
 	font-size: 3em;
