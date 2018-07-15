@@ -111,26 +111,22 @@ public class CreateTable extends HttpServlet {
 							lectureListMap.put("lecture"+Integer.toString(count),lectureDataMap );
 							count++;
 						}
-//						lectureDataMap.put("taninum","0" );
-//						lectureDataMap.put("name","取らない");
-//						lectureDataMap.put("id","0" );
-//						lectureDataMap.put("room","0");
-//						lectureDataMap.put("type","0");
-//						lectureDataMap.put("unit","0");
-//						lectureDataMap.put("must", "false");
-//					}else{
-//						lectureDataMap.put("taninum","0" );
-//						lectureDataMap.put("name","取らない");
-//						lectureDataMap.put("id","0" );
-//						lectureDataMap.put("room","0");
-//						lectureDataMap.put("type","0");
-//						lectureDataMap.put("unit","0");
-//						lectureDataMap.put("must", "false");
+
 					}
+					lectureDataMap.put("taninum","0" );
+					lectureDataMap.put("name","取らない");
+					lectureDataMap.put("id","0" );
+					lectureDataMap.put("room","0");
+					lectureDataMap.put("type","0");
+					lectureDataMap.put("unit","0");
+					lectureDataMap.put("must", "false");
+
+					//取らないを入れる為の
+					lectureListMap.put("lecture"+Integer.toString(count),lectureDataMap );
 
 					//履修可能講義を現在の講義のマップに入れる
 					table.get(semesters[i]).get(days[p]).get("period"+periods[n]).put("csc",lectureListMap);
-
+					lectureListMap=new HashMap<String,Map>();
 				}
 			}
 		}
@@ -138,7 +134,6 @@ public class CreateTable extends HttpServlet {
 		JSONObject myClassesJson = new JSONObject(table);
 		session.setAttribute("EditLectureList",myClassesJson);
 		System.out.println(myClassesJson);
-
 		getServletContext().getRequestDispatcher("/edit.jsp").forward(request, response);
 	} catch (SQLException e) {
 		e.printStackTrace();
