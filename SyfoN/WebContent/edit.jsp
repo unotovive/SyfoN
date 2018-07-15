@@ -374,6 +374,75 @@
                     this.needs = JSON.parse(this.needs)
                     this.needs = this.needs.mustTani
                     console.log(this.needs)
+
+                    let numAllSum = 0;
+                    let numEngAllSum = 0;
+                    let numHumAllSum = 0;
+                    let numMusAllSum = 0;
+                    let numTwoSum = 0;
+                    let numEngTwoSum = 0;
+                    let numHumTwoSum = 0;
+                    let numMusTwoSum = 0;
+                    let numForSum = 0;
+                    let numEngForSum = 0;
+                    let numHumForSum = 0;
+                    let numMusForSum = 0;
+                    for (term in this.table) {
+                        for (yobi in this.table[`${term}`]) {
+                            for (clas in this.table[`${term}`][`${yobi}`]) {
+                                numAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                console.log(term)
+                                if ((term == "zenki1") || (term == "kouki1")) {
+                                    numTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                }
+                                if (!(term == "zenki4") && !(term == "kouki4")) {
+                                    numForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                }
+
+                                if (this.table[`${term}`][`${yobi}`][`${clas}`].type == "eng") {
+                                    numEngAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                    if ((term == "zenki1") || (term == "kouki1")) {
+                                        numEngTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                    }
+                                    if (!(term == "zenki4") || !(term == "kouki4")) {
+                                        numEngForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                    }
+                                }
+                                if (this.table[`${term}`][`${yobi}`][`${clas}`].type == "must") {
+                                    numHumAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                    if ((term == "zenki1") || (term == "kouki1")) {
+                                        numHumTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                    }
+                                    if (!(term == "zenki4") || !(term == "kouki4")) {
+                                        numHumForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                    }
+                                }
+                                if (this.table[`${term}`][`${yobi}`][`${clas}`].type == "human") {
+                                    numMusAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                    if ((term == "zenki1") || (term == "kouki1")) {
+                                        numMusTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                    }
+                                    if (!(term == "zenki4") || !(term == "kouki4")) {
+                                        numMusForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    this.numAllSum = numAllSum;
+                    this.numEngAllSum = numEngAllSum;
+                    this.numHumAllSum = numHumAllSum;
+                    this.numMusAllSum = numMusAllSum;
+
+                    this.numTwoSum = numTwoSum;
+                    this.numEngTwoSum = numEngTwoSum;
+                    this.numHumTwoSum = numHumTwoSum;
+                    this.numMusTwoSum = numMusTwoSum;
+
+                    this.numForSum = numForSum;
+                    this.numEngForSum = numEngForSum;
+                    this.numHumForSum = numHumForSum;
+                    this.numMusForSum = numMusForSum;
                 }
             })
         </script>
