@@ -35,7 +35,7 @@ public class RegisterStudent extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//登録画面に行く
-		getServletContext().getRequestDispatcher("/register.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/Common_Register.jsp").forward(request, response);
 	}
 
 	/**
@@ -50,10 +50,10 @@ public class RegisterStudent extends HttpServlet {
 		StudentManager manager= new StudentManager();
 
 		student.setNickName(request.getParameter("name"));
-		student.setStudentID(request.getParameter("studentNo"));
+		student.setStudentID(request.getParameter("studentId"));
 		student.setMailAddress(request.getParameter("mail"));
-		student.setPassWord(request.getParameter("pass1"));
-		student.setGradeID(Integer.parseInt(request.getParameter("Grade")));
+		student.setPassWord(request.getParameter("pass"));
+		student.setGradeID(Integer.parseInt(request.getParameter("grade")));
 
 		boolean result = false;
 		try {
