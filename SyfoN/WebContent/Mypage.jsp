@@ -133,7 +133,7 @@
 
 #panel {
 	display: block;
-	height: 60%;
+	height: 500px;
 	width: 500px;
 	margin-top: 8%;
 	clear: both;
