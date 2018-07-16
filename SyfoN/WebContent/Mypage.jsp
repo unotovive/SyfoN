@@ -245,21 +245,20 @@
 				border-collapse: separate;
 				border-spacing: 25px;
 			}
-
 			#text-field {
 				position: relative;
 				margin-top: 1.5rem;
-				input {
+
 					padding-bottom: 0.5rem;
 					background-color: transparent;
 					border: none;
 					outline: none;
 					border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 					transition: 256ms;
-					&: focus {
-						border-bottom: 2px solid blue;
-					}
-
+					
+				}
+				#text-field{
+					border-bottom: 2px solid blue;
 				}
 				label {
 					position: absolute;
