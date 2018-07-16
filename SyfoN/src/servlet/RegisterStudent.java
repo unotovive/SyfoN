@@ -56,25 +56,22 @@ public class RegisterStudent extends HttpServlet {
 		student.setGradeID(Integer.parseInt(request.getParameter("grade")));
 
 		boolean result = false;
-		try {
-			result = manager.check(student);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+
 		HttpSession session = request.getSession();
 		session.setAttribute("studentRegisted", result);
-		if (result) {
-			// 同じIDがなかった場合
-			try {
-				manager.registerStudent(student);
-			} catch (SQLException e) {
-				// TODO 自動生成された catch ブロック
-				e.printStackTrace();
-			}
+
+		try {
+			result=manager.registerStudent(student);
+		} catch (SQLException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+		if(result){
 			getServletContext().getRequestDispatcher("/Common_Login.jsp").forward(request, response);
-		} else {
-			// ログインに失敗している場合はlogin.jspへ
-			getServletContext().getRequestDispatcher("/Common_Register.jsp").forward(request, response);
+		} else{
+			System.out.println("sippai");
+			// ログインに失敗している場合はadd.jspへ
+			getServletContext().getRequestDispatcher("/add.jsp").forward(request, response);
 			}
 		}
 	}
