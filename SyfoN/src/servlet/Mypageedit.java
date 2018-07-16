@@ -44,7 +44,7 @@ public class Mypageedit extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		request.setCharacterEncoding("UTF-8");
-		
+
 		Student student = new Student();
 		StudentManager mane = new StudentManager();
 		boolean result = false;
