@@ -28,16 +28,16 @@
             <nav class="drawer-menu">
                 <ul>
                     <li>
-                        <a href="#">トップページ</a>
+                        <a href="TimeTableServ">トップページ</a>
                     </li>
                     <li>
-                        <a href="#">講義一覧</a>
+                        <a href="SearchLecture">講義一覧</a>
                     </li>
                     <li>
-                        <a href="#">マイページ</a>
+                        <a href="MyPageSev">マイページ</a>
                     </li>
                     <li>
-                        <a href="#">ログアウト</a>
+                        <a href="Logout">ログアウト</a>
                     </li>
                 </ul>
             </nav>
@@ -45,9 +45,8 @@
                 <div id="sirabas">
                     <h2>シラバス情報</h2>
                     <div class="arl">
-                    <i class="far fa-circle"></i>
-                    <i class="far fa-check-circle"></i>
-                    <p>履修済み</p>
+                    <p style="display: inline-block;" v-if="!risyu">履修状況：<span style="color:darkred">未履修</span></p>
+                    <p style="display: inline-block;" v-if="risyu">履修状況：<span style="color:darkgreen">履修済み</span></p>
                     </div>
                     <div class="datas">
                     <table class="data2">
@@ -176,7 +175,10 @@
                 <div id="hyoka">
                     <div class="h20">
                         <h2 class="wb">講義評価情報</h2>
-                        <button>評価作成 / 編集</button>
+                        <form action="toEditReview" method="POST" style="display: inline-block;">
+                            <input v-model="clas.lectureid" name="id" style="display:none;">
+                            <button>評価作成 / 編集</button>
+                        </form>
                     </div>
                     <div class="h80">
                         <div class="box">
@@ -206,7 +208,10 @@
                                 <div class="star-rating-back">★★★★★</div>
                             </div>
                             <h3>グループワーク</h3>
-                            <p>{{rev.group}}</p>
+                            <div class="star-rating">
+                                <div class="star-rating-front" id="gw">★★★★★</div>
+                                <div class="star-rating-back">★★★★★</div>
+                            </div>
                         </div>
                         <div class="box">
                             <h3>みんなのコメント</h3>
@@ -222,6 +227,14 @@
             var app = new Vue({
                 el: '#app',
                 data: {
+                    attendPoint:0,
+                    groupworkPoint:0,
+                    homeworkPoint:0,
+                    mathPoint:0,
+                    professorPoint:0,
+                    programPoint:0,
+                    totalPoint:0,
+                    comnum:0,
                     clas: '',
                     risyu:'',
                     rev: { group: "あり" },
@@ -323,25 +336,63 @@
                     var prog = document.getElementById('prog');
                     var pers = document.getElementById('pers');
                     var atte = document.getElementById('atte');
-                    sogo.style.width = "100%";
-                    math.style.width = "75%";
-                    prog.style.width = "50%";
-                    pers.style.width = "20%";
+                    var gw = document.getElementById('gw');
+                    sogo.style.width = "0%";
+                    math.style.width = "0%";
+                    prog.style.width = "0%";
+                    pers.style.width = "0%";
                     atte.style.width = "0%";
+                    gw.style.width = "0%";
+                    var attendPoint=0;
+                    var groupworkPoint=0;
+                    var homeworkPoint=0;
+                    var mathPoint=0;
+                    var professorPoint=0;
+                    var programPoint=0;
+                    var totalPoint=0;
+                    var comnum=0;
 
                     const self=this
                     console.log("hello")
                     this.clas= '<%= session.getAttribute("lectureInfo") %>'
-                    console.log(this.clas)
+
                     this.clas=JSON.parse(this.clas)
                     this.clas=this.clas.lectureInfo
-                    console.log(this.clas)
 
+                    console.log(this.clas)
                     this.comments='<%= session.getAttribute("reviewJson") %>'
                     this.comments= JSON.parse(this.comments)
                     this.comments=this.comments.reviews
-                    console.log(this.comments)
 
+                    console.log(this.comments)
+                    for(let com in this.comments){
+                        console.log(this.comments[com])
+                        console.log(this.comments[com].name)
+                        console.log(this.comments[com].attendPoint)
+                        attendPoint+=Number(this.comments[com].attendPoint)
+                        groupworkPoint+=Number(this.comments[com].groupworkPoint)
+                        homeworkPoint+=Number(this.comments[com].homeworkPoint)
+                        mathPoint+=Number(this.comments[com].mathPoint)
+                        professorPoint+=Number(this.comments[com].professorPoint)
+                        programPoint+=Number(this.comments[com].programPoint)
+                        totalPoint+=Number(this.comments[com].totalPoint)
+                        comnum+=1;
+                    }
+                    console.log(attendPoint)
+                    console.log(comnum)
+                    var tp=totalPoint*20/comnum
+                    var mp=mathPoint*20/comnum
+                    var pp=programPoint*20/comnum
+                    var ppp=professorPoint*20/comnum
+                    var ap=attendPoint*20/comnum
+                    var gp=groupworkPoint*20/comnum
+                    console.log(tp)
+                    sogo.style.width = tp+"%";
+                    math.style.width = mp+"%";
+                    prog.style.width = pp+"%";
+                    pers.style.width = ppp+"%";
+                    atte.style.width = ap+"%";
+                    gw.style.width = gp+"%";
                     this.risyu=<%= session.getAttribute("risyu")%>
                     console.log(this.risyu)
 
@@ -577,7 +628,6 @@
 
             button {
                 display: inline-block;
-                width: 25%;
                 height: 50%;
                 border-radius: 50px;
                 border: #4568DC 3px solid;

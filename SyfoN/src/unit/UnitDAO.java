@@ -59,7 +59,7 @@ public class UnitDAO {
 
 			pstmt.setString(1, unitID);
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 
 				String unID = resultSet.getString("unitid");
