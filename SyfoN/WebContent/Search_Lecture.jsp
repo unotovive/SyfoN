@@ -31,11 +31,11 @@
 		</ul>
 		</nav>
 		<div id="mcontent">
-			<div id="pageBody">
+			<div id="panel">
 				<form action="SearchLecture" method="post">
 					<div id="pageBodyLeft">
 						<h2>講義一覧</h2>
-						<table>
+						<table id= "table">
 							<tr>
 								<td>教科名</td>
 								<td><input id="inputformSmall" type="text"
@@ -48,32 +48,32 @@
 							</tr>
 							<tr>
 								<td>開講日</td>
-								<td><select id="inputformSmall" name="day">
-										<option value=""></option>
+								<td><label><select id="inputformSmall" name="day">
+										<option value="">曜日を選択して下さい</option>
 										<option value="monday">月</option>
 										<option value="tuesday">火</option>
 										<option value="wednesday">水</option>
 										<option value="thursday">木</option>
 										<option value="fryday">金</option>
-								</select></td>
+								</select></label></td>
 							</tr>
 							<tr>
 								<td>配当年</td>
-								<td><select id="inputformSmall" name="haitoNen">
-										<option value=""></option>
+								<td><label><select id="inputformSmall" name="haitoNen">
+										<option value="">配当年を選択してください</option>
 										<option value="1">1年</option>
 										<option value="2">2年</option>
 										<option value="3">3年</option>
 										<option value="4">4年</option>
-								</select></td>
+								</select></label></td>
 							</tr>
 							<tr>
 								<td>開講期</td>
-								<td><select id="inputformSmall" name="kaikoki">
-										<option value=""></option>
+								<td><label><select id="inputformSmall" name="kaikoki">
+										<option value="">学期を選択してください</option>
 										<option value="zenki">前期</option>
 										<option value="kouki">後期</option>
-								</select></td>
+								</select></label></td>
 							</tr>
 					<!--  		<tr>
 								<td><span class="checkbox-parts">履修済</span> <input
@@ -83,7 +83,7 @@
 								</td>
 							</tr> -->
 						</table>
-						<button v-on:click="search" type="submit">検索2</button>
+						<button  id = "submit" v-on:click="search" type="submit">検索</button>
 					</div>
 					<div id="pageBodyRight">
 						<h2>検索結果</h2>
@@ -268,6 +268,159 @@
 	transition-duration: .5s;
 	top: 0;
 }
+
+#panel {
+	display: block;
+	height: 80%;
+	width: 60%;
+	margin-top: 8%;
+	clear: both;
+	background: #FFF;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	box-sizing: inherit;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+
+#reviewPanel {
+	height: 100%;
+	width: 100%;
+	margin: auto;
+}
+
+#pageBodyLeft {
+	right: 0;
+	width: 50%;
+	height: 100%;
+	margin: 0;
+	box-sizing: inherit;
+	float: left;
+	margin: 0 auto;
+}
+
+#pageBodyRight {
+	right: 0;
+	width: 50%;
+	height: 100%;
+	margin: 0;
+	box-sizing: inherit;
+	float: right;
+	margin: 0 auto;
+}
+
+#comment {
+	margin-top: 100px;
+}
+
+#commentBox {
+	width: 200px;
+	height: 120px;
+	margin-left: 30px;
+}
+
+#submit {
+	margin-left: 300px;
+	display: inline-block;
+	background-color: #26a69b; /*背景色*/
+	color: #FFF; /*文字色*/
+	font-size: 1em; /*文字サイズ*/
+	line-height: 1;
+	text-decoration: none;
+	letter-spacing: 0.05em; /*字間*/
+	padding: 0.2em 1em; /*ボタン内の余白*/
+	border-radius: 3px; /*角の丸み*/
+	cursor: pointer;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0
+		rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); /*影*/
+	-webkit-tap-highlight-color: transparent;
+	transition: .3s ease-out; /*変化を緩やかに*/
+}
+
+#submit:hover {
+	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0
+		rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2); /*浮き上がるように*/
+}
+
+#back {
+	display: inline-block;
+	background-color: #A4A4A4; /*背景色*/
+	color: #FFF; /*文字色*/
+	font-size: 1em; /*文字サイズ*/
+	line-height: 1;
+	text-decoration: none;
+	letter-spacing: 0.05em; /*字間*/
+	padding: 0.2em 1em; /*ボタン内の余白*/
+	border-radius: 3px; /*角の丸み*/
+	cursor: pointer;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0
+		rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); /*影*/
+	-webkit-tap-highlight-color: transparent;
+	transition: .3s ease-out; /*変化を緩やかに*/
+}
+
+#back:hover {
+	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0
+		rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2); /*浮き上がるように*/
+}
+
+#table {
+	font-size: 20px;
+	margin-left: 50px;
+	border-collapse: separate;
+	border-spacing: 25px;
+}
+
+input {
+	font-size: 15px;
+	padding: 10px 10px 10px 5px;
+	display: block;
+	border: none;
+	border-bottom: 1px solid #757575;
+}
+
+input:focus {
+	outline: none;
+}
+
+label {
+    position: relative;
+    display: block;
+    width: 200px;
+    border: none;
+	border-bottom: 1px solid #757575;
+    background: #fff;
+}
+
+label:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    display: block;
+    width: 0;
+    height: 0;
+    margin: -2px 0 0 0;
+    border: none;
+	border-bottom: 1px solid #757575;
+}
+
+select {
+    cursor: pointer;
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
+    width: 200px;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+}
+
+::-ms-expand {
+    display: none;
+}
+
 
 h1 {
 	margin: 20px;
