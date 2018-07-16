@@ -223,6 +223,7 @@
                 el: '#app',
                 data: {
                     clas: '',
+                    risyu:'',
                     rev: { group: "あり" },
                     comments:'',
 //                     comments: {
@@ -340,6 +341,9 @@
                     this.comments= JSON.parse(this.comments)
                     this.comments=this.comments.reviews
                     console.log(this.comments)
+
+                    this.risyu=<%= session.getAttribute("risyu")%>
+                    console.log(this.risyu)
 
                 },
 //                created() {

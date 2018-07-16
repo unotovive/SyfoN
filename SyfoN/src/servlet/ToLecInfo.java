@@ -17,11 +17,16 @@ import org.json.JSONObject;
 
 import Lecture.Lecture;
 import Lecture.LectureManager;
+import courseLecture.CourseLecture;
+import courseLecture.CourseLectureManager;
 import professor.ProfessorManager;
 import professorToLecture.ProfessorToLectureManager;
 import review.Review;
 import review.ReviewManager;
 import student.StudentManager;
+import timetable.TimeTable;
+import timetable.TimeTableManager;
+import unit.UnitManager;
 /**
  * Servlet implementation class ToLecInfo
  */
@@ -45,6 +50,7 @@ public class ToLecInfo extends HttpServlet {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
 		session.setAttribute("lectureID", 161001);
+		session.setAttribute("studentID", "16fi888");
 
 		this.doPost(request, response);
 
@@ -162,9 +168,11 @@ public class ToLecInfo extends HttpServlet {
 
 		HttpSession session = request.getSession();
 
+		int lectureID=(int)session.getAttribute("lectureID");
+
 		//レクチャーIDからレクチャーの情報を得る
 //		lecture.setLectureID(Integer.valueOf(request.getParameter("lectureID")));
-		lecture.setLectureID((int)session.getAttribute("lectureID"));
+		lecture.setLectureID(lectureID);
 		String professorID,professorName;
 		try {
 		lecture=lectureManager.getLecture(lecture.getLectureID());
@@ -193,17 +201,34 @@ public class ToLecInfo extends HttpServlet {
 		lectureDataMap.put("support",lecture.getSupport());
 		lectureDataMap.put("caution",lecture.getCaution());
 		lectureDataMap.put("advice",lecture.getAdvice());
-		lectureDataMap.put("unit",lecture.getUnit());
+		lectureDataMap.put("unit",new UnitManager().getUnit(lecture.getUnit()).getUnitName());
 		lectureDataMap.put("type",lecture.getType());
 		lectureDataMap.put("professorname",professorName);
 
 		lectureMap.put("lectureInfo",lectureDataMap);
 		JSONObject lectureMapJson=new JSONObject(lectureMap);
 		session.setAttribute("lectureInfo", lectureMapJson);
-		System.out.println(lectureMapJson);
-
+		System.out.println("送った講義情報は"+lectureMapJson);
 
 		//ここまで講義
+		//----------------------------------------------------------
+		//ここから履修中かどうか
+		boolean risyu=false;
+		CourseLectureManager clManager=new CourseLectureManager();
+		String studentID=(String)session.getAttribute("studentID");
+		TimeTableManager ttManager=new TimeTableManager();
+		ArrayList<TimeTable> ttList=ttManager.getTimeTableList(studentID);
+		ArrayList<CourseLecture> courseLectureList=new ArrayList<CourseLecture>();
+		for(TimeTable tempTT:ttList){
+			courseLectureList.addAll(clManager.getCourseLectureList(tempTT.getTimeTableID()));
+		}
+		for(CourseLecture cl:courseLectureList){
+			if(cl.getLectureID()==lectureID){
+				risyu=true;
+			}
+		}
+		session.setAttribute("risyu", risyu);
+		//ここまで履修中かどうか
 		//-------------------------------------------------------
 		//ここから評価
         ReviewManager reviewManager = new ReviewManager();
