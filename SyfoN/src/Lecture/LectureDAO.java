@@ -321,12 +321,12 @@ public class LectureDAO {
 			Class.forName(driverClassName);
 			connection = DriverManager.getConnection(url, user, password);
 			PreparedStatement pstmt = connection.prepareStatement(sql);
-
 			if(!gaitoGakki.isEmpty()){
 			pstmt.setString(1, "%"+gaitoGakki+"%");
 			}else{
 				pstmt.setString(1, "なし");
 			}
+
 			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 
