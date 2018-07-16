@@ -148,7 +148,7 @@ public class CreateTable extends HttpServlet {
 		String result="";
 		switch(type){
 		case "必修":
-			result="must";
+			result="mus";
 			break;
 		case "選択":
 			result="elect";
@@ -157,7 +157,7 @@ public class CreateTable extends HttpServlet {
 			result="eng";
 			break;
 		case "人科":
-			result="human";
+			result="hum";
 			break;
 		default:
 			result="";

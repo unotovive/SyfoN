@@ -350,7 +350,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!--前期４-->
                         <div class="tab_content" id="zen4_content">
                             <span class="five-m">月</span>
@@ -964,22 +964,22 @@
                                             numEngForSum += Number(this.table[term][yobi][clas].taninum)
                                         }
                                     }
-                                    if (this.table[term][yobi][clas].type == "must") {
+                                    if (this.table[term][yobi][clas].type == "mus") {
+                                        numHumAllSum += Number(this.table[term][yobi][clas].taninum)
+                                        if ((term == "zenki1") || (term == "kouki1")) {
+                                            numMusTwoSum += Number(this.table[term][yobi][clas].taninum)
+                                        }
+                                        if (!(term == "zenki4") || !(term == "kouki4")) {
+                                            numMusForSum += Number(this.table[term][yobi][clas].taninum)
+                                        }
+                                    }
+                                    if (this.table[term][yobi][clas].type == "hum") {
                                         numHumAllSum += Number(this.table[term][yobi][clas].taninum)
                                         if ((term == "zenki1") || (term == "kouki1")) {
                                             numHumTwoSum += Number(this.table[term][yobi][clas].taninum)
                                         }
                                         if (!(term == "zenki4") || !(term == "kouki4")) {
                                             numHumForSum += Number(this.table[term][yobi][clas].taninum)
-                                        }
-                                    }
-                                    if (this.table[term][yobi][clas].type == "human") {
-                                        numMusAllSum += Number(this.table[term][yobi][clas].taninum)
-                                        if ((term == "zenki1") || (term == "kouki1")) {
-                                            numMusTwoSum += Number(this.table[term][yobi][clas].taninum)
-                                        }
-                                        if (!(term == "zenki4") || !(term == "kouki4")) {
-                                            numMusForSum += Number(this.table[term][yobi][clas].taninum)
                                         }
                                     }
                                 }
