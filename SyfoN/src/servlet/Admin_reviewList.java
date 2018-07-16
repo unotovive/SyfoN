@@ -45,12 +45,23 @@ public class Admin_reviewList extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 		ReviewManager reviewManager = new ReviewManager();
 		ArrayList<Review> result = new ArrayList<Review>();
 		HttpSession session = request.getSession();
+
 		int lectureID = Integer.valueOf(request.getParameter("id"));
 		Lecture lecture=null;
+
 		try {
 			lecture=new LectureManager().getLecture(lectureID);
 			result = reviewManager.getReviewList(lectureID); //LectureID 仮置き
@@ -72,39 +83,12 @@ public class Admin_reviewList extends HttpServlet {
         System.out.println(reviewListJson);
         session.setAttribute("lectureList",reviewListJson);
 
+    	getServletContext().getRequestDispatcher("/Admin_ReviewList.jsp").forward(request, response);
+
 		}catch(SQLException e){
 			e.printStackTrace();
 		}
 
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		Review review = new Review();
-		ReviewManager reviewManager = new ReviewManager();
-		boolean result = false;
-		HttpSession session = request.getSession();
-
-		String revID = request.getParameter("評価ID");
-		try {
-			System.out.println(revID);
-			review=reviewManager.getReview(revID);
-			result = reviewManager.removeReview(review);
-		} catch (SQLException e1) {
-			// TODO 自動生成された catch ブロック
-			e1.printStackTrace();
-		}
-		if(result){
-			System.out.println("レビュー削除成功");
-			getServletContext().getRequestDispatcher("/Admin_ReviewList.jsp").forward(request, response);
-		}else{
-			System.out.println("レビュー削除失敗");
-			getServletContext().getRequestDispatcher("/Admin_ReviewList.jsp").forward(request, response);
-		}
 	}
 
 }

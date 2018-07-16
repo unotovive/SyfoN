@@ -47,7 +47,6 @@ public class Admin_LectureListServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
 
 		//講義リストに行く
 
@@ -63,7 +62,6 @@ public class Admin_LectureListServlet extends HttpServlet {
 		try {
 			result = mane.getAllLecture();
 
-			System.out.println("d");
 			String lect = "lect";
 			for(int i = 0; i < result.size(); i++) {
 				//教員IDを得る

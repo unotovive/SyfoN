@@ -36,7 +36,6 @@
               <th width="50px"></th>
               <th width="50px"></th>
             </tr>
-            <form action="Admin_reviewList" method="GET">
             <tr v-for="item in table" @click="execPost('Admin_reviewList', item.授業コード);return false;" class="stylho">
               <td>{{item.開講曜日}}</td>
               <td>{{item.授業コード}}</td>
@@ -48,12 +47,9 @@
               </td>
               <td>
                   <span>削除</span>
-              </td>
-            </tr>
-            </form>
+			</tr>
           </table>
         </div>
-      </form>
     </div>
   </div>
 
@@ -70,7 +66,7 @@
 				console.log(data)
 				var form = document.createElement("form");
 				form.setAttribute("action", action);
-				form.setAttribute("method", "get");
+				form.setAttribute("method", "post");
 				form.style.display = "none";
 				document.body.appendChild(form);
 				// パラメタの設定

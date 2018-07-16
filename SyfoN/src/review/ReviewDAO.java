@@ -76,7 +76,8 @@ public class ReviewDAO {
 			PreparedStatement pstmt = connection.prepareStatement(sql);
 
 			pstmt.setString(1, reviewID);
-			
+
+			System.out.println(reviewID);
 			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 

@@ -19,7 +19,7 @@ public class RelationUnitDAO {
 		// memberがDBにあるかどうかを調べる
 		RelationUnit relUnit = new RelationUnit();
 		Connection connection;
-		String sql = "select * from relationunit where lecture = ?";
+		String sql = "select * from relationunit where lectureid = ?";
 
 		try {
 			Class.forName(driverClassName);
