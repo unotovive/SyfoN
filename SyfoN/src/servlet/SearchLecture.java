@@ -98,6 +98,7 @@ public class SearchLecture extends HttpServlet {
 			lectureDataMap.put("教科名", l.getLectureName());
 			lectureDataMap.put("時限",Integer.toString(l.getPeriod())+"限");
 			lectureDataMap.put("配当年学期", this.AdaptGakki(l.getGaitoGakki()));
+			lectureDataMap.put("id", Integer.toString(l.getLectureID()));
 			//教授名を取得して、入れる
 			String professorName=professorManager.getProfessor(
 					ptlManager.getPTL(l.getLectureID()).getProfessorID()).getProfessorName();
