@@ -24,11 +24,12 @@
 		<nav class="drawer-menu">
 		<ul>
 			<li><a href="TimeTableSe">トップページ</a></li>
-			<li><a href="#">講義一覧</a></li>
-			<li><a href="#">マイページ</a></li>
-			<li><a href="#">ログアウト</a></li>
+			<li><a href="SearchLecture">講義一覧</a></li>
+			<li><a href="Mypagesev">マイページ</a></li>
+			<li><a href="Logout">ログアウト</a></li>
 		</ul>
 		</nav>
+		<form method="post" action="EditReview">
 		<div id="mcontent">
 			<div id="panel">
 				<div id="reviewPanel">
@@ -37,45 +38,41 @@
 						<h3>{{table.曜日}}{{table.時限}} {{table.講義名}}</h3>
 						<table id="table" cellspacing="15">
 							<tr>
-								<td width="200px">総合</td>
-								<td width="150px">
-									<span class="star-rating">
-										<input type="radio" name="rating" value="1"><i></i>
-										<input type="radio" name="rating" value="2"><i></i>
-										<input type="radio" name="rating" value="3"><i></i>
-										<input type="radio" name="rating" value="4"><i></i>
-										<input type="radio" name="rating" value="5"><i></i>
-									  </span>
+								<td>総合</td>
+								<td>
+									<div class="group">
+										<input type="text" name="totalPoint" v-model="table.総合">
+									</div>
 								</td>
 							</tr>
 							<tr>
 								<td>数学</td>
 								<td>
 									<div class="group">
-										<input type="text" v-model="table.数学">
+										<input type="text" name="mathPoint" v-model="table.数学">
 									</div>
 								</td>
 							</tr>
 							<tr>
 								<td>program</td>
-								<td><input type="text" v-model="table.program"></td>
+								<td><input type="text" name="programPoint" v-model="table.program"></td>
 							</tr>
 							<tr>
 								<td>教授</td>
 								<td><div class="group">
-										<input type="text" v-model="table.教授">
+										<input type="text" name="professorPoint" v-model="table.教授">
 									</div></td>
 							</tr>
 							<tr>
 								<td>出席</td>
 								<td><div class="group">
-										<input type="text" v-model="table.出席">
+										<input type="text" name="attendPoint" v-model="table.出席">
 									</div></td>
 							</tr>
 							<tr>
 								<td>グループワーク</td>
 								<td><div class="group">
-										<input type="text" v-model="table.グループワーク">
+										<input type="text" name="groupworkPoint" v-model="table.グループワーク">
 									</div></td>
 							</tr>
 
@@ -86,7 +83,7 @@
 
 							<h3>コメント</h3>
 							<span><textarea v-model="table.コメント"
-									placeholder="add multiple lines"></textarea></span>
+									placeholder="add multiple lines" name="comment"></textarea></span>
 
 						</div>
 						<input id="submit" type="submit" value="評価する">
@@ -95,6 +92,7 @@
 
 			</div>
 		</div>
+		</form>
 	</div>
 	<script>
     var app = new Vue({
@@ -106,16 +104,21 @@
       methods: {
 
       },
-      created() {
-        const self = this
-        console.log("afo")
-        axios
-          .get('https://api.myjson.com/bins/tdezq')
-          .then(function (res) {
-            self.table = res.data.review;
-            console.log(self.table)
-          })
+      mounted(){
+    	  this.table='<%= session.getAttribute("reviewInfo")%>'
+    	  this.table=JSON.parse(this.table)
+    	  console.log(this.table)
       }
+//       created() {
+//         const self = this
+//         console.log("afo")
+//         axios
+//           .get('https://api.myjson.com/bins/tdezq')
+//           .then(function (res) {
+//             self.table = res.data.review;
+//             console.log(self.table)
+//           })
+//       }
     })
   </script>
 	<style scoped>

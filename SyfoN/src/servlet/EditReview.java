@@ -16,7 +16,7 @@ import review.ReviewManager;
 /**
  * Servlet implementation class ExitReview
  */
-@WebServlet("/ExitReview")
+@WebServlet("/EditReview")
 public class EditReview extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -34,7 +34,6 @@ public class EditReview extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -48,14 +47,14 @@ public class EditReview extends HttpServlet {
 
 		HttpSession session = request.getSession();
 		rev.setStudentID((String)session.getAttribute("studentID"));
-		rev.setLectureID(Integer.parseInt(request.getParameter("lectureID")));
+		rev.setLectureID((int)session.getAttribute("tempLectureID"));
+		rev.setReviewID((String)session.getAttribute("tempReviewID"));
 		rev.setComment(request.getParameter("comment"));
-		rev.setTotalPoint(Integer.parseInt(request.getParameter("totalpoint")));
-		rev.setMathPoint(Integer.parseInt(request.getParameter("mathpoint")));
-		rev.setProgramPoint(Integer.parseInt(request.getParameter("programpoint")));
-		rev.setAttendPoint(Integer.parseInt(request.getParameter("attendpoint")));
-		rev.setHomeworkPoint(Integer.parseInt(request.getParameter("homeworkpoint")));
-		rev.setGroupworkPoint(Integer.parseInt(request.getParameter("groupworkpoint")));
+		rev.setTotalPoint(Float.parseFloat(request.getParameter("totalPoint")));
+		rev.setMathPoint(Float.parseFloat(request.getParameter("mathPoint")));
+		rev.setProgramPoint(Float.parseFloat(request.getParameter("programPoint")));
+		rev.setAttendPoint(Float.parseFloat(request.getParameter("attendPoint")));
+		rev.setGroupworkPoint(Float.parseFloat(request.getParameter("groupworkPoint")));
 
 		boolean result = false;
 		try {
@@ -66,9 +65,15 @@ public class EditReview extends HttpServlet {
 
 		if (result) {
 			// レビュー作成に成功したとき
-			getServletContext().getRequestDispatcher("/reviewtable.jsp").forward(request, response);
+			System.out.println("レビュー作成完了");
+			//セッションの破棄
+			session.removeAttribute("tempReveiwID");
+			session.removeAttribute("tempLectureID");
+			//detail.jspへ
+			getServletContext().getRequestDispatcher("/detail.jsp").forward(request, response);
 		} else {
-			// ログインに失敗している場合はlogin.jspへ
+			// ログインに失敗している場合はreview.jspへ
+			System.out.println("レビュー作成失敗");
 			getServletContext().getRequestDispatcher("/review.jsp").forward(request, response);
 			}
 		}
