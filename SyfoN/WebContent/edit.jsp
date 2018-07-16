@@ -925,8 +925,8 @@
                             for (let yobi in this.table[term]) {
 
                                 for (clas in this.table[term][yobi]) {
-                                    if(this.table[term][yobi][clas].units==name){
-                                        sum+=Number(this.table[term][yobi][clas].taninum)
+                                    if (this.table[term][yobi][clas].units == name) {
+                                        sum += Number(this.table[term][yobi][clas].taninum)
                                     }
                                 }
                             }
@@ -1048,8 +1048,9 @@
                         br3.style.width = brr3 + "%";
                     }
                 },
-                mounted() {
+                mounted: function () {
                     const self = this
+
                     console.log("hello")
                     this.table = '<%= session.getAttribute("EditLectureList")%>'
                     this.table = JSON.parse(this.table)
@@ -1078,11 +1079,14 @@
                     let numEngForSum = 0;
                     let numHumForSum = 0;
                     let numMusForSum = 0;
-                    for (term in this.table) {
-                        for (yobi in this.table[term]) {
+                    for (let term in this.table) {
+                        console.log(term)
+                        console.log(this.table)
+                        console.log(this.table[term])
+                        for (let yobi in this.table[term]) {
+                            console.log(yobi)
                             for (clas in this.table[term][yobi]) {
                                 numAllSum += Number(this.table[term][yobi][clas].taninum)
-                                console.log(term)
                                 if ((term == "zenki1") || (term == "kouki1")) {
                                     numTwoSum += Number(this.table[term][yobi][clas].taninum)
                                 }
@@ -1099,7 +1103,10 @@
                                         numEngForSum += Number(this.table[term][yobi][clas].taninum)
                                     }
                                 }
-                                if (this.table[term][yobi][clas].type == "must") {
+                                if (this.table[term][yobi][clas].type == "mus") {
+                                    numMusAllSum += Number(this.table[term][yobi][clas].taninum)
+                                }
+                                if (this.table[term][yobi][clas].type == "hum") {
                                     numHumAllSum += Number(this.table[term][yobi][clas].taninum)
                                     if ((term == "zenki1") || (term == "kouki1")) {
                                         numHumTwoSum += Number(this.table[term][yobi][clas].taninum)
@@ -1108,36 +1115,37 @@
                                         numHumForSum += Number(this.table[term][yobi][clas].taninum)
                                     }
                                 }
-                                if (this.table[term][yobi][clas].type == "human") {
-                                    numMusAllSum += Number(this.table[term][yobi][clas].taninum)
-                                    if ((term == "zenki1") || (term == "kouki1")) {
-                                        numMusTwoSum += Number(this.table[term][yobi][clas].taninum)
-                                    }
-                                    if (!(term == "zenki4") || !(term == "kouki4")) {
-                                        numMusForSum += Number(this.table[term][yobi][clas].taninum)
-                                    }
-                                }
                             }
                         }
                     }
                     this.numAllSum = numAllSum;
-                    this.numEngAllSum = numEngAllSum;
-                    this.numHumAllSum = numHumAllSum;
-                    this.numMusAllSum = numMusAllSum;
+                    this.numEngAllSum = this.needs.English.num - numEngAllSum;
+                    this.numHumAllSum = this.needs.Jinka.num - numHumAllSum;
+                    this.numMusAllSum = this.needs.Hissyu.num - numMusAllSum;
 
                     this.numTwoSum = numTwoSum;
-                    this.numEngTwoSum = numEngTwoSum;
-                    this.numHumTwoSum = numHumTwoSum;
-                    this.numMusTwoSum = numMusTwoSum;
+                    this.numEngTwoSum = 0;
+                    this.numHumTwoSum = 0;
 
                     this.numForSum = numForSum;
-                    this.numEngForSum = numEngForSum;
-                    this.numHumForSum = numHumForSum;
-                    this.numMusForSum = numMusForSum;
+                    this.numEngForSum = 4 - numEngForSum;
+                    this.numHumForSum = 10 - numHumForSum;
+
+                    var br1 = document.getElementById('probar1n');
+                    console.log(br1)
+                    var br2 = document.getElementById('probar2n');
+                    var br3 = document.getElementById('probar3n');
+                    var brr1 = this.numTwoSum / 24 * 100;
+                    var brr2 = this.numForSum / 108 * 100;
+                    var brr3 = this.numAllSum / 124 * 100;
+                    br1.style.width = brr1 + "%";
+                    br2.style.width = brr2 + "%";
+                    br3.style.width = brr3 + "%";
                 }
             })
         </script>
         <style scoped>
+            @import url('https://fonts.googleapis.com/css?family=Gruppo|Handlee|Itim|Jura|Life+Savers:700|Nothing+You+Could+Do|Short+Stack');
             #app {
                 width: 100vw;
                 height: 100vh;
@@ -1247,7 +1255,7 @@
                 background: -webkit-linear-gradient(left, #4568DC, #B06AB3);
                 background: linear-gradient(to right, #4568DC, #B06AB3);
                 height: 100px;
-                box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, .9);
             }
 
             #mcontent {
@@ -1319,8 +1327,8 @@
             h1 {
                 margin: 20px;
                 font-size: 3em;
-                font-family: 'Poor Story', cursive;
-                color: #EEE;
+                color: #f3f3f3;
+                font-family: 'Gruppo', cursive;
             }
 
             h2 {
@@ -1345,6 +1353,7 @@
             p {
                 margin: 10px;
             }
+
             button {
                 display: inline-block;
                 height: 6%;
@@ -1363,6 +1372,7 @@
             button:hover {
                 opacity: .8;
             }
+
             .edit {
                 clear: both;
 
@@ -1591,10 +1601,12 @@
                 display: block;
                 height: 50px;
                 line-height: 50px;
-                font-size: 14px;
+                font-size: 1.3em;
                 color: #fff;
                 -webkit-transition: all .8s;
                 transition: all .8s;
+                font-family: "Rounded Mplus 1c";
+                text-decoration: none;
             }
 
             .drawer-menu li a:hover {
@@ -1631,7 +1643,7 @@
                 display: block;
                 width: 40px;
                 height: 3px;
-                background: #555555;
+                background: #f3f3f3;
                 -webkit-transition: all .5s;
                 transition: all .5s;
                 -webkit-transform-origin: left top;
@@ -1649,6 +1661,12 @@
                 -webkit-transform-origin: left bottom;
                 -ms-transform-origin: left bottom;
                 transform-origin: left bottom;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
             }
 
             .menu-btn:hover .bar {
