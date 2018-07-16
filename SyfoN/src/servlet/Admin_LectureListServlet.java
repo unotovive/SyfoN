@@ -17,6 +17,8 @@ import org.json.JSONObject;
 
 import Lecture.Lecture;
 import Lecture.LectureManager;
+import professor.ProfessorManager;
+import professorToLecture.ProfessorToLectureManager;
 
 /**
  * Servlet implementation class Admin_LectureListServlet
@@ -47,8 +49,12 @@ public class Admin_LectureListServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
 
+		//講義リストに行く
+
 		Lecture Lecture = new Lecture();
 		LectureManager mane = new LectureManager();
+		ProfessorManager professorManager=new ProfessorManager();
+		ProfessorToLectureManager ptlManager=new ProfessorToLectureManager();
 		HttpSession session = request.getSession();
 
 
@@ -56,28 +62,34 @@ public class Admin_LectureListServlet extends HttpServlet {
 
 		try {
 			result = mane.getAllLecture();
+
+			System.out.println("d");
+			String lect = "lect";
+			for(int i = 0; i < result.size(); i++) {
+				//教員IDを得る
+				String professorID=ptlManager.getPTL(result.get(i).getLectureID()).getProfessorID();
+
+				//講義情報をMapに入れる
+				Map<String , String> LectureDetail = new HashMap<String , String>();
+				LectureDetail.put("開講曜日",this.AdaptDay(result.get(i).getDay()));
+				LectureDetail.put("授業コード",Integer.toString(result.get(i).getLectureID()));
+				LectureDetail.put("講義名",result.get(i).getLectureName());
+				LectureDetail.put("教員名",professorManager.getProfessor(professorID).getProfessorName());
+				LectureDetail.put("教室",result.get(i).getRoom());
+				lect = "lect" + Integer.toString(i);
+				lecture.put(lect, LectureDetail);
+			}
+			lectureListMap.put("lectureList", lecture);
+			JSONObject lectureListJson=new JSONObject(lectureListMap);
+	        System.out.println(lectureListJson);
+	        session.setAttribute("lectureList",lectureListJson);
+
+			getServletContext().getRequestDispatcher("/Admin_LectureList.jsp").forward(request, response);
+	//        Lecture lecresult = new Lecture();
+	//        lecresult.setLectureID(Integer.parseInt(request.getParameter("授業コード")));
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		System.out.println("d");
-		String lect = "lect";
-		for(int i = 0; i < result.size(); i++) {
-			Map<String , String> LectureDetail = new HashMap<String , String>();
-			LectureDetail.put("開講曜日",result.get(i).getDay());
-			LectureDetail.put("授業コード",Integer.toString(result.get(i).getLectureID()));
-			LectureDetail.put("講義名",result.get(i).getLectureName());
-			LectureDetail.put("教員名","kakizaki"); //かりおき
-			LectureDetail.put("教室",result.get(i).getRoom());
-			lect = "lect" + Integer.toString(i);
-			lecture.put(lect, LectureDetail);
-		}
-		lectureListMap.put("lectureList", lecture);
-		JSONObject lectureListJson=new JSONObject(lectureListMap);
-        System.out.println(lectureListJson);
-        session.setAttribute("lectureList",lectureListJson);
-
-        Lecture lecresult = new Lecture();
-        lecresult.setLectureID(Integer.parseInt(request.getParameter("授業コード")));;;
       }
 
 	/**
@@ -130,6 +142,31 @@ public class Admin_LectureListServlet extends HttpServlet {
 			}
 			getServletContext().getRequestDispatcher("/Admin_ReviewList.jsp").forward(request, response);
 		}
+	}
+
+	private String AdaptDay(String day){
+		String result="";
+		switch(day){
+		case "monday":
+			result="月曜日";
+			break;
+		case "tuesday":
+			result="火曜日";
+			break;
+		case "wednesday":
+			result="水曜日";
+			break;
+		case "thursday":
+			result="木曜日";
+			break;
+		case "fryday":
+			result="金曜日";
+			break;
+		default:
+			result="謎";
+			break;
+		}
+		return result;
 	}
 
 }
