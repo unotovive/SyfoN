@@ -826,21 +826,31 @@
 
                 <div id="panel">
                     <div id="progres1">
-                        <h3>進級まで</h3>
-                        <div id="probar1"></div>
-                        <p>{{numTwoSum}}/24</p>
-                        <p>英語：あと{{numEngTwoSum}}単位　人科：あと{{numHumTwoSum}}単位　必修：あと{{numMusTwoSum}}単位</p>
-                        <h3>進級まで</h3>
-                        <div id="probar1"></div>
-                        <p>{{numForSum}}/108</p>
-                        <p>英語：あと{{numEngForSum}}単位　人科：あと{{numHumForSum}}単位　必修：あと{{numMusForSum}}単位</p>
+                        <h3>1→２進級まで</h3>
+                        <div id="probar1">
+                            <div id="probar1n">
+                                <p>{{numTwoSum}}/24</p>
+                            </div>
+                        </div>
+                        <p style="color:#FFFFFF;">_</p>
+                        <h3>3→4進級まで</h3>
+                        <div id="probar2">
+                            <div id="probar2n">
+                                <p>{{numForSum}}/108</p>
+                            </div>
+                        </div>
+                        <p>英語：あと{{numEngForSum}}単位　人科：あと{{numHumForSum}}単位</p>
                     </div>
                     <div id="progres2">
                         <h3>卒業まで</h3>
-                        <div id="probar2"></div>
-                        <p>{{numAllSum}}/124</p>
+                        <div id="probar3">
+                            <div id="probar3n">
+                                <p>{{numAllSum}}/124</p>
+                            </div>
+                        </div>
                         <p>英語：あと{{numEngAllSum}}単位　人科：あと{{numHumAllSum}}単位　必修：あと{{numMusAllSum}}単位</p>
                         <h4>ユニット取得状況</h4>
+                        <p v-for="unit in units">{{unit.name}}:{{getAllUnit()}}/{{unit.taninum}}</p>
                     </div>
                 </div>
             </div>
@@ -848,12 +858,13 @@
         <script>
             const Selector = {
                 template:
-                    '<div><select v-model="selected" style="width:90%; border-radius:10px; margin: 1% 5%; height:48%; font-size: .7em;"><option v-for="csc in clas.csc" v-bind:value="csc">{{csc.name}}</option></select><br><button @click="set(selected)" style="color:#7369CB; border-radius:10px; border:2px solid #7369CB; width:90%; background: #FFFFFF; margin: 1% 5%; height:40%; font-size:0.7em; padding:0;">この教科を選択</button></div>'
+                    '<div><select v-model="selected" style="width:90%; border-radius:10px; margin: 1% 5%; height:48%; font-size: .7em;"><option v-for="csc in clas.csc" v-bind:value="csc">{{csc.name}}</option></select><br><button @click="set(selected)" style="color:#7369CB; border-radius:10px; border:2px solid #7369CB; width:90%; background: #FFFFFF; margin: 1% 5%; height:40%; font-size:0.7em; padding:0;" v-if="!(selected==strnull)">この教科を選択</button></div>'
                 ,
                 props: ['clas'],
                 data: function () {
                     return {
-                        selected: ''
+                        selected: '',
+                        strnull: ''
                     }
                 },
                 methods: {
@@ -902,13 +913,26 @@
                     numTwoSum: 0,
                     numEngTwoSum: 0,
                     numHumTwoSum: 0,
-                    numMusTwoSum: 0,
                     numForSum: 0,
                     numEngForSum: 0,
                     numHumForSum: 0,
-                    numMusForSum: 0
                 },
                 methods: {
+                    getAllUnit(name) {
+                        var sum = 0;
+                        for (let term in this.table) {
+
+                            for (let yobi in this.table[term]) {
+
+                                for (clas in this.table[term][yobi]) {
+                                    if(this.table[term][yobi][clas].units==name){
+                                        sum+=Number(this.table[term][yobi][clas].taninum)
+                                    }
+                                }
+                            }
+                        }
+                        return sum;
+                    },
                     send() {
                         var form = document.createElement("form");
                         form.setAttribute("action", "RegisterTimeTable");
@@ -929,7 +953,7 @@
                                 }
                             }
                         }
-                        console.log(form);  
+                        console.log(form);
                         //form.submit();
                     },
                     itemset(clas) {
@@ -956,11 +980,9 @@
                         let numTwoSum = 0;
                         let numEngTwoSum = 0;
                         let numHumTwoSum = 0;
-                        let numMusTwoSum = 0;
                         let numForSum = 0;
                         let numEngForSum = 0;
                         let numHumForSum = 0;
-                        let numMusForSum = 0;
                         console.log("rerun")
                         console.log(this.table)
                         for (let term in this.table) {
@@ -988,13 +1010,7 @@
                                         }
                                     }
                                     if (this.table[term][yobi][clas].type == "mus") {
-                                        numHumAllSum += Number(this.table[term][yobi][clas].taninum)
-                                        if ((term == "zenki1") || (term == "kouki1")) {
-                                            numMusTwoSum += Number(this.table[term][yobi][clas].taninum)
-                                        }
-                                        if (!(term == "zenki4") || !(term == "kouki4")) {
-                                            numMusForSum += Number(this.table[term][yobi][clas].taninum)
-                                        }
+                                        numMusAllSum += Number(this.table[term][yobi][clas].taninum)
                                     }
                                     if (this.table[term][yobi][clas].type == "hum") {
                                         numHumAllSum += Number(this.table[term][yobi][clas].taninum)
@@ -1009,19 +1025,27 @@
                             }
                         }
                         this.numAllSum = numAllSum;
-                        this.numEngAllSum = numEngAllSum;
-                        this.numHumAllSum = numHumAllSum;
-                        this.numMusAllSum = numMusAllSum;
+                        this.numEngAllSum = this.needs.English.num - numEngAllSum;
+                        this.numHumAllSum = this.needs.Jinka.num - numHumAllSum;
+                        this.numMusAllSum = this.needs.Hissyu.num - numMusAllSum;
 
                         this.numTwoSum = numTwoSum;
-                        this.numEngTwoSum = numEngTwoSum;
-                        this.numHumTwoSum = numHumTwoSum;
-                        this.numMusTwoSum = numMusTwoSum;
+                        this.numEngTwoSum = 0;
+                        this.numHumTwoSum = 0;
 
                         this.numForSum = numForSum;
-                        this.numEngForSum = numEngForSum;
-                        this.numHumForSum = numHumForSum;
-                        this.numMusForSum = numMusForSum;
+                        this.numEngForSum = 4 - numEngForSum;
+                        this.numHumForSum = 10 - numHumForSum;
+
+                        var br1 = document.getElementById('probar1n');
+                        var br2 = document.getElementById('probar2n');
+                        var br3 = document.getElementById('probar3n');
+                        var brr1 = this.numTwoSum / 24 * 100;
+                        var brr2 = this.numForSum / 108 * 100;
+                        var brr3 = this.numAllSum / 124 * 100;
+                        br1.style.width = brr1 + "%";
+                        br2.style.width = brr2 + "%";
+                        br3.style.width = brr3 + "%";
                     }
                 },
                 mounted() {
@@ -1130,6 +1154,87 @@
                 box-sizing: border-box;
             }
 
+            #probar1 {
+                width: 90%;
+                height: 30px;
+                border-radius: 100px;
+                border: #555555 3px solid;
+            }
+
+            #probar1n {
+                width: 0%;
+                height: 30px;
+                max-width: 100%;
+                border-radius: 100px;
+                border: none;
+                background: #a80077;
+                background: -moz-linear-gradient(left, #a80077, #66ff00);
+                background: -webkit-linear-gradient(left, #a80077, #66ff00);
+                background: linear-gradient(to right, #a80077, #66ff00);
+            }
+
+            #probar1n p {
+                margin: 0 auto;
+                padding: 0;
+                color: #FFF;
+                font-size: 1.1em;
+                margin-left: 5%;
+            }
+
+            #probar2 {
+                width: 90%;
+                height: 30px;
+                border-radius: 100px;
+                border: #555555 3px solid;
+            }
+
+            #probar2n {
+                width: 30%;
+                max-width: 100%;
+                height: 30px;
+                border-radius: 100px;
+                border: none;
+                background: #a80077;
+                background: -moz-linear-gradient(left, #a80077, #66ff00);
+                background: -webkit-linear-gradient(left, #a80077, #66ff00);
+                background: linear-gradient(to right, #a80077, #66ff00);
+            }
+
+            #probar2n p {
+                margin: 0 auto;
+                padding: 0;
+                color: #FFF;
+                font-size: 1.1em;
+                margin-left: 5%;
+            }
+
+            #probar3 {
+                width: 90%;
+                height: 30px;
+                border-radius: 100px;
+                border: #555555 3px solid;
+            }
+
+            #probar3n {
+                width: 110%;
+                max-width: 100%;
+                height: 30px;
+                border-radius: 100px;
+                border: none;
+                background: #a80077;
+                background: -moz-linear-gradient(left, #a80077, #66ff00);
+                background: -webkit-linear-gradient(left, #a80077, #66ff00);
+                background: linear-gradient(to right, #a80077, #66ff00);
+            }
+
+            #probar3n p {
+                margin: 0 auto;
+                padding: 0;
+                color: #FFF;
+                font-size: 1.1em;
+                margin-left: 5%;
+            }
+
             #bar {
                 position: absolute;
                 top: 0;
@@ -1234,14 +1339,33 @@
                 font-size: 1.2em;
                 margin: 10px;
                 color: #555555;
+                margin-bottom: 3px;
             }
 
             p {
                 margin: 10px;
             }
+            button {
+                display: inline-block;
+                height: 6%;
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 2%;
+                margin-bottom: 0;
+                border-radius: 50px;
+                border: #4568DC 3px solid;
+                background: #FFF;
+                transition: .2;
+                color: #4568DC;
+                font-size: 1em;
+            }
 
+            button:hover {
+                opacity: .8;
+            }
             .edit {
                 clear: both;
+                
             }
 
             .raw {
@@ -1263,7 +1387,7 @@
             }
 
             .five-m {
-                width: calc(95%/5);
+                width: calc(94%/5);
                 float: left;
                 border: #7369CB 1px solid;
                 box-sizing: inherit;
@@ -1273,7 +1397,6 @@
             .five {
                 width: calc(95%/5);
                 float: left;
-                border: #7369CB 1px solid;
                 box-sizing: inherit;
                 height: 90%;
             }
