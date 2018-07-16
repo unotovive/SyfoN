@@ -106,8 +106,8 @@ public class Admin_LectureEditServlet extends HttpServlet {
 		lectureName.put("授業コード", Integer.toString(editLectureID));
 		lectureName.put("授業名", editLecture.getLectureName());
 		lectureName.put("担当教員", professor.getProfessorID()); //aaaaaaaaaaaaaa
-		lectureName.put("該当学期", editLecture.getGaitoGakki());
-		lectureName.put("曜日", editLecture.getDay());
+		lectureName.put("該当学期", this.AdaptGakki(editLecture.getGaitoGakki()));
+		lectureName.put("曜日", this.AdaptDay(editLecture.getDay()));
 		lectureName.put("時限", Integer.toString(editLecture.getPeriod()));
 		lectureName.put("教室番号", editLecture.getRoom());
 		lectureName.put("単位数", Integer.toString(editLecture.getTaniNum()));
@@ -151,6 +151,73 @@ public class Admin_LectureEditServlet extends HttpServlet {
         JSONObject unitListJson=new JSONObject(unitList);
         System.out.println(unitListJson);
         session.setAttribute("unitList", unitListJson);
+
+        getServletContext().getRequestDispatcher("/Admin_Register.jsp").forward(request, response);
 	}
+
+	private String AdaptGakki(String gaitoGakki){
+		String result="";
+		switch(gaitoGakki){
+		case "zenki1":
+			result="1年生前期";
+			break;
+		case "kouki1":
+			result="1年生後期";
+			break;
+		case "zenki2":
+			result="2年生前期";
+			break;
+		case "kouki2":
+			result="2年生後期";
+			break;
+		case "zenki3":
+			result="3年生前期";
+			break;
+		case "kouki3":
+			result="3年生後期";
+			break;
+		case "zenki4":
+			result="4年生前期";
+			break;
+		case "kouki4":
+			result="4年生後期";
+			break;
+		}
+		return result;
 	}
+	private String AdaptGaitoGakki(String Kaikoki){
+		String result=Kaikoki;
+		switch(result){
+		case "前期":
+			result="zenki";
+			break;
+		case"後期":
+			result="kouki";
+			break;
+		}
+		return result;
+	}
+
+	public String AdaptDay(String day){
+		String result="";
+		switch(day){
+		case "monday":
+			result="月";
+			break;
+		case "tuesday":
+			result="火";
+			break;
+		case "wednesday":
+			result="水";
+			break;
+		case "thursday":
+			result="木";
+			break;
+		case "fryday":
+			result="金";
+			break;
+		}
+		return result;
+	}
+}
 

@@ -41,4 +41,9 @@ public class CourseLectureManager {
 		return courseLectureList;
 	}
 
+	public boolean deleteCourseLectue2(){
+		boolean result=false;
+		result=
+		return result;
+	}
 }

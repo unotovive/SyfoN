@@ -184,38 +184,15 @@
       </div>
   </div>
 
-  <%
-  	Map<String,ArrayList> map=new HashMap<String,ArrayList>();
-  	ArrayList<String> teachers = new ArrayList<String>();
-  	teachers.add("柿崎");
-  	teachers.add("中島");
-  	teachers.add("増田");
-  	map.put("教員",teachers);
-  	JSONObject jsonTest=new JSONObject(map);
-	session.setAttribute("jsonTest",jsonTest);
-  %>
 
-  <%
-  	Map<String,ArrayList> map2=new HashMap<String,ArrayList>();
-  	ArrayList<String> unit = new ArrayList<String>();
-  	unit.add("CG");
-  	unit.add("VS");
-  	unit.add("MI");
-  	unit.add("WI");
-  	unit.add("SN");
-  	unit.add("ST");
-  	map2.put("ユニット",unit);
-  	JSONObject jsonTest2=new JSONObject(map2);
-	session.setAttribute("jsonTest2",jsonTest2);
-  %>
 
   <%
   	Map<String,ArrayList> map3=new HashMap<String,ArrayList>();
   	ArrayList<String> type = new ArrayList<String>();
   	type.add("必修");
   	type.add("英語");
-  	type.add("人間科目");
-  	type.add("選択科目");
+  	type.add("人科");
+  	//type.add("選択科目");
   	map3.put("種類",type);
   	JSONObject jsonTest3=new JSONObject(map3);
 	session.setAttribute("jsonTest3",jsonTest3);
@@ -224,8 +201,9 @@
   <script>
   //var selectTeacher = document.forms.adominRegister.teacher;
   //selectTeacher.options.lenght = 0;
-  	var jsonTest='<%= session.getAttribute("jsonTest")%>';
+  	var jsonTest='<%= session.getAttribute("professorList")%>';
   	jsonTest=JSON.parse(jsonTest);
+  	var jsonTest=jsonTest.教員
   	var keys = Object.keys(jsonTest);
 	console.log(Object.keys(jsonTest));
 	document.forms.adminRegister.teacher.options[0] = new Option("");
@@ -237,7 +215,7 @@
   <script>
   //var selectTeacher = document.forms.adominRegister.teacher;
   //selectTeacher.options.lenght = 0;
-  	var jsonTest2='<%= session.getAttribute("jsonTest2")%>';
+  	var jsonTest2='<%= session.getAttribute("unitList")%>';
   	jsonTest2=JSON.parse(jsonTest2);
   	var keys = Object.keys(jsonTest2);
 	console.log(Object.keys(jsonTest2));
@@ -272,12 +250,9 @@
                 created() {
                     const self = this
                     console.log("afo")
-                    axios
-                        .get('https://api.myjson.com/bins/1g1sni')
-                        .then(function (res) {
-                            self.table = res.data.講義;
-                            console.log(self.table)
-                    })
+                    this.table='<%= session.getAttribute("registLecture")%>'
+                    this.table=JSON.parse(this.table)
+                    console.log(this.table)
                 }
             })
     </script>
