@@ -27,13 +27,25 @@
           	}
           </script>
               <h1>Welcome</h1>
-              <h2>SyfoN-ログイン</h2>
+              
 
-              <form class="form" action="Login" method="POST" >
-                  <input type="text"  name="studentID" placeholder="学籍番号" v-model="studentNo">
-                  <input type="password" name="pass" placeholder="パスワード" v-model="pass">
+              <form class="aform" action="Login" method="POST" v-if="!admin">
+                  <h2>SyfoN-ログイン</h2>
+                  <input type="text"  name="studentID" placeholder="学籍番号">
+                  <input type="password" name="pass" placeholder="パスワード">
                   <button type="submit" id="login-button" >ログイン</button>
                   <a href="add.jsp">新規登録</a>
+              </form>
+              <form class="aform" action="Admin_Login" method="POST" v-if="admin">
+                  <h2>SyfoN-管理者ログイン</h2>
+                  <input type="text"  name="adminID" placeholder="管理者ID">
+                  <input type="password" name="adminPass" placeholder="パスワード">
+                  <button type="submit" id="login-button" >ログイン</button>
+              </form>
+              <form style="position: absolute; bottom:10px; right: 10px; z-index: 1000;">
+              <label for="box">
+                <input type="checkbox" v-model="admin" id="box">管理者ログイン
+              </label>
               </form>
           </div>
           <ul class="bg-bubbles">
@@ -58,6 +70,7 @@
       data: {
         studentNo: '',
         pass: '',
+        admin:false
       },
       methods: {
         humanizeURL: function (url) {
@@ -146,12 +159,12 @@
     a:hover{
         color:#ffa751;
     }
-    form {
+    .aform {
       padding: 20px 0;
       position: relative;
       z-index: 2;
     }
-    form input {
+    .aform input {
       -webkit-appearance: none;
          -moz-appearance: none;
               appearance: none;
@@ -169,15 +182,15 @@
       transition-duration: 0.25s;
       font-weight: 300;
     }
-    form input:hover {
+    .aform input:hover {
       background-color: rgba(255, 255, 255, 0.4);
     }
-    form input:focus {
+    .aform input:focus {
       background-color: white;
       width: 300px;
       color: #7F7FD5;
     }
-    form button {
+    .aform button {
       -webkit-appearance: none;
          -moz-appearance: none;
               appearance: none;
@@ -194,7 +207,7 @@
       display: block;
       margin: 0 auto 10px auto;
     }
-    form button:hover {
+    .aform button:hover {
       background-color: #f0f2f4;
     }
     .bg-bubbles {
