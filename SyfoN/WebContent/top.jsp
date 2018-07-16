@@ -2253,6 +2253,9 @@
                 font-size: 1em;
                 clear: both;
             }
+            .edit:hover{
+                opacity: .8;
+            }
             #progres1 {
                 display: block;
                 height: 34%;
