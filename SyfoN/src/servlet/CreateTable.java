@@ -119,7 +119,7 @@ public class CreateTable extends HttpServlet {
 					lectureDataMap.put("id","0" );
 					lectureDataMap.put("room","0");
 					lectureDataMap.put("type","0");
-					lectureDataMap.put("unit","0");
+					lectureDataMap.put("unit","0000");
 					lectureDataMap.put("must", "false");
 					System.out.println("lectureData"+lectureDataMap.size());
 

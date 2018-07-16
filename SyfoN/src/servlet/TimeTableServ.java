@@ -144,7 +144,7 @@ public class TimeTableServ extends HttpServlet {
 						lectureDataMap.put("lectureid","0" );
 						lectureDataMap.put("room","0");
 						lectureDataMap.put("type","0" );
-						lectureDataMap.put("unit","0");
+						lectureDataMap.put("unit","0000");
 					}
 					System.out.println(lectureDataMap);
 					period.put("period"+periods[n], lectureDataMap);
