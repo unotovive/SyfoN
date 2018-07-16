@@ -24,7 +24,7 @@
                 <span class="bar bottom"></span>
             </label>
             <label class="close-menu" for="checked"></label>
-            <nav class="drawer-menu">
+           <nav class="drawer-menu">
                 <ul>
                     <li>
                         <a href="TimeTableServ">トップページ</a>
@@ -36,7 +36,7 @@
                         <a href="Mypagesev">マイページ</a>
                     </li>
                     <li>
-                        <a href="Common_Logout">ログアウト</a>
+                        <a href="Logout">ログアウト</a>
                     </li>
                 </ul>
             </nav>

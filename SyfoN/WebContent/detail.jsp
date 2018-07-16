@@ -31,10 +31,10 @@
                         <a href="TimeTableServ">トップページ</a>
                     </li>
                     <li>
-                        <a href="SearchLecture">講義一覧</a>
+                        <a href="Search_Lecture.jsp">講義一覧</a>
                     </li>
                     <li>
-                        <a href="MyPageSev">マイページ</a>
+                        <a href="Mypagesev">マイページ</a>
                     </li>
                     <li>
                         <a href="Logout">ログアウト</a>

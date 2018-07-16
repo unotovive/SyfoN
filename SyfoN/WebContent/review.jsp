@@ -22,13 +22,21 @@
 			<span class="bar middle"></span> <span class="bar bottom"></span>
 		</label> <label class="close-menu" for="checked"></label>
 		<nav class="drawer-menu">
-		<ul>
-			<li><a href="TimeTableSe">トップページ</a></li>
-			<li><a href="SearchLecture">講義一覧</a></li>
-			<li><a href="Mypagesev">マイページ</a></li>
-			<li><a href="Logout">ログアウト</a></li>
-		</ul>
-		</nav>
+                <ul>
+                    <li>
+                        <a href="TimeTableServ">トップページ</a>
+                    </li>
+                    <li>
+                        <a href="Search_Lecture.jsp">講義一覧</a>
+                    </li>
+                    <li>
+                        <a href="Mypagesev">マイページ</a>
+                    </li>
+                    <li>
+                        <a href="Logout">ログアウト</a>
+                    </li>
+                </ul>
+            </nav>
 		<form method="post" action="EditReview">
 		<div id="mcontent">
 			<div id="panel">
