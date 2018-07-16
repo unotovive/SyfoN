@@ -80,18 +80,25 @@
       created() {
         const self = this
         console.log("afo")
-        axios
-          .get('https://api.myjson.com/bins/twgy6')
-          .then(function (res) {
-            self.table = res.data.講義.投稿;
-            console.log(self.table)
-          })
-        axios
-          .get('https://api.myjson.com/bins/twgy6')
-          .then(function (res) {
-            self.lecture = res.data.講義;
-            console.log(self.lecture)
-          })
+        this.lecture='<%= session.getAttribute("lectureList")%>'
+		this.lecture=JSON.parse(this.lecture)
+		this.table=this.lecture.投稿
+		this.lecture=this.lecture.講義
+		console.log(this.lecture)
+
+
+//         axios
+//           .get('https://api.myjson.com/bins/twgy6')
+//           .then(function (res) {
+//             self.table = res.data.講義.投稿;
+//             console.log(self.table)
+//           })
+//         axios
+//           .get('https://api.myjson.com/bins/twgy6')
+//           .then(function (res) {
+//             self.lecture = res.data.講義;
+//             console.log(self.lecture)
+//           })
       }
     })
   </script>
