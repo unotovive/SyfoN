@@ -23,7 +23,7 @@
 		</label> <label class="close-menu" for="checked"></label>
 		<nav class="drawer-menu">
 		<ul>
-			<li><a href="#">トップページ</a></li>
+			<li><a href="TimeTableSe">トップページ</a></li>
 			<li><a href="#">講義一覧</a></li>
 			<li><a href="#">マイページ</a></li>
 			<li><a href="#">ログアウト</a></li>

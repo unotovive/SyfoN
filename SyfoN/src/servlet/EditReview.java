@@ -31,6 +31,7 @@ public class EditReview extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
@@ -39,6 +40,7 @@ public class EditReview extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		Review rev = new Review();
@@ -63,7 +65,7 @@ public class EditReview extends HttpServlet {
 		}
 
 		if (result) {
-			// レビューに成功したとき
+			// レビュー作成に成功したとき
 			getServletContext().getRequestDispatcher("/reviewtable.jsp").forward(request, response);
 		} else {
 			// ログインに失敗している場合はlogin.jspへ
