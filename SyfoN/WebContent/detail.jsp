@@ -62,7 +62,7 @@
                             <tr>
                                 <th class="arrow_box">開講学期
                                 </th>
-                                <td>{{clas.term}}</td>
+                                <td>{{clas.gaitogakki}}</td>
                             </tr>
 
                             <tr>
@@ -79,9 +79,9 @@
                                 <tr>
                                     <th class="arrow_box">担当教員
                                     </th>
-                                    <td>{{clas.teacher}}</td>
+                                    <td>{{clas.professorname}}</td>
                                 </tr>
-    
+
 
                                 <tr>
                                     <th class="arrow_box">曜日時限
@@ -92,7 +92,7 @@
                                 <tr>
                                     <th class="arrow_box">単位数
                                     </th>
-                                    <td>{{clas.num}}</td>
+                                    <td>{{clas.taninum}}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -101,12 +101,12 @@
                             <tr>
                                 <th class="arrow_box">目的
                                 </th>
-                                <td>{{clas.target}}</td>
+                                <td>{{clas.purpose}}</td>
                             </tr>
                             <tr>
-                                <th class="arrow_box">目標
+                                <th class="arrow_box">達成目標
                                 </th>
-                                <td>{{clas.goal}}</td>
+                                <td>{{clas.achieve}}</td>
                             </tr>
                             <tr>
                                 <th class="arrow_box">関連科目
@@ -116,27 +116,27 @@
                             <tr>
                                 <th class="arrow_box">履修条件
                                 </th>
-                                <td>{{clas.book}}</td>
+                                <td>{{clas.term}}</td>
                             </tr>
                             <tr>
                                 <th class="arrow_box">教科書名
                                 </th>
-                                <td>{{clas.book}}</td>
+                                <td>{{clas.textbook}}</td>
                             </tr>
                             <tr>
                                 <th class="arrow_box">評価方法
                                 </th>
-                                <td>{{clas.evaluation}}</td>
+                                <td>{{clas.hyokahoho}}</td>
                             </tr>
                             <tr>
                                 <th class="arrow_box">教育目標との対応
                                 </th>
-                                <td>{{clas.accept}}</td>
+                                <td>{{clas.kyoikumokuhyo}}</td>
                             </tr>
                             <tr>
                                 <th class="arrow_box">事前・事後学習
                                 </th>
-                                <td>{{clas.homework}}</td>
+                                <td>{{clas.yosyuhukusyu}}</td>
                             </tr>
                             <tr>
                                 <th class="arrow_box">E-mail
@@ -146,17 +146,17 @@
                             <tr>
                                 <th class="arrow_box">質問対応
                                 </th>
-                                <td>{{clas.question}}</td>
+                                <td>{{clas.support}}</td>
                             </tr>
                             <tr>
                                 <th class="arrow_box">履修注意事項
                                 </th>
-                                <td>{{clas.attention}}</td>
+                                <td>{{clas.caution}}</td>
                             </tr>
                             <tr>
                                 <th class="arrow_box">学習上の助言
                                 </th>
-                                <td>{{clas.help}}</td>
+                                <td>{{clas.advice}}</td>
                             </tr>
                             <tr>
                                 <th class="arrow_box">該当ユニット
@@ -224,92 +224,93 @@
                 data: {
                     clas: '',
                     rev: { group: "あり" },
-                    comments: {
-                        "come1": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        },
-                        "come2": {
-                            "name": "奥西",
-                            coment: "８かいしました"
-                        },
-                        "come3": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        },
-                        "come4": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        },
-                        "come5": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        },
-                        "come6": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        },
-                        "come7": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        },
-                        "come8": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        },
-                        "come9": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        },
-                        "come10": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        },
-                        "come11": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        },
-                        "come12": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        },
-                        "come13": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        },
-                        "come14": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        },
-                        "come15": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        },
-                        "come16": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        },
-                        "come17": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        },
-                        "come18": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        },
-                        "come19": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        },
-                        "come20": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        },
-                        "come21": {
-                            "coment": "うんこ",
-                            "name": "あやたか"
-                        }
-                    }
+                    comments:'',
+//                     comments: {
+//                         "come1": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         },
+//                         "come2": {
+//                             "name": "奥西",
+//                             coment: "８かいしました"
+//                         },
+//                         "come3": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         },
+//                         "come4": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         },
+//                         "come5": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         },
+//                         "come6": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         },
+//                         "come7": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         },
+//                         "come8": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         },
+//                         "come9": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         },
+//                         "come10": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         },
+//                         "come11": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         },
+//                         "come12": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         },
+//                         "come13": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         },
+//                         "come14": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         },
+//                         "come15": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         },
+//                         "come16": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         },
+//                         "come17": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         },
+//                         "come18": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         },
+//                         "come19": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         },
+//                         "come20": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         },
+//                         "come21": {
+//                             "coment": "うんこ",
+//                             "name": "あやたか"
+//                         }
+//                     }
 
                 },
                 methods: {
@@ -326,20 +327,34 @@
                     prog.style.width = "50%";
                     pers.style.width = "20%";
                     atte.style.width = "0%";
-                },
-                created() {
-                    const self = this
-                    console.log("hello")
-                    axios
-                        .get('https://api.myjson.com/bins/1by2li')
-                        .then(function (res) {
-                            self.table = res.data.classes;
-                            self.units = res.data.units;
-                            self.needs = res.data.needs
-                            console.log(self.table)
-                        })
 
-                }
+                    const self=this
+                    console.log("hello")
+                    this.clas= '<%= session.getAttribute("lectureInfo") %>'
+                    console.log(this.clas)
+                    this.clas=JSON.parse(this.clas)
+                    this.clas=this.clas.lectureInfo
+                    console.log(this.clas)
+
+                    this.comments='<%= session.getAttribute("reviewJson") %>'
+                    this.comments= JSON.parse(this.comments)
+                    this.comments=this.comments.reviews
+                    console.log(this.comments)
+
+                },
+//                created() {
+//                     const self = this
+//                     console.log("hello")
+//                     axios
+//                         .get('https://api.myjson.com/bins/1by2li')
+//                         .then(function (res) {
+//                             self.table = res.data.classes;
+//                             self.units = res.data.units;
+//                             self.needs = res.data.needs
+//                             console.log(self.table)
+//                         })
+
+//                 }
             })
         </script>
         <style scoped>

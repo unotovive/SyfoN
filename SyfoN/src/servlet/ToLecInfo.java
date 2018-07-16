@@ -43,7 +43,13 @@ public class ToLecInfo extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		HttpSession session = request.getSession();
+		session.setAttribute("lectureID", 161001);
+
+		this.doPost(request, response);
+
+
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
 //		request.setCharacterEncoding("UTF-8");
 //
 //		Lecture lecture= new Lecture();
@@ -157,8 +163,8 @@ public class ToLecInfo extends HttpServlet {
 		HttpSession session = request.getSession();
 
 		//レクチャーIDからレクチャーの情報を得る
-//		lecture.setLectureID(Integer.valueOf(request.getParameter("lecutureID")));
-		lecture.setLectureID(Integer.valueOf("161001"));
+//		lecture.setLectureID(Integer.valueOf(request.getParameter("lectureID")));
+		lecture.setLectureID((int)session.getAttribute("lectureID"));
 		String professorID,professorName;
 		try {
 		lecture=lectureManager.getLecture(lecture.getLectureID());
@@ -213,10 +219,10 @@ public class ToLecInfo extends HttpServlet {
 			//StudentManagerを使用してニックネームを取得
 			String studentName=new StudentManager().getStudent(tempReview.getStudentID()).getNickName();
 
-			reviewDataMap.put("studentName",studentName);
+			reviewDataMap.put("name",studentName);
 			reviewDataMap.put("studentid",tempReview.getStudentID());
 			reviewDataMap.put("reviewid",tempReview.getReviewID());
-			reviewDataMap.put("comment",tempReview.getComment());
+			reviewDataMap.put("coment",tempReview.getComment());
 			reviewDataMap.put("totalPoint",Float.toString(tempReview.getTotalPoint()));
 			reviewDataMap.put("mathPoint",Float.toString(tempReview.getMathPoint()));
 			reviewDataMap.put("programPoint",Float.toString(tempReview.getProgramPoint()));
@@ -225,7 +231,7 @@ public class ToLecInfo extends HttpServlet {
 			reviewDataMap.put("homeworkPoint",Float.toString(tempReview.getHomeworkPoint()));
 			reviewDataMap.put("groupworkPoint",Float.toString(tempReview.getGroupworkPoint()));
 
-			reviewListMap.put("review"+Integer.toString(count),reviewDataMap);
+			reviewListMap.put("come"+Integer.toString(count),reviewDataMap);
 			count++;
 		}
 
@@ -233,7 +239,7 @@ public class ToLecInfo extends HttpServlet {
 		JSONObject reviewsJson=new JSONObject(reviewMap);
 		session.setAttribute("reviewJson",reviewsJson);
 		System.out.println(reviewsJson);
-		getServletContext().getRequestDispatcher("/reviewtable.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/detail.jsp").forward(request, response);
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
