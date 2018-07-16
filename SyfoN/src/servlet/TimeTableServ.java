@@ -106,10 +106,6 @@ public class TimeTableServ extends HttpServlet {
 			Lecture tempLecture=lectureManager.getLecture(lectureIdList.get(i));
 			lectureList.add(tempLecture);
 		}
-		}catch (SQLException e) {
-			// TODO 自動生成された catch ブロック
-			e.printStackTrace();
-		}
 
 		System.out.println("oi!");
 
@@ -139,8 +135,8 @@ public class TimeTableServ extends HttpServlet {
 						lectureDataMap.put("name",lc.getLectureName() );
 						lectureDataMap.put("lectureid",Integer.toString(lc.getLectureID()) );
 						lectureDataMap.put("room",lc.getRoom() );
-						lectureDataMap.put("type",lc.getType() );
-						lectureDataMap.put("unit",lc.getUnit());
+						lectureDataMap.put("type",this.AdaptType(lc.getType()) );
+						lectureDataMap.put("unit",new UnitManager().getUnit(lc.getUnit()).getUnitName());
 					}else{
 						lectureDataMap.put("taninum","0");
 						lectureDataMap.put("name","0");
@@ -221,6 +217,10 @@ public class TimeTableServ extends HttpServlet {
 		session.setAttribute("unit",unitListJson);
 
 		getServletContext().getRequestDispatcher("/top.jsp").forward(request, response);
+		}catch (SQLException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
 	}
 	//
 
@@ -239,6 +239,27 @@ public class TimeTableServ extends HttpServlet {
 
 	private void initUnit(){
 		unitDataMap =new HashMap<String,String>();
+	}
+
+	private String AdaptType(String type){
+		String result="";
+		switch(type){
+		case "必修":
+			result="must";
+			break;
+		case "選択":
+			result="elect";
+			break;
+		case "英語":
+			result="eng";
+			break;
+		case "人科":
+			result="human";
+			break;
+		default:
+			result="";
+		}
+		return result;
 	}
 
 }
