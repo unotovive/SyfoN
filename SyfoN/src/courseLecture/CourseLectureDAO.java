@@ -56,7 +56,7 @@ public class CourseLectureDAO {
 		// memberがDBにあるかどうかを調べる
 		boolean result = false;
 		Connection connection;
-		String sql = "INSERT INTO timeTable VALUES (?, ?, ?)";
+		String sql = "INSERT INTO courselecture VALUES (?, ?, ?)";
 
 		try {
 			Class.forName(driverClassName);
@@ -67,10 +67,11 @@ public class CourseLectureDAO {
 			pstmt.setInt(2, courseLecture.getLectureID());
 			pstmt.setString(3, courseLecture.getCourseSituation());
 
-			ResultSet resultSet = pstmt.executeQuery();
-			if (resultSet.next()) result = true;
+			int rowNum=pstmt.executeUpdate();
+			if (rowNum==1) result = true;
+			System.out.println(result);
 
-			resultSet.close();
+
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -82,7 +83,7 @@ public class CourseLectureDAO {
 		// memberがDBにあるかどうかを調べる
 		boolean result = false;
 		Connection connection;
-		String sql = "UPDATE timeTable SET lectureID = ? ,courseSituation = ? WHERE timeTableID = ?";
+		String sql = "UPDATE courselecture SET lectureid = ? ,courseSituation = ? WHERE timeTableID = ?";
 
 		try {
 			Class.forName(driverClassName);
@@ -108,7 +109,7 @@ public class CourseLectureDAO {
 		// memberがDBにあるかどうかを調べる
 		boolean result = false;
 		Connection connection;
-		String sql = "DELETE FROM timeTable WHERE timeTableID = ? lectureID = ? ";
+		String sql = "DELETE FROM courselecture WHERE timetableid = ? AND lectureid = ? ";
 
 		try {
 			Class.forName(driverClassName);
@@ -118,10 +119,9 @@ public class CourseLectureDAO {
 			pstmt.setString(1, courseLecture.getTimeTableID());
 			pstmt.setInt(2, courseLecture.getLectureID());
 
-			ResultSet resultSet = pstmt.executeQuery();
-			if (resultSet.next()) result = true;
+			int rowNum = pstmt.executeUpdate();
+			if (rowNum==1) result = true;
 
-			resultSet.close();
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();
