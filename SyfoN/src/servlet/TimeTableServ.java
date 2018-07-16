@@ -64,8 +64,6 @@ public class TimeTableServ extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 
-		request.setCharacterEncoding("UTF-8");
-
 		TimeTableManager timeTableManager = new TimeTableManager();
 	    CourseLectureManager courseLectureManager = new CourseLectureManager();
 		LectureManager lectureManager=new LectureManager();
@@ -108,6 +106,10 @@ public class TimeTableServ extends HttpServlet {
 			Lecture tempLecture=lectureManager.getLecture(lectureIdList.get(i));
 			lectureList.add(tempLecture);
 		}
+		}catch (SQLException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
 
 		System.out.println("oi!");
 
@@ -138,14 +140,14 @@ public class TimeTableServ extends HttpServlet {
 						lectureDataMap.put("lectureid",Integer.toString(lc.getLectureID()) );
 						lectureDataMap.put("room",lc.getRoom() );
 						lectureDataMap.put("type",lc.getType() );
-						lectureDataMap.put("unit",new UnitManager().getUnit(lc.getUnit()).getUnitName());
+						lectureDataMap.put("unit",lc.getUnit());
 					}else{
-						lectureDataMap.put("taninum","");
-						lectureDataMap.put("name","");
-						lectureDataMap.put("lectureid","" );
-						lectureDataMap.put("room","");
-						lectureDataMap.put("type","" );
-						lectureDataMap.put("unit","");
+						lectureDataMap.put("taninum","0");
+						lectureDataMap.put("name","0");
+						lectureDataMap.put("lectureid","0" );
+						lectureDataMap.put("room","0");
+						lectureDataMap.put("type","0" );
+						lectureDataMap.put("unit","0");
 					}
 					System.out.println(lectureDataMap);
 					period.put("period"+periods[n], lectureDataMap);
@@ -217,10 +219,6 @@ public class TimeTableServ extends HttpServlet {
 		session.setAttribute("unit",unitListJson);
 
 		getServletContext().getRequestDispatcher("/top.jsp").forward(request, response);
-		}catch (SQLException e) {
-			// TODO 自動生成された catch ブロック
-			e.printStackTrace();
-		}
 	}
 	//
 
@@ -242,3 +240,4 @@ public class TimeTableServ extends HttpServlet {
 	}
 
 }
+

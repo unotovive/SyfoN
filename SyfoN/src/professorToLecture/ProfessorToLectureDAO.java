@@ -29,6 +29,8 @@ public class ProfessorToLectureDAO {
 			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 
+
+
 				int lecID = resultSet.getInt("lectureid");
 
 				ptl.setLectureID(lecID);
@@ -58,7 +60,8 @@ public class ProfessorToLectureDAO {
 			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 				ProfessorToLecture tempPtl=new ProfessorToLecture();
-				int lecID = resultSet.getInt("lecturerid");
+				int lecID = resultSet.getInt("lectureid");
+
 				tempPtl.setLectureID(lecID);
 				String proID = resultSet.getString("professorid");
 				tempPtl.setProfessorID(proID);
