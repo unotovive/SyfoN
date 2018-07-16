@@ -4,6 +4,8 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Tomcat8 (Java8)"/>
-	<classpathentry kind="lib" path="C:/Users/naoto/Documents/GitHub/SyfoN/jsonlib/json-20180130.jar"/>
+
+	<classpathentry kind="lib" path="../jsonlib/json-20180130.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/postgresql-42.2.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

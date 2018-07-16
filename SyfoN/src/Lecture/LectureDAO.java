@@ -85,7 +85,7 @@ public class LectureDAO {
 	}
 
 	public ArrayList<Lecture> getLectureList() throws SQLException {
-		// memberがDBにあるかどうかを調べる
+		//全ての講義を渡す
 
 		ArrayList<Lecture> lecList = new ArrayList<Lecture>();
 
@@ -99,7 +99,7 @@ public class LectureDAO {
 
 			//pstmt.setString(1, day);
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 
 				Lecture lec = new Lecture();
@@ -159,21 +159,25 @@ public class LectureDAO {
 	}
 
 	public ArrayList<Lecture> findLectureByLectureName(String lecName) throws SQLException {
-		// memberがDBにあるかどうかを調べる
+		// 名前を使ってLectureを探す
 
 		ArrayList<Lecture> lecList = new ArrayList<Lecture>();
 
 		Connection connection;
-		String sql = "SELECT * FROM lecture where lecName Like ? ";
+		String sql = "SELECT * FROM lecture where lecturename Like ? ";
 
 		try {
 			Class.forName(driverClassName);
 			connection = DriverManager.getConnection(url, user, password);
 			PreparedStatement pstmt = connection.prepareStatement(sql);
 
-			pstmt.setString(1, '%'+lecName+'%');
+			if(!lecName.isEmpty()){
+				pstmt.setString(1, "%"+lecName+"%");
+			}else{
+				pstmt.setString(1, "Empty!!!!!");
+			}
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 
 				Lecture lec = new Lecture();
@@ -232,9 +236,6 @@ public class LectureDAO {
 		return lecList;
 	}
 
-
-
-
 	public ArrayList<Lecture> findLectureByDay(String day) throws SQLException {
 		// memberがDBにあるかどうかを調べる
 
@@ -250,7 +251,7 @@ public class LectureDAO {
 
 			pstmt.setString(1, day);
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 
 				Lecture lec = new Lecture();
@@ -309,21 +310,24 @@ public class LectureDAO {
 		return lecList;
 	}
 
-	//ここ、完全検索でおｋ？
+	//学期による検索
 	public ArrayList<Lecture> findLectureByGaitoGakki(String gaitoGakki) throws SQLException {
 		ArrayList<Lecture> lecList = new ArrayList<Lecture>();
 
 		Connection connection;
-		String sql = "SELECT * FROM lecture where gaitogakki = ?";
+		String sql = "SELECT * FROM lecture where gaitogakki LIKE ?";
 
 		try {
 			Class.forName(driverClassName);
 			connection = DriverManager.getConnection(url, user, password);
 			PreparedStatement pstmt = connection.prepareStatement(sql);
+			if(!gaitoGakki.isEmpty()){
+			pstmt.setString(1, "%"+gaitoGakki+"%");
+			}else{
+				pstmt.setString(1, "なし");
+			}
 
-			pstmt.setString(1, gaitoGakki);
-
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 
 				Lecture lec = new Lecture();
@@ -381,7 +385,7 @@ public class LectureDAO {
 		}
 		return lecList;
 	}
-
+/*
 	//ここ、完全検索でおｋ？
 	public ArrayList<Lecture> findLectureByPeriod(int period) throws SQLException {
 		ArrayList<Lecture> lecList = new ArrayList<Lecture>();
@@ -396,7 +400,7 @@ public class LectureDAO {
 
 			pstmt.setInt(1, period);
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 
 				Lecture lec = new Lecture();
@@ -454,6 +458,7 @@ public class LectureDAO {
 		}
 		return lecList;
 	}
+*/
 
 	public boolean registerLecture(Lecture lecture) throws SQLException {
 		// memberがDBにあるかどうかを調べる

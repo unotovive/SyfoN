@@ -21,7 +21,7 @@ public class ProfessorDAO {
 		Professor professor = new Professor();
 
 		Connection connection;
-		String sql = "select * from unit where professorID=?";
+		String sql = "select * from professor where professorID=?";
 
 		try {
 			Class.forName(driverClassName);
@@ -30,7 +30,7 @@ public class ProfessorDAO {
 
 			pstmt.setString(1, professorID);
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 
 				String proID = resultSet.getString("professorid");
@@ -48,7 +48,7 @@ public class ProfessorDAO {
 
 	public ArrayList<Professor> findProfessor(String professorName) throws SQLException {
 		Connection connection;
-		String sql = "SELECT * FROM professor WHERE professorname = ?";
+		String sql = "SELECT * FROM professor WHERE professorname LIKE ?";
 		ArrayList<Professor> proList=new ArrayList<Professor>();
 
 		try {
@@ -56,7 +56,11 @@ public class ProfessorDAO {
 			connection = DriverManager.getConnection(url, user, password);
 			PreparedStatement pstmt = connection.prepareStatement(sql);
 
+			if(!professorName.isEmpty()){
 			pstmt.setString(1, "%"+professorName+"%");
+			}else{
+				pstmt.setString(1, "Empty!!!!!");
+			}
 
 			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
