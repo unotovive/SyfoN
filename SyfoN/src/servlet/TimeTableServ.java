@@ -209,6 +209,7 @@ public class TimeTableServ extends HttpServlet {
 			unitDataMap.put("id",u.getUnitID());
 			unitDataMap.put("name", u.getUnitName());
 			unitDataMap.put("taninum", Integer.toString(u.getUnitTani()));
+			unitDataMap.put("sum", "");
 			variousUnit.put("unit"+count, unitDataMap);
 			count++;
 		}
