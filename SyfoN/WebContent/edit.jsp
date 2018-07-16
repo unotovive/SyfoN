@@ -27,16 +27,16 @@
             <nav class="drawer-menu">
                 <ul>
                     <li>
-                        <a href="#">トップページ</a>
+                        <a href="TimeTableServ">トップページ</a>
                     </li>
                     <li>
-                        <a href="#">講義一覧</a>
+                        <a href="Search_Lecture.jsp">講義一覧</a>
                     </li>
                     <li>
-                        <a href="#">マイページ</a>
+                        <a href="Mypagesev">マイページ</a>
                     </li>
                     <li>
-                        <a href="#">ログアウト</a>
+                        <a href="Logout">ログアウト</a>
                     </li>
                 </ul>
             </nav>
@@ -850,7 +850,7 @@
                         </div>
                         <p>英語：あと{{numEngAllSum}}単位　人科：あと{{numHumAllSum}}単位　必修：あと{{numMusAllSum}}単位</p>
                         <h4>ユニット取得状況</h4>
-                        <p v-for="unit in units">{{unit.name}}:{{getAllUnit()}}/{{unit.taninum}}</p>
+                        <p v-for="unit in units" style="display: inline-block; width: 40% ;">{{unit.name}}:{{unit.sum}}/{{unit.taninum}}</p>
                     </div>
                 </div>
             </div>
@@ -918,20 +918,20 @@
                     numHumForSum: 0,
                 },
                 methods: {
-                    getAllUnit(name) {
-                        var sum = 0;
+                    getAllUnit() {
+                        for (unit in this.units) {
+                            this.units[unit].sum = 0;
+                        }
                         for (let term in this.table) {
-
                             for (let yobi in this.table[term]) {
-
                                 for (clas in this.table[term][yobi]) {
-                                    if (this.table[term][yobi][clas].units == name) {
-                                        sum += Number(this.table[term][yobi][clas].taninum)
+                                    for (unit in this.units) {
+                                        if (this.table[term][yobi][clas].unit == this.units[unit].id)
+                                            this.units[unit].sum += Number(this.table[term][yobi][clas].taninum)
                                     }
                                 }
                             }
                         }
-                        return sum;
                     },
                     send() {
                         var form = document.createElement("form");
@@ -953,7 +953,6 @@
                                 }
                             }
                         }
-                        console.log(form);
                         form.submit();
                     },
                     itemset(clas) {
@@ -963,13 +962,12 @@
                         clas = item
                     },
                     set(clas, nclas) {
-                        console.log(clas)
-                        console.log(nclas)
                         clas.name = nclas.name
                         clas.lectureid = nclas.id
                         clas.room = nclas.room
                         clas.taninum = nclas.taninum
                         clas.type = nclas.type;
+                        clas.unit = nclas.unit;
                         this.rerun()
                     },
                     rerun() {
@@ -983,14 +981,8 @@
                         let numForSum = 0;
                         let numEngForSum = 0;
                         let numHumForSum = 0;
-                        console.log("rerun")
-                        console.log(this.table)
                         for (let term in this.table) {
-                            console.log(term)
-                            console.log(this.table)
-                            console.log(this.table[term])
                             for (let yobi in this.table[term]) {
-                                console.log(yobi)
                                 for (clas in this.table[term][yobi]) {
                                     numAllSum += Number(this.table[term][yobi][clas].taninum)
                                     if ((term == "zenki1") || (term == "kouki1")) {
@@ -1028,7 +1020,15 @@
                         this.numEngAllSum = this.needs.English.num - numEngAllSum;
                         this.numHumAllSum = this.needs.Jinka.num - numHumAllSum;
                         this.numMusAllSum = this.needs.Hissyu.num - numMusAllSum;
-
+                        if (this.numEngAllSum < 0) {
+                            this.numEngAllSum = 0
+                        }
+                        if (this.numHumAllSum < 0) {
+                            this.numHumAllSum = 0
+                        }
+                        if (this.numMusAllSum < 0) {
+                            this.numMusAllSum = 0
+                        }
                         this.numTwoSum = numTwoSum;
                         this.numEngTwoSum = 0;
                         this.numHumTwoSum = 0;
@@ -1036,7 +1036,12 @@
                         this.numForSum = numForSum;
                         this.numEngForSum = 4 - numEngForSum;
                         this.numHumForSum = 10 - numHumForSum;
-
+                        if (this.numEngForSum < 0) {
+                            this.numEngForSum = 0
+                        }
+                        if (this.numHumForSum < 0) {
+                            this.numHumForSum = 0
+                        }
                         var br1 = document.getElementById('probar1n');
                         var br2 = document.getElementById('probar2n');
                         var br3 = document.getElementById('probar3n');
@@ -1046,9 +1051,11 @@
                         br1.style.width = brr1 + "%";
                         br2.style.width = brr2 + "%";
                         br3.style.width = brr3 + "%";
+                        this.getAllUnit()
                     }
+
                 },
-                updated:function(){
+                updated: function () {
                     var br1 = document.getElementById('probar1n');
                     console.log(br1)
                     var br2 = document.getElementById('probar2n');
@@ -1134,7 +1141,15 @@
                     this.numEngAllSum = this.needs.English.num - numEngAllSum;
                     this.numHumAllSum = this.needs.Jinka.num - numHumAllSum;
                     this.numMusAllSum = this.needs.Hissyu.num - numMusAllSum;
-
+                    if (this.numEngAllSum < 0) {
+                        this.numEngAllSum = 0
+                    }
+                    if (this.numHumAllSum < 0) {
+                        this.numHumAllSum = 0
+                    }
+                    if (this.numMusAllSum < 0) {
+                        this.numMusAllSum = 0
+                    }
                     this.numTwoSum = numTwoSum;
                     this.numEngTwoSum = 0;
                     this.numHumTwoSum = 0;
@@ -1142,17 +1157,26 @@
                     this.numForSum = numForSum;
                     this.numEngForSum = 4 - numEngForSum;
                     this.numHumForSum = 10 - numHumForSum;
+                    if (this.numEngForSum < 0) {
+                        this.numEngForSum = 0
+                    }
+                    if (this.numHumForSum < 0) {
+                        this.numHumForSum = 0
+                    }
 
-                    var br1 = document.getElementById('probar1n');
-                    console.log(br1)
-                    var br2 = document.getElementById('probar2n');
-                    var br3 = document.getElementById('probar3n');
-                    var brr1 = this.numTwoSum / 24 * 100;
-                    var brr2 = this.numForSum / 108 * 100;
-                    var brr3 = this.numAllSum / 124 * 100;
-                    br1.style.width = brr1 + "%";
-                    br2.style.width = brr2 + "%";
-                    br3.style.width = brr3 + "%";
+                    for (unit in this.units) {
+                        this.units[unit].sum = 0;
+                    }
+                    for (let term in this.table) {
+                        for (let yobi in this.table[term]) {
+                            for (clas in this.table[term][yobi]) {
+                                for (unit in this.units) {
+                                    if (this.table[term][yobi][clas].unit == this.units[unit].id)
+                                        this.units[unit].sum += Number(this.table[term][yobi][clas].taninum)
+                                }
+                            }
+                        }
+                    }
                 }
             })
         </script>
@@ -1308,7 +1332,7 @@
 
             #progres1 {
                 display: block;
-                height: 41%;
+                height: 34%;
                 width: 80%;
                 margin-top: 8%;
                 clear: both;
@@ -1320,7 +1344,7 @@
 
             #progres2 {
                 display: block;
-                height: 38%;
+                height: 44%;
                 width: 80%;
                 clear: both;
                 margin-top: 3%;
