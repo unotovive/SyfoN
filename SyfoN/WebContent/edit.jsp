@@ -954,7 +954,7 @@
                             }
                         }
                         console.log(form);
-                        //form.submit();
+                        form.submit();
                     },
                     itemset(clas) {
                         this.items = clas.csc;
@@ -1365,7 +1365,7 @@
             }
             .edit {
                 clear: both;
-                
+
             }
 
             .raw {
