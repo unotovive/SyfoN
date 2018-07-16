@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -44,15 +45,11 @@ public class Admin_Login extends HttpServlet {
 		Admin admin = new Admin();
 		AdminManager adminmane = new AdminManager();
 
-
-
 		admin.setAdminID(request.getParameter("adminID"));
 		admin.setPassword(request.getParameter("adminPass"));
 
 		boolean result = false;
 
-		if(request.getParameter("admincheck")!=null)
-		{     //管理者のログイン
 		try {
 			result = adminmane.check(admin);
 		} catch (Exception e) {
@@ -64,14 +61,14 @@ public class Admin_Login extends HttpServlet {
 		if (result) {
 			// ログインに成功している場合はtop.jspへ
 			session.setAttribute("admin", admin);
-			session.setAttribute("adminID", admin.getAdminID);
-			//System.out.print("dekita");
+			session.setAttribute("adminID", admin.getAdminID());
+			System.out.print("dekita");
 			getServletContext().getRequestDispatcher("/Admin_Top.jsp").forward(request, response);
 		} else {
 			// ログインに失敗している場合はlogin.jspへ
-			//System.out.print("sippai");
+			System.out.print("sippai");
 			getServletContext().getRequestDispatcher("/Common_Login.jsp").forward(request, response);
 		}
-	}
+		}
 
 }
