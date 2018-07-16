@@ -91,6 +91,7 @@ public class Admin_reviewList extends HttpServlet {
 
 		String revID = request.getParameter("評価ID");
 		try {
+			System.out.println(revID);
 			review=reviewManager.getReview(revID);
 			result = reviewManager.removeReview(review);
 		} catch (SQLException e1) {

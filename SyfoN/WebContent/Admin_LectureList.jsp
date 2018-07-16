@@ -70,7 +70,7 @@
 				console.log(data)
 				var form = document.createElement("form");
 				form.setAttribute("action", action);
-				form.setAttribute("method", "post");
+				form.setAttribute("method", "get");
 				form.style.display = "none";
 				document.body.appendChild(form);
 				// パラメタの設定
