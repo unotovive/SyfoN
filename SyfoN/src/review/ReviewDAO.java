@@ -28,7 +28,7 @@ public class ReviewDAO {
 
 			pstmt.setInt(1, lectureID);
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 				Review rev = new Review();
 
@@ -52,7 +52,7 @@ public class ReviewDAO {
 				rev.setAttendPoint(attendP);
 				float homeworkP = resultSet.getFloat("homeworkpoint");
 				rev.setHomeworkPoint(homeworkP);
-				float groupP = resultSet.getFloat("grouppoint");
+				float groupP = resultSet.getFloat("groupworkpoint");
 				rev.setGroupworkPoint(groupP);
 				revList.add(rev);
 

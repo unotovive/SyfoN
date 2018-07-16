@@ -1148,7 +1148,8 @@
                 methods: {
                 },
                 mounted() {
-                	const self = this
+
+              	const self = this
                     console.log("hello")
                     this.table = '<%= session.getAttribute("lectureList")%>'
                     this.table = JSON.parse(this.table)
