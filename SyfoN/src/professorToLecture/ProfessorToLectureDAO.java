@@ -30,7 +30,7 @@ public class ProfessorToLectureDAO {
 			while(resultSet.next()){
 
 
-				int lecID = resultSet.getInt("lecturerid");
+				int lecID = resultSet.getInt("lectureid");
 				ptl.setLectureID(lecID);
 				String professorID = resultSet.getString("professorid");
 				ptl.setProfessorID(professorID);
