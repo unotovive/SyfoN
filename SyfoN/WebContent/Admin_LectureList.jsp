@@ -14,6 +14,7 @@
     <div id="pageBody">
       <h1>登録講義一覧</h1>
       <div id="backTop">
+      	  <a href="Admin_Top.jsp">
             <span>TOPへ戻る</span>
           </a>
         </div>
