@@ -43,7 +43,9 @@ public class LectureManager {
 		if(!lecture.getGaitoGakki().isEmpty()){
 			ArrayList<Lecture> lecList = lectureDAO.findLectureByGaitoGakki(lecture.getGaitoGakki());
 			lectureList.addAll(lecList);
-			System.out.print("学期、配当年検索");
+
+			System.out.print("学期、検索");
+
 		}
 		return lectureList;
 	}
