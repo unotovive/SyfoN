@@ -24,7 +24,7 @@
                 <span class="bar bottom"></span>
             </label>
             <label class="close-menu" for="checked"></label>
-           <nav class="drawer-menu">
+            <nav class="drawer-menu">
                 <ul>
                     <li>
                         <a href="TimeTableServ">トップページ</a>
@@ -43,7 +43,9 @@
             <div id="mcontent">
                 <div id="tables">
                     <h2>Timetable</h2>
-                    <a href="CreateTable"><button class="edit">時間割作成・編集</button></a>
+                    <a href="CreateTable">
+                        <button class="edit">時間割作成・編集</button>
+                    </a>
                     <div class="tabs">
                         <input id="zen1" type="radio" name="tab_item" checked>
                         <label class="tab_item" for="zen1">1年前期</label>
@@ -1915,23 +1917,31 @@
                 </div>
                 <div id="panel">
                     <div id="progres1">
-                        <h3>進級まで</h3>
-                        <div id="probar1"></div>
-                        <p>70/108</p>
-                        <p>英語：あと1単位　人科：あと0単位　必修：あと2単位</p>
+                        <h3>1→２進級まで</h3>
+                        <div id="probar1">
+                            <div id="probar1n">
+                                <p>{{numTwoSum}}/24</p>
+                            </div>
+                        </div>
+                        <p style="color:#FFFFFF;">_</p>
+                        <h3>3→4進級まで</h3>
+                        <div id="probar2">
+                            <div id="probar2n">
+                                <p>{{numForSum}}/108</p>
+                            </div>
+                        </div>
+                        <p>英語：あと{{numEngForSum}}単位　人科：あと{{numHumForSum}}単位</p>
                     </div>
                     <div id="progres2">
                         <h3>卒業まで</h3>
-                        <div id="probar2"></div>
-                        <p>5/124</p>
-                        <p>英語：あと5単位　人科：あと16単位　必修：あと2単位</p>
+                        <div id="probar3">
+                            <div id="probar3n">
+                                <p>{{numAllSum}}/124</p>
+                            </div>
+                        </div>
+                        <p>英語：あと{{numEngAllSum}}単位　人科：あと{{numHumAllSum}}単位　必修：あと{{numMusAllSum}}単位</p>
                         <h4>ユニット取得状況</h4>
-                        <p>プログラミング：0/6</p>
-                        <p>プログラミング：0/6</p>
-                        <p>プログラミング：0/6</p>
-                        <p>プログラミング：0/6</p>
-                        <p>プログラミング：0/6</p>
-                        <p>プログラミング：0/6</p>
+                        <p v-for="unit in units" style="display: inline-block; width: 40% ;">{{unit.name}}:{{unit.sum}}/{{unit.taninum}}</p>
                     </div>
                 </div>
             </div>
@@ -1947,6 +1957,18 @@
                     test: 'unko'
                 },
                 methods: {
+                },
+                updated: function () {
+                    var br1 = document.getElementById('probar1n');
+                    console.log(br1)
+                    var br2 = document.getElementById('probar2n');
+                    var br3 = document.getElementById('probar3n');
+                    var brr1 = this.numTwoSum / 24 * 100;
+                    var brr2 = this.numForSum / 108 * 100;
+                    var brr3 = this.numAllSum / 124 * 100;
+                    br1.style.width = brr1 + "%";
+                    br2.style.width = brr2 + "%";
+                    br3.style.width = brr3 + "%";
                 },
                 mounted() {
 
@@ -1966,6 +1988,97 @@
                     this.needs = JSON.parse(this.needs)
                     this.needs = this.needs.mustTani
                     console.log(this.needs)
+                    let numAllSum = 0;
+                    let numEngAllSum = 0;
+                    let numHumAllSum = 0;
+                    let numMusAllSum = 0;
+                    let numTwoSum = 0;
+                    let numEngTwoSum = 0;
+                    let numHumTwoSum = 0;
+                    let numMusTwoSum = 0;
+                    let numForSum = 0;
+                    let numEngForSum = 0;
+                    let numHumForSum = 0;
+                    let numMusForSum = 0;
+                    for (let term in this.table) {
+                        console.log(term)
+                        console.log(this.table)
+                        console.log(this.table[term])
+                        for (let yobi in this.table[term]) {
+                            console.log(yobi)
+                            for (clas in this.table[term][yobi]) {
+                                numAllSum += Number(this.table[term][yobi][clas].taninum)
+                                if ((term == "zenki1") || (term == "kouki1")) {
+                                    numTwoSum += Number(this.table[term][yobi][clas].taninum)
+                                }
+                                if (!(term == "zenki4") && !(term == "kouki4")) {
+                                    numForSum += Number(this.table[term][yobi][clas].taninum)
+                                }
+
+                                if (this.table[term][yobi][clas].type == "eng") {
+                                    numEngAllSum += Number(this.table[term][yobi][clas].taninum)
+                                    if ((term == "zenki1") || (term == "kouki1")) {
+                                        numEngTwoSum += Number(this.table[term][yobi][clas].taninum)
+                                    }
+                                    if (!(term == "zenki4") || !(term == "kouki4")) {
+                                        numEngForSum += Number(this.table[term][yobi][clas].taninum)
+                                    }
+                                }
+                                if (this.table[term][yobi][clas].type == "mus") {
+                                    numMusAllSum += Number(this.table[term][yobi][clas].taninum)
+                                }
+                                if (this.table[term][yobi][clas].type == "hum") {
+                                    numHumAllSum += Number(this.table[term][yobi][clas].taninum)
+                                    if ((term == "zenki1") || (term == "kouki1")) {
+                                        numHumTwoSum += Number(this.table[term][yobi][clas].taninum)
+                                    }
+                                    if (!(term == "zenki4") || !(term == "kouki4")) {
+                                        numHumForSum += Number(this.table[term][yobi][clas].taninum)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    this.numAllSum = numAllSum;
+                    this.numEngAllSum = this.needs.English.num - numEngAllSum;
+                    this.numHumAllSum = this.needs.Jinka.num - numHumAllSum;
+                    this.numMusAllSum = this.needs.Hissyu.num - numMusAllSum;
+                    if (this.numEngAllSum < 0) {
+                        this.numEngAllSum = 0
+                    }
+                    if (this.numHumAllSum < 0) {
+                        this.numHumAllSum = 0
+                    }
+                    if (this.numMusAllSum < 0) {
+                        this.numMusAllSum = 0
+                    }
+                    this.numTwoSum = numTwoSum;
+                    this.numEngTwoSum = 0;
+                    this.numHumTwoSum = 0;
+
+                    this.numForSum = numForSum;
+                    this.numEngForSum = 4 - numEngForSum;
+                    this.numHumForSum = 10 - numHumForSum;
+                    if (this.numEngForSum < 0) {
+                        this.numEngForSum = 0
+                    }
+                    if (this.numHumForSum < 0) {
+                        this.numHumForSum = 0
+                    }
+
+                    for (unit in this.units) {
+                        this.units[unit].sum = 0;
+                    }
+                    for (let term in this.table) {
+                        for (let yobi in this.table[term]) {
+                            for (clas in this.table[term][yobi]) {
+                                for (unit in this.units) {
+                                    if (this.table[term][yobi][clas].unit == this.units[unit].id)
+                                        this.units[unit].sum += Number(this.table[term][yobi][clas].taninum)
+                                }
+                            }
+                        }
+                    }
                 }
             })
         </script>
@@ -2039,25 +2152,85 @@
                 float: right;
             }
 
-            #progres1 {
-                display: block;
-                height: 30%;
-                width: 80%;
-                margin-top: 8%;
-                clear: both;
-                background: #FFF;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-                box-sizing: inherit;
+            #probar1 {
+                width: 90%;
+                height: 30px;
+                border-radius: 100px;
+                border: #555555 3px solid;
             }
 
-            #progres2 {
-                display: block;
-                height: 50%;
-                width: 80%;
-                clear: both;
-                background: #FFF;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-                box-sizing: inherit;
+            #probar1n {
+                width: 0%;
+                height: 30px;
+                max-width: 100%;
+                border-radius: 100px;
+                border: none;
+                background: #a80077;
+                background: -moz-linear-gradient(left, #a80077, #66ff00);
+                background: -webkit-linear-gradient(left, #a80077, #66ff00);
+                background: linear-gradient(to right, #a80077, #66ff00);
+            }
+
+            #probar1n p {
+                margin: 0 auto;
+                padding: 0;
+                color: #FFF;
+                font-size: 1.1em;
+                margin-left: 5%;
+            }
+
+            #probar2 {
+                width: 90%;
+                height: 30px;
+                border-radius: 100px;
+                border: #555555 3px solid;
+            }
+
+            #probar2n {
+                width: 30%;
+                max-width: 100%;
+                height: 30px;
+                border-radius: 100px;
+                border: none;
+                background: #a80077;
+                background: -moz-linear-gradient(left, #a80077, #66ff00);
+                background: -webkit-linear-gradient(left, #a80077, #66ff00);
+                background: linear-gradient(to right, #a80077, #66ff00);
+            }
+
+            #probar2n p {
+                margin: 0 auto;
+                padding: 0;
+                color: #FFF;
+                font-size: 1.1em;
+                margin-left: 5%;
+            }
+
+            #probar3 {
+                width: 90%;
+                height: 30px;
+                border-radius: 100px;
+                border: #555555 3px solid;
+            }
+
+            #probar3n {
+                width: 110%;
+                max-width: 100%;
+                height: 30px;
+                border-radius: 100px;
+                border: none;
+                background: #a80077;
+                background: -moz-linear-gradient(left, #a80077, #66ff00);
+                background: -webkit-linear-gradient(left, #a80077, #66ff00);
+                background: linear-gradient(to right, #a80077, #66ff00);
+            }
+
+            #probar3n p {
+                margin: 0 auto;
+                padding: 0;
+                color: #FFF;
+                font-size: 1.1em;
+                margin-left: 5%;
             }
 
             #unit {
@@ -2065,7 +2238,47 @@
                 height: 30%;
                 width: 100%;
             }
+            .edit {
+                display: inline-block;
+                height: 6%;
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top: 2%;
+                margin-bottom: 0;
+                border-radius: 50px;
+                border: #4568DC 3px solid;
+                background: #FFF;
+                transition: .2;
+                color: #4568DC;
+                font-size: 1em;
+                clear: both;
+            }
+            #progres1 {
+                display: block;
+                height: 34%;
+                width: 80%;
+                margin-top: 8%;
+                clear: both;
+                padding: 10px;
+                background: #FFF;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                box-sizing: inherit;
+            }
 
+            #progres2 {
+                display: block;
+                height: 44%;
+                width: 80%;
+                clear: both;
+                margin-top: 3%;
+                padding: 10px;
+                background: #FFF;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                box-sizing: inherit;
+            }
+            p {
+                margin:10px;
+            }
             h1 {
                 margin: 20px;
                 font-size: 3em;
@@ -2079,13 +2292,20 @@
                 margin: 30px;
             }
 
-            h3 {}
-
-            h4 {}
-
-            .edit {
-                clear: both;
+            h3 {
+                font-size: 1.5em;
+                margin: 10px;
+                color: #555555;
             }
+
+            h4 {
+                font-size: 1.2em;
+                margin: 10px;
+                color: #555555;
+                margin-bottom: 3px;
+            }
+
+
 
             table {
                 width: 100%;
@@ -2429,4 +2649,5 @@
             }
         </style>
     </body>
+
     </html>
