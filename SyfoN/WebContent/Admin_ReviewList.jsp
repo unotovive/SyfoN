@@ -14,7 +14,7 @@
     <div id="pageBody">
       <h1>評価一覧</h1>
       <div id="backTop">
-        <a href="https://www.ayataka.jp/">
+        <a href="Admin_LectureListServlet">
           <span>講義一覧へ戻る</span>
         </a>
       </div>

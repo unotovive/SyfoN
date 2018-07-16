@@ -17,7 +17,7 @@
           <h2>管理者用講義情報入力画面</h2>
           <h3>講義情報を入力してください</h3>
           <div id="cancel">
-              <a href="https://www.ayataka.jp/">
+              <a href="Admin_LectureListServlet">
                   <span>キャンセル</span>
               </a>
           </div>
