@@ -19,7 +19,7 @@
 				</a>
 			</div>
 			<div id="list">
-				<a href="#" class="fl_tw2"> <i class="fa fa-twitter"></i> <span>講義一覧</span>
+				<a href="Admin_LectureListServlet" class="fl_tw2"> <i class="fa fa-twitter"></i> <span>講義一覧</span>
 				</a>
 			</div>
 		</div>
