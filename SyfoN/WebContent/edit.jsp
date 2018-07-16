@@ -43,7 +43,7 @@
             <div id="mcontent">
                 <div id="tables">
                     <h2>Timetable</h2>
-                    <button class="edit">時間割作成・編集</button>
+                    <button class="edit" @click="send()">時間割を確定してTOPへ</button>
                     <div class="tabs">
                         <input id="zen1" type="radio" name="tab_item" checked/>
                         <label class="tab_item" for="zen1">1年前期</label>
@@ -909,6 +909,29 @@
                     numMusForSum: 0
                 },
                 methods: {
+                    send() {
+                        var form = document.createElement("form");
+                        form.setAttribute("action", "RegisterTimeTable");
+                        form.setAttribute("method", "post");
+                        form.style.display = "none";
+                        document.body.appendChild(form);
+                        // パラメタの設定
+                        for (let term in this.table) {
+
+                            for (let yobi in this.table[term]) {
+
+                                for (clas in this.table[term][yobi]) {
+                                    var input = document.createElement('input');
+                                    input.setAttribute('type', 'hidden');
+                                    input.setAttribute('name', "idList");
+                                    input.setAttribute('value', this.table[term][yobi][clas].lectureid);
+                                    form.appendChild(input);
+                                }
+                            }
+                        }
+                        console.log(form);  
+                        //form.submit();
+                    },
                     itemset(clas) {
                         this.items = clas.csc;
                     },
@@ -919,7 +942,7 @@
                         console.log(clas)
                         console.log(nclas)
                         clas.name = nclas.name
-                        clas.id = nclas.id
+                        clas.lectureid = nclas.id
                         clas.room = nclas.room
                         clas.taninum = nclas.taninum
                         clas.type = nclas.type;
@@ -1238,6 +1261,7 @@
                 height: 20%;
                 overflow: hidden;
             }
+
             .five-m {
                 width: calc(95%/5);
                 float: left;
@@ -1245,6 +1269,7 @@
                 box-sizing: inherit;
                 height: 5%;
             }
+
             .five {
                 width: calc(95%/5);
                 float: left;
