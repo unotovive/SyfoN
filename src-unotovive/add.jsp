@@ -29,7 +29,7 @@
                       <option value='4'>4</option>
                   </select>
                   <button type="submit" id="login-button" >新規登録</button>
-                  <a @click="goLogin()">ログイン</a>
+                  <a href="Common_Login.jsp">ログイン</a>
               </form>
           </div>
           <ul class="bg-bubbles">
