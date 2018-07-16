@@ -132,7 +132,6 @@
 										<td width="20%">{{lec.教授名}}</td>
 									</form>
 								</tr>
-								</form>
 							</table>
 						</div>
 						</table>
