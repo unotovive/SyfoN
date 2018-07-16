@@ -46,8 +46,8 @@ public class Admin_Login extends HttpServlet {
 
 
 
-		admin.setAdminID(request.getParameter("AdminID"));
-		admin.setPassword(request.getParameter("AdminPass"));
+		admin.setAdminID(request.getParameter("adminID"));
+		admin.setPassword(request.getParameter("adminPass"));
 
 		boolean result = false;
 
