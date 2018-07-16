@@ -17,7 +17,6 @@ import org.json.JSONObject;
 
 import Lecture.Lecture;
 import Lecture.LectureManager;
-import unit.UnitManager;
 
 /**
  * Servlet implementation class CreateTable
@@ -102,7 +101,7 @@ public class CreateTable extends HttpServlet {
 							lectureDataMap.put("id",Integer.toString(lc.getLectureID()) );
 							lectureDataMap.put("room",lc.getRoom() );
 							lectureDataMap.put("type",this.AdaptType(lc.getType()));
-							lectureDataMap.put("unit",new UnitManager().getUnit(lc.getUnit()).getUnitName());
+							lectureDataMap.put("unit",lc.getUnit());
 							if(lc.getType().equals("必修")){
 								lectureDataMap.put("must", "true");
 							}else{
