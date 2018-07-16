@@ -44,7 +44,7 @@
               <td>{{item.教員名}}</td>
               <td>{{item.教室}}</td>
               <td>
-                  <a href="Admin_LectureEditServlet?id=item.授業コード"><span>変更</span></a>
+                 <span>変更</span>
               </td>
               <td>
                   <span>削除</span>

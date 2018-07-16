@@ -50,7 +50,7 @@ public class Admin_LectureEditServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		this.doGet(request, response);
+		this.doPost(request, response);
 	}
 
 	/**
