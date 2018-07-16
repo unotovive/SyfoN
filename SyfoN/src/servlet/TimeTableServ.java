@@ -64,6 +64,8 @@ public class TimeTableServ extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 
+		request.setCharacterEncoding("UTF-8");
+
 		TimeTableManager timeTableManager = new TimeTableManager();
 	    CourseLectureManager courseLectureManager = new CourseLectureManager();
 		LectureManager lectureManager=new LectureManager();

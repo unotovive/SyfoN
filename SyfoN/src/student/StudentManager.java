@@ -28,7 +28,7 @@ public class StudentManager {
 	//ユーザ登録
 	public boolean registerStudent(Student student) throws SQLException{
 		boolean result = false;
-			result = studentDAO.registerStudent(student);
+		result = studentDAO.registerStudent(student);
 		return result;
 	}
 

@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito|Poor+Story" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
         <script src="https://unpkg.com/vue"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <meta http-equiv="content-type" charset="utf-8">
     </head>
 
@@ -26,16 +27,16 @@
             <nav class="drawer-menu">
                 <ul>
                     <li>
-                        <a href="#">トップページ</a>
+                        <a href="TimeTableServ">トップページ</a>
                     </li>
                     <li>
-                        <a href="#">講義一覧</a>
+                        <a href="SearchLecture">講義一覧</a>
                     </li>
                     <li>
-                        <a href="#">マイページ</a>
+                        <a href="Mypagesev">マイページ</a>
                     </li>
                     <li>
-                        <a href="#">ログアウト</a>
+                        <a href="Common_Logout">ログアウト</a>
                     </li>
                 </ul>
             </nav>
@@ -1147,22 +1148,14 @@
                 methods: {
                 },
                 mounted() {
-                    const self = this
-                    console.log("hello")
-                    axios
-                        .get('https://api.myjson.com/bins/1by2li')
-                        .then(function (res) {
-                            self.table = res.data.classes;
-                            self.units = res.data.units;
-                            self.needs = res.data.needs
-                            console.log(self.table)
-                        })
+
+              	const self = this
                     console.log("hello")
                     this.table = '<%= session.getAttribute("lectureList")%>'
                     this.table = JSON.parse(this.table)
                     this.table = this.table.table
-                    console.log(this.table)
-                        ;
+                    console.log("mounted");
+                    console.log(this.table);
                     this.units = '<%= session.getAttribute("unit")%>'
                     this.units = JSON.parse(this.units)
                     this.units = this.units.units

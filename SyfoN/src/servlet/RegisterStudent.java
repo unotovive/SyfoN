@@ -1,4 +1,4 @@
-package servlet;
+﻿package servlet;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -14,16 +14,16 @@ import student.Student;
 import student.StudentManager;
 
 /**
- * Servlet implementation class Login
+ * Servlet implementation class AddSystem
  */
-@WebServlet("/Login")
-public class Login extends HttpServlet {
+@WebServlet("/RegisterStudent")
+public class RegisterStudent extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Login() {
+    public RegisterStudent() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,7 +34,8 @@ public class Login extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//登録画面に行く
+		getServletContext().getRequestDispatcher("/Common_Register.jsp").forward(request, response);
 	}
 
 	/**
@@ -42,41 +43,39 @@ public class Login extends HttpServlet {
 	 */
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 		request.setCharacterEncoding("UTF-8");
 
 		Student student = new Student();
-		StudentManager mane = new StudentManager();
+		StudentManager manager= new StudentManager();
 
-
-		student.setStudentID(request.getParameter("studentID"));
+		student.setNickName(request.getParameter("name"));
+		student.setStudentID(request.getParameter("studentId"));
+		student.setMailAddress(request.getParameter("mail"));
 		student.setPassWord(request.getParameter("pass"));
-		String studentID = request.getParameter("studentID");
+		student.setGradeID(Integer.parseInt(request.getParameter("grade")));
 
 		boolean result = false;
-		try {
-			result = mane.check(student);
-			student=mane.getStudent(studentID);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
 
 		HttpSession session = request.getSession();
-		session.setAttribute("login", result);
-		if (result) {
-			// ログインに成功している場合はtop.jspへ
-			session.setAttribute("student", student);
-			session.setAttribute("studentID", studentID);
-			//System.out.print("dekita");
-			getServletContext().getRequestDispatcher("/TimeTableServ").forward(request, response);
-		} else {
-			// ログインに失敗している場合はlogin.jspへ
-			//System.out.print("sippai");
+		session.setAttribute("studentRegisted", result);
+
+		try {
+			result=manager.registerStudent(student);
+		} catch (SQLException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+		if(result){
 			getServletContext().getRequestDispatcher("/Common_Login.jsp").forward(request, response);
+		} else{
+			System.out.println("sippai");
+			// ログインに失敗している場合はadd.jspへ
+			getServletContext().getRequestDispatcher("/add.jsp").forward(request, response);
 			}
 		}
 	}
 
-/*ログインボタンが押されたときの処理*/
 
 
 
