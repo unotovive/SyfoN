@@ -78,87 +78,87 @@
                             <span class="five-m">金</span>
                             <div class="five">
                                 <div class="data">
-                                    <box :clas="table.zanki1.monday.period1" @setting="set(table.zanki1.monday.period1,$event)" />
+                                    <box :clas="table.zenki1.monday.period1" @setting="set(table.zenki1.monday.period1,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki1.monday.period2" @setting="set(table.zanki1.monday.period2,$event)" />
+                                    <box :clas="table.zenki1.monday.period2" @setting="set(table.zenki1.monday.period2,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki1.monday.period3" @setting="set(table.zanki1.monday.period3,$event)" />
+                                    <box :clas="table.zenki1.monday.period3" @setting="set(table.zenki1.monday.period3,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki1.monday.period4" @setting="set(table.zanki1.monday.period4,$event)" />
+                                    <box :clas="table.zenki1.monday.period4" @setting="set(table.zenki1.monday.period4,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki1.monday.period5" @setting="set(table.zanki1.monday.period5,$event)" />
-                                </div>
-                            </div>
-                            <div class="five">
-                                <div class="data">
-                                    <box :clas="table.zanki1.tuesday.period1" @setting="set(table.zanki1.tuesday.period1,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki1.tuesday.period2" @setting="set(table.zanki1.tuesday.period2,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki1.tuesday.period3" @setting="set(table.zanki1.tuesday.period3,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki1.tuesday.period4" @setting="set(table.zanki1.tuesday.period4,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki1.tuesday.period5" @setting="set(table.zanki1.tuesday.period5,$event)" />
+                                    <box :clas="table.zenki1.monday.period5" @setting="set(table.zenki1.monday.period5,$event)" />
                                 </div>
                             </div>
                             <div class="five">
                                 <div class="data">
-                                    <box :clas="table.zanki1.wednesday.period1" @setting="set(table.zanki1.wednesday.period1,$event)" />
+                                    <box :clas="table.zenki1.tuesday.period1" @setting="set(table.zenki1.tuesday.period1,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki1.wednesday.period2" @setting="set(table.zanki1.wednesday.period2,$event)" />
+                                    <box :clas="table.zenki1.tuesday.period2" @setting="set(table.zenki1.tuesday.period2,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki1.wednesday.period3" @setting="set(table.zanki1.wednesday.period3,$event)" />
+                                    <box :clas="table.zenki1.tuesday.period3" @setting="set(table.zenki1.tuesday.period3,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki1.wednesday.period4" @setting="set(table.zanki1.wednesday.period4,$event)" />
+                                    <box :clas="table.zenki1.tuesday.period4" @setting="set(table.zenki1.tuesday.period4,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki1.wednesday.period5" @setting="set(table.zanki1.wednesday.period5,$event)" />
-                                </div>
-                            </div>
-                            <div class="five">
-                                <div class="data">
-                                    <box :clas="table.zanki1.thursday.period1" @setting="set(table.zanki1.thursday.period1,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki1.thursday.period2" @setting="set(table.zanki1.thursday.period2,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki1.thursday.period3" @setting="set(table.zanki1.thursday.period3,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki1.thursday.period4" @setting="set(table.zanki1.thursday.period4,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki1.thursday.period5" @setting="set(table.zanki1.thursday.period5,$event)" />
+                                    <box :clas="table.zenki1.tuesday.period5" @setting="set(table.zenki1.tuesday.period5,$event)" />
                                 </div>
                             </div>
                             <div class="five">
                                 <div class="data">
-                                    <box :clas="table.zanki1.fryday.period1" @setting="set(table.zanki1.fryday.period1,$event)" />
+                                    <box :clas="table.zenki1.wednesday.period1" @setting="set(table.zenki1.wednesday.period1,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki1.fryday.period2" @setting="set(table.zanki1.fryday.period2,$event)" />
+                                    <box :clas="table.zenki1.wednesday.period2" @setting="set(table.zenki1.wednesday.period2,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki1.fryday.period3" @setting="set(table.zanki1.fryday.period3,$event)" />
+                                    <box :clas="table.zenki1.wednesday.period3" @setting="set(table.zenki1.wednesday.period3,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki1.fryday.period4" @setting="set(table.zanki1.fryday.period4,$event)" />
+                                    <box :clas="table.zenki1.wednesday.period4" @setting="set(table.zenki1.wednesday.period4,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki1.fryday.period5" @setting="set(table.zanki1.fryday.period5,$event)" />
+                                    <box :clas="table.zenki1.wednesday.period5" @setting="set(table.zenki1.wednesday.period5,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="table.zenki1.thursday.period1" @setting="set(table.zenki1.thursday.period1,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki1.thursday.period2" @setting="set(table.zenki1.thursday.period2,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki1.thursday.period3" @setting="set(table.zenki1.thursday.period3,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki1.thursday.period4" @setting="set(table.zenki1.thursday.period4,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki1.thursday.period5" @setting="set(table.zenki1.thursday.period5,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="table.zenki1.fryday.period1" @setting="set(table.zenki1.fryday.period1,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki1.fryday.period2" @setting="set(table.zenki1.fryday.period2,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki1.fryday.period3" @setting="set(table.zenki1.fryday.period3,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki1.fryday.period4" @setting="set(table.zenki1.fryday.period4,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki1.fryday.period5" @setting="set(table.zenki1.fryday.period5,$event)" />
                                 </div>
                             </div>
                         </div>
@@ -172,87 +172,87 @@
                             <span class="five-m">金</span>
                             <div class="five">
                                 <div class="data">
-                                    <box :clas="table.zanki2.monday.period1" @setting="set(table.zanki2.monday.period1,$event)" />
+                                    <box :clas="table.zenki2.monday.period1" @setting="set(table.zenki2.monday.period1,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki2.monday.period2" @setting="set(table.zanki2.monday.period2,$event)" />
+                                    <box :clas="table.zenki2.monday.period2" @setting="set(table.zenki2.monday.period2,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki2.monday.period3" @setting="set(table.zanki2.monday.period3,$event)" />
+                                    <box :clas="table.zenki2.monday.period3" @setting="set(table.zenki2.monday.period3,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki2.monday.period4" @setting="set(table.zanki2.monday.period4,$event)" />
+                                    <box :clas="table.zenki2.monday.period4" @setting="set(table.zenki2.monday.period4,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki2.monday.period5" @setting="set(table.zanki2.monday.period5,$event)" />
-                                </div>
-                            </div>
-                            <div class="five">
-                                <div class="data">
-                                    <box :clas="table.zanki2.tuesday.period1" @setting="set(table.zanki2.tuesday.period1,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki2.tuesday.period2" @setting="set(table.zanki2.tuesday.period2,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki2.tuesday.period3" @setting="set(table.zanki2.tuesday.period3,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki2.tuesday.period4" @setting="set(table.zanki2.tuesday.period4,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki2.tuesday.period5" @setting="set(table.zanki2.tuesday.period5,$event)" />
+                                    <box :clas="table.zenki2.monday.period5" @setting="set(table.zenki2.monday.period5,$event)" />
                                 </div>
                             </div>
                             <div class="five">
                                 <div class="data">
-                                    <box :clas="table.zanki2.wednesday.period1" @setting="set(table.zanki2.wednesday.period1,$event)" />
+                                    <box :clas="table.zenki2.tuesday.period1" @setting="set(table.zenki2.tuesday.period1,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki2.wednesday.period2" @setting="set(table.zanki2.wednesday.period2,$event)" />
+                                    <box :clas="table.zenki2.tuesday.period2" @setting="set(table.zenki2.tuesday.period2,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki2.wednesday.period3" @setting="set(table.zanki2.wednesday.period3,$event)" />
+                                    <box :clas="table.zenki2.tuesday.period3" @setting="set(table.zenki2.tuesday.period3,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki2.wednesday.period4" @setting="set(table.zanki2.wednesday.period4,$event)" />
+                                    <box :clas="table.zenki2.tuesday.period4" @setting="set(table.zenki2.tuesday.period4,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki2.wednesday.period5" @setting="set(table.zanki2.wednesday.period5,$event)" />
-                                </div>
-                            </div>
-                            <div class="five">
-                                <div class="data">
-                                    <box :clas="table.zanki2.thursday.period1" @setting="set(table.zanki2.thursday.period1,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki2.thursday.period2" @setting="set(table.zanki2.thursday.period2,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki2.thursday.period3" @setting="set(table.zanki2.thursday.period3,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki2.thursday.period4" @setting="set(table.zanki2.thursday.period4,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki2.thursday.period5" @setting="set(table.zanki2.thursday.period5,$event)" />
+                                    <box :clas="table.zenki2.tuesday.period5" @setting="set(table.zenki2.tuesday.period5,$event)" />
                                 </div>
                             </div>
                             <div class="five">
                                 <div class="data">
-                                    <box :clas="table.zanki2.fryday.period1" @setting="set(table.zanki2.fryday.period1,$event)" />
+                                    <box :clas="table.zenki2.wednesday.period1" @setting="set(table.zenki2.wednesday.period1,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki2.fryday.period2" @setting="set(table.zanki2.fryday.period2,$event)" />
+                                    <box :clas="table.zenki2.wednesday.period2" @setting="set(table.zenki2.wednesday.period2,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki2.fryday.period3" @setting="set(table.zanki2.fryday.period3,$event)" />
+                                    <box :clas="table.zenki2.wednesday.period3" @setting="set(table.zenki2.wednesday.period3,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki2.fryday.period4" @setting="set(table.zanki2.fryday.period4,$event)" />
+                                    <box :clas="table.zenki2.wednesday.period4" @setting="set(table.zenki2.wednesday.period4,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki2.fryday.period5" @setting="set(table.zanki2.fryday.period5,$event)" />
+                                    <box :clas="table.zenki2.wednesday.period5" @setting="set(table.zenki2.wednesday.period5,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="table.zenki2.thursday.period1" @setting="set(table.zenki2.thursday.period1,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki2.thursday.period2" @setting="set(table.zenki2.thursday.period2,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki2.thursday.period3" @setting="set(table.zenki2.thursday.period3,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki2.thursday.period4" @setting="set(table.zenki2.thursday.period4,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki2.thursday.period5" @setting="set(table.zenki2.thursday.period5,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="table.zenki2.fryday.period1" @setting="set(table.zenki2.fryday.period1,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki2.fryday.period2" @setting="set(table.zenki2.fryday.period2,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki2.fryday.period3" @setting="set(table.zenki2.fryday.period3,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki2.fryday.period4" @setting="set(table.zenki2.fryday.period4,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki2.fryday.period5" @setting="set(table.zenki2.fryday.period5,$event)" />
                                 </div>
                             </div>
                         </div>
@@ -266,87 +266,87 @@
                             <span class="five-m">金</span>
                             <div class="five">
                                 <div class="data">
-                                    <box :clas="table.zanki3.monday.period1" @setting="set(table.zanki3.monday.period1,$event)" />
+                                    <box :clas="table.zenki3.monday.period1" @setting="set(table.zenki3.monday.period1,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki3.monday.period2" @setting="set(table.zanki3.monday.period2,$event)" />
+                                    <box :clas="table.zenki3.monday.period2" @setting="set(table.zenki3.monday.period2,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki3.monday.period3" @setting="set(table.zanki3.monday.period3,$event)" />
+                                    <box :clas="table.zenki3.monday.period3" @setting="set(table.zenki3.monday.period3,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki3.monday.period4" @setting="set(table.zanki3.monday.period4,$event)" />
+                                    <box :clas="table.zenki3.monday.period4" @setting="set(table.zenki3.monday.period4,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki3.monday.period5" @setting="set(table.zanki3.monday.period5,$event)" />
-                                </div>
-                            </div>
-                            <div class="five">
-                                <div class="data">
-                                    <box :clas="table.zanki3.tuesday.period1" @setting="set(table.zanki3.tuesday.period1,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki3.tuesday.period2" @setting="set(table.zanki3.tuesday.period2,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki3.tuesday.period3" @setting="set(table.zanki3.tuesday.period3,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki3.tuesday.period4" @setting="set(table.zanki3.tuesday.period4,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki3.tuesday.period5" @setting="set(table.zanki3.tuesday.period5,$event)" />
+                                    <box :clas="table.zenki3.monday.period5" @setting="set(table.zenki3.monday.period5,$event)" />
                                 </div>
                             </div>
                             <div class="five">
                                 <div class="data">
-                                    <box :clas="table.zanki3.wednesday.period1" @setting="set(table.zanki3.wednesday.period1,$event)" />
+                                    <box :clas="table.zenki3.tuesday.period1" @setting="set(table.zenki3.tuesday.period1,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki3.wednesday.period2" @setting="set(table.zanki3.wednesday.period2,$event)" />
+                                    <box :clas="table.zenki3.tuesday.period2" @setting="set(table.zenki3.tuesday.period2,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki3.wednesday.period3" @setting="set(table.zanki3.wednesday.period3,$event)" />
+                                    <box :clas="table.zenki3.tuesday.period3" @setting="set(table.zenki3.tuesday.period3,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki3.wednesday.period4" @setting="set(table.zanki3.wednesday.period4,$event)" />
+                                    <box :clas="table.zenki3.tuesday.period4" @setting="set(table.zenki3.tuesday.period4,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki3.wednesday.period5" @setting="set(table.zanki3.wednesday.period5,$event)" />
-                                </div>
-                            </div>
-                            <div class="five">
-                                <div class="data">
-                                    <box :clas="table.zanki3.thursday.period1" @setting="set(table.zanki3.thursday.period1,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki3.thursday.period2" @setting="set(table.zanki3.thursday.period2,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki3.thursday.period3" @setting="set(table.zanki3.thursday.period3,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki3.thursday.period4" @setting="set(table.zanki3.thursday.period4,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki3.thursday.period5" @setting="set(table.zanki3.thursday.period5,$event)" />
+                                    <box :clas="table.zenki3.tuesday.period5" @setting="set(table.zenki3.tuesday.period5,$event)" />
                                 </div>
                             </div>
                             <div class="five">
                                 <div class="data">
-                                    <box :clas="table.zanki3.fryday.period1" @setting="set(table.zanki3.fryday.period1,$event)" />
+                                    <box :clas="table.zenki3.wednesday.period1" @setting="set(table.zenki3.wednesday.period1,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki3.fryday.period2" @setting="set(table.zanki3.fryday.period2,$event)" />
+                                    <box :clas="table.zenki3.wednesday.period2" @setting="set(table.zenki3.wednesday.period2,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki3.fryday.period3" @setting="set(table.zanki3.fryday.period3,$event)" />
+                                    <box :clas="table.zenki3.wednesday.period3" @setting="set(table.zenki3.wednesday.period3,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki3.fryday.period4" @setting="set(table.zanki3.fryday.period4,$event)" />
+                                    <box :clas="table.zenki3.wednesday.period4" @setting="set(table.zenki3.wednesday.period4,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki3.fryday.period5" @setting="set(table.zanki3.fryday.period5,$event)" />
+                                    <box :clas="table.zenki3.wednesday.period5" @setting="set(table.zenki3.wednesday.period5,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="table.zenki3.thursday.period1" @setting="set(table.zenki3.thursday.period1,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki3.thursday.period2" @setting="set(table.zenki3.thursday.period2,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki3.thursday.period3" @setting="set(table.zenki3.thursday.period3,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki3.thursday.period4" @setting="set(table.zenki3.thursday.period4,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki3.thursday.period5" @setting="set(table.zenki3.thursday.period5,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="table.zenki3.fryday.period1" @setting="set(table.zenki3.fryday.period1,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki3.fryday.period2" @setting="set(table.zenki3.fryday.period2,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki3.fryday.period3" @setting="set(table.zenki3.fryday.period3,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki3.fryday.period4" @setting="set(table.zenki3.fryday.period4,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki3.fryday.period5" @setting="set(table.zenki3.fryday.period5,$event)" />
                                 </div>
                             </div>
                         </div>
@@ -360,87 +360,87 @@
                             <span class="five-m">金</span>
                             <div class="five">
                                 <div class="data">
-                                    <box :clas="table.zanki4.monday.period1" @setting="set(table.zanki4.monday.period1,$event)" />
+                                    <box :clas="table.zenki4.monday.period1" @setting="set(table.zenki4.monday.period1,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki4.monday.period2" @setting="set(table.zanki4.monday.period2,$event)" />
+                                    <box :clas="table.zenki4.monday.period2" @setting="set(table.zenki4.monday.period2,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki4.monday.period3" @setting="set(table.zanki4.monday.period3,$event)" />
+                                    <box :clas="table.zenki4.monday.period3" @setting="set(table.zenki4.monday.period3,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki4.monday.period4" @setting="set(table.zanki4.monday.period4,$event)" />
+                                    <box :clas="table.zenki4.monday.period4" @setting="set(table.zenki4.monday.period4,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki4.monday.period5" @setting="set(table.zanki4.monday.period5,$event)" />
-                                </div>
-                            </div>
-                            <div class="five">
-                                <div class="data">
-                                    <box :clas="table.zanki4.tuseday.period1" @setting="set(table.zanki4.tuseday.period1,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki4.tuseday.period2" @setting="set(table.zanki4.tuseday.period2,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki4.tuseday.period3" @setting="set(table.zanki4.tuseday.period3,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki4.tuseday.period4" @setting="set(table.zanki4.tuseday.period4,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki4.tuseday.period5" @setting="set(table.zanki4.tuseday.period5,$event)" />
+                                    <box :clas="table.zenki4.monday.period5" @setting="set(table.zenki4.monday.period5,$event)" />
                                 </div>
                             </div>
                             <div class="five">
                                 <div class="data">
-                                    <box :clas="table.zanki4.wednesday.period1" @setting="set(table.zanki4.wednesday.period1,$event)" />
+                                    <box :clas="table.zenki4.tuesday.period1" @setting="set(table.zenki4.tuesday.period1,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki4.wednesday.period2" @setting="set(table.zanki4.wednesday.period2,$event)" />
+                                    <box :clas="table.zenki4.tuesday.period2" @setting="set(table.zenki4.tuesday.period2,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki4.wednesday.period3" @setting="set(table.zanki4.wednesday.period3,$event)" />
+                                    <box :clas="table.zenki4.tuesday.period3" @setting="set(table.zenki4.tuesday.period3,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki4.wednesday.period4" @setting="set(table.zanki4.wednesday.period4,$event)" />
+                                    <box :clas="table.zenki4.tuesday.period4" @setting="set(table.zenki4.tuesday.period4,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki4.wednesday.period5" @setting="set(table.zanki4.wednesday.period5,$event)" />
-                                </div>
-                            </div>
-                            <div class="five">
-                                <div class="data">
-                                    <box :clas="table.zanki4.thursday.period1" @setting="set(table.zanki4.thursday.period1,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki4.thursday.period2" @setting="set(table.zanki4.thursday.period2,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki4.thursday.period3" @setting="set(table.zanki4.thursday.period3,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki4.thursday.period4" @setting="set(table.zanki4.thursday.period4,$event)" />
-                                </div>
-                                <div class="data">
-                                    <box :clas="table.zanki4.thursday.period5" @setting="set(table.zanki4.thursday.period5,$event)" />
+                                    <box :clas="table.zenki4.tuesday.period5" @setting="set(table.zenki4.tuesday.period5,$event)" />
                                 </div>
                             </div>
                             <div class="five">
                                 <div class="data">
-                                    <box :clas="table.zanki4.fryday.period1" @setting="set(table.zanki4.fryday.period1,$event)" />
+                                    <box :clas="table.zenki4.wednesday.period1" @setting="set(table.zenki4.wednesday.period1,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki4.fryday.period2" @setting="set(table.zanki4.fryday.period2,$event)" />
+                                    <box :clas="table.zenki4.wednesday.period2" @setting="set(table.zenki4.wednesday.period2,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki4.fryday.period3" @setting="set(table.zanki4.fryday.period3,$event)" />
+                                    <box :clas="table.zenki4.wednesday.period3" @setting="set(table.zenki4.wednesday.period3,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki4.fryday.period4" @setting="set(table.zanki4.fryday.period4,$event)" />
+                                    <box :clas="table.zenki4.wednesday.period4" @setting="set(table.zenki4.wednesday.period4,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.zanki4.fryday.period5" @setting="set(table.zanki4.fryday.period5,$event)" />
+                                    <box :clas="table.zenki4.wednesday.period5" @setting="set(table.zenki4.wednesday.period5,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="table.zenki4.thursday.period1" @setting="set(table.zenki4.thursday.period1,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki4.thursday.period2" @setting="set(table.zenki4.thursday.period2,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki4.thursday.period3" @setting="set(table.zenki4.thursday.period3,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki4.thursday.period4" @setting="set(table.zenki4.thursday.period4,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki4.thursday.period5" @setting="set(table.zenki4.thursday.period5,$event)" />
+                                </div>
+                            </div>
+                            <div class="five">
+                                <div class="data">
+                                    <box :clas="table.zenki4.fryday.period1" @setting="set(table.zenki4.fryday.period1,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki4.fryday.period2" @setting="set(table.zenki4.fryday.period2,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki4.fryday.period3" @setting="set(table.zenki4.fryday.period3,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki4.fryday.period4" @setting="set(table.zenki4.fryday.period4,$event)" />
+                                </div>
+                                <div class="data">
+                                    <box :clas="table.zenki4.fryday.period5" @setting="set(table.zenki4.fryday.period5,$event)" />
                                 </div>
                             </div>
                         </div>
@@ -659,19 +659,19 @@
                             </div>
                             <div class="five">
                                 <div class="data">
-                                    <box :clas="table.kouki3.tuseday.period1" @setting="set(table.kouki3.tuseday.period1,$event)" />
+                                    <box :clas="table.kouki3.tuesday.period1" @setting="set(table.kouki3.tuesday.period1,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.kouki3.tuseday.period2" @setting="set(table.kouki3.tuseday.period2,$event)" />
+                                    <box :clas="table.kouki3.tuesday.period2" @setting="set(table.kouki3.tuesday.period2,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.kouki3.tuseday.period3" @setting="set(table.kouki3.tuseday.period3,$event)" />
+                                    <box :clas="table.kouki3.tuesday.period3" @setting="set(table.kouki3.tuesday.period3,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.kouki3.tuseday.period4" @setting="set(table.kouki3.tuseday.period4,$event)" />
+                                    <box :clas="table.kouki3.tuesday.period4" @setting="set(table.kouki3.tuesday.period4,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.kouki3.tuseday.period5" @setting="set(table.kouki3.tuseday.period5,$event)" />
+                                    <box :clas="table.kouki3.tuesday.period5" @setting="set(table.kouki3.tuesday.period5,$event)" />
                                 </div>
                             </div>
                             <div class="five">
@@ -753,19 +753,19 @@
                             </div>
                             <div class="five">
                                 <div class="data">
-                                    <box :clas="table.kouki4.tuseday.period1" @setting="set(table.kouki4.tuseday.period1,$event)" />
+                                    <box :clas="table.kouki4.tuesday.period1" @setting="set(table.kouki4.tuesday.period1,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.kouki4.tuseday.period2" @setting="set(table.kouki4.tuseday.period2,$event)" />
+                                    <box :clas="table.kouki4.tuesday.period2" @setting="set(table.kouki4.tuesday.period2,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.kouki4.tuseday.period3" @setting="set(table.kouki4.tuseday.period3,$event)" />
+                                    <box :clas="table.kouki4.tuesday.period3" @setting="set(table.kouki4.tuesday.period3,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.kouki4.tuseday.period4" @setting="set(table.kouki4.tuseday.period4,$event)" />
+                                    <box :clas="table.kouki4.tuesday.period4" @setting="set(table.kouki4.tuesday.period4,$event)" />
                                 </div>
                                 <div class="data">
-                                    <box :clas="table.kouki4.tuseday.period5" @setting="set(table.kouki4.tuseday.period5,$event)" />
+                                    <box :clas="table.kouki4.tuesday.period5" @setting="set(table.kouki4.tuesday.period5,$event)" />
                                 </div>
                             </div>
                             <div class="five">
@@ -922,6 +922,7 @@
                         clas.id = nclas.id
                         clas.room = nclas.room
                         clas.taninum = nclas.taninum
+                        clas.type = nclas.type;
                         this.rerun()
                     },
                     rerun() {
@@ -939,42 +940,46 @@
                         let numMusForSum = 0;
                         console.log("rerun")
                         console.log(this.table)
-                        for (term in this.table) {
-                            for (yobi in this.table[`${term}`]) {
-                                for (clas in this.table[`${term}`][`${yobi}`]) {
-                                    numAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                        for (let term in this.table) {
+                            console.log(term)
+                            console.log(this.table)
+                            console.log(this.table[term])
+                            for (let yobi in this.table[term]) {
+                                console.log(yobi)
+                                for (clas in this.table[term][yobi]) {
+                                    numAllSum += Number(this.table[term][yobi][clas].taninum)
                                     if ((term == "zenki1") || (term == "kouki1")) {
-                                        numTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                        numTwoSum += Number(this.table[term][yobi][clas].taninum)
                                     }
                                     if (!(term == "zenki4") && !(term == "kouki4")) {
-                                        numForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                        numForSum += Number(this.table[term][yobi][clas].taninum)
                                     }
 
-                                    if (this.table[`${term}`][`${yobi}`][`${clas}`].type == "eng") {
-                                        numEngAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                    if (this.table[term][yobi][clas].type == "eng") {
+                                        numEngAllSum += Number(this.table[term][yobi][clas].taninum)
                                         if ((term == "zenki1") || (term == "kouki1")) {
-                                            numEngTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                            numEngTwoSum += Number(this.table[term][yobi][clas].taninum)
                                         }
                                         if (!(term == "zenki4") || !(term == "kouki4")) {
-                                            numEngForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                            numEngForSum += Number(this.table[term][yobi][clas].taninum)
                                         }
                                     }
-                                    if (this.table[`${term}`][`${yobi}`][`${clas}`].type == "must") {
-                                        numHumAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                    if (this.table[term][yobi][clas].type == "must") {
+                                        numHumAllSum += Number(this.table[term][yobi][clas].taninum)
                                         if ((term == "zenki1") || (term == "kouki1")) {
-                                            numHumTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                            numHumTwoSum += Number(this.table[term][yobi][clas].taninum)
                                         }
                                         if (!(term == "zenki4") || !(term == "kouki4")) {
-                                            numHumForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                            numHumForSum += Number(this.table[term][yobi][clas].taninum)
                                         }
                                     }
-                                    if (this.table[`${term}`][`${yobi}`][`${clas}`].type == "human") {
-                                        numMusAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                    if (this.table[term][yobi][clas].type == "human") {
+                                        numMusAllSum += Number(this.table[term][yobi][clas].taninum)
                                         if ((term == "zenki1") || (term == "kouki1")) {
-                                            numMusTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                            numMusTwoSum += Number(this.table[term][yobi][clas].taninum)
                                         }
                                         if (!(term == "zenki4") || !(term == "kouki4")) {
-                                            numMusForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                            numMusForSum += Number(this.table[term][yobi][clas].taninum)
                                         }
                                     }
                                 }
@@ -1027,42 +1032,42 @@
                     let numHumForSum = 0;
                     let numMusForSum = 0;
                     for (term in this.table) {
-                        for (yobi in this.table[`${term}`]) {
-                            for (clas in this.table[`${term}`][`${yobi}`]) {
-                                numAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                        for (yobi in this.table[term]) {
+                            for (clas in this.table[term][yobi]) {
+                                numAllSum += Number(this.table[term][yobi][clas].taninum)
                                 console.log(term)
                                 if ((term == "zenki1") || (term == "kouki1")) {
-                                    numTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                    numTwoSum += Number(this.table[term][yobi][clas].taninum)
                                 }
                                 if (!(term == "zenki4") && !(term == "kouki4")) {
-                                    numForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                    numForSum += Number(this.table[term][yobi][clas].taninum)
                                 }
 
-                                if (this.table[`${term}`][`${yobi}`][`${clas}`].type == "eng") {
-                                    numEngAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                if (this.table[term][yobi][clas].type == "eng") {
+                                    numEngAllSum += Number(this.table[term][yobi][clas].taninum)
                                     if ((term == "zenki1") || (term == "kouki1")) {
-                                        numEngTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                        numEngTwoSum += Number(this.table[term][yobi][clas].taninum)
                                     }
                                     if (!(term == "zenki4") || !(term == "kouki4")) {
-                                        numEngForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                        numEngForSum += Number(this.table[term][yobi][clas].taninum)
                                     }
                                 }
-                                if (this.table[`${term}`][`${yobi}`][`${clas}`].type == "must") {
-                                    numHumAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                if (this.table[term][yobi][clas].type == "must") {
+                                    numHumAllSum += Number(this.table[term][yobi][clas].taninum)
                                     if ((term == "zenki1") || (term == "kouki1")) {
-                                        numHumTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                        numHumTwoSum += Number(this.table[term][yobi][clas].taninum)
                                     }
                                     if (!(term == "zenki4") || !(term == "kouki4")) {
-                                        numHumForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                        numHumForSum += Number(this.table[term][yobi][clas].taninum)
                                     }
                                 }
-                                if (this.table[`${term}`][`${yobi}`][`${clas}`].type == "human") {
-                                    numMusAllSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                if (this.table[term][yobi][clas].type == "human") {
+                                    numMusAllSum += Number(this.table[term][yobi][clas].taninum)
                                     if ((term == "zenki1") || (term == "kouki1")) {
-                                        numMusTwoSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                        numMusTwoSum += Number(this.table[term][yobi][clas].taninum)
                                     }
                                     if (!(term == "zenki4") || !(term == "kouki4")) {
-                                        numMusForSum += this.table[`${term}`][`${yobi}`][`${clas}`].taninum
+                                        numMusForSum += Number(this.table[term][yobi][clas].taninum)
                                     }
                                 }
                             }
