@@ -28,7 +28,7 @@ public class ReviewDAO {
 
 			pstmt.setInt(1, lectureID);
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 				Review rev = new Review();
 
@@ -52,7 +52,7 @@ public class ReviewDAO {
 				rev.setAttendPoint(attendP);
 				float homeworkP = resultSet.getFloat("homeworkpoint");
 				rev.setHomeworkPoint(homeworkP);
-				float groupP = resultSet.getFloat("grouppoint");
+				float groupP = resultSet.getFloat("groupworkpoint");
 				rev.setGroupworkPoint(groupP);
 				revList.add(rev);
 
@@ -77,7 +77,7 @@ public class ReviewDAO {
 
 			pstmt.setString(1, reviewID);
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 
 				String revID = resultSet.getString("reviewid");
@@ -160,18 +160,19 @@ public class ReviewDAO {
 		return revList;
 	}
 
-	public boolean resisterReview(Review review) throws SQLException {
-		// memberがDBにあるかどうかを調べる
+	public boolean registerReview(Review review) throws SQLException {
+		// レビューを登録する
 		boolean result = false;
 		Connection connection;
-		String sql = "INSERT INTO review VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO review VALUES(?,?,?,?,?,?,?,?,?,?,?)";
 
 		try {
 			Class.forName(driverClassName);
 			connection = DriverManager.getConnection(url, user, password);
 			PreparedStatement pstmt = connection.prepareStatement(sql);
+			String newID=Integer.toString(Integer.valueOf(this.getMaxID())+1);
 
-			pstmt.setString(1, review.getReviewID());
+			pstmt.setString(1, newID);
 			pstmt.setString(2, review.getStudentID());
 			pstmt.setInt(3, review.getLectureID());
 			pstmt.setString(4, review.getComment());
@@ -180,14 +181,13 @@ public class ReviewDAO {
 			pstmt.setFloat(7, review.getProgramPoint());
 			pstmt.setFloat(8, review.getProfessorPoint());
 			pstmt.setFloat(9, review.getAttendPoint());
-			pstmt.setFloat(10, review.getHomeworkPoint());
+			pstmt.setFloat(10, 0);
 			pstmt.setFloat(11, review.getGroupworkPoint());
 
 
-			ResultSet resultSet = pstmt.executeQuery();
-			if (resultSet.next()) result = true;
+			int rowNum=pstmt.executeUpdate();
+			if (rowNum==1) result = true;
 
-			resultSet.close();
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -196,7 +196,7 @@ public class ReviewDAO {
 	}
 
 	public boolean updateReview(Review review) throws SQLException {
-		// memberがDBにあるかどうかを調べる
+		// レビューの更新
 		boolean result = false;
 		Connection connection;
 		String sql = "UPDATE review SET studentid = ?,lectureid = ?, comment = ?,"
@@ -216,14 +216,14 @@ public class ReviewDAO {
 			pstmt.setFloat(6, review.getProgramPoint());
 			pstmt.setFloat(7, review.getProfessorPoint());
 			pstmt.setFloat(8, review.getAttendPoint());
-			pstmt.setFloat(9, review.getHomeworkPoint());
+			pstmt.setFloat(9, 0);
 			pstmt.setFloat(10, review.getGroupworkPoint());
 			pstmt.setString(11, review.getReviewID());
 
-			ResultSet resultSet = pstmt.executeQuery();
-			if (resultSet.next()) result = true;
+			int rowNum=pstmt.executeUpdate();
+			System.out.println(rowNum);
+			if (rowNum>=1) result = true;
 
-			resultSet.close();
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -232,7 +232,7 @@ public class ReviewDAO {
 	}
 
 	public boolean removeReview(Review review) throws SQLException {
-		// memberがDBにあるかどうかを調べる
+		// レビューを削除する
 		boolean result = false;
 		Connection connection;
 		String sql = "DELETE FROM review WHERE reviewid = ?";
@@ -255,6 +255,54 @@ public class ReviewDAO {
 		return result;
 	}
 
+	public boolean check(Review review){
+		boolean result=false;
+		Connection connection;
+		String sql = "SELECT * FROM review WHERE studentid = ? AND lectureid = ?";
+
+		try {
+			Class.forName(driverClassName);
+			connection = DriverManager.getConnection(url, user, password);
+			PreparedStatement pstmt = connection.prepareStatement(sql);
+
+			pstmt.setString(1, review.getStudentID());
+			pstmt.setInt(2, review.getLectureID());
+
+			ResultSet resultSet = pstmt.executeQuery();
+			if (resultSet.next()) result = true;
+
+			resultSet.close();
+			connection.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+
+	public String getMaxID(){
+		String result="0";
+		final int MAXNO=1;
+		Connection connection;
+		String sql="SELECT MAX(reviewid) FROM review;";
+
+		try {
+			Class.forName(driverClassName);
+			connection = DriverManager.getConnection(url, user, password);
+			PreparedStatement pstmt = connection.prepareStatement(sql);
+
+			ResultSet resultSet = pstmt.executeQuery();
+			resultSet.next();
+
+			result=resultSet.getString(MAXNO);
+
+			resultSet.close();
+			connection.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
 
 
 

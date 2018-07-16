@@ -36,9 +36,9 @@ public class ReviewManager {
 		return reviewList;
 	}
 
-	public boolean resisterReview(Review review) throws SQLException{
+	public boolean registerReview(Review review) throws SQLException{
 		boolean result = false;
-		result = reviewDAO.resisterReview(review);
+		result = reviewDAO.registerReview(review);
 		return result;
 	}
 
@@ -51,6 +51,12 @@ public class ReviewManager {
 	public boolean removeReview(Review review) throws SQLException{
 		boolean result = false;
 		result = reviewDAO.removeReview(review);
+		return result;
+	}
+
+	public boolean check(Review review){
+		boolean result=false;
+		result=reviewDAO.check(review);
 		return result;
 	}
 

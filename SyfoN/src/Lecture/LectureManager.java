@@ -29,24 +29,24 @@ public class LectureManager {
 
 	//講義情報を全て
 	public ArrayList<Lecture> findLecture(Lecture lecture) throws SQLException{
-
-		if(lecture.getLectureName() != null){
+		lectureList=new ArrayList<Lecture>();
+		if(!lecture.getLectureName().isEmpty()){
 			ArrayList<Lecture> lecList = lectureDAO.findLectureByLectureName(lecture.getLectureName());
 			lectureList.addAll(lecList);
+			System.out.print("名前検索");
 		}
-		if(lecture.getDay() != null){
+		if(!lecture.getDay().isEmpty()){
 			ArrayList<Lecture> lecList = lectureDAO.findLectureByDay(lecture.getDay());
 			lectureList.addAll(lecList);
+			System.out.print("曜日検索");
 		}
-		if(lecture.getGaitoGakki() != null){
+		if(!lecture.getGaitoGakki().isEmpty()){
 			ArrayList<Lecture> lecList = lectureDAO.findLectureByGaitoGakki(lecture.getGaitoGakki());
 			lectureList.addAll(lecList);
-		}
-		if(lecture.getPeriod() >= 0){
-			ArrayList<Lecture> lecList = lectureDAO.findLectureByPeriod(lecture.getPeriod());
-			lectureList.addAll(lecList);
-		}
 
+			System.out.print("学期、検索");
+
+		}
 		return lectureList;
 	}
 

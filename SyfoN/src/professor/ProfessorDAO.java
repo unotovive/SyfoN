@@ -48,7 +48,7 @@ public class ProfessorDAO {
 
 	public ArrayList<Professor> findProfessor(String professorName) throws SQLException {
 		Connection connection;
-		String sql = "SELECT * FROM professor WHERE professorname like ?";
+		String sql = "SELECT * FROM professor WHERE professorname LIKE ?";
 		ArrayList<Professor> proList=new ArrayList<Professor>();
 
 		try {
@@ -56,7 +56,11 @@ public class ProfessorDAO {
 			connection = DriverManager.getConnection(url, user, password);
 			PreparedStatement pstmt = connection.prepareStatement(sql);
 
+			if(!professorName.isEmpty()){
 			pstmt.setString(1, "%"+professorName+"%");
+			}else{
+				pstmt.setString(1, "Empty!!!!!");
+			}
 
 			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){

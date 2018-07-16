@@ -14,19 +14,19 @@ import student.Student;
 import student.StudentManager;
 
 /**
- * Servlet implementation class Login
+ * Servlet implementation class Mypageexit
  */
-@WebServlet("/Login")
-public class Login extends HttpServlet {
+@WebServlet("/Mypageedit")
+public class Mypageedit extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public Login() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public Mypageedit() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -42,41 +42,39 @@ public class Login extends HttpServlet {
 	 */
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 		request.setCharacterEncoding("UTF-8");
 
 		Student student = new Student();
 		StudentManager mane = new StudentManager();
-
-
-		student.setStudentID(request.getParameter("studentID"));
-		student.setPassWord(request.getParameter("pass"));
-		String studentID = request.getParameter("studentID");
-
 		boolean result = false;
+		HttpSession session=request.getSession();
+
+		student.setNickName(request.getParameter("name"));
+		student.setGradeID(Integer.parseInt(request.getParameter("grade")) );
+		student.setPassWord(request.getParameter("pass"));
+		student.setMailAddress(request.getParameter("mail"));
+		student.setStudentID((String)session.getAttribute("studentID"));
+
 		try {
-			result = mane.check(student);
-			student=mane.getStudent(studentID);
+			result = mane.editProf(student);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 
-		HttpSession session = request.getSession();
-		session.setAttribute("login", result);
 		if (result) {
-			// ログインに成功している場合はtop.jspへ
+			//編集に成功した場合マイページへ
+			System.out.print("dekita");
+			//セッションの学生情報を更新
+			session.removeAttribute("student");
 			session.setAttribute("student", student);
-			session.setAttribute("studentID", studentID);
-
-			getServletContext().getRequestDispatcher("/TimeTableServ").forward(request, response);
+			getServletContext().getRequestDispatcher("/Mypagesev").forward(request, response);
 		} else {
-			// ログインに失敗している場合はlogin.jspへ
-			//System.out.print("sippai");
-			getServletContext().getRequestDispatcher("/Common_Login.jsp").forward(request, response);
-			}
+			// 編集に失敗している場合はlogin.jspへ
+			System.out.print("sippai");
+			getServletContext().getRequestDispatcher("/exitmypage.jsp").forward(request, response);
 		}
 	}
-
-/*ログインボタンが押されたときの処理*/
-
+}
 
 

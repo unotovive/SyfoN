@@ -33,7 +33,7 @@
                   <input type="text"  name="studentID" placeholder="学籍番号" v-model="studentNo">
                   <input type="password" name="pass" placeholder="パスワード" v-model="pass">
                   <button type="submit" id="login-button" >ログイン</button>
-                  <a @click="">新規登録</a>
+                  <a href="add.jsp">新規登録</a>
               </form>
           </div>
           <ul class="bg-bubbles">
