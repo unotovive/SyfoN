@@ -125,14 +125,11 @@ public class RegisterTimeTable extends HttpServlet {
 							System.out.println("失敗");
 					}
 				}
-				//時間割表示のサーブレットへ
-				getServletContext().getRequestDispatcher("/TimeTableServ").forward(request, response);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 
 		}
-		//履修講義が一つもないなら、すべて削除済みなはずなのでトップ画面を表示するサーブレット
 		getServletContext().getRequestDispatcher("/TimeTableServ").forward(request, response);
 
 	}
