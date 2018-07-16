@@ -26,13 +26,13 @@ import timetable.TimeTableManager;
 public class RegisterTimeTable extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public RegisterTimeTable() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public RegisterTimeTable() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -52,82 +52,97 @@ public class RegisterTimeTable extends HttpServlet {
 		String[] stringList=request.getParameterValues("idList");
 		int[] lectureIdList=Stream.of(stringList).mapToInt(Integer::parseInt).toArray();
 
+		HttpSession session = request.getSession();
+		String studentID=(String)session.getAttribute("studentID");
 
-		boolean result = false;
-		System.out.println("レクチャーの量"+lectureIdList.length);
+		TimeTableManager timeTableManager=new TimeTableManager();
+		ArrayList<TimeTable> timeTableList=new ArrayList<TimeTable>();
+		LectureManager lectureManager=new LectureManager();
+		CourseLectureManager courseLectureManager=new CourseLectureManager();
+
+		try {
+			timeTableList = timeTableManager.getTimeTableList(studentID);
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
+		try{
+			ArrayList<Lecture> lectureList=new ArrayList<Lecture>();
+			ArrayList<CourseLecture> coursingLecture=new ArrayList<CourseLecture>();
+
+			//全ての履修中講義を得る
+			for(TimeTable tt:timeTableList){
+				String timeTableID=tt.getTimeTableID();
+				coursingLecture.addAll(courseLectureManager.getCourseLectureList(timeTableID));
+			}
+
+			//履修中講義と現在の履修講義を比較して、現在にない場合削除
+			for(CourseLecture cl:coursingLecture){
+				//存在するか？
+				boolean exist=false;
+				//取得した講義のリストを回して、存在すればexistをtrueにする
+				//0回ならfalse
+				for(int id:lectureIdList){
+					if(id==cl.getLectureID()){
+						exist=true;
+					}
+				}
+
+				//存在しないなら
+				if(!exist){
+					courseLectureManager.deleteCourseLecture(cl);
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
 		if(lectureIdList.length>0){
 			try {
-				HttpSession session = request.getSession();
-				String studentID=(String)session.getAttribute("studentID");
-
-				TimeTableManager timeTableManager=new TimeTableManager();
-				ArrayList<TimeTable> timeTableList=timeTableManager.getTimeTableList(studentID);
-				LectureManager lectureManager=new LectureManager();
-				CourseLectureManager courseLectureManager=new CourseLectureManager();
-
 				for(int tempID:lectureIdList){
 					if(tempID!=0){
-					TimeTable targetTimeTable=new TimeTable();
-					Lecture lecture =lectureManager.getLecture(tempID);
-					String tempGakki =lecture.getGaitoGakki();
-					//学期から該当の時間割を見つける
-					for(TimeTable tt:timeTableList){
-						if(tt.getTimeSemester().equals(tempGakki)){
-							targetTimeTable=tt;
+						TimeTable targetTimeTable=new TimeTable();
+						Lecture lecture =lectureManager.getLecture(tempID);
+						String tempGakki =lecture.getGaitoGakki();
+						//学期から該当の時間割を見つける
+						for(TimeTable tt:timeTableList){
+							if(tt.getTimeSemester().equals(tempGakki)){
+								targetTimeTable=tt;
+							}
 						}
-					}
 
-					//履修講義クラスに登録
-					CourseLecture courseLecture=new CourseLecture();
-					courseLecture.setLectureID(tempID);
-					courseLecture.setTimeTableID(targetTimeTable.getTimeTableID());
-					courseLecture.setCourseSituation("risyu");
+						//履修講義クラスに登録
+						CourseLecture courseLecture=new CourseLecture();
+						courseLecture.setLectureID(tempID);
+						courseLecture.setTimeTableID(targetTimeTable.getTimeTableID());
+						courseLecture.setCourseSituation("risyu");
 
-					//履修講義クラスに前に履修してた講義があった場合削除
-					ArrayList<CourseLecture> oldCourseLectureList=courseLectureManager.getCourseLectureList(targetTimeTable.getTimeTableID());
-					for(CourseLecture tempCL:oldCourseLectureList){
-						Lecture lc=lectureManager.getLecture(tempCL.getLectureID());
-						if(lc.getPeriod()==lecture.getPeriod()
-								&&lc.getDay().equals(lecture.getDay())){
-							CourseLecture cl=new CourseLecture();
-							cl.setLectureID(lc.getLectureID());
-							cl.setTimeTableID(targetTimeTable.getTimeTableID());
-							courseLectureManager.deleteCourseLecture(cl);
-						}
-					}
-					//履修講義クラスに登録
-					System.out.println(courseLecture.getLectureID());
-					result=courseLectureManager.registerCourseLecture(courseLecture);
+						//履修講義クラスに登録
+						//失敗したら即座にエラー表記
+						System.out.println(courseLecture.getLectureID());
+						if(!courseLectureManager.registerCourseLecture(courseLecture))
+							System.out.println("失敗");
 					}
 				}
-
-
-				System.out.println(result);
-				if (result) {
-					//登録に成功したとき
-					System.out.println("時間割登録成功");
-					getServletContext().getRequestDispatcher("/TimeTableServ").forward(request, response);
-				} else {
-					// 登録に失敗している場合はedit.jspへ
-					System.out.println("時間割登録失敗");
-					getServletContext().getRequestDispatcher("/CreateTable").forward(request, response);
-				}
+				//時間割表示のサーブレットへ
+				getServletContext().getRequestDispatcher("/TimeTableServ").forward(request, response);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 
-		}else{
-			System.out.println("エラー　登録する講義がない");
-			getServletContext().getRequestDispatcher("/CreateTable").forward(request, response);
 		}
+		//履修講義が一つもないなら、すべて削除済みなはずなのでトップ画面を表示するサーブレット
+		getServletContext().getRequestDispatcher("/TimeTableServ").forward(request, response);
 
 	}
+
 	private int[] parseInts(String[] s){
 
-		  int[] x = new int[s.length];
-		  for(int i = 0; i < s.length; i++){
-		    x[i] = Integer.valueOf(s[i]);
-		  }
-		  return x;
+		int[] x = new int[s.length];
+		for(int i = 0; i < s.length; i++){
+			x[i] = Integer.valueOf(s[i]);
+		}
+		return x;
 	}
 }
