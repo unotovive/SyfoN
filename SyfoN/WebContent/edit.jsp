@@ -1048,6 +1048,18 @@
                         br3.style.width = brr3 + "%";
                     }
                 },
+                updated:function(){
+                    var br1 = document.getElementById('probar1n');
+                    console.log(br1)
+                    var br2 = document.getElementById('probar2n');
+                    var br3 = document.getElementById('probar3n');
+                    var brr1 = this.numTwoSum / 24 * 100;
+                    var brr2 = this.numForSum / 108 * 100;
+                    var brr3 = this.numAllSum / 124 * 100;
+                    br1.style.width = brr1 + "%";
+                    br2.style.width = brr2 + "%";
+                    br3.style.width = brr3 + "%";
+                },
                 mounted: function () {
                     const self = this
 
