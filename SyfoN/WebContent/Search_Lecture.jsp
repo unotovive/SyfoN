@@ -27,10 +27,10 @@
 			<nav class="drawer-menu">
 				<ul>
 					<li>
-						<a href="#">トップページ</a>
+						<a href="top.jsp">トップページ</a>
 					</li>
 					<li>
-						<a href="#">講義一覧</a>
+						<a href="Search_Lecture.jsp">講義一覧</a>
 					</li>
 					<li>
 						<a href="#">マイページ</a>
@@ -200,20 +200,19 @@
 			}
 
 			#bar {
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				margin: 0;
-				padding: 0;
-				background: #4568DC;
-				background: -moz-linear-gradient(left, #4568DC, #B06AB3);
-				background: -webkit-linear-gradient(left, #4568DC, #B06AB3);
-				background: linear-gradient(to right, #4568DC, #B06AB3);
-				height: 100px;
-				box-shadow: 10px rgba(0, 0, 0, 0.2);
-			}
-
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                margin: 0;
+                padding: 0;
+                background: #4568DC;
+                background: -moz-linear-gradient(left, #4568DC, #B06AB3);
+                background: -webkit-linear-gradient(left, #4568DC, #B06AB3);
+                background: linear-gradient(to right, #4568DC, #B06AB3);
+                height: 100px;
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, .9);
+            }
 			#mcontent {
 				box-sizing: inherit;
 				width: 100%;
@@ -370,8 +369,6 @@
 				display: block;
 				width: 200px;
 				border: none;
-				border-bottom: 1px solid #757575;
-				background: #fff;
 			}
 
 			label:before {

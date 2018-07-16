@@ -168,7 +168,7 @@ public class ToLecInfo extends HttpServlet {
 
 		HttpSession session = request.getSession();
 
-		int lectureID=(int)session.getAttribute("lectureID");
+		int lectureID=Integer.valueOf(request.getParameter("id"));
 
 		//レクチャーIDからレクチャーの情報を得る
 //		lecture.setLectureID(Integer.valueOf(request.getParameter("lectureID")));
