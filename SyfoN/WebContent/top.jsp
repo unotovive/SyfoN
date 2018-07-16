@@ -27,16 +27,16 @@
             <nav class="drawer-menu">
                 <ul>
                     <li>
-                        <a href="#">トップページ</a>
+                        <a href="TimeTableServ">トップページ</a>
                     </li>
                     <li>
-                        <a href="#">講義一覧</a>
+                        <a href="SearchLecture">講義一覧</a>
                     </li>
                     <li>
-                        <a href="#">マイページ</a>
+                        <a href="Mypagesev">マイページ</a>
                     </li>
                     <li>
-                        <a href="#">ログアウト</a>
+                        <a href="Common_Logout">ログアウト</a>
                     </li>
                 </ul>
             </nav>
