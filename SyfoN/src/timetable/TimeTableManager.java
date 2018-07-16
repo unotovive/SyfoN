@@ -19,9 +19,16 @@ public class TimeTableManager {
 
 
 //新規に時間割を作成
-	public boolean createTimeTable(TimeTable timeTable) throws SQLException{
+	public boolean createTimeTable(String studentID) throws SQLException{
 		boolean result = false;
-		result = timeTableDAO.registerTimeTable(timeTable);
+		result = timeTableDAO.registerTimeTable(studentID);
+		return result;
+	}
+
+	//新規登録した学生の新規の時間割を作成
+	public boolean registerNewTimeTable(String studentID){
+		boolean result=false;
+		result=registerNewTimeTable(studentID);
 		return result;
 	}
 

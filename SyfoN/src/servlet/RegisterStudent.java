@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import student.Student;
 import student.StudentManager;
+import timetable.TimeTableManager;
 
 /**
  * Servlet implementation class AddSystem
@@ -48,6 +49,7 @@ public class RegisterStudent extends HttpServlet {
 
 		Student student = new Student();
 		StudentManager manager= new StudentManager();
+		TimeTableManager ttManager=new TimeTableManager();
 
 		student.setNickName(request.getParameter("name"));
 		student.setStudentID(request.getParameter("studentId"));
@@ -58,19 +60,20 @@ public class RegisterStudent extends HttpServlet {
 		boolean result = false;
 
 		HttpSession session = request.getSession();
-		session.setAttribute("studentRegisted", result);
 
 		try {
 			result=manager.registerStudent(student);
+			result=ttManager.registerNewTimeTable(student.getStudentID());
 		} catch (SQLException e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
 		if(result){
+			//新規登録に成功すればログイン画面
 			getServletContext().getRequestDispatcher("/Common_Login.jsp").forward(request, response);
 		} else{
 			System.out.println("sippai");
-			// ログインに失敗している場合はadd.jspへ
+			// 新規登録に失敗している場合はadd.jspへ
 			getServletContext().getRequestDispatcher("/add.jsp").forward(request, response);
 			}
 		}

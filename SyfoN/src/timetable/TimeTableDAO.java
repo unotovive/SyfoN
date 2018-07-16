@@ -51,23 +51,52 @@ public class TimeTableDAO {
 		return result;
 	}
 
-	public boolean registerTimeTable(TimeTable timeTable) throws SQLException {
+	public boolean registerTimeTable(String studentID) throws SQLException {
 		// timeTableをDBに登録する
 		boolean result = false;
 		Connection connection;
-		String sql = "INSERT INTO timeTable VALUES (?, ?, ?)";
+		String[] semesters={"zenki1","kouki1","zenki2","kouki2","zenki3","kouki3","zenki4","kouki4"};
+
+		try {
+			Class.forName(driverClassName);
+			connection = DriverManager.getConnection(url, user, password);
+			int max=Integer.valueOf(this.getMaxID())+1;
+
+
+			for(int i=0;i<semesters.length;i++){
+			String sql = "INSERT INTO timetable VALUES (?, ?, ?)";
+			PreparedStatement pstmt = connection.prepareStatement(sql);
+
+			pstmt.setString(1, Integer.toString(max)+i);
+			pstmt.setString(2, studentID);
+			pstmt.setString(3, semesters[i]);
+
+			int rowNum=pstmt.executeUpdate();
+			if (rowNum==1) result = true;
+			}
+
+			connection.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	public String getMaxID(){
+		String result="0";
+		final int MAXNO=1;
+		Connection connection;
+		String sql="SELECT MAX(timetable) FROM timetable;";
 
 		try {
 			Class.forName(driverClassName);
 			connection = DriverManager.getConnection(url, user, password);
 			PreparedStatement pstmt = connection.prepareStatement(sql);
 
-			pstmt.setString(1, timeTable.getTimeTableID());
-			pstmt.setString(2, timeTable.getTimeSemester());
-			pstmt.setString(3, timeTable.getStudentID());
-
 			ResultSet resultSet = pstmt.executeQuery();
-			if (resultSet.next()) result = true;
+			resultSet.next();
+
+			result=resultSet.getString(MAXNO);
 
 			resultSet.close();
 			connection.close();
@@ -76,5 +105,6 @@ public class TimeTableDAO {
 		}
 		return result;
 	}
+
 
 }

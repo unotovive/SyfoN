@@ -280,7 +280,7 @@ public class ReviewDAO {
 	}
 
 
-	public String getMaxID(){
+	private String getMaxID(){
 		String result="0";
 		final int MAXNO=1;
 		Connection connection;
