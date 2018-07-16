@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
 import org.json.JSONObject;
 
 import Lecture.Lecture;
+import Lecture.LectureManager;
 import review.Review;
 import review.ReviewManager;
 
@@ -41,42 +42,46 @@ public class Admin_reviewList extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
 		ReviewManager reviewManager = new ReviewManager();
 		ArrayList<Review> result = new ArrayList<Review>();
 		HttpSession session = request.getSession();
-		Lecture stragelec = (Lecture) session.getAttribute("editresult");
-        int lecID = 0;
+		int lectureID = Integer.valueOf(request.getParameter("id"));
+		Lecture lecture=null;
 		try {
-			lecID = stragelec.getLectureID();
-			result = reviewManager.getReviewList(lecID); //LectureID 仮置き
-		}catch(SQLException e){
-			e.printStackTrace();
-		}
+			lecture=new LectureManager().getLecture(lectureID);
+			result = reviewManager.getReviewList(lectureID); //LectureID 仮置き
+
 
 		String rev = "rev";
 		for(int i = 0; i < result.size(); i++) {
 			Map<String,String> reviewDetail = new HashMap<String,String>();
 			reviewDetail.put("投稿者", result.get(i).getStudentID());
 			reviewDetail.put("投稿内容", result.get(i).getComment());
+			reviewDetail.put("id", result.get(i).getReviewID());
 			rev = "rev" + Integer.toString(i);
 			lectureReview.put(rev,reviewDetail);
 		}
-		lectureName.put("講義名", stragelec.getLectureName());
+		lectureName.put("講義名", lecture.getLectureName());
 		lectureMap.put("講義", lectureName);
 		lectureMap.put("投稿", lectureReview);
 		JSONObject reviewListJson=new JSONObject(lectureMap);
         System.out.println(reviewListJson);
         session.setAttribute("lectureList",reviewListJson);
 
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
 
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		Review review = new Review();
@@ -92,8 +97,13 @@ public class Admin_reviewList extends HttpServlet {
 			// TODO 自動生成された catch ブロック
 			e1.printStackTrace();
 		}
-
-
+		if(result){
+			System.out.println("レビュー削除成功");
+			getServletContext().getRequestDispatcher("/Admin_ReviewList.jsp").forward(request, response);
+		}else{
+			System.out.println("レビュー削除失敗");
+			getServletContext().getRequestDispatcher("/Admin_ReviewList.jsp").forward(request, response);
+		}
 	}
 
 }

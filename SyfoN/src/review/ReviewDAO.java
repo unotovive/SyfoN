@@ -77,7 +77,7 @@ public class ReviewDAO {
 
 			pstmt.setString(1, reviewID);
 
-			ResultSet resultSet = pstmt.executeQuery(sql);
+			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 
 				String revID = resultSet.getString("reviewid");

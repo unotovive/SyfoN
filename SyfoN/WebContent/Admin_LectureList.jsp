@@ -25,7 +25,6 @@
           <span>講義の新規登録</span>
         </a>
       </div>
-      <form action="adominLectureList" method="post">
         <div id="lectureTable">
           <table border="1">
             <tr>
@@ -37,7 +36,8 @@
               <th width="50px"></th>
               <th width="50px"></th>
             </tr>
-            <tr v-for="item in table">
+            <tr v-for="item in table" @click="execPost('Admin_reviewList', item.授業コード);return false;" class="stylho">
+			<form action="Admin_reviewList" method="GET">
               <td>{{item.開講曜日}}</td>
               <td>{{item.授業コード}}</td>
               <td>{{item.講義名}}</td>
@@ -49,6 +49,7 @@
               <td>
                   <span>削除</span>
               </td>
+              </form>
             </tr>
           </table>
         </div>
@@ -64,7 +65,26 @@
         test: 'aaa'
       },
       methods: {
-
+    	  execPost(action, data) {
+				// フォームの生成
+				console.log(data)
+				var form = document.createElement("form");
+				form.setAttribute("action", action);
+				form.setAttribute("method", "post");
+				form.style.display = "none";
+				document.body.appendChild(form);
+				// パラメタの設定
+				if (data !== undefined) {
+						var input = document.createElement('input');
+						input.setAttribute('type', 'hidden');
+						input.setAttribute('name', 'id');
+						input.setAttribute('value', data);
+						form.appendChild(input);
+				}
+				// submit
+				console.log(form);
+				form.submit();
+			}
       },
       mounted(){
     	  const self=this
