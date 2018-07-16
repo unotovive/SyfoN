@@ -36,8 +36,8 @@
               <th width="50px"></th>
               <th width="50px"></th>
             </tr>
+            <form action="Admin_reviewList" method="GET">
             <tr v-for="item in table" @click="execPost('Admin_reviewList', item.授業コード);return false;" class="stylho">
-			<form action="Admin_reviewList" method="GET">
               <td>{{item.開講曜日}}</td>
               <td>{{item.授業コード}}</td>
               <td>{{item.講義名}}</td>
@@ -49,8 +49,8 @@
               <td>
                   <span>削除</span>
               </td>
-              </form>
             </tr>
+            </form>
           </table>
         </div>
       </form>
