@@ -137,7 +137,7 @@ public class TimeTableServ extends HttpServlet {
 						lectureDataMap.put("lectureid",Integer.toString(lc.getLectureID()) );
 						lectureDataMap.put("room",lc.getRoom() );
 						lectureDataMap.put("type",this.AdaptType(lc.getType()) );
-						lectureDataMap.put("unit",new UnitManager().getUnit(lc.getUnit()).getUnitName());
+						lectureDataMap.put("unit",lc.getUnit());
 					}else{
 						lectureDataMap.put("taninum","0");
 						lectureDataMap.put("name","0");
@@ -210,6 +210,7 @@ public class TimeTableServ extends HttpServlet {
 			unitDataMap.put("name", u.getUnitName());
 			unitDataMap.put("taninum", Integer.toString(u.getUnitTani()));
 			variousUnit.put("unit"+count, unitDataMap);
+			count++;
 		}
 
 		unitMap.put("units", variousUnit);
