@@ -20,7 +20,7 @@
 				<a href="Admin_LectureListServlet"> <span>キャンセル</span>
 				</a>
 			</div>
-			<form action="adminRegister" method="post" name="adminRegister">
+			<form action="AdminLectureRegisterServlet" method="post" name="adminRegister">
 				<div id="lectureTable">
 					<table id="inputtable">
 						<tr>
