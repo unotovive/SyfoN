@@ -56,10 +56,10 @@
             <form >
               <td>{{item.投稿者}}</td>
               <td>{{item.投稿内容}}</td>
-              <td>
+
                <td @click="execPost('Admin_ReviewDelete', item.id );return false;" class="btn">
                 <span>削除</span>
-              </td>
+
               </td>
             </tr>
           </table>

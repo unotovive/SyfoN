@@ -45,14 +45,14 @@
 							<td>
 								<select id="inputformSmall" name="kaikoki" v-model="table.該当学期">
 										<option value="">学期を選択してください</option>
-										<option value="1年生前期">1年生前期</option>
-										<option value="1年生後期">1年生後期</option>
-										<option value="2年生前期">2年生前期</option>
-										<option value="2年生後期">2年生後期</option>
-										<option value="3年生前期">3年生前期</option>
-										<option value="3年生後期">3年生後期</option>
-										<option value="4年生前期">4年生前期</option>
-										<option value="4年生後期">4年生後期</option>
+										<option value="zenki1">1年生前期</option>
+										<option value="kouki1">1年生後期</option>
+										<option value="zenki2">2年生前期</option>
+										<option value="kouki2">2年生後期</option>
+										<option value="zenki3">3年生前期</option>
+										<option value="kouki3">3年生後期</option>
+										<option value="zenki4">4年生前期</option>
+										<option value="kouki4">4年生後期</option>
 								</select>
 							</label
 							></td>
@@ -161,10 +161,10 @@
 							<td>種類</td>
 							<td><select id="inputformSmall" required name="type"
 								v-model="table.種類">
-									<option value="" >英語</option>
-								<option value="" >人科</option>
-								<option value="" >必修</option>
-								<option value="" >選択</option>
+									<option value="英語" >英語</option>
+								<option value="人科" >人科</option>
+								<option value=必修 >必修</option>
+								<option value="選択" >選択</option>
 							</select></td>
 						</tr>
 					</table>
