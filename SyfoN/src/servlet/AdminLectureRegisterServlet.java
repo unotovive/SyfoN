@@ -62,7 +62,7 @@ public class AdminLectureRegisterServlet extends HttpServlet {
 		int strageID = (Integer.parseInt(request.getParameter("授業コード")));
 
 
-		Lecture.setLectureID(strageID);
+		Lecture.setLectureID(Integer.parseInt(request.getParameter("授業コード")));
 		Lecture.setLectureName(request.getParameter("授業名"));
 		Lecture.setGaitoGakki(request.getParameter("該当学期"));
 		Lecture.setDay(request.getParameter("曜日"));

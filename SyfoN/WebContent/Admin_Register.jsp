@@ -177,22 +177,6 @@
 		</div>
 	</div>
 
-
-
- //	<%
- // 	Map<String,ArrayList> map3=new HashMap<String,ArrayList>();
- // 	ArrayList<String> type = new ArrayList<String>();
- // 	type.add("必修");
- // 	type.add("英語");
- // 	type.add("人科");
- // 	//type.add("選択科目");
- // 	map3.put("種類",type);
- // 	JSONObject jsonTest3=new JSONObject(map3);
-//	session.setAttribute("jsonTest3",jsonTest3);
-  //%>
-
-
-
 	<script>
         var app = new Vue({
                 el: '#app',
