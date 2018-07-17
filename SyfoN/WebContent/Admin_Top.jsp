@@ -14,7 +14,7 @@
 				<h2>管理者機能</h2>
 			</div>
 			<div id="logout">
-				<a href="#" id="logoutButton">
+				<a href="Logout" id="logoutButton">
 					<span id="logoutSpan">ログアウト</span>
 				</a>
 			</div>

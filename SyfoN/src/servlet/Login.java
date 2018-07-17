@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import Admin.Admin;
-import Admin.AdminManager;
 import student.Student;
 import student.StudentManager;
 
@@ -48,26 +46,16 @@ public class Login extends HttpServlet {
 
 		Student student = new Student();
 		StudentManager mane = new StudentManager();
-		Admin admin = new Admin();
-		AdminManager adminmane = new AdminManager();
-
 
 		student.setStudentID(request.getParameter("studentID"));
 		student.setPassWord(request.getParameter("pass"));
 		String ID = request.getParameter("studentID");
 
-		admin.setAdminID(request.getParameter("studentID"));
-		admin.setPassword(request.getParameter("pass"));
-
 		boolean result = false;
-
-		if(request.getParameter("admincheck")!=null)
-		{     //管理者のログイン
 		try {
-
-			result = mane.check(student);
-			student=mane.getStudent(ID);
+			result=mane.check(student);
 		} catch (SQLException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -86,8 +74,6 @@ public class Login extends HttpServlet {
 			getServletContext().getRequestDispatcher("/Common_Login.jsp").forward(request, response);
 			}
 		}
-
-	}
 }
 
 
