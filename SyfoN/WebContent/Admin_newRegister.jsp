@@ -161,6 +161,10 @@
 							<td>種類</td>
 							<td><select id="inputformSmall" name="type"
 								v-model="table.種類">
+								<option value="" >英語</option>
+								<option value="" >人科</option>
+								<option value="" >必修</option>
+								<option value="" >選択</option>
 							</select></td>
 						</tr>
 					</table>

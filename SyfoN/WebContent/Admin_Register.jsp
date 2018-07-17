@@ -154,14 +154,17 @@
 							<td>該当ユニット</td>
 							<td><select id="inputformSmall" required name="unit"
 								v-model="table.ユニット">
-									<option value=""></option>
+									<option v-for="unit in unitTable" value="unitTable[unit]">{{unit.name}}</option>
 							</select></td>
 						</tr>
 						<tr>
 							<td>種類</td>
 							<td><select id="inputformSmall" required name="type"
 								v-model="table.種類">
-									<option value=""></option>
+									<option value="" >英語</option>
+								<option value="" >人科</option>
+								<option value="" >必修</option>
+								<option value="" >選択</option>
 							</select></td>
 						</tr>
 					</table>

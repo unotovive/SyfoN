@@ -169,7 +169,7 @@ public class Admin_newLecture extends HttpServlet {
 		session.setAttribute("unitList", unitListJson);
 
 
-		getServletContext().getRequestDispatcher("/Admin_Register.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/Admin_newRegister.jsp").forward(request, response);
 	}
 	private String NoNull(String str){
 		if(str==null){
