@@ -54,6 +54,7 @@ public class EditReview extends HttpServlet {
 		rev.setComment(request.getParameter("comment"));
 		rev.setTotalPoint(Float.parseFloat(request.getParameter("totalPoint")));
 		rev.setMathPoint(Float.parseFloat(request.getParameter("mathPoint")));
+		rev.setProfessorPoint(Float.parseFloat(request.getParameter("professorPoint")));
 		rev.setProgramPoint(Float.parseFloat(request.getParameter("programPoint")));
 		rev.setAttendPoint(Float.parseFloat(request.getParameter("attendPoint")));
 		rev.setGroupworkPoint(Float.parseFloat(request.getParameter("groupworkPoint")));
@@ -67,6 +68,7 @@ public class EditReview extends HttpServlet {
 
 		if (result) {
 			// レビュー作成に成功したとき
+			System.out.println(Float.parseFloat(request.getParameter("professorPoint")));
 			System.out.println("レビュー作成完了");
 			//セッションの破棄
 			session.removeAttribute("tempReveiwID");
