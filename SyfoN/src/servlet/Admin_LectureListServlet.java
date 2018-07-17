@@ -58,6 +58,8 @@ public class Admin_LectureListServlet extends HttpServlet {
 		ArrayList<Lecture> result = new ArrayList<Lecture>();
 
 		try {
+			lecture = new HashMap<String , Map>();
+			lectureListMap=new HashMap<String,Map>();
 			System.out.println("リストの始まり");
 			result = mane.getAllLecture();
 			System.out.println(result.size());
