@@ -245,10 +245,9 @@ public class ReviewDAO {
 
 			pstmt.setString(1, review.getReviewID());
 
-			ResultSet resultSet = pstmt.executeQuery();
-			if (resultSet.next()) result = true;
+			int rowNum = pstmt.executeUpdate();
+			if (rowNum==1) result = true;
 
-			resultSet.close();
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();

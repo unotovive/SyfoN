@@ -102,28 +102,28 @@ public class Admin_LectureEditServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		lectureName.put("授業コード", Integer.toString(editLectureID));
-		lectureName.put("授業名", editLecture.getLectureName());
-		lectureName.put("担当教員", professor.getProfessorID()); //aaaaaaaaaaaaaa
-		lectureName.put("該当学期", editLecture.getGaitoGakki());
-		lectureName.put("曜日", editLecture.getDay());
-		lectureName.put("時限", Integer.toString(editLecture.getPeriod()));
-		lectureName.put("教室番号", editLecture.getRoom());
-		lectureName.put("単位数", Integer.toString(editLecture.getTaniNum()));
-		lectureName.put("目的概要", editLecture.getPurpose());
-		lectureName.put("達成目標", editLecture.getAchieve());
-		lectureName.put("関連科目", editLecture.getRelation());
-		lectureName.put("履修条件", editLecture.getTerm());
-		lectureName.put("教科書名", editLecture.getTextbook());
-		lectureName.put("評価方法", editLecture.getHyokahoho());
-		lectureName.put("教育目標との対応", editLecture.getKyoikumokuhyo());
-		lectureName.put("事前事後学習", editLecture.getYosyufukusyu());
-		lectureName.put("メール", editLecture.getEmail());
-		lectureName.put("質問", editLecture.getSupport());
-		lectureName.put("注意事項", editLecture.getCaution());
-		lectureName.put("助言", editLecture.getAdvice());
-		lectureName.put("ユニット", unitID);
-		lectureName.put("種類", editLecture.getType());
+		lectureName.put("授業コード", this.NoNull(Integer.toString(editLectureID)));
+		lectureName.put("授業名", this.NoNull(editLecture.getLectureName()));
+		lectureName.put("担当教員", this.NoNull(professor.getProfessorID())); //aaaaaaaaaaaaaa
+		lectureName.put("該当学期", this.NoNull(editLecture.getGaitoGakki()));
+		lectureName.put("曜日", this.NoNull(editLecture.getDay()));
+		lectureName.put("時限", this.NoNull(Integer.toString(editLecture.getPeriod())));
+		lectureName.put("教室番号", this.NoNull(editLecture.getRoom()));
+		lectureName.put("単位数", this.NoNull(Integer.toString(editLecture.getTaniNum())));
+		lectureName.put("目的概要", this.NoNull(editLecture.getPurpose()));
+		lectureName.put("達成目標", this.NoNull(editLecture.getAchieve()));
+		lectureName.put("関連科目", this.NoNull(editLecture.getRelation()));
+		lectureName.put("履修条件", this.NoNull(editLecture.getTerm()));
+		lectureName.put("教科書名", this.NoNull(editLecture.getTextbook()));
+		lectureName.put("評価方法", this.NoNull(editLecture.getHyokahoho()));
+		lectureName.put("教育目標との対応", this.NoNull(editLecture.getKyoikumokuhyo()));
+		lectureName.put("事前事後学習", this.NoNull(editLecture.getYosyufukusyu()));
+		lectureName.put("メール", this.NoNull(editLecture.getEmail()));
+		lectureName.put("質問", this.NoNull(editLecture.getSupport()));
+		lectureName.put("注意事項", this.NoNull(editLecture.getCaution()));
+		lectureName.put("助言", this.NoNull(editLecture.getAdvice()));
+		lectureName.put("ユニット", this.NoNull(editLecture.getUnit()));
+		lectureName.put("種類", this.NoNull(editLecture.getType()));
 
 		JSONObject registLectureJson=new JSONObject(lectureName);
         System.out.println(registLectureJson);
@@ -153,6 +153,13 @@ public class Admin_LectureEditServlet extends HttpServlet {
         session.setAttribute("unitList", unitListJson);
 
         getServletContext().getRequestDispatcher("/Admin_Register.jsp").forward(request, response);
+	}
+	private String NoNull(String str){
+		if(str==null){
+			return "";
+		}
+		return str;
+
 	}
 }
 

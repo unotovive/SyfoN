@@ -56,7 +56,6 @@ public class Admin_LectureListServlet extends HttpServlet {
 		ProfessorToLectureManager ptlManager=new ProfessorToLectureManager();
 		HttpSession session = request.getSession();
 
-
 		ArrayList<Lecture> result = new ArrayList<Lecture>();
 
 		try {
@@ -83,8 +82,7 @@ public class Admin_LectureListServlet extends HttpServlet {
 	        session.setAttribute("lectureList",lectureListJson);
 
 			getServletContext().getRequestDispatcher("/Admin_LectureList.jsp").forward(request, response);
-	//        Lecture lecresult = new Lecture();
-	//        lecresult.setLectureID(Integer.parseInt(request.getParameter("授業コード")));
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -100,7 +98,7 @@ public class Admin_LectureListServlet extends HttpServlet {
 		LectureManager mane = new LectureManager();
 		Lecture editresult = new Lecture();
 		boolean remresult = false;
-		Lecture.setLectureID((Integer.parseInt(request.getParameter("授業コード"))));
+		Lecture.setLectureID((Integer.parseInt(request.getParameter("id"))));
 
 		HttpSession session = request.getSession();
 

@@ -52,7 +52,7 @@
               <td @click="execPost('Admin_LectureEditServlet', item.授業コード);return false;" class="btn">
                 <span>変更</span>
               </td>
-              <td @click="execPost('Admin_LectureDelete', item.授業コード);return false;" class="btn">
+              <td @click="execPost('Admin_LectureDeleteServlet', item.授業コード);return false;" class="btn">
                 <span>削除</span>
               </td>
             </tr>
@@ -116,7 +116,7 @@
         background: #fff5e5;
       }
   .btn{
-    text-decoration: underline        
+    text-decoration: underline
   }
   .btn:hover{
     color:#FFF;

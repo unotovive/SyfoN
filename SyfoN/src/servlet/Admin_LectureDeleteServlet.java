@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import Lecture.Lecture;
 import Lecture.LectureManager;
 import courseLecture.CourseLectureManager;
+import professorToLecture.ProfessorToLectureManager;
+import review.ReviewManager;
 
 /**
  * Servlet implementation class Admin_LectureDeleteServlet
@@ -47,19 +49,24 @@ public class Admin_LectureDeleteServlet extends HttpServlet {
 
 		LectureManager lectureManager=new LectureManager();
 		CourseLectureManager clManager=new CourseLectureManager();
+		ReviewManager rManager=new ReviewManager();
+		ProfessorToLectureManager ptlManager=new ProfessorToLectureManager();
 
 		boolean result=false;
 		Lecture deleteLecture=new Lecture();
 		try {
+			result=ptlManager.removePTLOfLecture(lectureID);
+			result=rManager.removeReviewOfLecture(lectureID);
+			result=clManager.deleteCourseLecture2(lectureID);
+
 			deleteLecture=lectureManager.getLecture(lectureID);
 			result=lectureManager.removeLecture(deleteLecture);
-			if(!result) System.out.println("講義削除失敗");
-			result=clManager.deleteCourseLecture2(lectureID);
-			if(!result) System.out.println("履修講義削除失敗");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		System.out.print("成功");
+		getServletContext().getRequestDispatcher("/Admin_LectureListServlet").forward(request, response);
 	}
 
 }

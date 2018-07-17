@@ -84,10 +84,9 @@ public class ProfessorToLectureDAO {
 			pstmt.setString(1, ptl.getProfessorID());
 			pstmt.setInt(2, ptl.getLectureID());
 
-			ResultSet resultSet = pstmt.executeQuery();
-			if (resultSet.next()) result = true;
+			int rowNum = pstmt.executeUpdate();
+			if (rowNum==1) result = true;
 
-			resultSet.close();
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -107,10 +106,33 @@ public class ProfessorToLectureDAO {
 			pstmt.setString(1, ptl.getProfessorID());
 			pstmt.setInt(2, ptl.getLectureID());
 
-			ResultSet resultSet = pstmt.executeQuery();
-			if (resultSet.next()) result = true;
+			int rowNum = pstmt.executeUpdate();
+			if (rowNum==1) result = true;
 
-			resultSet.close();
+
+			connection.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	public boolean removePTL(ProfessorToLecture ptl) {
+		// TODO Auto-generated method stub
+		boolean result = false;
+		Connection connection;
+		String sql = "DELETE FROM professortolecture WHERE lectureID = ?";
+
+		try {
+			Class.forName(driverClassName);
+			connection = DriverManager.getConnection(url, user, password);
+			PreparedStatement pstmt = connection.prepareStatement(sql);
+
+			pstmt.setInt(1, ptl.getLectureID());
+
+			int rowNum = pstmt.executeUpdate();
+			if (rowNum==1) result = true;
+
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();

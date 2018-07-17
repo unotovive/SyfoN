@@ -67,10 +67,9 @@ public class CourseLectureDAO {
 			pstmt.setInt(2, courseLecture.getLectureID());
 			pstmt.setString(3, courseLecture.getCourseSituation());
 
-			ResultSet resultSet = pstmt.executeQuery();
-			if (resultSet.next()) result = true;
+			int rowNum = pstmt.executeUpdate();
+			if (rowNum==1) result = true;
 
-			resultSet.close();
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -93,10 +92,9 @@ public class CourseLectureDAO {
 			pstmt.setInt(1, courseLecture.getLectureID());
 			pstmt.setString(2, courseLecture.getCourseSituation());
 
-			ResultSet resultSet = pstmt.executeQuery();
-			if (resultSet.next()) result = true;
+			int rowNum = pstmt.executeUpdate();
+			if (rowNum>=0) result = true;
 
-			resultSet.close();
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -117,10 +115,9 @@ public class CourseLectureDAO {
 
 			pstmt.setString(1, courseLecture.getTimeTableID());
 
-			ResultSet resultSet = pstmt.executeQuery();
-			if (resultSet.next()) result = true;
+			int rowNum = pstmt.executeUpdate();
+			if (rowNum>=0) result = true;
 
-			resultSet.close();
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -131,7 +128,7 @@ public class CourseLectureDAO {
 	public boolean deleteCourseLecture2(int lectureID){
 		boolean result = false;
 		Connection connection;
-		String sql = "DELETE FROM timeTable WHERE lectureTableID = ?";
+		String sql = "DELETE FROM courselecture WHERE lectureid = ?";
 
 		try {
 			Class.forName(driverClassName);
