@@ -41,36 +41,19 @@
 			</nav>
 			<div id="mcontent">
 				<div id="panel">
-					<h2>マイページ・設定</h2>
+					<h2>マイページ・編集</h2>
 					<form class="form" action="Mypageedit" method="POST">
 						<h3>学籍番号 {{table.id}}</h3>
-						<table id="table">
-							<tr>
-								<td>ニックネーム</td>
-								<td>
-									<input type="text" v-model="table.name" name="name" required>
-								</td>
-							</tr>
-							<tr>
-								<td>学年</td>
-								<td>
-									<input type="text" v-model="table.grade" name="grade" required>
-								</td>
-							</tr>
-							<tr>
-								<td>メールアドレス</td>
-								<td>
-									<input type="text" v-model="table.mail" name="mail" required>
-								</td>
-							</tr>
-							<tr>
-								<td>パスワード</td>
-								<td>
-									<input type="text" v-model="table.pass" name="pass" required>
-								</td>
-							</tr>
-						</table>
-						<input class="edit" type="submit" value="確定する">
+
+									<input type="text" v-model="table.name" name="name" required placeholder="名前">
+
+									<input type="text" v-model="table.grade" name="grade" required placeholder="学年">
+
+									<input type="text" v-model="table.mail" name="mail" required placeholder="メール">
+
+									<input type="text" v-model="table.pass" name="pass" required placeholder="パスワード">
+		
+									<input class="edit" type="submit" value="確定する">
 					</form>
 				</div>
 			</div>
@@ -98,6 +81,55 @@
 		<style scoped>
 			@import url('https://fonts.googleapis.com/css?family=Gruppo|Handlee|Itim|Jura|Life+Savers:700|Nothing+You+Could+Do|Short+Stack');
 			/*デザインテンプレート的なもの、カードの追加は背景白とシャドウをいい感じに入れればあとは何でもOK説*/
+
+
+			input::-webkit-input-placeholder,
+			button {
+				transition: all 0.3s ease-in-out;
+			}
+			form {
+				box-sizing: border-box;
+				width: 100%;
+				margin: 0 0;
+			}
+
+			form h1 {
+				box-sizing: border-box;
+				padding: 20px;
+			}
+
+			input {
+				margin: 0 auto;
+				margin-top: 30px;
+				width: 300px;
+				display: block;
+				border: none;
+				padding: 10px 0;
+				border-bottom: solid 1px #7532e0;
+				transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+				background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #4568DC 4%);
+				background-position: -300px 0;
+				background-size: 300px 100%;
+				background-repeat: no-repeat;
+				color: #4568DC;
+			}
+
+			input:focus,
+			input:valid {
+				box-shadow: none;
+				outline: none;
+				background-position: 0 0;
+			}
+
+			input:focus::-webkit-input-placeholder,
+			input:valid::-webkit-input-placeholder {
+				color: #4568DC;
+				font-size: 11px;
+				-webkit-transform: translateY(-20px);
+				transform: translateY(-20px);
+				visibility: visible !important;
+				z-index: 900;
+			}
 
 			#app {
 				width: 100vw;
@@ -127,7 +159,7 @@
 				background: -webkit-linear-gradient(left, #4568DC, #B06AB3);
 				background: linear-gradient(to right, #4568DC, #B06AB3);
 				height: 100px;
-				box-shadow: 10px rgba(0, 0, 0, 0.2);
+				box-shadow: 0 0 10px 0 rgba(0, 0, 0, .9);
 			}
 
 			#mcontent {
@@ -159,7 +191,7 @@
 				box-sizing: inherit;
 				margin: 0 auto;
 				margin-top: 80px;
-				padding:2% 1%;
+				padding: 2% 1%;
 			}
 
 			#reviewPanel {
@@ -199,53 +231,25 @@
 			}
 
 			.edit {
-                display: inline-block;
-                height: 5%;
-				font-size:1.1em;
-                margin-left: 40%;
-                margin-right: 10%;
-                margin-top: 2%;
-                margin-bottom: 0;
-                border-radius: 50px;
-                border: #4568DC 3px solid;
-                background: #FFF;
-                transition: .2;
-                color: #4568DC;
-                font-size: 1em;
-                clear: both;
-            }
-            .edit:hover{
-                opacity: .8;
-            }
-
-			#back {
 				display: inline-block;
-				background-color: #A4A4A4;
-				/*背景色*/
-				color: #FFF;
-				/*文字色*/
+				height: 3%;
+				font-size: 1.1em;
+				margin-left: 20%;
+				margin-right: 10%;
+				margin-bottom: 0;
+				border-radius: 50px;
+				border: #4568DC 3px solid;
+				background: #FFF;
+				transition: .2;
+				color: #4568DC;
 				font-size: 1em;
-				/*文字サイズ*/
-				line-height: 1;
-				text-decoration: none;
-				letter-spacing: 0.05em;
-				/*字間*/
-				padding: 0.2em 1em;
-				/*ボタン内の余白*/
-				border-radius: 3px;
-				/*角の丸み*/
-				cursor: pointer;
-				box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-				/*影*/
-				-webkit-tap-highlight-color: transparent;
-				transition: .3s ease-out;
-				/*変化を緩やかに*/
+				clear: both;
 			}
 
-			#back:hover {
-				box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
-				/*浮き上がるように*/
+			.edit:hover {
+				opacity: .8;
 			}
+
 
 			#table {
 				font-size: 20px;
@@ -254,18 +258,22 @@
 				border-spacing: 25px;
 			}
 
-			input {
-				font-size: 15px;
-				padding: 10px 10px 10px 5px;
-				display: block;
+			#text-field {
+				position: relative;
+				margin-top: 1.5rem;
+
+				padding-bottom: 0.5rem;
+				background-color: transparent;
 				border: none;
-				border-bottom: 1px solid #757575;
-			}
-
-			input:focus {
 				outline: none;
+				border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+				transition: 256ms;
+
 			}
 
+			#text-field {
+				border-bottom: 2px solid blue;
+			}
 
 			h1 {
 				margin: 20px;
@@ -276,7 +284,7 @@
 
 			h2 {
 				font-size: 2em;
-				margin:0 auto;
+				margin: 0 auto;
 				margin-top: 4%;
 			}
 
