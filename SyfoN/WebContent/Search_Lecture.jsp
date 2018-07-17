@@ -25,21 +25,21 @@
 			</label>
 			<label class="close-menu" for="checked"></label>
 			<nav class="drawer-menu">
-                <ul>
-                    <li>
-                        <a href="TimeTableServ">トップページ</a>
-                    </li>
-                    <li>
-                        <a href="Search_Lecture.jsp">講義一覧</a>
-                    </li>
-                    <li>
-                        <a href="Mypagesev">マイページ</a>
-                    </li>
-                    <li>
-                        <a href="Logout">ログアウト</a>
-                    </li>
-                </ul>
-            </nav>
+				<ul>
+					<li>
+						<a href="TimeTableServ">トップページ</a>
+					</li>
+					<li>
+						<a href="Search_Lecture.jsp">講義一覧</a>
+					</li>
+					<li>
+						<a href="Mypagesev">マイページ</a>
+					</li>
+					<li>
+						<a href="Logout">ログアウト</a>
+					</li>
+				</ul>
+			</nav>
 			<div id="mcontent">
 				<div id="panel">
 					<form action="SearchLecture" method="post">
@@ -107,7 +107,7 @@
 								</td>
 							</tr> -->
 							</table>
-							<button id="submit" type="submit">検索</button>
+							<button class="edit" type="submit">検索</button>
 						</div>
 					</form>
 					<div id="pageBodyRight">
@@ -160,11 +160,11 @@
 						document.body.appendChild(form);
 						// パラメタの設定
 						if (data !== undefined) {
-								var input = document.createElement('input');
-								input.setAttribute('type', 'hidden');
-								input.setAttribute('name', 'id');
-								input.setAttribute('value', data);
-								form.appendChild(input);
+							var input = document.createElement('input');
+							input.setAttribute('type', 'hidden');
+							input.setAttribute('name', 'id');
+							input.setAttribute('value', data);
+							form.appendChild(input);
 						}
 						// submit
 						console.log(form);
@@ -199,19 +199,20 @@
 			}
 
 			#bar {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                margin: 0;
-                padding: 0;
-                background: #4568DC;
-                background: -moz-linear-gradient(left, #4568DC, #B06AB3);
-                background: -webkit-linear-gradient(left, #4568DC, #B06AB3);
-                background: linear-gradient(to right, #4568DC, #B06AB3);
-                height: 100px;
-                box-shadow: 0 0 10px 0 rgba(0, 0, 0, .9);
-            }
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				margin: 0;
+				padding: 0;
+				background: #4568DC;
+				background: -moz-linear-gradient(left, #4568DC, #B06AB3);
+				background: -webkit-linear-gradient(left, #4568DC, #B06AB3);
+				background: linear-gradient(to right, #4568DC, #B06AB3);
+				height: 100px;
+				box-shadow: 0 0 10px 0 rgba(0, 0, 0, .9);
+			}
+
 			#mcontent {
 				box-sizing: inherit;
 				width: 100%;
@@ -265,19 +266,22 @@
 				margin: 0 auto;
 			}
 
-			.table {
+			#table {
 				width: 100%;
 				height: 80%;
 				border-spacing: 25px;
 				overflow: auto;
 			}
-			.stylho{
+
+			.stylho {
 				transition: .1s;
 			}
-			.stylho:hover{
-				background:#4568DC;
+
+			.stylho:hover {
+				background: #4568DC;
 				color: #fff;
 			}
+
 			.tablem {}
 
 			#comment {
@@ -290,35 +294,6 @@
 				margin-left: 30px;
 			}
 
-			#submit {
-				margin-left: 300px;
-				display: inline-block;
-				background-color: #26a69b;
-				/*背景色*/
-				color: #FFF;
-				/*文字色*/
-				font-size: 1em;
-				/*文字サイズ*/
-				line-height: 1;
-				text-decoration: none;
-				letter-spacing: 0.05em;
-				/*字間*/
-				padding: 0.2em 1em;
-				/*ボタン内の余白*/
-				border-radius: 3px;
-				/*角の丸み*/
-				cursor: pointer;
-				box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-				/*影*/
-				-webkit-tap-highlight-color: transparent;
-				transition: .3s ease-out;
-				/*変化を緩やかに*/
-			}
-
-			#submit:hover {
-				box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
-				/*浮き上がるように*/
-			}
 
 			#back {
 				display: inline-block;
@@ -349,6 +324,26 @@
 				/*浮き上がるように*/
 			}
 
+			.edit {
+				display: inline-block;
+				height: 15%;
+				width:30%;
+				margin-left: 25%;
+				margin-right: 10%;
+				margin-top: 2%;
+				margin-bottom: 0;
+				border-radius: 50px;
+				border: #4568DC 3px solid;
+				background: #FFF;
+				transition: .2;
+				color: #4568DC;
+				font-size: 1em;
+				clear: both;
+			}
+
+			.edit:hover {
+				opacity: .8;
+			}
 
 
 			input {
@@ -356,7 +351,7 @@
 				padding: 10px 10px 10px 5px;
 				display: block;
 				border: none;
-				border-bottom: 1px solid #757575;
+				border-bottom: 3px solid #4568DC;
 			}
 
 			input:focus {
@@ -380,7 +375,7 @@
 				height: 0;
 				margin: -2px 0 0 0;
 				border: none;
-				border-bottom: 1px solid #757575;
+				border-bottom: 3px solid #4568DC;
 			}
 
 			select {
@@ -395,7 +390,10 @@
 				border-radius: 5px;
 				background: transparent;
 			}
-
+			select{
+				border-bottom: #4568DC 3px solid;
+				border-radius:0;
+			}
 			::-ms-expand {
 				display: none;
 			}
@@ -608,4 +606,3 @@
 	</body>
 
 	</html>
-
