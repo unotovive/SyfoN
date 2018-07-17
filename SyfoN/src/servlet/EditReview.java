@@ -42,6 +42,8 @@ public class EditReview extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		request.setCharacterEncoding("UTF-8");
+
 		Review rev = new Review();
 		ReviewManager mane = new ReviewManager();
 
@@ -68,9 +70,8 @@ public class EditReview extends HttpServlet {
 			System.out.println("レビュー作成完了");
 			//セッションの破棄
 			session.removeAttribute("tempReveiwID");
-			session.removeAttribute("tempLectureID");
 			//detail.jspへ
-			getServletContext().getRequestDispatcher("/detail.jsp").forward(request, response);
+			getServletContext().getRequestDispatcher("/ToLecInfo").forward(request, response);
 		} else {
 			// ログインに失敗している場合はreview.jspへ
 			System.out.println("レビュー作成失敗");

@@ -41,17 +41,23 @@ public class toEditReview extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		System.out.println("get");
 
-		//評価編集ボタン
-		//テスト用
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		request.setCharacterEncoding("UTF-8");
+
 		HttpSession session =request.getSession();
 		ReviewManager reviewManager=new ReviewManager();
-		session.setAttribute("studentID", "16fi888");
 		String studentID=(String)session.getAttribute("studentID");
 
-		//int lectureID=(int)request.getAttribute("id");
-		//テスト用
-		int lectureID=161001;
+		int lectureID=(int)session.getAttribute("tempLectureID");
 
 		Review review=new Review();
 		review.setLectureID(lectureID);
@@ -100,7 +106,6 @@ public class toEditReview extends HttpServlet {
 			System.out.println(reviewJson);
 
 			//その他情報をセッションに入れる
-			session.setAttribute("tempLectureID", lectureID);
 			session.setAttribute("tempReviewID",targetReview.getReviewID());
 			getServletContext().getRequestDispatcher("/review.jsp").forward(request, response);
 
@@ -109,15 +114,6 @@ public class toEditReview extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
 	}
 
 	private String AdaptDay(String day){
