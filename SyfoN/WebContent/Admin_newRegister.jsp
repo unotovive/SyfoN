@@ -61,7 +61,7 @@
 							<td>曜日</td>
 							<td>
 								<select id="inputformSmall" name="kaikoki" v-model="table.曜日">
-										<option value="">学期を選択してください</option>
+										<option value="">曜日を選択してください</option>
 										<option value="月">月</option>
 										<option value="火">火</option>
 										<option value="wednesday">水</option>
@@ -152,16 +152,15 @@
 						</tr>
 						<tr>
 							<td>該当ユニット</td>
-							<td><select id="inputformSmall" required name="unit"
+							<td><select id="inputformSmall" name="unit"
 								v-model="table.ユニット">
-									<option value=""></option>
+									<option v-for="unit in unitTable" value="unitTable[unit]">{{unit.name}}</option>
 							</select></td>
 						</tr>
 						<tr>
 							<td>種類</td>
-							<td><select id="inputformSmall" required name="type"
+							<td><select id="inputformSmall" name="type"
 								v-model="table.種類">
-									<option value=""></option>
 							</select></td>
 						</tr>
 					</table>
@@ -197,7 +196,7 @@
                     test: 'afo',
                     table: "",
                     teacherTable: '',
-                    unitTable:''
+                    unitTable: ''
                     },
                 methods: {
                 },
