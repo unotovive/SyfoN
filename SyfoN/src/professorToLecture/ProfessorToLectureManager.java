@@ -37,8 +37,7 @@ public class ProfessorToLectureManager {
 		result=ptlDAO.updatePTL(ptl);
 		return result;
 	}
-<<<<<<< HEAD
-=======
+
 
 	public boolean removePTLOfLecture(int lectureID) throws SQLException{
 		boolean result = false;
@@ -46,6 +45,5 @@ public class ProfessorToLectureManager {
 		result=ptlDAO.removePTL(professorToLecture);
 		return result;
 	}
->>>>>>> Admin3
 }
 

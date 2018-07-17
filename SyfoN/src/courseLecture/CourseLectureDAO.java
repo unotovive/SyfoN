@@ -67,15 +67,9 @@ public class CourseLectureDAO {
 			pstmt.setInt(2, courseLecture.getLectureID());
 			pstmt.setString(3, courseLecture.getCourseSituation());
 
-<<<<<<< HEAD
 			int rowNum=pstmt.executeUpdate();
 			if (rowNum==1) result = true;
-			System.out.println(result);
 
-=======
-			int rowNum = pstmt.executeUpdate();
-			if (rowNum==1) result = true;
->>>>>>> Admin3
 
 			connection.close();
 		} catch (Exception e) {
@@ -88,11 +82,9 @@ public class CourseLectureDAO {
 		// memberがDBにあるかどうかを調べる
 		boolean result = false;
 		Connection connection;
-<<<<<<< HEAD
+
 		String sql = "UPDATE courselecture SET lectureid = ? ,courseSituation = ? WHERE timeTableID = ?";
-=======
-		String sql = "UPDATE courselecture SET lectureID = ? ,courseSituation = ? WHERE timeTableID = ?";
->>>>>>> Admin3
+
 
 		try {
 			Class.forName(driverClassName);
@@ -117,11 +109,8 @@ public class CourseLectureDAO {
 		// memberがDBにあるかどうかを調べる
 		boolean result = false;
 		Connection connection;
-<<<<<<< HEAD
 		String sql = "DELETE FROM courselecture WHERE timetableid = ? AND lectureid = ? ";
-=======
-		String sql = "DELETE FROM courselecture WHERE timeTableID = ?";
->>>>>>> Admin3
+
 
 		try {
 			Class.forName(driverClassName);
@@ -132,10 +121,8 @@ public class CourseLectureDAO {
 			pstmt.setInt(2, courseLecture.getLectureID());
 
 			int rowNum = pstmt.executeUpdate();
-<<<<<<< HEAD
 			if (rowNum==1) result = true;
-=======
-			if (rowNum>=0) result = true;
+
 
 			connection.close();
 		} catch (Exception e) {
@@ -158,7 +145,6 @@ public class CourseLectureDAO {
 
 			int rowNum = pstmt.executeUpdate();
 			if (rowNum>=0) result = true;
->>>>>>> Admin3
 
 			connection.close();
 		} catch (Exception e) {

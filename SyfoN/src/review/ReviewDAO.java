@@ -77,10 +77,6 @@ public class ReviewDAO {
 
 			pstmt.setString(1, reviewID);
 
-<<<<<<< HEAD
-=======
-			System.out.println(reviewID);
->>>>>>> Admin3
 			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 

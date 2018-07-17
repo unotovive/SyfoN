@@ -64,14 +64,10 @@ public class Login extends HttpServlet {
 		if(request.getParameter("admincheck")!=null)
 		{     //管理者のログイン
 		try {
-<<<<<<< HEAD
+
 			result = mane.check(student);
-			student=mane.getStudent(studentID);
+			student=mane.getStudent(ID);
 		} catch (SQLException e) {
-=======
-			result = adminmane.check(admin);
-		} catch (Exception e) {
->>>>>>> Admin3
 			e.printStackTrace();
 		}
 
@@ -79,46 +75,20 @@ public class Login extends HttpServlet {
 		session.setAttribute("login", result);
 		if (result) {
 			// ログインに成功している場合はtop.jspへ
-<<<<<<< HEAD
 			session.setAttribute("student", student);
-			session.setAttribute("studentID", studentID);
+			session.setAttribute("studentID", ID);
 
 			getServletContext().getRequestDispatcher("/TimeTableServ").forward(request, response);
-=======
-			session.setAttribute("admin", admin);
-			session.setAttribute("adminID", ID);
-			//System.out.print("dekita");
-			getServletContext().getRequestDispatcher("/Admin_Top.jsp").forward(request, response);
->>>>>>> Admin3
+
 		} else {
 			// ログインに失敗している場合はlogin.jspへ
 			//System.out.print("sippai");
 			getServletContext().getRequestDispatcher("/Common_Login.jsp").forward(request, response);
 			}
-		}else{    //下は学生のログイン
-			try {
-				result = mane.check(student);
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-
-			HttpSession session = request.getSession();
-			session.setAttribute("login", result);
-			if (result) {
-				// ログインに成功している場合はtop.jspへ
-				session.setAttribute("student", student);
-				session.setAttribute("studentID", ID);
-				//System.out.print("dekita");
-				getServletContext().getRequestDispatcher("/top.jsp").forward(request, response);
-			} else {
-				// ログインに失敗している場合はlogin.jspへ
-				//System.out.print("sippai");
-				getServletContext().getRequestDispatcher("/Common_Login.jsp").forward(request, response);
-				}
 		}
+
 	}
 }
-/*ログインボタンが押されたときの処理*/
 
 
 
