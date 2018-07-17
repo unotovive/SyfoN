@@ -25,7 +25,7 @@
         </div>
 
         <div id="createLecture">
-        <a href="Admin_LectureEditServlet">
+        <a href="Admin_newLecture">
           <span>講義の新規登録</span>
           </a>
         </div>

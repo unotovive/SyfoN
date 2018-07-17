@@ -61,9 +61,9 @@
 							<td>曜日</td>
 							<td>
 								<select id="inputformSmall" name="kaikoki" v-model="table.曜日">
-										<option value="">学期を選択してください</option>
-										<option value="月">月</option>
-										<option value="火">火</option>
+										<option value="">曜日を選択してください</option>
+										<option value="monday">月</option>
+										<option value="tuesday">火</option>
 										<option value="wednesday">水</option>
 										<option value="thursday">木</option>
 										<option value="fryday">金</option>
