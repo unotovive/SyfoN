@@ -56,7 +56,7 @@ public class CourseLectureDAO {
 		// memberがDBにあるかどうかを調べる
 		boolean result = false;
 		Connection connection;
-		String sql = "INSERT INTO timeTable VALUES (?, ?, ?)";
+		String sql = "INSERT INTO courselecture VALUES (?, ?, ?)";
 
 		try {
 			Class.forName(driverClassName);
@@ -82,7 +82,7 @@ public class CourseLectureDAO {
 		// memberがDBにあるかどうかを調べる
 		boolean result = false;
 		Connection connection;
-		String sql = "UPDATE timeTable SET lectureID = ? ,courseSituation = ? WHERE timeTableID = ?";
+		String sql = "UPDATE courselecture SET lectureID = ? ,courseSituation = ? WHERE timeTableID = ?";
 
 		try {
 			Class.forName(driverClassName);
@@ -108,7 +108,7 @@ public class CourseLectureDAO {
 		// memberがDBにあるかどうかを調べる
 		boolean result = false;
 		Connection connection;
-		String sql = "DELETE FROM timeTable WHERE timeTableID = ?";
+		String sql = "DELETE FROM courselecture WHERE timeTableID = ?";
 
 		try {
 			Class.forName(driverClassName);
@@ -121,6 +121,28 @@ public class CourseLectureDAO {
 			if (resultSet.next()) result = true;
 
 			resultSet.close();
+			connection.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	public boolean deleteCourseLecture2(int lectureID){
+		boolean result = false;
+		Connection connection;
+		String sql = "DELETE FROM timeTable WHERE lectureTableID = ?";
+
+		try {
+			Class.forName(driverClassName);
+			connection = DriverManager.getConnection(url, user, password);
+			PreparedStatement pstmt = connection.prepareStatement(sql);
+
+			pstmt.setInt(1, lectureID);
+
+			int rowNum = pstmt.executeUpdate();
+			if (rowNum>=0) result = true;
+
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();
