@@ -64,7 +64,7 @@ public class AdminLectureRegisterServlet extends HttpServlet {
 
 		Lecture.setLectureID(strageID);
 		Lecture.setLectureName(request.getParameter("授業名"));
-		Lecture.setGaitoGakki(request.getParameter("該当楽器i"));
+		Lecture.setGaitoGakki(request.getParameter("該当学期"));
 		Lecture.setDay(request.getParameter("曜日"));
 		Lecture.setPeriod(Integer.parseInt(request.getParameter("時限")));
 		Lecture.setRoom(request.getParameter("教室番号"));
