@@ -91,7 +91,7 @@
                                             <br/> {{table.zenki1.monday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.monday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.monday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.monday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -99,7 +99,7 @@
                                             <br/> {{table.zenki1.tuesday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.tuesday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.tuesday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.tuesday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
 
                                         </td>
@@ -108,7 +108,7 @@
                                             <br/> {{table.zenki1.wednesday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.wednesday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.wednesday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.wednesday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -116,7 +116,7 @@
                                             <br/> {{table.zenki1.thursday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.thursday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.thursday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.thursday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -124,7 +124,7 @@
                                             <br/> {{table.zenki1.fryday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.fryday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.fryday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.fryday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -135,7 +135,7 @@
                                             <br/> {{table.zenki1.monday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.monday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.monday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.monday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -143,7 +143,7 @@
                                             <br/> {{table.zenki1.tuesday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.tuesday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.tuesday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.tuesday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -151,7 +151,7 @@
                                             <br/> {{table.zenki1.wednesday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.wednesday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.wednesday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.wednesday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -159,7 +159,7 @@
                                             <br/> {{table.zenki1.thursday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.thursday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.thursday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.thursday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -167,7 +167,7 @@
                                             <br/> {{table.zenki1.fryday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.fryday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.fryday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.fryday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -178,7 +178,7 @@
                                             <br/> {{table.zenki1.monday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.monday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.monday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.monday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -186,7 +186,7 @@
                                             <br/> {{table.zenki1.tuesday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.tuesday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.tuesday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.tuesday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -194,7 +194,7 @@
                                             <br/> {{table.zenki1.wednesday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.wednesday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.wednesday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.wednesday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -202,7 +202,7 @@
                                             <br/> {{table.zenki1.thursday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.thursday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.thursday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.thursday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -210,7 +210,7 @@
                                             <br/> {{table.zenki1.fryday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.fryday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.fryday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.fryday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -221,7 +221,7 @@
                                             <br/> {{table.zenki1.monday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.monday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.monday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.monday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -229,7 +229,7 @@
                                             <br/> {{table.zenki1.tuesday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.tuesday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.tuesday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.tuesday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -237,7 +237,7 @@
                                             <br/> {{table.zenki1.wednesday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.wednesday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.wednesday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.wednesday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -245,7 +245,7 @@
                                             <br/> {{table.zenki1.thursday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.thursday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.thursday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.thursday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -253,7 +253,7 @@
                                             <br/> {{table.zenki1.fryday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.fryday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.fryday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.fryday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -264,7 +264,7 @@
                                             <br/> {{table.zenki1.monday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.monday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.monday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.monday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -272,7 +272,7 @@
                                             <br/> {{table.zenki1.tuesday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.tuesday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.tuesday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.tuesday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -280,7 +280,7 @@
                                             <br/> {{table.zenki1.wednesday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.wednesday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.wednesday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.wednesday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -288,7 +288,7 @@
                                             <br/> {{table.zenki1.thursday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.thursday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.thursday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.thursday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -296,7 +296,7 @@
                                             <br/> {{table.zenki1.fryday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki1.fryday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki1.fryday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki1.fryday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -321,7 +321,7 @@
                                         <br/> {{table.zenki2.monday.period1.room}}
                                         <form action="ToLecInfo" method="POST">
                                             <input v-model="table.zenki2.monday.period1.lectureid" name="id" style="display: none;" />
-                                            <button v-if="!(table.zenki2.monday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                            <button v-if="!(table.zenki2.monday.period1.lectureid==0)" @click="submit">詳細</button>
                                         </form>
                                     </td>
                                     <td>
@@ -329,7 +329,7 @@
                                         <br/> {{table.zenki2.tuesday.period1.room}}
                                         <form action="ToLecInfo" method="POST">
                                             <input v-model="table.zenki2.tuesday.period1.lectureid" name="id" style="display: none;" />
-                                            <button v-if="!(table.zenki2.tuesday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                            <button v-if="!(table.zenki2.tuesday.period1.lectureid==0)" @click="submit">詳細</button>
                                         </form>
                                     </td>
                                     <td>
@@ -337,7 +337,7 @@
                                         <br/> {{table.zenki2.wednesday.period1.room}}
                                         <form action="ToLecInfo" method="POST">
                                             <input v-model="table.zenki2.wednesday.period1.lectureid" name="id" style="display: none;" />
-                                            <button v-if="!(table.zenki2.wednesday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                            <button v-if="!(table.zenki2.wednesday.period1.lectureid==0)" @click="submit">詳細</button>
                                         </form>
                                     </td>
                                     <td>
@@ -345,7 +345,7 @@
                                         <br/> {{table.zenki2.thursday.period1.room}}
                                         <form action="ToLecInfo" method="POST">
                                             <input v-model="table.zenki2.thursday.period1.lectureid" name="id" style="display: none;" />
-                                            <button v-if="!(table.zenki2.thursday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                            <button v-if="!(table.zenki2.thursday.period1.lectureid==0)" @click="submit">詳細</button>
                                         </form>
                                     </td>
                                     <td>
@@ -353,7 +353,7 @@
                                         <br/> {{table.zenki2.fryday.period1.room}}
                                         <form action="ToLecInfo" method="POST">
                                             <input v-model="table.zenki2.fryday.period1.lectureid" name="id" style="display: none;" />
-                                            <button v-if="!(table.zenki2.fryday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                            <button v-if="!(table.zenki2.fryday.period1.lectureid==0)" @click="submit">詳細</button>
                                         </form>
                                     </td>
                                     </tr>
@@ -364,7 +364,7 @@
                                             <br/> {{table.zenki2.monday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.monday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.monday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.monday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -372,7 +372,7 @@
                                             <br/> {{table.zenki2.tuesday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.tuesday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.tuesday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.tuesday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -380,7 +380,7 @@
                                             <br/> {{table.zenki2.wednesday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.wednesday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.wednesday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.wednesday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -388,7 +388,7 @@
                                             <br/> {{table.zenki2.thursday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.thursday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.thursday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.thursday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -396,7 +396,7 @@
                                             <br/> {{table.zenki2.fryday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.fryday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.fryday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.fryday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -407,7 +407,7 @@
                                             <br/> {{table.zenki2.monday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.monday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.monday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.monday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -415,7 +415,7 @@
                                             <br/> {{table.zenki2.tuesday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.tuesday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.tuesday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.tuesday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -423,7 +423,7 @@
                                             <br/> {{table.zenki2.wednesday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.wednesday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.wednesday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.wednesday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -431,7 +431,7 @@
                                             <br/> {{table.zenki2.thursday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.thursday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.thursday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.thursday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -439,7 +439,7 @@
                                             <br/> {{table.zenki2.fryday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.fryday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.fryday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.fryday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -450,7 +450,7 @@
                                             <br/> {{table.zenki2.monday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.monday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.monday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.monday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -458,7 +458,7 @@
                                             <br/> {{table.zenki2.tuesday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.tuesday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.tuesday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.tuesday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -466,7 +466,7 @@
                                             <br/> {{table.zenki2.wednesday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.wednesday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.wednesday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.wednesday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -474,7 +474,7 @@
                                             <br/> {{table.zenki2.thursday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.thursday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.thursday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.thursday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -482,7 +482,7 @@
                                             <br/> {{table.zenki2.fryday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.fryday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.fryday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.fryday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -493,7 +493,7 @@
                                             <br/> {{table.zenki2.monday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.monday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.monday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.monday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -501,7 +501,7 @@
                                             <br/> {{table.zenki2.tuesday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.tuesday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.tuesday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.tuesday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -509,7 +509,7 @@
                                             <br/> {{table.zenki2.wednesday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.wednesday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.wednesday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.wednesday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -517,7 +517,7 @@
                                             <br/> {{table.zenki2.thursday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.thursday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.thursday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.thursday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -525,7 +525,7 @@
                                             <br/> {{table.zenki2.fryday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki2.fryday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki2.fryday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki2.fryday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -551,7 +551,7 @@
                                             <br/> {{table.zenki3.monday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.monday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.monday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.monday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -559,7 +559,7 @@
                                             <br/> {{table.zenki3.tuesday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.tuesday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.tuesday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.tuesday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -567,7 +567,7 @@
                                             <br/> {{table.zenki3.wednesday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.wednesday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.wednesday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.wednesday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -575,7 +575,7 @@
                                             <br/> {{table.zenki3.thursday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.thursday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.thursday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.thursday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -583,7 +583,7 @@
                                             <br/> {{table.zenki3.fryday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.fryday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.fryday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.fryday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -594,7 +594,7 @@
                                             <br/> {{table.zenki3.monday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.monday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.monday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.monday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -602,7 +602,7 @@
                                             <br/> {{table.zenki3.tuesday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.tuesday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.tuesday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.tuesday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -610,7 +610,7 @@
                                             <br/> {{table.zenki3.wednesday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.wednesday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.wednesday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.wednesday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -618,7 +618,7 @@
                                             <br/> {{table.zenki3.thursday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.thursday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.thursday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.thursday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -626,7 +626,7 @@
                                             <br/> {{table.zenki3.fryday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.fryday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.fryday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.fryday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -637,7 +637,7 @@
                                             <br/> {{table.zenki3.monday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.monday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.monday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.monday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -645,7 +645,7 @@
                                             <br/> {{table.zenki3.tuesday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.tuesday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.tuesday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.tuesday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -653,7 +653,7 @@
                                             <br/> {{table.zenki3.wednesday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.wednesday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.wednesday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.wednesday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -661,7 +661,7 @@
                                             <br/> {{table.zenki3.thursday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.thursday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.thursday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.thursday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -669,7 +669,7 @@
                                             <br/> {{table.zenki3.fryday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.fryday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.fryday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.fryday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -680,7 +680,7 @@
                                             <br/> {{table.zenki3.monday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.monday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.monday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.monday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -688,7 +688,7 @@
                                             <br/> {{table.zenki3.tuesday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.tuesday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.tuesday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.tuesday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -696,7 +696,7 @@
                                             <br/> {{table.zenki3.wednesday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.wednesday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.wednesday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.wednesday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -704,7 +704,7 @@
                                             <br/> {{table.zenki3.thursday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.thursday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.thursday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.thursday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -712,7 +712,7 @@
                                             <br/> {{table.zenki3.fryday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.fryday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.fryday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.fryday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -723,7 +723,7 @@
                                             <br/> {{table.zenki3.monday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.monday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.monday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.monday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -731,7 +731,7 @@
                                             <br/> {{table.zenki3.tuesday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.tuesday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.tuesday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.tuesday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -739,7 +739,7 @@
                                             <br/> {{table.zenki3.wednesday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.wednesday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.wednesday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.wednesday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -747,7 +747,7 @@
                                             <br/> {{table.zenki3.thursday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.thursday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.thursday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.thursday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -755,7 +755,7 @@
                                             <br/> {{table.zenki3.fryday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki3.fryday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki3.fryday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki3.fryday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -781,7 +781,7 @@
                                             <br/> {{table.zenki4.monday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.monday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.monday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.monday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -789,7 +789,7 @@
                                             <br/> {{table.zenki4.tuesday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.tuesday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.tuesday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.tuesday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -797,7 +797,7 @@
                                             <br/> {{table.zenki4.wednesday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.wednesday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.wednesday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.wednesday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -805,7 +805,7 @@
                                             <br/> {{table.zenki4.thursday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.thursday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.thursday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.thursday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -813,7 +813,7 @@
                                             <br/> {{table.zenki4.fryday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.fryday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.fryday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.fryday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -824,7 +824,7 @@
                                             <br/> {{table.zenki4.monday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.monday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.monday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.monday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -832,7 +832,7 @@
                                             <br/> {{table.zenki4.tuesday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.tuesday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.tuesday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.tuesday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -840,7 +840,7 @@
                                             <br/> {{table.zenki4.wednesday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.wednesday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.wednesday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.wednesday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -848,7 +848,7 @@
                                             <br/> {{table.zenki4.thursday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.thursday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.thursday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.thursday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -856,7 +856,7 @@
                                             <br/> {{table.zenki4.fryday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.fryday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.fryday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.fryday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -867,7 +867,7 @@
                                             <br/> {{table.zenki4.monday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.monday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.monday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.monday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -875,7 +875,7 @@
                                             <br/> {{table.zenki4.tuesday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.tuesday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.tuesday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.tuesday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -883,7 +883,7 @@
                                             <br/> {{table.zenki4.wednesday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.wednesday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.wednesday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.wednesday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -891,7 +891,7 @@
                                             <br/> {{table.zenki4.thursday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.thursday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.thursday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.thursday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -899,7 +899,7 @@
                                             <br/> {{table.zenki4.fryday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.fryday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.fryday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.fryday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -910,7 +910,7 @@
                                             <br/> {{table.zenki4.monday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.monday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.monday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.monday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -918,7 +918,7 @@
                                             <br/> {{table.zenki4.tuesday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.tuesday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.tuesday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.tuesday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -926,7 +926,7 @@
                                             <br/> {{table.zenki4.wednesday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.wednesday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.wednesday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.wednesday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -934,7 +934,7 @@
                                             <br/> {{table.zenki4.thursday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.thursday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.thursday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.thursday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -942,7 +942,7 @@
                                             <br/> {{table.zenki4.fryday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.fryday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.fryday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.fryday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -953,7 +953,7 @@
                                             <br/> {{table.zenki4.monday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.monday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.monday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.monday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -961,7 +961,7 @@
                                             <br/> {{table.zenki4.tuesday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.tuesday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.tuesday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.tuesday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -969,7 +969,7 @@
                                             <br/> {{table.zenki4.wednesday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.wednesday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.wednesday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.wednesday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -977,7 +977,7 @@
                                             <br/> {{table.zenki4.thursday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.thursday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.thursday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.thursday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -985,7 +985,7 @@
                                             <br/> {{table.zenki4.fryday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.zenki4.fryday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.zenki4.fryday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.zenki4.fryday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1012,7 +1012,7 @@
                                             <br/> {{table.kouki1.monday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.monday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.monday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.monday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1020,7 +1020,7 @@
                                             <br/> {{table.kouki1.tuesday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.tuesday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.tuesday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.tuesday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1028,7 +1028,7 @@
                                             <br/> {{table.kouki1.wednesday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.wednesday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.wednesday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.wednesday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1036,7 +1036,7 @@
                                             <br/> {{table.kouki1.thursday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.thursday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.thursday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.thursday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1044,7 +1044,7 @@
                                             <br/> {{table.kouki1.fryday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.fryday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.fryday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.fryday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1055,7 +1055,7 @@
                                             <br/> {{table.kouki1.monday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.monday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.monday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.monday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1063,7 +1063,7 @@
                                             <br/> {{table.kouki1.tuesday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.tuesday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.tuesday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.tuesday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1071,7 +1071,7 @@
                                             <br/> {{table.kouki1.wednesday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.wednesday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.wednesday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.wednesday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1079,7 +1079,7 @@
                                             <br/> {{table.kouki1.thursday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.thursday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.thursday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.thursday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1087,7 +1087,7 @@
                                             <br/> {{table.kouki1.fryday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.fryday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.fryday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.fryday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1098,7 +1098,7 @@
                                             <br/> {{table.kouki1.monday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.monday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.monday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.monday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1106,7 +1106,7 @@
                                             <br/> {{table.kouki1.tuesday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.tuesday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.tuesday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.tuesday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1114,7 +1114,7 @@
                                             <br/> {{table.kouki1.wednesday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.wednesday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.wednesday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.wednesday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1122,7 +1122,7 @@
                                             <br/> {{table.kouki1.thursday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.thursday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.thursday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.thursday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1130,7 +1130,7 @@
                                             <br/> {{table.kouki1.fryday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.fryday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.fryday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.fryday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1141,7 +1141,7 @@
                                             <br/> {{table.kouki1.monday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.monday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.monday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.monday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1149,7 +1149,7 @@
                                             <br/> {{table.kouki1.tuesday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.tuesday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.tuesday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.tuesday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1157,7 +1157,7 @@
                                             <br/> {{table.kouki1.wednesday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.wednesday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.wednesday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.wednesday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1165,7 +1165,7 @@
                                             <br/> {{table.kouki1.thursday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.thursday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.thursday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.thursday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1173,7 +1173,7 @@
                                             <br/> {{table.kouki1.fryday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.fryday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.fryday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.fryday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1184,7 +1184,7 @@
                                             <br/> {{table.kouki1.monday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.monday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.monday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.monday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1192,7 +1192,7 @@
                                             <br/> {{table.kouki1.tuesday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.tuesday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.tuesday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.tuesday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1200,7 +1200,7 @@
                                             <br/> {{table.kouki1.wednesday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.wednesday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.wednesday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.wednesday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1208,7 +1208,7 @@
                                             <br/> {{table.kouki1.thursday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.thursday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.thursday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.thursday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1216,7 +1216,7 @@
                                             <br/> {{table.kouki1.fryday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki1.fryday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki1.fryday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki1.fryday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1242,7 +1242,7 @@
                                             <br/> {{table.kouki2.monday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.monday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.monday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.monday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1250,7 +1250,7 @@
                                             <br/> {{table.kouki2.tuesday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.tuesday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.tuesday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.tuesday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1258,7 +1258,7 @@
                                             <br/> {{table.kouki2.wednesday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.wednesday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.wednesday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.wednesday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1266,7 +1266,7 @@
                                             <br/> {{table.kouki2.thursday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.thursday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.thursday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.thursday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1274,7 +1274,7 @@
                                             <br/> {{table.kouki2.fryday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.fryday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.fryday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.fryday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1285,7 +1285,7 @@
                                             <br/> {{table.kouki2.monday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.monday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.monday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.monday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1293,7 +1293,7 @@
                                             <br/> {{table.kouki2.tuesday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.tuesday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.tuesday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.tuesday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1301,7 +1301,7 @@
                                             <br/> {{table.kouki2.wednesday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.wednesday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.wednesday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.wednesday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1309,7 +1309,7 @@
                                             <br/> {{table.kouki2.thursday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.thursday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.thursday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.thursday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1317,7 +1317,7 @@
                                             <br/> {{table.kouki2.fryday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.fryday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.fryday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.fryday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1328,7 +1328,7 @@
                                             <br/> {{table.kouki2.monday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.monday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.monday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.monday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1336,7 +1336,7 @@
                                             <br/> {{table.kouki2.tuesday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.tuesday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.tuesday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.tuesday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1344,7 +1344,7 @@
                                             <br/> {{table.kouki2.wednesday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.wednesday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.wednesday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.wednesday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1352,7 +1352,7 @@
                                             <br/> {{table.kouki2.thursday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.thursday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.thursday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.thursday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1360,7 +1360,7 @@
                                             <br/> {{table.kouki2.fryday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.fryday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.fryday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.fryday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1371,7 +1371,7 @@
                                             <br/> {{table.kouki2.monday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.monday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.monday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.monday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1379,7 +1379,7 @@
                                             <br/> {{table.kouki2.tuesday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.tuesday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.tuesday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.tuesday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1387,7 +1387,7 @@
                                             <br/> {{table.kouki2.wednesday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.wednesday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.wednesday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.wednesday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1395,7 +1395,7 @@
                                             <br/> {{table.kouki2.thursday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.thursday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.thursday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.thursday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1403,7 +1403,7 @@
                                             <br/> {{table.kouki2.fryday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.fryday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.fryday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.fryday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1414,7 +1414,7 @@
                                             <br/> {{table.kouki2.monday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.monday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.monday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.monday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1422,7 +1422,7 @@
                                             <br/> {{table.kouki2.tuesday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.tuesday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.tuesday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.tuesday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1430,7 +1430,7 @@
                                             <br/> {{table.kouki2.wednesday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.wednesday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.wednesday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.wednesday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1438,7 +1438,7 @@
                                             <br/> {{table.kouki2.thursday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.thursday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.thursday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.thursday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1446,7 +1446,7 @@
                                             <br/> {{table.kouki2.fryday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki2.fryday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki2.fryday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki2.fryday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1472,7 +1472,7 @@
                                             <br/> {{table.kouki3.monday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.monday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.monday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.monday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1480,7 +1480,7 @@
                                             <br/> {{table.kouki3.tuesday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.tuesday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.tuesday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.tuesday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1488,7 +1488,7 @@
                                             <br/> {{table.kouki3.wednesday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.wednesday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.wednesday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.wednesday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1496,7 +1496,7 @@
                                             <br/> {{table.kouki3.thursday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.thursday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.thursday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.thursday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1504,7 +1504,7 @@
                                             <br/> {{table.kouki3.fryday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.fryday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.fryday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.fryday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1515,7 +1515,7 @@
                                             <br/> {{table.kouki3.monday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.monday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.monday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.monday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1523,7 +1523,7 @@
                                             <br/> {{table.kouki3.tuesday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.tuesday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.tuesday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.tuesday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1531,7 +1531,7 @@
                                             <br/> {{table.kouki3.wednesday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.wednesday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.wednesday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.wednesday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1539,7 +1539,7 @@
                                             <br/> {{table.kouki3.thursday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.thursday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.thursday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.thursday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1547,7 +1547,7 @@
                                             <br/> {{table.kouki3.fryday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.fryday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.fryday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.fryday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1558,7 +1558,7 @@
                                             <br/> {{table.kouki3.monday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.monday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.monday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.monday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1566,7 +1566,7 @@
                                             <br/> {{table.kouki3.tuesday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.tuesday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.tuesday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.tuesday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1574,7 +1574,7 @@
                                             <br/> {{table.kouki3.wednesday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.wednesday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.wednesday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.wednesday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1582,7 +1582,7 @@
                                             <br/> {{table.kouki3.thursday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.thursday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.thursday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.thursday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1590,7 +1590,7 @@
                                             <br/> {{table.kouki3.fryday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.fryday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.fryday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.fryday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1601,7 +1601,7 @@
                                             <br/> {{table.kouki3.monday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.monday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.monday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.monday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1609,7 +1609,7 @@
                                             <br/> {{table.kouki3.tuesday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.tuesday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.tuesday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.tuesday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1617,7 +1617,7 @@
                                             <br/> {{table.kouki3.wednesday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.wednesday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.wednesday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.wednesday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1625,7 +1625,7 @@
                                             <br/> {{table.kouki3.thursday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.thursday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.thursday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.thursday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1633,7 +1633,7 @@
                                             <br/> {{table.kouki3.fryday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.fryday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.fryday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.fryday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1644,7 +1644,7 @@
                                             <br/> {{table.kouki3.monday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.monday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.monday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.monday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1652,7 +1652,7 @@
                                             <br/> {{table.kouki3.tuesday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.tuesday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.tuesday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.tuesday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1660,7 +1660,7 @@
                                             <br/> {{table.kouki3.wednesday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.wednesday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.wednesday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.wednesday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1668,7 +1668,7 @@
                                             <br/> {{table.kouki3.thursday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.thursday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.thursday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.thursday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1676,7 +1676,7 @@
                                             <br/> {{table.kouki3.fryday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki3.fryday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki3.fryday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki3.fryday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1702,7 +1702,7 @@
                                             <br/> {{table.kouki4.monday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.monday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.monday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.monday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1710,7 +1710,7 @@
                                             <br/> {{table.kouki4.tuesday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.tuesday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.tuesday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.tuesday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1718,7 +1718,7 @@
                                             <br/> {{table.kouki4.wednesday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.wednesday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.wednesday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.wednesday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1726,7 +1726,7 @@
                                             <br/> {{table.kouki4.thursday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.thursday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.thursday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.thursday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1734,7 +1734,7 @@
                                             <br/> {{table.kouki4.fryday.period1.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.fryday.period1.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.fryday.period1.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.fryday.period1.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1745,7 +1745,7 @@
                                             <br/> {{table.kouki4.monday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.monday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.monday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.monday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1753,7 +1753,7 @@
                                             <br/> {{table.kouki4.tuesday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.tuesday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.tuesday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.tuesday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1761,7 +1761,7 @@
                                             <br/> {{table.kouki4.wednesday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.wednesday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.wednesday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.wednesday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1769,7 +1769,7 @@
                                             <br/> {{table.kouki4.thursday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.thursday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.thursday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.thursday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1777,7 +1777,7 @@
                                             <br/> {{table.kouki4.fryday.period2.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.fryday.period2.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.fryday.period2.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.fryday.period2.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1788,7 +1788,7 @@
                                             <br/> {{table.kouki4.monday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.monday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.monday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.monday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1796,7 +1796,7 @@
                                             <br/> {{table.kouki4.tuesday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.tuesday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.tuesday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.tuesday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1804,7 +1804,7 @@
                                             <br/> {{table.kouki4.wednesday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.wednesday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.wednesday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.wednesday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1812,7 +1812,7 @@
                                             <br/> {{table.kouki4.thursday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.thursday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.thursday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.thursday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1820,7 +1820,7 @@
                                             <br/> {{table.kouki4.fryday.period3.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.fryday.period3.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.fryday.period3.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.fryday.period3.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1831,7 +1831,7 @@
                                             <br/> {{table.kouki4.monday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.monday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.monday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.monday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1839,7 +1839,7 @@
                                             <br/> {{table.kouki4.tuesday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.tuesday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.tuesday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.tuesday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1847,7 +1847,7 @@
                                             <br/> {{table.kouki4.wednesday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.wednesday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.wednesday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.wednesday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1855,7 +1855,7 @@
                                             <br/> {{table.kouki4.thursday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.thursday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.thursday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.thursday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1863,7 +1863,7 @@
                                             <br/> {{table.kouki4.fryday.period4.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.fryday.period4.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.fryday.period4.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.fryday.period4.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -1874,7 +1874,7 @@
                                             <br/> {{table.kouki4.monday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.monday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.monday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.monday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1882,7 +1882,7 @@
                                             <br/> {{table.kouki4.tuesday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.tuesday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.tuesday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.tuesday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1890,7 +1890,7 @@
                                             <br/> {{table.kouki4.wednesday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.wednesday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.wednesday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.wednesday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1898,7 +1898,7 @@
                                             <br/> {{table.kouki4.thursday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.thursday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.thursday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.thursday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                         <td>
@@ -1906,7 +1906,7 @@
                                             <br/> {{table.kouki4.fryday.period5.room}}
                                             <form action="ToLecInfo" method="POST">
                                                 <input v-model="table.kouki4.fryday.period5.lectureid" name="id" style="display: none;" />
-                                                <button v-if="!(table.kouki4.fryday.period5.lectureid==strnull)" @click="submit">詳細</button>
+                                                <button v-if="!(table.kouki4.fryday.period5.lectureid==0)" @click="submit">詳細</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -2008,6 +2008,12 @@
                             console.log(yobi)
                             for (clas in this.table[term][yobi]) {
                                 numAllSum += Number(this.table[term][yobi][clas].taninum)
+                                if(this.table[term][yobi][clas].name==0){
+                                    this.table[term][yobi][clas].name="";
+                                }
+                                if(this.table[term][yobi][clas].room==0){
+                                    this.table[term][yobi][clas].room="";
+                                }
                                 if ((term == "zenki1") || (term == "kouki1")) {
                                     numTwoSum += Number(this.table[term][yobi][clas].taninum)
                                 }
