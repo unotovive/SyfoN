@@ -50,7 +50,6 @@ public class Admin_LectureListServlet extends HttpServlet {
 
 		//講義リストに行く
 
-		Lecture Lecture = new Lecture();
 		LectureManager mane = new LectureManager();
 		ProfessorManager professorManager=new ProfessorManager();
 		ProfessorToLectureManager ptlManager=new ProfessorToLectureManager();
@@ -59,6 +58,7 @@ public class Admin_LectureListServlet extends HttpServlet {
 		ArrayList<Lecture> result = new ArrayList<Lecture>();
 
 		try {
+			System.out.println("リストの始まり");
 			result = mane.getAllLecture();
 
 			String lect = "lect";

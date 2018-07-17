@@ -13,6 +13,8 @@ import Lecture.Lecture;
 import Lecture.LectureManager;
 import courseLecture.CourseLectureManager;
 import professorToLecture.ProfessorToLectureManager;
+import relationUnit.RelationUnit;
+import relationUnit.RelationUnitManager;
 import review.ReviewManager;
 
 /**
@@ -50,11 +52,15 @@ public class Admin_LectureDeleteServlet extends HttpServlet {
 		LectureManager lectureManager=new LectureManager();
 		CourseLectureManager clManager=new CourseLectureManager();
 		ReviewManager rManager=new ReviewManager();
+		RelationUnitManager ruManager=new RelationUnitManager();
 		ProfessorToLectureManager ptlManager=new ProfessorToLectureManager();
 
 		boolean result=false;
 		Lecture deleteLecture=new Lecture();
 		try {
+			RelationUnit ru=new RelationUnit();
+			ru.setLectureID(lectureID);
+			result=ruManager.removeRelationUnit(ru);
 			result=ptlManager.removePTLOfLecture(lectureID);
 			result=rManager.removeReviewOfLecture(lectureID);
 			result=clManager.deleteCourseLecture2(lectureID);
