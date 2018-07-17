@@ -54,9 +54,19 @@ public class ReviewManager {
 		return result;
 	}
 
+<<<<<<< HEAD
 	public boolean check(Review review){
 		boolean result=false;
 		result=reviewDAO.check(review);
+=======
+	public boolean removeReviewOfLecture(int lectureID) throws SQLException{
+		boolean result=false;
+		ArrayList<Review> reviewList=new ReviewManager().getReviewList(lectureID);
+		for(Review tempReview:reviewList){
+			result=reviewDAO.removeReview(tempReview);
+			if(!result)break;
+		}
+>>>>>>> Admin3
 		return result;
 	}
 

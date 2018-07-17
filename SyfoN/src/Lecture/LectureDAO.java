@@ -566,10 +566,8 @@ public class LectureDAO {
 
 			pstmt.setInt(1, lecture.getLectureID());
 
-			ResultSet resultSet = pstmt.executeQuery();
-			if (resultSet.next()) result = true;
-
-			resultSet.close();
+			int rowNum=pstmt.executeUpdate();
+			if (rowNum==1) result = true;
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -77,6 +77,10 @@ public class ReviewDAO {
 
 			pstmt.setString(1, reviewID);
 
+<<<<<<< HEAD
+=======
+			System.out.println(reviewID);
+>>>>>>> Admin3
 			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 
@@ -98,9 +102,9 @@ public class ReviewDAO {
 				rev.setProfessorPoint(professorP);
 				float attendP = resultSet.getFloat("attendpoint");
 				rev.setAttendPoint(attendP);
-				float homeworkP = resultSet.getFloat("homeworkpoint");
+				float homeworkP = 0;
 				rev.setHomeworkPoint(homeworkP);
-				float groupP = resultSet.getFloat("grouppoint");
+				float groupP = resultSet.getFloat("groupworkpoint");
 				rev.setGroupworkPoint(groupP);
 			}
 			resultSet.close();
@@ -244,10 +248,9 @@ public class ReviewDAO {
 
 			pstmt.setString(1, review.getReviewID());
 
-			ResultSet resultSet = pstmt.executeQuery();
-			if (resultSet.next()) result = true;
+			int rowNum = pstmt.executeUpdate();
+			if (rowNum==1) result = true;
 
-			resultSet.close();
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();

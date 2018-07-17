@@ -20,7 +20,7 @@
 				<a href="Admin_LectureListServlet"> <span>キャンセル</span>
 				</a>
 			</div>
-			<form action="AdminLectureRegisterServlet" method="post" name="adminRegister">
+			<form action="AdminLectureRegisterServlet" method="post" name="Admin_LectureEditServlet">
 				<div id="lectureTable">
 					<table id="inputtable">
 						<tr>
@@ -45,14 +45,14 @@
 							<td>
 								<select id="inputformSmall" name="kaikoki" v-model="table.該当学期">
 										<option value="">学期を選択してください</option>
-										<option value="zenki1">1年生前期</option>
-										<option value="kouki1">1年生後期</option>
-										<option value="zenki2">2年生前期</option>
-										<option value="kouki2">2年生後期</option>
-										<option value="zenki3">3年生前期</option>
-										<option value="kouki3">3年生後期</option>
-										<option value="zenki4">4年生前期</option>
-										<option value="kouki4">4年生後期</option>
+										<option value="1年生前期">1年生前期</option>
+										<option value="1年生後期">1年生後期</option>
+										<option value="2年生前期">2年生前期</option>
+										<option value="2年生後期">2年生後期</option>
+										<option value="3年生前期">3年生前期</option>
+										<option value="3年生後期">3年生後期</option>
+										<option value="4年生前期">4年生前期</option>
+										<option value="4年生後期">4年生後期</option>
 								</select>
 							</label
 							></td>
@@ -62,8 +62,8 @@
 							<td>
 								<select id="inputformSmall" name="kaikoki" v-model="table.曜日">
 										<option value="">曜日を選択してください</option>
-										<option value="monday">月</option>
-										<option value="tuesday">火</option>
+										<option value="月">月</option>
+										<option value="火">火</option>
 										<option value="wednesday">水</option>
 										<option value="thursday">木</option>
 										<option value="fryday">金</option>
@@ -152,19 +152,19 @@
 						</tr>
 						<tr>
 							<td>該当ユニット</td>
-							<td><select id="inputformSmall" required name="unit"
+							<td><select id="inputformSmall" name="unit"
 								v-model="table.ユニット">
 									<option v-for="unit in unitTable" value="unitTable[unit]">{{unit.name}}</option>
 							</select></td>
 						</tr>
 						<tr>
 							<td>種類</td>
-							<td><select id="inputformSmall" required name="type"
+							<td><select id="inputformSmall" name="type"
 								v-model="table.種類">
-									<option value="英語" >英語</option>
-								<option value="人科" >人科</option>
-								<option value=必修 >必修</option>
-								<option value="選択" >選択</option>
+								<option value="" >英語</option>
+								<option value="" >人科</option>
+								<option value="" >必修</option>
+								<option value="" >選択</option>
 							</select></td>
 						</tr>
 					</table>
@@ -177,6 +177,22 @@
 		</div>
 	</div>
 
+
+
+ //	<%
+ // 	Map<String,ArrayList> map3=new HashMap<String,ArrayList>();
+ // 	ArrayList<String> type = new ArrayList<String>();
+ // 	type.add("必修");
+ // 	type.add("英語");
+ // 	type.add("人科");
+ // 	//type.add("選択科目");
+ // 	map3.put("種類",type);
+ // 	JSONObject jsonTest3=new JSONObject(map3);
+//	session.setAttribute("jsonTest3",jsonTest3);
+  //%>
+
+
+
 	<script>
         var app = new Vue({
                 el: '#app',
@@ -184,7 +200,7 @@
                     test: 'afo',
                     table: "",
                     teacherTable: '',
-                    unitTable:''
+                    unitTable: ''
                     },
                 methods: {
                 },

@@ -67,10 +67,15 @@ public class CourseLectureDAO {
 			pstmt.setInt(2, courseLecture.getLectureID());
 			pstmt.setString(3, courseLecture.getCourseSituation());
 
+<<<<<<< HEAD
 			int rowNum=pstmt.executeUpdate();
 			if (rowNum==1) result = true;
 			System.out.println(result);
 
+=======
+			int rowNum = pstmt.executeUpdate();
+			if (rowNum==1) result = true;
+>>>>>>> Admin3
 
 			connection.close();
 		} catch (Exception e) {
@@ -83,7 +88,11 @@ public class CourseLectureDAO {
 		// memberがDBにあるかどうかを調べる
 		boolean result = false;
 		Connection connection;
+<<<<<<< HEAD
 		String sql = "UPDATE courselecture SET lectureid = ? ,courseSituation = ? WHERE timeTableID = ?";
+=======
+		String sql = "UPDATE courselecture SET lectureID = ? ,courseSituation = ? WHERE timeTableID = ?";
+>>>>>>> Admin3
 
 		try {
 			Class.forName(driverClassName);
@@ -94,10 +103,9 @@ public class CourseLectureDAO {
 			pstmt.setInt(1, courseLecture.getLectureID());
 			pstmt.setString(2, courseLecture.getCourseSituation());
 
-			ResultSet resultSet = pstmt.executeQuery();
-			if (resultSet.next()) result = true;
+			int rowNum = pstmt.executeUpdate();
+			if (rowNum>=0) result = true;
 
-			resultSet.close();
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -109,7 +117,11 @@ public class CourseLectureDAO {
 		// memberがDBにあるかどうかを調べる
 		boolean result = false;
 		Connection connection;
+<<<<<<< HEAD
 		String sql = "DELETE FROM courselecture WHERE timetableid = ? AND lectureid = ? ";
+=======
+		String sql = "DELETE FROM courselecture WHERE timeTableID = ?";
+>>>>>>> Admin3
 
 		try {
 			Class.forName(driverClassName);
@@ -120,7 +132,33 @@ public class CourseLectureDAO {
 			pstmt.setInt(2, courseLecture.getLectureID());
 
 			int rowNum = pstmt.executeUpdate();
+<<<<<<< HEAD
 			if (rowNum==1) result = true;
+=======
+			if (rowNum>=0) result = true;
+
+			connection.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	public boolean deleteCourseLecture2(int lectureID){
+		boolean result = false;
+		Connection connection;
+		String sql = "DELETE FROM courselecture WHERE lectureid = ?";
+
+		try {
+			Class.forName(driverClassName);
+			connection = DriverManager.getConnection(url, user, password);
+			PreparedStatement pstmt = connection.prepareStatement(sql);
+
+			pstmt.setInt(1, lectureID);
+
+			int rowNum = pstmt.executeUpdate();
+			if (rowNum>=0) result = true;
+>>>>>>> Admin3
 
 			connection.close();
 		} catch (Exception e) {
