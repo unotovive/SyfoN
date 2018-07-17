@@ -45,15 +45,15 @@
 					<form class="form" action="Mypageedit" method="POST">
 						<h3>学籍番号 {{table.id}}</h3>
 
-									<input type="text" v-model="table.name" name="name" required placeholder="名前">
+						<input type="text" v-model="table.name" name="name" required placeholder="名前">
 
-									<input type="text" v-model="table.grade" name="grade" required placeholder="学年">
+						<input type="text" v-model="table.grade" name="grade" required placeholder="学年">
 
-									<input type="text" v-model="table.mail" name="mail" required placeholder="メール">
+						<input type="text" v-model="table.mail" name="mail" required placeholder="メール">
 
-									<input type="text" v-model="table.pass" name="pass" required placeholder="パスワード">
-		
-									<input class="edit" type="submit" value="確定する">
+						<input type="text" v-model="table.pass" name="pass" required placeholder="パスワード">
+
+						<input class="edit" type="submit" value="確定する" :disabled="xss4||xss3||xss2||xss1">
 					</form>
 				</div>
 			</div>
@@ -69,6 +69,23 @@
 				methods: {
 
 				},
+				computed: {
+					pass: function () {
+						return this.pass1 == this.pass2
+					},
+					xss1: function () {
+						return /\bscript\b/i.test(this.table.name)
+					},
+					xss2: function () {
+						return /\bscript\b/i.test(this.table.grade)
+					},
+					xss3: function () {
+						return /\bscript\b/i.test(this.table.mail)
+					},
+					xss4: function () {
+						return /\bscript\b/i.test(this.table.pass)
+					},
+				},
 				mounted() {
 					const self = this
 					console.log("afo")
@@ -82,11 +99,11 @@
 			@import url('https://fonts.googleapis.com/css?family=Gruppo|Handlee|Itim|Jura|Life+Savers:700|Nothing+You+Could+Do|Short+Stack');
 			/*デザインテンプレート的なもの、カードの追加は背景白とシャドウをいい感じに入れればあとは何でもOK説*/
 
-
 			input::-webkit-input-placeholder,
 			button {
 				transition: all 0.3s ease-in-out;
 			}
+
 			form {
 				box-sizing: border-box;
 				width: 100%;
@@ -250,7 +267,10 @@
 				opacity: .8;
 			}
 
-
+			.edit:disabled{
+				color:#878787;
+				border: #878787 3px solid;
+			}
 			#table {
 				font-size: 20px;
 				margin-left: 0em;
