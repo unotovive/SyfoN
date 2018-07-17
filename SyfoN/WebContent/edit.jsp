@@ -1215,6 +1215,7 @@
                 background: -moz-linear-gradient(left, #a80077, #66ff00);
                 background: -webkit-linear-gradient(left, #a80077, #66ff00);
                 background: linear-gradient(to right, #a80077, #66ff00);
+                transition: .5s;
             }
 
             #probar1n p {
@@ -1242,6 +1243,7 @@
                 background: -moz-linear-gradient(left, #a80077, #66ff00);
                 background: -webkit-linear-gradient(left, #a80077, #66ff00);
                 background: linear-gradient(to right, #a80077, #66ff00);
+                transition: .5s;
             }
 
             #probar2n p {
@@ -1269,6 +1271,7 @@
                 background: -moz-linear-gradient(left, #a80077, #66ff00);
                 background: -webkit-linear-gradient(left, #a80077, #66ff00);
                 background: linear-gradient(to right, #a80077, #66ff00);
+                transition: .5s;
             }
 
             #probar3n p {
