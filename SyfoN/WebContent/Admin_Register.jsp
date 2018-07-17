@@ -35,9 +35,11 @@
 						</tr>
 						<tr>
 							<td>担当教員</td>
-							<td><select id="inputformSmall" required name="teacher"
-								v-model="table.担当教員">
-									<option value=""></option>
+							<td>
+							{{teacherTable.教員}}
+							<select id="inputformSmall" required name="table.担当教員"
+								v-model="teacherTable.教員">
+									<option value="高橋時市郎">高橋時市郎</option>
 							</select></td>
 						</tr>
 						<tr>
@@ -191,41 +193,41 @@
 	<script>
   //var selectTeacher = document.forms.adominRegister.teacher;
   //selectTeacher.options.lenght = 0;
-  	var jsonTest='<%= session.getAttribute("professorList")%>';
-  	jsonTest=JSON.parse(jsonTest);
-  	var jsonTest=jsonTest.担当教員
-  	var keys = Object.keys(jsonTest);
-	console.log(Object.keys(jsonTest));
-	document.forms.adminRegister.teacher.options[0] = new Option("");
-	for(var i = 0; i < Object.keys(jsonTest.担当教員).length; i++){
-		document.forms.adminRegister.teacher.options[i+1] = new Option(jsonTest.担当教員[i]);
-	}
+  	//var jsonTest='<%= session.getAttribute("professorList")%>';
+  	//jsonTest=JSON.parse(jsonTest);
+  	//var jsonTest=jsonTest.担当教員
+  	//var keys = Object.keys(jsonTest);
+	//console.log(Object.keys(jsonTest));
+	//document.forms.adminRegister.teacher.options[0] = new Option("");
+	//for(var i = 0; i < Object.keys(jsonTest.担当教員).length; i++){
+	//	document.forms.adminRegister.teacher.options[i+1] = new Option(jsonTest.担当教員[i]);
+	//}
   </script>
 
 	<script>
   //var selectTeacher = document.forms.adominRegister.teacher;
   //selectTeacher.options.lenght = 0;
-  	var jsonTest2='<%= session.getAttribute("unitList")%>';
-  	jsonTest2=JSON.parse(jsonTest2);
-  	var keys = Object.keys(jsonTest2);
-	console.log(Object.keys(jsonTest2));
-	document.forms.adminRegister.unit.options[0] = new Option("");
-	for(var i = 0; i < Object.keys(jsonTest2.ユニット).length; i++){
-		document.forms.adminRegister.unit.options[i+1] = new Option(jsonTest2.ユニット[i]);
-	}
+  	//var jsonTest2='<%= session.getAttribute("unitList")%>';
+  	//jsonTest2=JSON.parse(jsonTest2);
+  	//var keys = Object.keys(jsonTest2);
+	//console.log(Object.keys(jsonTest2));
+	//document.forms.adminRegister.unit.options[0] = new Option("");
+	//for(var i = 0; i < Object.keys(jsonTest2.ユニット).length; i++){
+	//	document.forms.adminRegister.unit.options[i+1] = new Option(jsonTest2.ユニット[i]);
+	//}
   </script>
 
 	<script>
   //var selectTeacher = document.forms.adominRegister.teacher;
   //selectTeacher.options.lenght = 0;
-  	var jsonTest3='<%= session.getAttribute("jsonTest3")%>';
-  	jsonTest3=JSON.parse(jsonTest3);
-  	var keys = Object.keys(jsonTest3);
-	console.log(Object.keys(jsonTest3));
-	document.forms.adminRegister.type.options[0] = new Option("");
-	for(var i = 0; i < Object.keys(jsonTest3.種類).length; i++){
-		document.forms.adminRegister.type.options[i+1] = new Option(jsonTest3.種類[i]);
-	}
+  	//var jsonTest3='<%= session.getAttribute("jsonTest3")%>';
+  	//jsonTest3=JSON.parse(jsonTest3);
+  	//var keys = Object.keys(jsonTest3);
+	//console.log(Object.keys(jsonTest3));
+	//document.forms.adminRegister.type.options[0] = new Option("");
+	//for(var i = 0; i < Object.keys(jsonTest3.種類).length; i++){
+	//	document.forms.adminRegister.type.options[i+1] = new Option(jsonTest3.種類[i]);
+	//}
   </script>
 
 	<script>
@@ -233,7 +235,8 @@
                 el: '#app',
                 data: {
                     test: 'afo',
-                    table: ""
+                    table: "",
+                    teacherTable: ""
                 },
                 methods: {
                 },
@@ -243,6 +246,10 @@
                     this.table='<%= session.getAttribute("registLecture")%>'
                     this.table=JSON.parse(this.table)
                     console.log(this.table)
+
+                    this.teacherTable='<%= session.getAttribute("professorList")%>'
+                    this.teacherTable=JSON.parse(this.teacherTable)
+                    console.log(this.teacherTable)
                 }
             })
     </script>

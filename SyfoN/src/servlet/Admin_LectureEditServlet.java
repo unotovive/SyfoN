@@ -33,8 +33,7 @@ import unit.UnitManager;
 public class Admin_LectureEditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static Map<String, String> lectureName = new HashMap<String,String>();
-	private static Map<String,String> professorList = new HashMap<String,String>();
-	private static Map<String,String> unitList=new HashMap<String,String>();
+	private static Map<String,String> professorList = new HashMap<String,String>();	private static Map<String,String> unitList=new HashMap<String,String>();
 
     /**
      * @see HttpServlet#HttpServlet()
@@ -140,6 +139,7 @@ public class Admin_LectureEditServlet extends HttpServlet {
         JSONObject professorListJson=new JSONObject(professorList);
         System.out.println(professorListJson);
         session.setAttribute("professorList",professorListJson);
+
 
         //ここまで教師
         //ここからユニット
