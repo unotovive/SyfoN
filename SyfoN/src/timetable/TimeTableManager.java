@@ -26,9 +26,9 @@ public class TimeTableManager {
 	}
 
 	//新規登録した学生の新規の時間割を作成
-	public boolean registerNewTimeTable(String studentID){
+	public boolean registerNewTimeTable(String studentID) throws SQLException{
 		boolean result=false;
-		result=registerNewTimeTable(studentID);
+		result=timeTableDAO.registerTimeTable(studentID);
 		return result;
 	}
 

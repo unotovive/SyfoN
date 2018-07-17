@@ -68,11 +68,15 @@ public class TimeTableDAO {
 			PreparedStatement pstmt = connection.prepareStatement(sql);
 
 			pstmt.setString(1, Integer.toString(max)+i);
-			pstmt.setString(2, studentID);
-			pstmt.setString(3, semesters[i]);
+			pstmt.setString(2, semesters[i]);
+			pstmt.setString(3, studentID);
 
 			int rowNum=pstmt.executeUpdate();
 			if (rowNum==1) result = true;
+			if(!result){
+				System.out.println("時間割作成に失敗");
+				break;
+			}
 			}
 
 			connection.close();
@@ -86,7 +90,7 @@ public class TimeTableDAO {
 		String result="0";
 		final int MAXNO=1;
 		Connection connection;
-		String sql="SELECT MAX(timetable) FROM timetable;";
+		String sql="SELECT MAX(timetableid) FROM timetable;";
 
 		try {
 			Class.forName(driverClassName);
