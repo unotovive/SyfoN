@@ -36,9 +36,8 @@
 						<tr>
 							<td>担当教員</td>
 							<td>
-							<select id="inputformSmall" required name="teacher"
-								v-model="teacherTable.教員">
-									<option value=""></option>
+							<select id="inputformSmall" required name="teacher" v-model="table.教員">
+									<option v-for="teacher in teacherTable" value="teacherTable[teacher]">{{teacher}}</option>
 							</select></td>
 						</tr>
 						<tr>
@@ -235,7 +234,7 @@
                 data: {
                     test: 'afo',
                     table: "",
-                    teacherTable: ""
+                    teacherTable: ''
                 },
                 methods: {
                 },
@@ -249,11 +248,7 @@
                     this.teacherTable='<%= session.getAttribute("professorList")%>'
                     this.teacherTable=JSON.parse(this.teacherTable)
                     console.log(this.teacherTable)
-                    document.forms.adminRegister.teacher.options[0] = new Option("");
-					for(var i = 0; i < teacherTable.length; i++){
-					document.forms.adminRegister.teacher.options[i+1] = new Option(teacherTable.教員+i);
-					console.log(teacherTable.教員+i)
-					}
+
                 }
             })
     </script>
