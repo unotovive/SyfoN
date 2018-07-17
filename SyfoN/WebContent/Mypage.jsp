@@ -38,10 +38,10 @@
 						<a href="Logout">ログアウト</a>
 					</li>
 				</ul>
-			</nav>>
+			</nav>
 			<div id="mcontent">
 				<div id="panel">
-					<h2>マイページ・設定</h2>
+					<h2>マイページ</h2>
 					<h3>学籍番号 {{table.id}}</h3>
 					<table id="table">
 						<tr>
@@ -91,6 +91,9 @@
 			@import url('https://fonts.googleapis.com/css?family=Gruppo|Handlee|Itim|Jura|Life+Savers:700|Nothing+You+Could+Do|Short+Stack');
 			/*デザインテンプレート的なもの、カードの追加は背景白とシャドウをいい感じに入れればあとは何でもOK説*/
 
+
+
+/*ここまでinput*/
 			#app {
 				width: 100vw;
 				height: 100vh;
@@ -151,7 +154,7 @@
 				box-sizing: inherit;
 				margin: 0 auto;
 				margin-top: 80px;
-				padding:2% 1%;
+				padding: 2% 1%;
 			}
 
 			#reviewPanel {
@@ -191,24 +194,25 @@
 			}
 
 			.edit {
-                display: inline-block;
-                height: 8%;
-				font-size:1.1em;
-                margin-left: 40%;
-                margin-right: 10%;
-                margin-top: 2%;
-                margin-bottom: 0;
-                border-radius: 50px;
-                border: #4568DC 3px solid;
-                background: #FFF;
-                transition: .2;
-                color: #4568DC;
-                font-size: 1em;
-                clear: both;
-            }
-            .edit:hover{
-                opacity: .8;
-            }
+				display: inline-block;
+				height: 8%;
+				font-size: 1.1em;
+				margin-left: 40%;
+				margin-right: 10%;
+				margin-top: 2%;
+				margin-bottom: 0;
+				border-radius: 50px;
+				border: #4568DC 3px solid;
+				background: #FFF;
+				transition: .2;
+				color: #4568DC;
+				font-size: 1em;
+				clear: both;
+			}
+
+			.edit:hover {
+				opacity: .8;
+			}
 
 			#back {
 				display: inline-block;
@@ -245,38 +249,23 @@
 				border-collapse: separate;
 				border-spacing: 25px;
 			}
+
 			#text-field {
 				position: relative;
 				margin-top: 1.5rem;
 
-					padding-bottom: 0.5rem;
-					background-color: transparent;
-					border: none;
-					outline: none;
-					border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-					transition: 256ms;
-					
-				}
-				#text-field{
-					border-bottom: 2px solid blue;
-				}
-				label {
-					position: absolute;
-					left: 0;
-					top: -2px;
-					color: #888;
-					pointer-events: none;
-					transition: 256ms;
-				}
-
-				input.focused+label {
-					color: blue;
-					top: -1rem;
-					font-size: 0.6rem;
-				}
+				padding-bottom: 0.5rem;
+				background-color: transparent;
+				border: none;
+				outline: none;
+				border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+				transition: 256ms;
 
 			}
 
+			#text-field {
+				border-bottom: 2px solid blue;
+			}
 			h1 {
 				margin: 20px;
 				font-size: 3em;
@@ -286,7 +275,7 @@
 
 			h2 {
 				font-size: 2em;
-				margin:0 auto;
+				margin: 0 auto;
 				margin-top: 4%;
 			}
 
