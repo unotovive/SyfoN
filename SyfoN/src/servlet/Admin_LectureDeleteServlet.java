@@ -55,6 +55,7 @@ public class Admin_LectureDeleteServlet extends HttpServlet {
 			result=lectureManager.removeLecture(deleteLecture);
 			if(!result) System.out.println("講義削除失敗");
 			result=clManager.deleteCourseLecture2(lectureID);
+			if(!result) System.out.println("履修講義削除失敗");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
