@@ -133,7 +133,7 @@ public class Admin_LectureEditServlet extends HttpServlet {
         //ここから教師一覧
         int count=0;
         for(Professor profResult: profList) {
-        	professorList.put("教員",profResult.getProfessorName());
+        	professorList.put("教員"+Integer.toString(count),profResult.getProfessorName());
         	count++;
         }
         JSONObject professorListJson=new JSONObject(professorList);
