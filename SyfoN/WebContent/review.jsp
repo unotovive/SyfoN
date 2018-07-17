@@ -101,7 +101,7 @@
 
 									<h3>コメント</h3>
 									<span>
-										<textarea v-model="table.コメント" placeholder="add multiple lines" name="comment"></textarea>
+										<textarea v-model="table.コメント" placeholder="add multiple lines" name="comment" required></textarea>
 									</span>
 
 								</div>
