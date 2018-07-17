@@ -81,12 +81,12 @@ public class Admin_LectureListServlet extends HttpServlet {
 	        System.out.println(lectureListJson);
 	        session.setAttribute("lectureList",lectureListJson);
 
+	        System.out.print("到達");
 			getServletContext().getRequestDispatcher("/Admin_LectureList.jsp").forward(request, response);
-
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-      }
+	}
+}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -94,6 +94,8 @@ public class Admin_LectureListServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+
+
 		Lecture Lecture = new Lecture();
 		LectureManager mane = new LectureManager();
 		Lecture editresult = new Lecture();

@@ -33,7 +33,13 @@ import unit.UnitManager;
 public class Admin_LectureEditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static Map<String, String> lectureName = new HashMap<String,String>();
-	private static Map<String,String> professorList = new HashMap<String,String>();	private static Map<String,String> unitList=new HashMap<String,String>();
+	private static Map<String,Map> professorList = new HashMap<String,Map>();
+	private static Map<String,Map> unitList=new HashMap<String,Map>();
+
+	private static Map<String,String> mustTaniDataMap;
+	private static Map<String,Map> variousMustTani=new HashMap<String,Map>();
+	private static Map<String,Map> mustTaniMap=new HashMap<String,Map>();
+
 
     /**
      * @see HttpServlet#HttpServlet()
@@ -104,7 +110,7 @@ public class Admin_LectureEditServlet extends HttpServlet {
 
 		lectureName.put("授業コード", this.NoNull(Integer.toString(editLectureID)));
 		lectureName.put("授業名", this.NoNull(editLecture.getLectureName()));
-		lectureName.put("担当教員", this.NoNull(professor.getProfessorID())); //aaaaaaaaaaaaaa
+		lectureName.put("担当教員", this.NoNull(professor.getProfessorID()));
 		lectureName.put("該当学期", this.NoNull(editLecture.getGaitoGakki()));
 		lectureName.put("曜日", this.NoNull(editLecture.getDay()));
 		lectureName.put("時限", this.NoNull(Integer.toString(editLecture.getPeriod())));
@@ -133,7 +139,10 @@ public class Admin_LectureEditServlet extends HttpServlet {
         //ここから教師一覧
         int count=0;
         for(Professor profResult: profList) {
-        	professorList.put("教員"+Integer.toString(count),profResult.getProfessorName());
+        	Map<String,String> professorMap=new HashMap<String,String>();
+        	professorMap.put("名前", profResult.getProfessorName());
+        	professorMap.put("id", profResult.getProfessorID());
+        	professorList.put("教員"+Integer.toString(count),professorMap);
         	count++;
         }
         JSONObject professorListJson=new JSONObject(professorList);
@@ -145,12 +154,16 @@ public class Admin_LectureEditServlet extends HttpServlet {
         //ここからユニット
         count=0;
         for(Unit unit:allUnitList){
-        	unitList.put("unit"+Integer.toString(count),unit.getUnitName());
+        	Map<String,String> unitMap=new HashMap<String,String>();
+        	unitMap.put("name",unit.getUnitName());
+        	unitMap.put("id",unit.getUnitID());
+        	unitList.put("unit"+Integer.toString(count),unitMap);
         	count++;
         }
         JSONObject unitListJson=new JSONObject(unitList);
         System.out.println(unitListJson);
         session.setAttribute("unitList", unitListJson);
+
 
         getServletContext().getRequestDispatcher("/Admin_Register.jsp").forward(request, response);
 	}
@@ -160,6 +173,10 @@ public class Admin_LectureEditServlet extends HttpServlet {
 		}
 		return str;
 
+	}
+
+	private void initMustTani(){
+		mustTaniDataMap =new HashMap<String,String>();
 	}
 }
 

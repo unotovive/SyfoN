@@ -109,12 +109,12 @@ public class AdminLectureRegisterServlet extends HttpServlet {
 
 		if (result) {
 			// データベースを更新成功したとき
-			getServletContext().getRequestDispatcher("/Admin_LectureList.jsp").forward(request, response);
+			getServletContext().getRequestDispatcher("/Admin_LectureListServlet").forward(request, response);
 		} else {
 			//失敗している場合
 			getServletContext().getRequestDispatcher("/Admin_Register.jsp").forward(request, response);
 			}
-	}
+		}
 	}
 
 }

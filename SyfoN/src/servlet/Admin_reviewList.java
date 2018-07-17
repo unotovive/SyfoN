@@ -79,9 +79,9 @@ public class Admin_reviewList extends HttpServlet {
 		lectureName.put("講義名", lecture.getLectureName());
 		lectureMap.put("講義", lectureName);
 		lectureMap.put("投稿", lectureReview);
-		JSONObject reviewListJson=new JSONObject(lectureMap);
-        System.out.println(reviewListJson);
-        session.setAttribute("lectureList",reviewListJson);
+		JSONObject lectureListJson=new JSONObject(lectureMap);
+        System.out.println(lectureListJson);
+        session.setAttribute("lectureList",lectureListJson);
 
     	getServletContext().getRequestDispatcher("/Admin_ReviewList.jsp").forward(request, response);
 

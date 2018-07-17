@@ -99,9 +99,9 @@ public class ReviewDAO {
 				rev.setProfessorPoint(professorP);
 				float attendP = resultSet.getFloat("attendpoint");
 				rev.setAttendPoint(attendP);
-				float homeworkP = resultSet.getFloat("homeworkpoint");
+				float homeworkP = 0;
 				rev.setHomeworkPoint(homeworkP);
-				float groupP = resultSet.getFloat("grouppoint");
+				float groupP = resultSet.getFloat("groupworkpoint");
 				rev.setGroupworkPoint(groupP);
 			}
 			resultSet.close();

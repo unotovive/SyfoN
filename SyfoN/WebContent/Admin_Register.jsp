@@ -37,7 +37,7 @@
 							<td>担当教員</td>
 							<td>
 							<select id="inputformSmall" required name="teacher" v-model="table.教員">
-									<option v-for="teacher in teacherTable" value="teacherTable[teacher]">{{teacher}}</option>
+									<option v-for="teacher in teacherTable" value="teacherTable[teacher]">{{teacher.名前}}</option>
 							</select></td>
 						</tr>
 						<tr>
@@ -188,45 +188,7 @@
 //	session.setAttribute("jsonTest3",jsonTest3);
   //%>
 
-	<script>
-  //var selectTeacher = document.forms.adominRegister.teacher;
-  //selectTeacher.options.lenght = 0;
-  	//var jsonTest='<%= session.getAttribute("professorList")%>';
-  	//jsonTest=JSON.parse(jsonTest);
-  	//var jsonTest=jsonTest.担当教員
-  	//var keys = Object.keys(jsonTest);
-	//console.log(Object.keys(jsonTest));
-	//document.forms.adminRegister.teacher.options[0] = new Option("");
-	//for(var i = 0; i < Object.keys(jsonTest.担当教員).length; i++){
-	//	document.forms.adminRegister.teacher.options[i+1] = new Option(jsonTest.担当教員[i]);
-	//}
-  </script>
 
-	<script>
-  //var selectTeacher = document.forms.adominRegister.teacher;
-  //selectTeacher.options.lenght = 0;
-  	//var jsonTest2='<%= session.getAttribute("unitList")%>';
-  	//jsonTest2=JSON.parse(jsonTest2);
-  	//var keys = Object.keys(jsonTest2);
-	//console.log(Object.keys(jsonTest2));
-	//document.forms.adminRegister.unit.options[0] = new Option("");
-	//for(var i = 0; i < Object.keys(jsonTest2.ユニット).length; i++){
-	//	document.forms.adminRegister.unit.options[i+1] = new Option(jsonTest2.ユニット[i]);
-	//}
-  </script>
-
-	<script>
-  //var selectTeacher = document.forms.adominRegister.teacher;
-  //selectTeacher.options.lenght = 0;
-  	//var jsonTest3='<%= session.getAttribute("jsonTest3")%>';
-  	//jsonTest3=JSON.parse(jsonTest3);
-  	//var keys = Object.keys(jsonTest3);
-	//console.log(Object.keys(jsonTest3));
-	//document.forms.adminRegister.type.options[0] = new Option("");
-	//for(var i = 0; i < Object.keys(jsonTest3.種類).length; i++){
-	//	document.forms.adminRegister.type.options[i+1] = new Option(jsonTest3.種類[i]);
-	//}
-  </script>
 
 	<script>
         var app = new Vue({
@@ -234,8 +196,9 @@
                 data: {
                     test: 'afo',
                     table: "",
-                    teacherTable: ''
-                },
+                    teacherTable: '',
+                    unitTable:''
+                    },
                 methods: {
                 },
                 mounted() {
@@ -249,6 +212,9 @@
                     this.teacherTable=JSON.parse(this.teacherTable)
                     console.log(this.teacherTable)
 
+                    this.unitTable='<%= session.getAttribute("unitList")%>'
+                    this.unitTable=JSON.parse(this.unitTable)
+                    console.log(this.unitTable)
                 }
             })
     </script>

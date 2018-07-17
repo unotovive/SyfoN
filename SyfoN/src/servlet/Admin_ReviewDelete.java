@@ -48,7 +48,7 @@ public class Admin_ReviewDelete extends HttpServlet {
 		boolean result = false;
 		HttpSession session = request.getSession();
 
-		String revID = request.getParameter("評価ID");
+		String revID = request.getParameter("id");
 		try {
 			System.out.println(revID);
 			review=reviewManager.getReview(revID);
@@ -59,10 +59,10 @@ public class Admin_ReviewDelete extends HttpServlet {
 		}
 		if(result){
 			System.out.println("レビュー削除成功");
-			getServletContext().getRequestDispatcher("/Admin_ReviewList.jsp").forward(request, response);
+			getServletContext().getRequestDispatcher("/Admin_reviewList").forward(request, response);
 		}else{
 			System.out.println("レビュー削除失敗");
-			getServletContext().getRequestDispatcher("/Admin_ReviewList.jsp").forward(request, response);
+			getServletContext().getRequestDispatcher("/Admin_reviewList").forward(request, response);
 		}
 	}
 

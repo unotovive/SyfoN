@@ -53,11 +53,13 @@
               <th width="50px"></th>
             </tr>
             <tr v-for="item in table">
+            <form >
               <td>{{item.投稿者}}</td>
               <td>{{item.投稿内容}}</td>
               <td>
-                <a href="https://www.ayataka.jp/">
-                  <span>削除</span>
+               <td @click="execPost('Admin_ReviewDelete', item.id );return false;" class="btn">
+                <span>削除</span>
+              </td>
               </td>
             </tr>
           </table>
@@ -75,7 +77,26 @@
         test: 'aaa'
       },
       methods: {
-
+    	  execPost(action, data) {
+              // フォームの生成
+              console.log(data)
+              var form = document.createElement("form");
+              form.setAttribute("action", action);
+              form.setAttribute("method", "post");
+              form.style.display = "none";
+              document.body.appendChild(form);
+              // パラメタの設定
+              if (data !== undefined) {
+                var input = document.createElement('input');
+                input.setAttribute('type', 'hidden');
+                input.setAttribute('name', 'id');
+                input.setAttribute('value', data);
+                form.appendChild(input);
+              }
+              // submit
+              console.log(form);
+              form.submit();
+            }
       },
       created() {
         const self = this
@@ -85,20 +106,6 @@
 		this.table=this.lecture.投稿
 		this.lecture=this.lecture.講義
 		console.log(this.lecture)
-
-
-//         axios
-//           .get('https://api.myjson.com/bins/twgy6')
-//           .then(function (res) {
-//             self.table = res.data.講義.投稿;
-//             console.log(self.table)
-//           })
-//         axios
-//           .get('https://api.myjson.com/bins/twgy6')
-//           .then(function (res) {
-//             self.lecture = res.data.講義;
-//             console.log(self.lecture)
-//           })
       }
     })
   </script>
