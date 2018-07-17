@@ -29,8 +29,13 @@ public class ProfessorToLectureDAO {
 			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 
+<<<<<<< HEAD
 				int lecID = resultSet.getInt("lectureid");
 
+=======
+
+				int lecID = resultSet.getInt("lectureid");
+>>>>>>> Admin3
 				ptl.setLectureID(lecID);
 				String professorID = resultSet.getString("professorid");
 				ptl.setProfessorID(professorID);
@@ -58,9 +63,13 @@ public class ProfessorToLectureDAO {
 			ResultSet resultSet = pstmt.executeQuery();
 			while(resultSet.next()){
 				ProfessorToLecture tempPtl=new ProfessorToLecture();
+<<<<<<< HEAD
 
 				int lecID = resultSet.getInt("lectureid");
 
+=======
+				int lecID = resultSet.getInt("lecturerid");
+>>>>>>> Admin3
 				tempPtl.setLectureID(lecID);
 				String proID = resultSet.getString("professorid");
 				tempPtl.setProfessorID(proID);
@@ -86,10 +95,16 @@ public class ProfessorToLectureDAO {
 			pstmt.setString(1, ptl.getProfessorID());
 			pstmt.setInt(2, ptl.getLectureID());
 
+<<<<<<< HEAD
 			ResultSet resultSet = pstmt.executeQuery();
 			if (resultSet.next()) result = true;
 
 			resultSet.close();
+=======
+			int rowNum = pstmt.executeUpdate();
+			if (rowNum==1) result = true;
+
+>>>>>>> Admin3
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -108,11 +123,42 @@ public class ProfessorToLectureDAO {
 
 			pstmt.setString(1, ptl.getProfessorID());
 			pstmt.setInt(2, ptl.getLectureID());
+<<<<<<< HEAD
 
 			ResultSet resultSet = pstmt.executeQuery();
 			if (resultSet.next()) result = true;
 
 			resultSet.close();
+=======
+
+			int rowNum = pstmt.executeUpdate();
+			if (rowNum==1) result = true;
+
+
+			connection.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	public boolean removePTL(ProfessorToLecture ptl) {
+		// TODO Auto-generated method stub
+		boolean result = false;
+		Connection connection;
+		String sql = "DELETE FROM professortolecture WHERE lectureID = ?";
+
+		try {
+			Class.forName(driverClassName);
+			connection = DriverManager.getConnection(url, user, password);
+			PreparedStatement pstmt = connection.prepareStatement(sql);
+
+			pstmt.setInt(1, ptl.getLectureID());
+
+			int rowNum = pstmt.executeUpdate();
+			if (rowNum==1) result = true;
+
+>>>>>>> Admin3
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();

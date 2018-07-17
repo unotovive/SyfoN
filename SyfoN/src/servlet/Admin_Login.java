@@ -50,6 +50,7 @@ public class Admin_Login extends HttpServlet {
 
 		boolean result = false;
 
+
 		try {
 			result = adminmane.check(admin);
 		} catch (Exception e) {
@@ -57,6 +58,7 @@ public class Admin_Login extends HttpServlet {
 		}
 
 		HttpSession session = request.getSession();
+
 		session.setAttribute("Admin_Login", result);
 		if (result) {
 			// ログインに成功している場合はtop.jspへ
@@ -70,5 +72,6 @@ public class Admin_Login extends HttpServlet {
 			getServletContext().getRequestDispatcher("/Common_Login.jsp").forward(request, response);
 		}
 		}
+
 
 }

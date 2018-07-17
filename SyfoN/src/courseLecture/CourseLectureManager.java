@@ -41,4 +41,9 @@ public class CourseLectureManager {
 		return courseLectureList;
 	}
 
+	public boolean deleteCourseLecture2(int lectureID){
+		boolean result=false;
+		result=courseLectureDAO.deleteCourseLecture2(lectureID);
+		return result;
+	}
 }

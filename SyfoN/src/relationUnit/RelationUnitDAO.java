@@ -19,7 +19,7 @@ public class RelationUnitDAO {
 		// memberがDBにあるかどうかを調べる
 		RelationUnit relUnit = new RelationUnit();
 		Connection connection;
-		String sql = "select * from relationunit where lecture = ?";
+		String sql = "select * from relationunit where lectureid = ?";
 
 		try {
 			Class.forName(driverClassName);
@@ -107,15 +107,15 @@ public class RelationUnitDAO {
 			pstmt.setInt(1, relationUnit.getLectureID());
 			//pstmt.setString(2, relationUnit.getUnitID());
 
-			ResultSet resultSet = pstmt.executeQuery();
-			if (resultSet.next()) result = true;
+			int rowNum = pstmt.executeUpdate();
+			if (rowNum==1) result = true;
 
-			resultSet.close();
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return result;
 	}
+
 
 }
