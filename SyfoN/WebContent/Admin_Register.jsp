@@ -36,10 +36,9 @@
 						<tr>
 							<td>担当教員</td>
 							<td>
-							{{teacherTable.教員}}
 							<select id="inputformSmall" required name="table.担当教員"
 								v-model="teacherTable.教員">
-									<option value="高橋時市郎">高橋時市郎</option>
+									<option value=""></option>
 							</select></td>
 						</tr>
 						<tr>
