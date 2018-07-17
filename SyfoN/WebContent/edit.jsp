@@ -1198,6 +1198,7 @@
                 box-sizing: border-box;
             }
 
+
             #probar1 {
                 width: 90%;
                 height: 30px;
@@ -1211,11 +1212,10 @@
                 max-width: 100%;
                 border-radius: 100px;
                 border: none;
-                background: #a80077;
-                background: -moz-linear-gradient(left, #a80077, #66ff00);
-                background: -webkit-linear-gradient(left, #a80077, #66ff00);
-                background: linear-gradient(to right, #a80077, #66ff00);
-                transition: .5s;
+                background: #00c3ff;
+                background: -moz-linear-gradient(left, #00c3ff, #ffff1c);
+                background: -webkit-linear-gradient(left, #00c3ff, #ffff1c);
+                background: linear-gradient(to right, #00c3ff, #ffff1c);
             }
 
             #probar1n p {
@@ -1239,11 +1239,10 @@
                 height: 30px;
                 border-radius: 100px;
                 border: none;
-                background: #a80077;
-                background: -moz-linear-gradient(left, #a80077, #66ff00);
-                background: -webkit-linear-gradient(left, #a80077, #66ff00);
-                background: linear-gradient(to right, #a80077, #66ff00);
-                transition: .5s;
+                background: #00c3ff;
+                background: -moz-linear-gradient(left, #00c3ff, #ffff1c);
+                background: -webkit-linear-gradient(left, #00c3ff, #ffff1c);
+                background: linear-gradient(to right, #00c3ff, #ffff1c);
             }
 
             #probar2n p {
@@ -1267,19 +1266,10 @@
                 height: 30px;
                 border-radius: 100px;
                 border: none;
-                background: #a80077;
-                background: -moz-linear-gradient(left, #a80077, #66ff00);
-                background: -webkit-linear-gradient(left, #a80077, #66ff00);
-                background: linear-gradient(to right, #a80077, #66ff00);
-                transition: .5s;
-            }
-
-            #probar3n p {
-                margin: 0 auto;
-                padding: 0;
-                color: #FFF;
-                font-size: 1.1em;
-                margin-left: 5%;
+                background: #00c3ff;
+                background: -moz-linear-gradient(left, #00c3ff, #ffff1c);
+                background: -webkit-linear-gradient(left, #00c3ff, #ffff1c);
+                background: linear-gradient(to right, #00c3ff, #ffff1c);
             }
 
             #bar {
