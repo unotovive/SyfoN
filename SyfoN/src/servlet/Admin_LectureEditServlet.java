@@ -76,7 +76,7 @@ public class Admin_LectureEditServlet extends HttpServlet {
 		ProfessorToLecture ptl = new ProfessorToLecture();
 
 		try {
-			editLecture=lectureManager.getLecture(Integer.valueOf(request.getParameter("lectureid")));
+			editLecture=lectureManager.getLecture(Integer.valueOf(request.getParameter("id")));
 		} catch (NumberFormatException | SQLException e2) {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
@@ -134,6 +134,8 @@ public class Admin_LectureEditServlet extends HttpServlet {
 		JSONObject registLectureJson=new JSONObject(lectureName);
         System.out.println(registLectureJson);
         session.setAttribute("registLecture",registLectureJson);
+        session.setAttribute("oldID", editLectureID);
+        System.out.println("ふるいID "+editLectureID);
 
         //ここまで講義
         //ここから教師一覧

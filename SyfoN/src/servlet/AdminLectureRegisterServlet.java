@@ -47,6 +47,8 @@ public class AdminLectureRegisterServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		request.setCharacterEncoding("UTF-8");
+
 		Lecture Lecture = new Lecture();
 		LectureManager mane = new LectureManager();
 		RelationUnit RelationUnit = new RelationUnit();
@@ -59,9 +61,10 @@ public class AdminLectureRegisterServlet extends HttpServlet {
 		boolean proresult = false;
 		HttpSession session = request.getSession();
 
-		int strageID = (Integer.parseInt(request.getParameter("授業コード")));
+		//古いIDをもらう
+		int strageID = ((int)session.getAttribute("oldID"));
 
-
+		//登録されたデータを得る
 		Lecture.setLectureID(Integer.parseInt(request.getParameter("授業コード")));
 		Lecture.setLectureName(request.getParameter("授業名"));
 		Lecture.setGaitoGakki(request.getParameter("該当学期"));
@@ -82,38 +85,59 @@ public class AdminLectureRegisterServlet extends HttpServlet {
 		Lecture.setCaution(request.getParameter("注意事項"));
 		Lecture.setAdvice(request.getParameter("助言"));
 		Lecture.setType(request.getParameter("種類"));
-		RelationUnit.setLectureID(strageID);
+		RelationUnit.setLectureID(Lecture.getLectureID());
 		RelationUnit.setUnitID(request.getParameter("ユニット"));
-	    ptl.setLectureID(strageID);
+	    ptl.setLectureID(Lecture.getLectureID());
 	    ptl.setProfessorID(request.getParameter("担当教員"));
 
-		if(session.getAttribute("editresult")!=null){      //編集
-	    try {
-			result = mane.editLecture(Lecture);
-			uniresult = unimane.editRelationUnit(RelationUnit);
-			proresult = promane.updatePTL(ptl);
-		} catch (SQLException e) {
-			e.printStackTrace();
+
+	    boolean oldResult=true;
+	    boolean isEquarls=true;
+	    //授業コードが違う場合、古いデータを削除
+		if(strageID!=Lecture.getLectureID()){      //編集
+			try {
+				isEquarls=false;
+				Lecture oldLecture = mane.getLecture(strageID);
+				RelationUnit oldru=unimane.getRelationUnit(strageID);
+				uniresult=unimane.removeRelationUnit(oldru);
+				proresult=promane.removePTLOfLecture(strageID);
+				oldResult=mane.removeLecture(oldLecture);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
 		}
-		}else{            //新規登録
-		try {
-			result = mane.registetLecture(Lecture);
-			uniresult = unimane.registerRelationUnit(RelationUnit);
-			proresult = promane.registerPTL(ptl);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		if(oldResult&&uniresult&&proresult){
+			if(isEquarls){
+				try {
+					uniresult = unimane.editRelationUnit(RelationUnit);
+					proresult = promane.updatePTL(ptl);
+					result = mane.editLecture(Lecture);
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}else{
+				try {
+					result = mane.registetLecture(Lecture);
+					uniresult = unimane.registerRelationUnit(RelationUnit);
+					proresult = promane.registerPTL(ptl);
 
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
 
-		getServletContext().getRequestDispatcher("/Admin_LectureList.jsp").forward(request, response);
-
-//		if (result) {
-//			// データベースを更新成功したとき
-//			getServletContext().getRequestDispatcher("/Admin_LectureListServlet").forward(request, response);
-//		} else {
-//			//失敗している場合
-//			getServletContext().getRequestDispatcher("/Admin_Register.jsp").forward(request, response);
-//			}
+			if (result&&proresult&&uniresult) {
+				// データベースを更新成功したとき
+				getServletContext().getRequestDispatcher("/Admin_LectureListServlet").forward(request, response);
+			} else {
+				//失敗している場合
+				getServletContext().getRequestDispatcher("/Admin_Register.jsp").forward(request, response);
+			}
+		}else{
+			System.out.println("古いデータの削除に失敗");
+			getServletContext().getRequestDispatcher("/Admin_Register.jsp").forward(request, response);
 		}
 	}
 

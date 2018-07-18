@@ -87,7 +87,7 @@ public class ProfessorToLectureDAO {
 			pstmt.setInt(2, ptl.getLectureID());
 
 			int rowNum = pstmt.executeUpdate();
-			if (rowNum==1) result = true;
+			if (rowNum>=1) result = true;
 
 			connection.close();
 		} catch (Exception e) {

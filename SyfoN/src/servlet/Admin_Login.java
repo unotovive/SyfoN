@@ -42,6 +42,8 @@ public class Admin_Login extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		request.setCharacterEncoding("UTF-8");
+
 		Admin admin = new Admin();
 		AdminManager adminmane = new AdminManager();
 
@@ -49,7 +51,6 @@ public class Admin_Login extends HttpServlet {
 		admin.setPassword(request.getParameter("adminPass"));
 
 		boolean result = false;
-
 
 		try {
 			result = adminmane.check(admin);
@@ -71,7 +72,5 @@ public class Admin_Login extends HttpServlet {
 			System.out.print("sippai");
 			getServletContext().getRequestDispatcher("/Common_Login.jsp").forward(request, response);
 		}
-		}
-
-
+	}
 }

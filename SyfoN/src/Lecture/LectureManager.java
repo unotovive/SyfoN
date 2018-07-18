@@ -50,7 +50,6 @@ public class LectureManager {
 		return lectureList;
 	}
 
-
 	public boolean registetLecture(Lecture lecture) throws SQLException{
 		boolean result = false;
 		result = lectureDAO.registerLecture(lecture);

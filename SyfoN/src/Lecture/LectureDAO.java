@@ -463,7 +463,7 @@ public class LectureDAO {
 		// memberがDBにあるかどうかを調べる
 		boolean result = false;
 		Connection connection;
-		String sql = "INSERT INTO lecture VALUES (?, ?, ?,?,?, ?,?,?,?,?, ?,?,?,?,?, ?,?,?,?,?, ?,?)";
+		String sql = "INSERT INTO lecture VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
 		try {
 			Class.forName(driverClassName);
@@ -477,56 +477,6 @@ public class LectureDAO {
 			pstmt.setInt(5, lecture.getPeriod());
 			pstmt.setString(6, lecture.getRoom());
 			pstmt.setInt(7, lecture.getTaniNum());
-			pstmt.setString(8, lecture.getProfessorID());
-			pstmt.setString(9, lecture.getPurpose());
-			pstmt.setString(10, lecture.getAchieve());
-			pstmt.setString(11, lecture.getRelation());
-			pstmt.setString(12, lecture.getTerm());
-			pstmt.setString(13, lecture.getTextbook());
-			pstmt.setString(14, lecture.getHyokahoho());
-			pstmt.setString(15, lecture.getKyoikumokuhyo());
-			pstmt.setString(16, lecture.getYosyufukusyu());
-			pstmt.setString(17, lecture.getEmail());
-			pstmt.setString(18, lecture.getSupport());
-			pstmt.setString(19, lecture.getCaution());
-			pstmt.setString(20, lecture.getAdvice());
-			pstmt.setString(21, lecture.getUnit());
-			pstmt.setString(22, lecture.getType());
-
-
-			ResultSet resultSet = pstmt.executeQuery();
-			if (resultSet.next()) result = true;
-
-			resultSet.close();
-			connection.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return result;
-	}
-
-	public boolean updateLecture(Lecture lecture) throws SQLException {
-		// memberがDBにあるかどうかを調べる
-		boolean result = false;
-		Connection connection;
-		String sql = "UPDATE lecture SET LectureName = ?,GaitoGakki = ?, Day = ?,"
-				+ "Period = ?, Room = ?,TaniNum = ?,ProfessorID = ?,Purpose = ?,Achieve = ?,"
-				+ "Relation = ?,Term = ?,Textbook = ?,Hyokahoho = ?,Kyoikumokuhyo = ?,"
-				+ "Yosyufukusyu = ?,Email = ?,Support = ?,Caution = ?,Advice = ?,Unit = ?,Type =? WHERE lectureID = ?";
-
-		try {
-			Class.forName(driverClassName);
-			connection = DriverManager.getConnection(url, user, password);
-			PreparedStatement pstmt = connection.prepareStatement(sql);
-
-			pstmt.setInt(22, lecture.getLectureID());
-			pstmt.setString(1, lecture.getLectureName());
-			pstmt.setString(2, lecture.getGaitoGakki());
-			pstmt.setString(3, lecture.getDay());
-			pstmt.setInt(4, lecture.getPeriod());
-			pstmt.setString(5, lecture.getRoom());
-			pstmt.setInt(6, lecture.getTaniNum());
-			pstmt.setString(7, lecture.getProfessorID());
 			pstmt.setString(8, lecture.getPurpose());
 			pstmt.setString(9, lecture.getAchieve());
 			pstmt.setString(10, lecture.getRelation());
@@ -542,10 +492,56 @@ public class LectureDAO {
 			pstmt.setString(20, lecture.getUnit());
 			pstmt.setString(21, lecture.getType());
 
-			ResultSet resultSet = pstmt.executeQuery();
-			if (resultSet.next()) result = true;
 
-			resultSet.close();
+			int rowNum = pstmt.executeUpdate();
+			if (rowNum>=1) result = true;
+
+			connection.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	public boolean updateLecture(Lecture lecture) throws SQLException {
+		// memberがDBにあるかどうかを調べる
+		boolean result = false;
+		Connection connection;
+		String sql = "UPDATE lecture SET LectureName = ?,GaitoGakki = ?, Day = ?,"
+				+ "Period = ?, Room = ?,TaniNum = ?,Purpose = ?,Achieve = ?,"
+				+ "Relation = ?,Term = ?,Textbook = ?,Hyokahoho = ?,Kyoikumokuhyo = ?,"
+				+ "Yosyufukusyu = ?,Email = ?,Support = ?,Caution = ?,Advice = ?,Unit = ?,Type =? WHERE lectureID = ?";
+
+		try {
+			Class.forName(driverClassName);
+			connection = DriverManager.getConnection(url, user, password);
+			PreparedStatement pstmt = connection.prepareStatement(sql);
+
+			pstmt.setInt(21, lecture.getLectureID());
+			pstmt.setString(1, lecture.getLectureName());
+			pstmt.setString(2, lecture.getGaitoGakki());
+			pstmt.setString(3, lecture.getDay());
+			pstmt.setInt(4, lecture.getPeriod());
+			pstmt.setString(5, lecture.getRoom());
+			pstmt.setInt(6, lecture.getTaniNum());
+			pstmt.setString(7, lecture.getPurpose());
+			pstmt.setString(8, lecture.getAchieve());
+			pstmt.setString(9, lecture.getRelation());
+			pstmt.setString(10, lecture.getTerm());
+			pstmt.setString(11, lecture.getTextbook());
+			pstmt.setString(12, lecture.getHyokahoho());
+			pstmt.setString(13, lecture.getKyoikumokuhyo());
+			pstmt.setString(14, lecture.getYosyufukusyu());
+			pstmt.setString(15, lecture.getEmail());
+			pstmt.setString(16, lecture.getSupport());
+			pstmt.setString(17, lecture.getCaution());
+			pstmt.setString(18, lecture.getAdvice());
+			pstmt.setString(19, lecture.getUnit());
+			pstmt.setString(20, lecture.getType());
+
+			int rowNum = pstmt.executeUpdate();
+			if (rowNum>=1) result = true;
+
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();

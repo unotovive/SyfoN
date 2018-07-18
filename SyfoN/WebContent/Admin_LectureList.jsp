@@ -99,16 +99,6 @@
           this.table = this.table.lectureList
           console.log(this.table)
         }
-        //       created() {
-        //         const self = this
-        //         console.log("afo")
-        //         axios
-        //           .get('https://api.myjson.com/bins/19mbbi')
-        //           .then(function (res) {
-        //             self.table = res.data.lectureList;
-        //             console.log(self.table)
-        //           })
-        //       }
       })
     </script>
     <style scoped>

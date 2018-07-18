@@ -20,17 +20,16 @@
 				<a href="Admin_LectureListServlet"> <span>キャンセル</span>
 				</a>
 			</div>
-			<form action="AdminLectureRegisterServlet" method="post" name="adminRegister">
 				<div id="lectureTable">
+				<form action="AdminLectureRegisterServlet" method="POST" >
 					<table id="inputtable">
 						<tr>
 							<td width="100px">授業コード</td>
-							<td width="100px"><input id="inputformSmall" type="text"
-								v-model="table.授業コード"></td>
+							<td width="100px"><input id="inputformSmall" type="text" name="授業コード"></td>
 						</tr>
 						<tr>
 							<td>授業名</td>
-							<td><input id="inputformSmall" type="text"
+							<td><input id="inputformSmall" type="text" name="授業名"
 								v-model="table.授業名"></td>
 						</tr>
 						<tr>
@@ -60,7 +59,7 @@
 						<tr>
 							<td>曜日</td>
 							<td>
-								<select id="inputformSmall" name="kaikoki" v-model="table.曜日">
+								<select id="inputformSmall" name="曜日" v-model="table.曜日">
 										<option value="">曜日を選択してください</option>
 										<option value="monday">月</option>
 										<option value="tuesday">火</option>
@@ -75,69 +74,69 @@
 						<tr>
 							<td>時限</td>
 							<td>
-							<input id="inputformSmall" type="text"
+							<input id="inputformSmall" type="text" name="時限"
 								v-model="table.時限">
 							</td>
 						</tr>
 						<tr>
 							<td>教室番号</td>
-							<td><input id="inputformSmall" type="text"
+							<td><input id="inputformSmall" type="text" name="教室番号"
 								v-model="table.教室番号"></td>
 						</tr>
 						<tr>
 							<td>単位数</td>
-							<td><input id="inputformSmall" type="text"
+							<td><input id="inputformSmall" type="text" name="単位数"
 								v-model="table.単位数"></td>
 						</tr>
 						<tr>
 							<td>目的概要</td>
-							<td><textarea id="inputformLarge" v-model="table.目的概要"
+							<td><textarea id="inputformLarge" v-model="table.目的概要" naem="目的概要"
 									rows="3" cols="50"></textarea></td>
 						</tr>
 						<tr>
 							<td>達成目標</td>
-							<td><textarea id="inputformLarge" v-model="table.達成目標"
+							<td><textarea id="inputformLarge" v-model="table.達成目標" name="達成目標"
 									rows="3" cols="50"></textarea></td>
 						</tr>
 						<tr>
 							<td>関連科目</td>
-							<td><textarea id="inputformLarge" v-model="table.関連科目"
+							<td><textarea id="inputformLarge" v-model="table.関連科目" name="関連科目"
 									rows="3" cols="50"></textarea></td>
 						</tr>
 						<tr>
 							<td>履修条件</td>
-							<td><textarea id="inputformLarge" v-model="table.履修条件"
+							<td><textarea id="inputformLarge" v-model="table.履修条件" name="履修条件"
 									rows="3" cols="50"></textarea></td>
 						</tr>
 						<tr>
 							<td>教科書名</td>
-							<td><input id="inputformSmall" type="text"
+							<td><input id="inputformSmall" type="text" name="教科書名"
 								v-model="table.教科書名"></td>
 						</tr>
 						<tr>
 							<td>評価方法</td>
-							<td><input id="inputformSmall" type="text"
+							<td><input id="inputformSmall" type="text" name="評価方法"
 								v-model="table.評価方法"></td>
 						</tr>
 						<tr>
 							<td>学習・教育目標との対応</td>
-							<td><textarea id="inputformLarge" v-model="table.教育目標との対応"
+							<td><textarea id="inputformLarge" v-model="table.教育目標との対応" name="教育目標"
 									rows="3" cols="50"></textarea></td>
 						</tr>
 						<tr>
 							<td>事前・事後学習</td>
-							<td><textarea id="inputformLarge" v-model="table.事前事後学習"
+							<td><textarea id="inputformLarge" v-model="table.事前事後学習" name="事前事後学習"
 									rows="3" cols="50"></textarea></td>
 						</tr>
 
 						<tr>
 							<td>E-Mail address</td>
-							<td><input id="inputformSmall" type="text"
+							<td><input id="inputformSmall" type="text" name="メール"
 								v-model="table.メール"></td>
 						</tr>
 						<tr>
 							<td>質問への対応</td>
-							<td><textarea id="inputformLarge" v-model="table.質問"
+							<td><textarea id="inputformLarge" v-model="table.質問"　name="質問"
 									rows="3" cols="50"></textarea></td>
 						</tr>
 						<tr>
@@ -147,12 +146,12 @@
 						</tr>
 						<tr>
 							<td>学習上の助言</td>
-							<td><textarea id="inputformLarge" v-model="table.助言"
+							<td><textarea id="inputformLarge" v-model="table.助言" name="助言"
 									rows="3" cols="50"></textarea></td>
 						</tr>
 						<tr>
 							<td>該当ユニット</td>
-							<td><select id="inputformSmall" required name="unit"
+							<td><select id="inputformSmall" required name="unit" name=unit
 								v-model="table.ユニット">
 									<option v-for="unit in unitTable" value="unitTable[unit]">{{unit.name}}</option>
 							</select></td>
@@ -171,9 +170,8 @@
 					<p id="submitButton">
 						<input type="submit" value="送信する">
 					</p>
-
-				</div>
-			</form>
+				</form>
+			</div>
 		</div>
 	</div>
 
