@@ -5,7 +5,7 @@
           "csc" : [ {
             "id" : 514,
             "must" : false,
-            "name" : "じんか",
+            "name" : "test",
             "room" : "うんこ",
             "taninum" : 10
           },{
