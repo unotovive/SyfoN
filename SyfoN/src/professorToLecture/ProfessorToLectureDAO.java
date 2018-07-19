@@ -133,6 +133,7 @@ public class ProfessorToLectureDAO {
 			pstmt.setInt(1, ptl.getLectureID());
 
 			int rowNum = pstmt.executeUpdate();
+			System.out.println("ptl"+rowNum);
 			if (rowNum==1) result = true;
 
 			connection.close();

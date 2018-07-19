@@ -56,12 +56,11 @@ public class AdminLectureRegisterServlet extends HttpServlet {
 		ProfessorToLecture ptl = new ProfessorToLecture();
 		ProfessorToLectureManager promane = new ProfessorToLectureManager();
 
-		boolean result = false;
-		boolean uniresult = false;
-		boolean proresult = false;
+
 		HttpSession session = request.getSession();
 
 		//古いIDをもらう
+		System.out.println(request.getParameter("teacher")+","+request.getParameter("unit")+","+request.getParameter("曜日"));
 		int strageID = ((int)session.getAttribute("oldID"));
 
 		//登録されたデータを得る
@@ -86,12 +85,15 @@ public class AdminLectureRegisterServlet extends HttpServlet {
 		Lecture.setAdvice(request.getParameter("助言"));
 		Lecture.setType(request.getParameter("種類"));
 		RelationUnit.setLectureID(Lecture.getLectureID());
-		RelationUnit.setUnitID(request.getParameter("ユニット"));
+		RelationUnit.setUnitID(request.getParameter("unit"));
 	    ptl.setLectureID(Lecture.getLectureID());
-	    ptl.setProfessorID(request.getParameter("担当教員"));
+	    ptl.setProfessorID(request.getParameter("teacher"));
 
 
 	    boolean oldResult=true;
+	    boolean uniresult = true;
+		boolean proresult = true;
+		boolean result = false;
 	    boolean isEquarls=true;
 	    //授業コードが違う場合、古いデータを削除
 		if(strageID!=Lecture.getLectureID()){      //編集
@@ -136,6 +138,7 @@ public class AdminLectureRegisterServlet extends HttpServlet {
 				getServletContext().getRequestDispatcher("/Admin_Register.jsp").forward(request, response);
 			}
 		}else{
+			System.out.print(oldResult+","+uniresult+","+proresult);
 			System.out.println("古いデータの削除に失敗");
 			getServletContext().getRequestDispatcher("/Admin_Register.jsp").forward(request, response);
 		}

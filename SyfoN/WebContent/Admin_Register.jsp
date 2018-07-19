@@ -25,7 +25,7 @@
 					<table id="inputtable">
 						<tr>
 							<td width="100px">授業コード</td>
-							<td width="100px"><input id="inputformSmall" type="text" name="授業コード"></td>
+							<td width="100px"><input id="inputformSmall" type="text" name="授業コード" v-model="table.授業コード"></td>
 						</tr>
 						<tr>
 							<td>授業名</td>
@@ -36,7 +36,7 @@
 							<td>担当教員</td>
 							<td>
 							<select id="inputformSmall" required name="teacher" v-model="table.教員">
-									<option v-for="teacher in teacherTable" value="teacherTable[teacher]">{{teacher.名前}}</option>
+									<option v-for="teacher in teacherTable" v-bind:value="teacher.id"> {{teacher.名前}}</option>
 							</select></td>
 						</tr>
 						<tr>
@@ -151,9 +151,8 @@
 						</tr>
 						<tr>
 							<td>該当ユニット</td>
-							<td><select id="inputformSmall" required name="unit" name=unit
-								v-model="table.ユニット">
-									<option v-for="unit in unitTable" value="unitTable[unit]">{{unit.name}}</option>
+							<td><select id="inputformSmall" required name="unit" v-model="table.ユニット">
+									<option v-for="unit in unitTable" v-bind:value="unit.id" >{{unit.name}}</option>
 							</select></td>
 						</tr>
 						<tr>
@@ -195,7 +194,7 @@
 
                     this.teacherTable='<%= session.getAttribute("professorList")%>'
                     this.teacherTable=JSON.parse(this.teacherTable)
-                    console.log(this.teacherTable)
+                    console.log(this.teacherTable.id)
 
                     this.unitTable='<%= session.getAttribute("unitList")%>'
                     this.unitTable=JSON.parse(this.unitTable)

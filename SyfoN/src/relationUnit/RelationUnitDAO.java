@@ -78,8 +78,8 @@ public class RelationUnitDAO {
 			connection = DriverManager.getConnection(url, user, password);
 			PreparedStatement pstmt = connection.prepareStatement(sql);
 
-			pstmt.setInt(2, relationUnit.getLectureID());
 			pstmt.setString(1, relationUnit.getUnitID());
+			pstmt.setInt(2, relationUnit.getLectureID());
 
 			int rowNum = pstmt.executeUpdate();
 			if (rowNum>=1) result = true;
@@ -103,9 +103,9 @@ public class RelationUnitDAO {
 			PreparedStatement pstmt = connection.prepareStatement(sql);
 
 			pstmt.setInt(1, relationUnit.getLectureID());
-			//pstmt.setString(2, relationUnit.getUnitID());
 
 			int rowNum = pstmt.executeUpdate();
+			System.out.println("ru"+rowNum);
 			if (rowNum==1) result = true;
 
 			connection.close();
