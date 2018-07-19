@@ -1221,7 +1221,7 @@
             #probar1n p {
                 margin: 0 auto;
                 padding: 0;
-                color: #FFF;
+                color: #353535;
                 font-size: 1.1em;
                 margin-left: 5%;
             }
@@ -1248,7 +1248,7 @@
             #probar2n p {
                 margin: 0 auto;
                 padding: 0;
-                color: #FFF;
+                color: #353535;
                 font-size: 1.1em;
                 margin-left: 5%;
             }
@@ -1271,7 +1271,13 @@
                 background: -webkit-linear-gradient(left, #00c3ff, #ffff1c);
                 background: linear-gradient(to right, #00c3ff, #ffff1c);
             }
-
+            #probar3n p {
+                margin: 0 auto;
+                padding: 0;
+                color: #353535;
+                font-size: 1.1em;
+                margin-left: 5%;
+            }
             #bar {
                 position: absolute;
                 top: 0;
