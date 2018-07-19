@@ -76,11 +76,7 @@ public class Admin_LectureEditServlet extends HttpServlet {
 		ProfessorToLecture ptl = new ProfessorToLecture();
 
 		try {
-			if(request.getParameter("id")!=null){
-				editLecture=lectureManager.getLecture(Integer.valueOf(request.getParameter("id")));
-			}else{
-				editLecture=lectureManager.getLecture((int)session.getAttribute("oldID"));
-			}
+			editLecture=lectureManager.getLecture(Integer.valueOf(request.getParameter("id")));
 		} catch (NumberFormatException | SQLException e2) {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
