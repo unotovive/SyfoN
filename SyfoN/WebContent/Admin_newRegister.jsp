@@ -20,24 +20,24 @@
 				<a href="Admin_LectureListServlet"> <span>キャンセル</span>
 				</a>
 			</div>
-			<form action="AdminLectureRegisterServlet" method="post" name="Admin_LectureEditServlet">
+			<form action="New_AdminLectureRegisterServlet" method="post" >
 				<div id="lectureTable">
 					<table id="inputtable">
 						<tr>
 							<td width="100px">授業コード</td>
-							<td width="100px"><input id="inputformSmall" type="text"
+							<td width="100px"><input id="inputformSmall" type="text" name="授業コード"
 								v-model="table.授業コード"></td>
 						</tr>
 						<tr>
 							<td>授業名</td>
-							<td><input id="inputformSmall" type="text"
+							<td><input id="inputformSmall" type="text" name="授業名"
 								v-model="table.授業名"></td>
 						</tr>
 						<tr>
 							<td>担当教員</td>
 							<td>
 							<select id="inputformSmall" required name="teacher" v-model="table.教員">
-									<option v-for="teacher in teacherTable" value="teacherTable[teacher]">{{teacher.名前}}</option>
+									<option v-for="teacher in teacherTable" v-bind:value="teacher.id">{{teacher.名前}}</option>
 							</select></td>
 						</tr>
 						<tr>
@@ -60,7 +60,7 @@
 						<tr>
 							<td>曜日</td>
 							<td>
-								<select id="inputformSmall" name="kaikoki" v-model="table.曜日">
+								<select id="inputformSmall" name="曜日" v-model="table.曜日">
 										<option value="">曜日を選択してください</option>
 										<option value="月">月</option>
 										<option value="火">火</option>
@@ -75,96 +75,96 @@
 						<tr>
 							<td>時限</td>
 							<td>
-							<input id="inputformSmall" type="text"
+							<input id="inputformSmall" type="text" name="時限"
 								v-model="table.時限">
 							</td>
 						</tr>
 						<tr>
 							<td>教室番号</td>
-							<td><input id="inputformSmall" type="text"
+							<td><input id="inputformSmall" type="text" name="教室番号"
 								v-model="table.教室番号"></td>
 						</tr>
 						<tr>
 							<td>単位数</td>
-							<td><input id="inputformSmall" type="text"
+							<td><input id="inputformSmall" type="text" name="単位数"
 								v-model="table.単位数"></td>
 						</tr>
 						<tr>
 							<td>目的概要</td>
-							<td><textarea id="inputformLarge" v-model="table.目的概要"
+							<td><textarea id="inputformLarge" v-model="table.目的概要" name="目的概要"
 									rows="3" cols="50"></textarea></td>
 						</tr>
 						<tr>
 							<td>達成目標</td>
-							<td><textarea id="inputformLarge" v-model="table.達成目標"
+							<td><textarea id="inputformLarge" v-model="table.達成目標" name="達成目標"
 									rows="3" cols="50"></textarea></td>
 						</tr>
 						<tr>
 							<td>関連科目</td>
-							<td><textarea id="inputformLarge" v-model="table.関連科目"
+							<td><textarea id="inputformLarge" v-model="table.関連科目" name="関連科目"
 									rows="3" cols="50"></textarea></td>
 						</tr>
 						<tr>
 							<td>履修条件</td>
-							<td><textarea id="inputformLarge" v-model="table.履修条件"
+							<td><textarea id="inputformLarge" v-model="table.履修条件" name="履修条件"
 									rows="3" cols="50"></textarea></td>
 						</tr>
 						<tr>
 							<td>教科書名</td>
-							<td><input id="inputformSmall" type="text"
+							<td><input id="inputformSmall" type="text" name="教科書名"
 								v-model="table.教科書名"></td>
 						</tr>
 						<tr>
 							<td>評価方法</td>
-							<td><input id="inputformSmall" type="text"
+							<td><input id="inputformSmall" type="text"　name="評価方法"
 								v-model="table.評価方法"></td>
 						</tr>
 						<tr>
 							<td>学習・教育目標との対応</td>
-							<td><textarea id="inputformLarge" v-model="table.教育目標との対応"
+							<td><textarea id="inputformLarge" v-model="table.教育目標との対応" name="教育目標"
 									rows="3" cols="50"></textarea></td>
 						</tr>
 						<tr>
 							<td>事前・事後学習</td>
-							<td><textarea id="inputformLarge" v-model="table.事前事後学習"
+							<td><textarea id="inputformLarge" v-model="table.事前事後学習"name="事前事後学習"
 									rows="3" cols="50"></textarea></td>
 						</tr>
 
 						<tr>
 							<td>E-Mail address</td>
-							<td><input id="inputformSmall" type="text"
+							<td><input id="inputformSmall" type="text"name="メール"
 								v-model="table.メール"></td>
 						</tr>
 						<tr>
 							<td>質問への対応</td>
-							<td><textarea id="inputformLarge" v-model="table.質問"
+							<td><textarea id="inputformLarge" v-model="table.質問"name="質問"
 									rows="3" cols="50"></textarea></td>
 						</tr>
 						<tr>
 							<td>履修上での注意事項</td>
-							<td><textarea id="inputformLarge" v-model="table.注意事項"
+							<td><textarea id="inputformLarge" v-model="table.注意事項"name="注意事項"
 									rows="3" cols="50"></textarea></td>
 						</tr>
 						<tr>
 							<td>学習上の助言</td>
-							<td><textarea id="inputformLarge" v-model="table.助言"
+							<td><textarea id="inputformLarge" v-model="table.助言"name="助言"
 									rows="3" cols="50"></textarea></td>
 						</tr>
 						<tr>
 							<td>該当ユニット</td>
 							<td><select id="inputformSmall" name="unit"
 								v-model="table.ユニット">
-									<option v-for="unit in unitTable" value="unitTable[unit]">{{unit.name}}</option>
+									<option v-for="unit in unitTable" v-bind:value="unit.id">{{unit.name}}</option>
 							</select></td>
 						</tr>
 						<tr>
 							<td>種類</td>
 							<td><select id="inputformSmall" name="type"
 								v-model="table.種類">
-								<option value="" >英語</option>
-								<option value="" >人科</option>
-								<option value="" >必修</option>
-								<option value="" >選択</option>
+								<option value="英語" >英語</option>
+								<option value="人科" >人科</option>
+								<option value="必修" >必修</option>
+								<option value=""選択 >選択</option>
 							</select></td>
 						</tr>
 					</table>
@@ -176,22 +176,6 @@
 			</form>
 		</div>
 	</div>
-
-
-
- //	<%
- // 	Map<String,ArrayList> map3=new HashMap<String,ArrayList>();
- // 	ArrayList<String> type = new ArrayList<String>();
- // 	type.add("必修");
- // 	type.add("英語");
- // 	type.add("人科");
- // 	//type.add("選択科目");
- // 	map3.put("種類",type);
- // 	JSONObject jsonTest3=new JSONObject(map3);
-//	session.setAttribute("jsonTest3",jsonTest3);
-  //%>
-
-
 
 	<script>
         var app = new Vue({
