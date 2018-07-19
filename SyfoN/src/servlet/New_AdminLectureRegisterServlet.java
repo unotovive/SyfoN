@@ -20,7 +20,7 @@ import relationUnit.RelationUnitManager;
 /**
  * Servlet implementation class AdminLectureRegisterServlet
  */
-@WebServlet("/AdminLectureRegisterServlet")
+@WebServlet("/New_AdminLectureRegisterServlet")
 public class New_AdminLectureRegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -64,22 +64,23 @@ public class New_AdminLectureRegisterServlet extends HttpServlet {
 		Lecture.setLectureName(request.getParameter("授業名"));
 		Lecture.setGaitoGakki(request.getParameter("該当学期"));
 		Lecture.setDay(request.getParameter("曜日"));
-		Lecture.setPeriod(Integer.parseInt(request.getParameter("時限")));
-		Lecture.setRoom(request.getParameter("教室番号"));
-		Lecture.setTaniNum(Integer.parseInt(request.getParameter("単位数")));
-		Lecture.setPurpose(request.getParameter("目的概要"));
-		Lecture.setAchieve(request.getParameter("達成目標"));
-		Lecture.setRelation(request.getParameter("関連科目"));
-		Lecture.setTerm(request.getParameter("履修条件"));
-		Lecture.setTextbook(request.getParameter("教科書名"));
-		Lecture.setHyokahoho(request.getParameter("評価方法"));
-		Lecture.setKyoikumokuhyo(request.getParameter("教育目標との対応"));
-		Lecture.setYosyufukusyu(request.getParameter("事前事後学習"));
-		Lecture.setEmail(request.getParameter("メール"));
-		Lecture.setSupport(request.getParameter("質問"));
-		Lecture.setCaution(request.getParameter("注意事項"));
-		Lecture.setAdvice(request.getParameter("助言"));
-		Lecture.setType(request.getParameter("種類"));
+		Lecture.setPeriod(Integer.parseInt(NoNullforInt(request.getParameter("時限"))));
+		Lecture.setRoom(NoNull(request.getParameter("教室番号")));
+		Lecture.setTaniNum(Integer.parseInt(NoNullforInt(request.getParameter("単位数"))));
+		Lecture.setPurpose(NoNull(request.getParameter("目的概要")));
+		Lecture.setAchieve(NoNull(request.getParameter("達成目標")));
+		Lecture.setRelation(NoNull(request.getParameter("関連科目")));
+		Lecture.setTerm(NoNull(request.getParameter("履修条件")));
+		Lecture.setTextbook(NoNull(request.getParameter("教科書名")));
+		Lecture.setHyokahoho(NoNull(request.getParameter("評価方法")));
+		Lecture.setKyoikumokuhyo(NoNull(request.getParameter("教育目標との対応")));
+		Lecture.setYosyufukusyu(NoNull(request.getParameter("事前事後学習")));
+		Lecture.setEmail(NoNull(request.getParameter("メール")));
+		Lecture.setSupport(NoNull(request.getParameter("質問")));
+		Lecture.setCaution(NoNull(request.getParameter("注意事項")));
+		Lecture.setAdvice(NoNull(request.getParameter("助言")));
+		Lecture.setType(NoNull(request.getParameter("type")));
+		Lecture.setUnit(request.getParameter("unit"));
 		RelationUnit.setLectureID(Lecture.getLectureID());
 		RelationUnit.setUnitID(request.getParameter("unit"));
 	    ptl.setLectureID(Lecture.getLectureID());
@@ -88,11 +89,11 @@ public class New_AdminLectureRegisterServlet extends HttpServlet {
 
 	    boolean uniresult = true;
 		boolean proresult = true;
-		boolean result = false;
-	    boolean notExist=false;
+		boolean result = true;
+	    boolean notExist=true;
 
 	    try {
-			if(mane.getLecture(Lecture.getLectureID())!=null){
+			if(mane.getLecture(Lecture.getLectureID()).getLectureID()!=0){
 				notExist=false;
 			}
 		} catch (SQLException e1) {
@@ -114,12 +115,25 @@ public class New_AdminLectureRegisterServlet extends HttpServlet {
 					getServletContext().getRequestDispatcher("/Admin_LectureListServlet").forward(request, response);
 				} else {
 					//失敗している場合
+					System.out.println(result+","+proresult+","+uniresult);
 					getServletContext().getRequestDispatcher("/Admin_newRegister.jsp").forward(request, response);
 				}
 			}else{
 				System.out.println("存在する");
 				getServletContext().getRequestDispatcher("/Admin_newRegister.jsp").forward(request, response);
 			}
+	}
+	private String NoNull(String str){
+		if(str==null){
+			return "";
+		}
+		return str;
+	}
+	private String NoNullforInt(String str){
+		if(str==""){
+			return "0";
+		}
+		return str;
 	}
 
 }

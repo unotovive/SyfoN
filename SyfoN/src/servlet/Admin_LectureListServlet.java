@@ -97,51 +97,6 @@ public class Admin_LectureListServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-
-//		Lecture Lecture = new Lecture();
-//		LectureManager mane = new LectureManager();
-//		Lecture editresult = new Lecture();
-//		boolean remresult = false;
-//		Lecture.setLectureID((Integer.parseInt(request.getParameter("id"))));
-//
-//		HttpSession session = request.getSession();
-//
-//
-//		if(request.getParameter("AddLecture")!= null){    //新規登録を押された場合
-//			session.removeAttribute("editresult");    //サーバーに残っている授業コードを破棄
-//			getServletContext().getRequestDispatcher("/Admin_RegisterLecture.jsp").forward(request, response);
-//
-//
-//		}else if(request.getParameter("EditLecture")!=null){    //編集を押された場合
-//			try {
-//				editresult = mane.getLecture(Lecture.getLectureID());
-//				session.setAttribute("editresult",editresult);  //押された講義の授業コードを保持
-//			} catch (SQLException e) {
-//				// TODO 自動生成された catch ブロック
-//				e.printStackTrace();
-//			}
-//			getServletContext().getRequestDispatcher("/Admin_RegisterLecture.jsp").forward(request, response);
-//
-//
-//
-//		}else if(request.getParameter("removelecture")!=null){       //削除を押された場合
-//			try {
-//
-//				remresult = mane.removeLecture(Lecture);
-//			} catch (SQLException e) {
-//				// TODO 自動生成された catch ブロック
-//				e.printStackTrace();
-//			}
-//			getServletContext().getRequestDispatcher("/Admin_LectureList.jsp").forward(request, response);
-//		}else if(request.getParameter("reviewlecture")!=null){    //講義の評価一覧へ
-//			try {
-//				editresult = mane.getLecture(Lecture.getLectureID());
-//			} catch (SQLException e) {
-//				// TODO 自動生成された catch ブロック
-//				e.printStackTrace();
-//			}
-//			getServletContext().getRequestDispatcher("/Admin_ReviewList.jsp").forward(request, response);
-//		}
 		this.doGet(request, response);
 	}
 
