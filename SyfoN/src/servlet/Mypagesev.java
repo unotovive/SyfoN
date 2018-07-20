@@ -55,7 +55,6 @@ public class Mypagesev extends HttpServlet {
 		Map<String, Map> studentMap=new HashMap<String,Map>();
 		Map<String,String> studentDataMap=new HashMap<String,String>();
 
-		System.out.print("ニックネーム"+student.getNickName());
 		studentDataMap.put("name", student.getNickName());
 		studentDataMap.put("id", student.getStudentID());
 		studentDataMap.put("grade", Integer.toString(student.getGradeID()));
