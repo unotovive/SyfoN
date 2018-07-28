@@ -69,10 +69,10 @@ public class RegisterStudent extends HttpServlet {
 			if(result){
 				if(ttResult){
 				//新規登録に成功すればログイン画面
-					System.out.println("時間割作成成功、時間割作成完了");
+					System.out.println("学生作成成功、時間割作成完了");
 					getServletContext().getRequestDispatcher("/Common_Login.jsp").forward(request, response);
 				} else{
-					System.out.println("時間割作成成功、時間割作成失敗");
+					System.out.println("学生作成成功、時間割作成失敗");
 					// 新規登録に失敗している場合はadd.jspへ
 					manager.removeStudent(student);
 					getServletContext().getRequestDispatcher("/add.jsp").forward(request, response);

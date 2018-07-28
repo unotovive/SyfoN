@@ -92,7 +92,7 @@ public class TimeTableDAO {
 		String result="0";
 		final int MAXNO=1;
 		Connection connection;
-		String sql="SELECT MAX(timetableid) FROM timetable;";
+		String sql="SELECT MAX(CAST(timetableid AS INTEGER)) FROM timetable;";
 
 		try {
 			Class.forName(driverClassName);
