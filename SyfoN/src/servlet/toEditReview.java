@@ -108,8 +108,6 @@ public class toEditReview extends HttpServlet {
 			//その他情報をセッションに入れる
 			session.setAttribute("tempReviewID",targetReview.getReviewID());
 			getServletContext().getRequestDispatcher("/review.jsp").forward(request, response);
-
-
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

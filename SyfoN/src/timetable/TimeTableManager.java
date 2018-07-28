@@ -55,4 +55,12 @@ public class TimeTableManager {
 	}
 
 
+	public boolean removeTimeTable(String studentID) throws SQLException{
+		// TODO Auto-generated method stub
+		boolean result=false;
+		result=timeTableDAO.removeTimeTable(studentID);
+		return result;
+	}
+
+
 }

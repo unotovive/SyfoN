@@ -131,4 +131,24 @@ public class StudentDAO {
 		return result;
 	}
 
+	public boolean removeStudent(Student student)throws SQLException {
+		boolean result = false;
+		Connection connection;
+		String sql = "DELETE FROM student WHERE studentID = ?";
+
+		try {
+			Class.forName(driverClassName);
+			connection = DriverManager.getConnection(url, user, password);
+			PreparedStatement pstmt = connection.prepareStatement(sql);
+
+			pstmt.setString(1, student.getStudentID());
+
+			int rowNum=pstmt.executeUpdate();
+			if (rowNum==1) result = true;
+			connection.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
 }

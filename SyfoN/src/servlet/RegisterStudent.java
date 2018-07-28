@@ -58,27 +58,41 @@ public class RegisterStudent extends HttpServlet {
 		student.setGradeID(Integer.parseInt(request.getParameter("grade")));
 
 		boolean result = false;
+		boolean ttResult=false;
 
 		HttpSession session = request.getSession();
 
+		//学生の新規登録と
 		try {
 			result=manager.registerStudent(student);
-			result=ttManager.registerNewTimeTable(student.getStudentID());
+			ttResult=ttManager.registerNewTimeTable(student.getStudentID());
+			if(result){
+				if(ttResult){
+				//新規登録に成功すればログイン画面
+					System.out.println("時間割作成成功、時間割作成完了");
+					getServletContext().getRequestDispatcher("/Common_Login.jsp").forward(request, response);
+				} else{
+					System.out.println("時間割作成成功、時間割作成失敗");
+					// 新規登録に失敗している場合はadd.jspへ
+					manager.removeStudent(student);
+					getServletContext().getRequestDispatcher("/add.jsp").forward(request, response);
+				}
+			}else{
+				if(ttResult){
+				//新規登録に成功すればログイン画面
+					System.out.println("学生登録失敗、時間割登録完了");
+					// 時間割を削除してadd.jsp
+					ttManager.removeTimeTable(student.getStudentID());
+					getServletContext().getRequestDispatcher("/add.jsp").forward(request, response);
+				} else{
+					System.out.println("学生登録失敗、時間割登録失敗");
+					// 新規登録に失敗している場合はadd.jspへ
+					getServletContext().getRequestDispatcher("/add.jsp").forward(request, response);
+				}
+			}
 		} catch (SQLException e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
-		if(result){
-			//新規登録に成功すればログイン画面
-			getServletContext().getRequestDispatcher("/Common_Login.jsp").forward(request, response);
-		} else{
-			System.out.println("sippai");
-			// 新規登録に失敗している場合はadd.jspへ
-			getServletContext().getRequestDispatcher("/add.jsp").forward(request, response);
-			}
-		}
 	}
-
-
-
-
+}

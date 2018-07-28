@@ -39,7 +39,11 @@ public class StudentManager {
 		return result;
 	}
 
-
+	public boolean removeStudent(Student student) throws SQLException{
+		boolean result = false;
+		result=studentDAO.removeStudent(student);
+		return result;
+	}
 
 
 

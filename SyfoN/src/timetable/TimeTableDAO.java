@@ -54,31 +54,33 @@ public class TimeTableDAO {
 	public boolean registerTimeTable(String studentID) throws SQLException {
 		// timeTableをDBに登録する
 		boolean result = false;
+		int max=0;
 		Connection connection;
 		String[] semesters={"zenki1","kouki1","zenki2","kouki2","zenki3","kouki3","zenki4","kouki4"};
 
 		try {
 			Class.forName(driverClassName);
 			connection = DriverManager.getConnection(url, user, password);
-			int max=Integer.valueOf(this.getMaxID())+1;
-
+			if(this.getMaxID()!=null){
+				max=Integer.valueOf(this.getMaxID())+1;
+				System.out.println(max);
+			}
 
 			for(int i=0;i<semesters.length;i++){
-			String sql = "INSERT INTO timetable VALUES (?, ?, ?)";
-			PreparedStatement pstmt = connection.prepareStatement(sql);
+				String sql = "INSERT INTO timetable VALUES (?, ?, ?)";
+				PreparedStatement pstmt = connection.prepareStatement(sql);
 
-			pstmt.setString(1, Integer.toString(max)+i);
-			pstmt.setString(2, semesters[i]);
-			pstmt.setString(3, studentID);
+				pstmt.setString(1, Integer.toString(max+i));
+				pstmt.setString(2, semesters[i]);
+				pstmt.setString(3, studentID);
 
-			int rowNum=pstmt.executeUpdate();
-			if (rowNum==1) result = true;
-			if(!result){
-				System.out.println("時間割作成に失敗");
-				break;
+				int rowNum=pstmt.executeUpdate();
+				if (rowNum==1) result = true;
+				if(!result){
+					System.out.println("時間割作成に失敗"+i);
+					break;
+				}
 			}
-			}
-
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -103,6 +105,28 @@ public class TimeTableDAO {
 			result=resultSet.getString(MAXNO);
 
 			resultSet.close();
+			connection.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	public boolean removeTimeTable(String studentID) throws SQLException {
+		// TODO Auto-generated method stub
+		boolean result=false;
+		Connection connection;
+		String sql = "DELETE FROM timetable WHERE studentID = ?";
+
+		try {
+			Class.forName(driverClassName);
+			connection = DriverManager.getConnection(url, user, password);
+			PreparedStatement pstmt = connection.prepareStatement(sql);
+
+			pstmt.setString(1, studentID);
+
+			int rowNum=pstmt.executeUpdate();
+			if (rowNum==8) result = true;
 			connection.close();
 		} catch (Exception e) {
 			e.printStackTrace();
